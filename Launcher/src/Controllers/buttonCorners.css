@@ -1,0 +1,7 @@
+.button{
+    -fx-font-size:15px;
+    -fx-font-family:Helvetica;
+    -fx-font-weight:bold;
+    -fx-text-fill: #2d2e30;
+    -fx-background-color:null;
+}

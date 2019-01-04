@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerConnect">
+   <children>
+      <Label fx:id="lblversion" layoutX="382.0" layoutY="227.0" />
+      <Button fx:id="infoButton" layoutX="356.0" layoutY="218.0" mnemonicParsing="false" onAction="#openInfo" stylesheets="@button.css" text="?" />
+      <ImageView fx:id="imageTitle" fitHeight="71.0" fitWidth="307.0" layoutX="58.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PowerOfGemsLogo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblSubtitle" layoutX="354.0" layoutY="67.0" text="Chat" textFill="#eb7e09">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="100.0" layoutY="112.0" onKeyPressed="#onKeyPressedToConnect" prefHeight="25.0" prefWidth="223.0" promptText="Put a username with 12 max chars..." />
+      <Button fx:id="connectButton" layoutX="182.0" layoutY="153.0" mnemonicParsing="false" onAction="#connectToChat" text="Connect" />
+      <Button fx:id="closeButton" layoutX="394.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closeWindow" style="-fx-border-radius: 0;" stylesheets="@buttonCorners.css" text="X">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="minimizeButton" layoutX="366.0" layoutY="-1.0" mnemonicParsing="false" onAction="#minimizeWindow" style="-fx-border-radius: 0;" stylesheets="@buttonCorners.css" text="__">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

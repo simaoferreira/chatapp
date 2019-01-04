@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneLauncher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="backgrounPic" fitHeight="700.0" fitWidth="1200.0" pickOnBounds="true">
+         <image>
+            <Image url="@wildbackground.png" />
+         </image>
+      </ImageView>
+      <Circle fx:id="circleLogin" fill="#202123" layoutX="600.0" layoutY="520.0" radius="156.0" stroke="#d4af37" strokeType="INSIDE" strokeWidth="3.0" />
+      <Button fx:id="loginButton" layoutX="532.0" layoutY="566.0" mnemonicParsing="false" onAction="#loginKeyButton" prefHeight="66.0" prefWidth="135.0" stylesheets="@buttonLogin.css" text="Login">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <ImageView fitHeight="219.0" fitWidth="629.0" layoutX="286.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PowerOfGemsLogo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblversionFirst" layoutX="1158.0" layoutY="678.0" />
+      <Button fx:id="closeButtonFirst" layoutX="1171.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closeWindow" style="-fx-border-radius: 0;" stylesheets="@buttonCorners.css" text="X">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="minimizeButtonFirst" layoutX="1142.0" layoutY="-1.0" mnemonicParsing="false" onAction="#minimizeWindow" style="-fx-border-radius: 0;" stylesheets="@buttonCorners.css" text="__">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="usernameTextField" layoutX="522.0" layoutY="428.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Username..." style="-fx-background-color: null; -fx-text-fill: white;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordTextField" layoutX="522.0" layoutY="488.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Password..." style="-fx-background-color: null; -fx-text-fill: white;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <Separator layoutX="530.0" layoutY="456.0" prefHeight="0.0" prefWidth="142.0" />
+      <Separator layoutX="530.0" layoutY="519.0" prefHeight="0.0" prefWidth="142.0" />
+      <Label fx:id="lblerror" layoutX="512.0" layoutY="533.0" text="Username or password incorrect!" textFill="#da1414" visible="false" />
+   </children>
+</Pane>
