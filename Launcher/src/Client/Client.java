@@ -14,8 +14,10 @@ public class Client extends Thread{
     private ControllerLauncher client;
     private static final String ip = "81.84.174.114";
 
-    public Client(ControllerLauncher controllerLauncher) {
+    public Client(ControllerLauncher controllerLauncher) throws UnknownHostException, IOException {
         this.client = controllerLauncher;
+        this.start();
+        runConnection();
     }
 
     public void runConnection() throws UnknownHostException, IOException {
@@ -50,7 +52,6 @@ public class Client extends Thread{
         String code = "3";
         ch.sendMessage(code, "null", "null");
     }
-
 
     ////////////////  CODE 5  ////////////////
     public void sendPrivateMessageToChat(String user) {
@@ -97,7 +98,4 @@ public class Client extends Thread{
                 " Number of words written: "+client.numWordsWritten+"\r\n";
         AlertBox.display("Details", text,false);
     }
-
-
-
 }

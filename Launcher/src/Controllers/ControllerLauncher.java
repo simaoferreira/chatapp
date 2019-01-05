@@ -64,7 +64,7 @@ public class ControllerLauncher {
         //mediaPlayer = new MediaPlayer(sound);
 
         try {
-            connectToServer();
+            c = new Client(this);
             usernameTextField.setTextFormatter(new TextFormatter<String>(change -> 
             change.getControlNewText().length() <= MAX_CHARS ? change : null));
             passwordTextField.setTextFormatter(new TextFormatter<String>(change -> 
@@ -461,10 +461,7 @@ public class ControllerLauncher {
 
 
     public void connectToServer() throws UnknownHostException, IOException {
-        c = new Client(this);
-        c.start();
-        c.runConnection();
-
+        
     }
 
 }

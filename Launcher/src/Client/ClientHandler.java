@@ -51,7 +51,6 @@ public class ClientHandler extends Thread{
     public ClientHandler(Socket socket,Client client,ControllerLauncher launcher) {
         this.socket = socket;
         this.mainClient = launcher;
-
     }
 
     public void sendMessage(String code,String user,String text) {
