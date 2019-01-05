@@ -8,18 +8,18 @@ import javafx.scene.input.KeyCode;
 
 @SuppressWarnings("restriction")
 public class Chat extends Application{
-	    
-	private static final String version = "v0.0.80";
-		    
-	public static void main(String[] args) {
-		Application.launch(args);
-	}
 
-	@Override
-	public void start(Stage primaryStage) throws Exception {
+    private static final String version = "v0.0.80";
 
-		ControllerLauncher c = new ControllerLauncher(primaryStage,version);
-		c.iniciarController();
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
 
-	}
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        ControllerLauncher c = new ControllerLauncher(primaryStage,version);
+        c.iniciarController();
+
+    }
 }
