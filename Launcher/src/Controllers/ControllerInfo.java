@@ -5,10 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-@SuppressWarnings("restriction")
 public class ControllerInfo {
-	
-	public Stage stage;
+
+    public Stage stage;
 
     @FXML
     public Label infoTitle;
@@ -30,12 +29,12 @@ public class ControllerInfo {
 
     @FXML
     void closeInfo(ActionEvent event) {
-    	stage.close();
+        stage.close();
     }
-    
+
     public void setStageAndSetupListeners(Stage stage) {
-		this.stage = stage;
-	}
+        this.stage = stage;
+    }
 
 
 }
