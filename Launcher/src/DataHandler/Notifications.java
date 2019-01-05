@@ -6,8 +6,8 @@ import java.net.MalformedURLException;
 import javax.swing.ImageIcon;
 
 public class Notifications {
-	
-	public void displayTray(String username) throws AWTException, MalformedURLException {
+
+    public void displayTray(String username) throws AWTException, MalformedURLException {
         //Obtain only one instance of the SystemTray object
         SystemTray tray = SystemTray.getSystemTray();
 
