@@ -1,6 +1,5 @@
 package handlers;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectDB {
@@ -9,7 +8,6 @@ public class ConnectDB {
         // TODO Auto-generated method stub
         
         SQLiteHandler bd = new SQLiteHandler();
-        ResultSet rs;
         
         try {
             //bd.updateWordsWritten("berunoxxx",14);

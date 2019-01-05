@@ -6,7 +6,7 @@ public class Pontuation {
         int valueWord = getValueWord(n);
         return valueWord;
     }
-    
+
     protected static int verifyLvl(int n) {
         int lvl;
         if(n>=1 && n<100) {
@@ -32,7 +32,7 @@ public class Pontuation {
         }else {
             lvl = 10;
         }
-        
+
         return lvl;
     }
 
@@ -40,7 +40,7 @@ public class Pontuation {
         int finalValue = 0;
         for(int i=1;i<=n;i++) {
             int value;
-            
+
             if(n>=1 && n<=10) {
                 value = 10;
             }else if(n>10 && n<=20) {
@@ -56,7 +56,7 @@ public class Pontuation {
             }
             finalValue+=value;
         }
-        
+
         return finalValue;
     }
 }

@@ -3,16 +3,16 @@ package handlers;
 import java.sql.SQLException;
 
 public class DataBaseCatalog {
-    
-    SQLiteHandler sql;
-    
+
+    private SQLiteHandler sql;
+
     /**
-     * Handle the Databse
+     * Handle the Database
      */
     public DataBaseCatalog() {
         sql = new SQLiteHandler();
     }
-    
+
     public void initialize() {
         try {
             sql.initialize();
@@ -21,7 +21,7 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
-    
+
     /**
      * Add new user
      * @param username - Username of user
@@ -35,7 +35,7 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
-    
+
     /**
      * Remove an user
      * @param id - ID of user
@@ -48,7 +48,7 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
-    
+
     /**
      * Update words written of user
      * @param username - Username of user
@@ -62,7 +62,7 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
-    
+
     /**
      * Update user experience
      * @param username - Username of user
@@ -76,7 +76,7 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
-    
+
     /**
      * Checks if user is registered in the system or not
      * @param username - Username of user
@@ -90,10 +90,10 @@ public class DataBaseCatalog {
             System.err.println("Error while trying to see if user is registered!");
             e.printStackTrace();
         }
-        
+
         return false;
     }
-    
+
     public boolean checkLogin(String username,String password) {
         try {
             return sql.checkLogin(username, password);
@@ -103,7 +103,7 @@ public class DataBaseCatalog {
         }
         return false;
     }
-    
+
     /**
      * Get user id in system
      * @param username - Username of user
@@ -118,7 +118,7 @@ public class DataBaseCatalog {
         }
         return -1;
     }
-    
+
     /**
      * Get user level
      * @param id - ID of user
@@ -133,7 +133,7 @@ public class DataBaseCatalog {
         }
         return -1;
     }
-    
+
     /**
      * Get user experience
      * @param id - ID of user
@@ -148,7 +148,7 @@ public class DataBaseCatalog {
         }
         return -1;
     }
-    
+
     /**
      * Obtain the amount of messages written by the user
      * @param id - ID of user
@@ -163,7 +163,7 @@ public class DataBaseCatalog {
         }
         return -1;
     }
-    
+
     /**
      * Obtain the amount of words written by the user
      * @param id - ID of user
