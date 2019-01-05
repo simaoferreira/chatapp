@@ -22,12 +22,4 @@ public class Chat extends Application{
 		c.iniciarController();
 
 	}
-	
-
-	
-	
-	
-	
-	
-
 }
