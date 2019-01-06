@@ -21,7 +21,7 @@ public class Client extends Thread{
     }
 
     public void runConnection() throws UnknownHostException, IOException {
-        socket = new Socket(ip,32456);
+        socket = new Socket("127.0.0.1",32456);
         socket.setTcpNoDelay(true);
         ch = new ClientHandler(socket,this,client);
         ch.start();  	
