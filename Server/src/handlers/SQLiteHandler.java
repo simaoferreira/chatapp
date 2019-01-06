@@ -58,6 +58,17 @@ public class SQLiteHandler {
                         + "foreign key(id) references users(id),"
                         + "primary key(id));");
             }
+            
+            ResultSet resTabelaUsersFriends = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersFriends'");
+            if( !resTabelaUsersFriends.next()) {
+                Statement state2 = con.createStatement();
+                state2.execute("CREATE TABLE usersFriends(id integer,"
+                        + "idUser integer,"
+                        + "idFriend integer,"
+                        + "foreign key(idUser) references users(id),"
+                        + "foreign key(idFriend) references users(id),"
+                        + "primary key(id));");
+            }
         }
 
     }
