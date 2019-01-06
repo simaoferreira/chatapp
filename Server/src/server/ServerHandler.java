@@ -164,15 +164,17 @@ public class ServerHandler extends Thread{
 
                 }else if(codeNumber.equals("7")) {
                     //dbh.addFriend(username, text);
-                    JSONObject obj = createObjWithData(codeNumber, username, "Invite of user " + text +" accepted!", null);
+                    JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
 
                     for(ServerHandler sh : server.connections) {
-                        if(sh.username.equals(username)) {
+                        if(sh.username.equals(text)) {
                             sh.sendText(obj.toString());
                             //envia para o cliente respetivo que recebeu pedido de amizade
                             break;
                         }
                     }
+                }else if(codeNumber.equals("8")) {
+                    JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
                 }
 
             }

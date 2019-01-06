@@ -238,6 +238,10 @@ public class ControllerLauncher {
             centeredLabel.add(mensagem, 0, 0);
             centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
             mensagem.setStyle("-fx-text-fill:#bf0000;");
+        }else if(isConnection.equals("3")){
+            centeredLabel.add(mensagem, 0, 0);
+            centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#0099ff; -fx-padding: 5 5 5 5;");
+            mensagem.setStyle("-fx-text-fill:#bf0000;");
         }else {
             centeredLabel.add(userOfMensagem, 0, 0);
             centeredLabel.add(mensagem, 0, 1);

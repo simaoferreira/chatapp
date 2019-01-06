@@ -183,15 +183,17 @@ public class ClientHandler extends Thread{
                             textOutput = "The user '"+lastUser+"' just connected";
                             side = "left";
 
-
+                            
                             Platform.runLater(new Runnable() {
                                 @Override public void run() {
-                                    try {
-                                        notify.displayTray(lastUser);
-                                    } catch (MalformedURLException e) {
-                                        e.printStackTrace();
-                                    } catch (AWTException e) {
-                                        e.printStackTrace();
+                                    if(username.equals(lastUser)) {
+                                        try {
+                                            notify.displayTray(lastUser);
+                                        } catch (MalformedURLException e) {
+                                            e.printStackTrace();
+                                        } catch (AWTException e) {
+                                            e.printStackTrace();
+                                        }
                                     }
                                     mainClient.updateSceneToMenu();
                                 }
@@ -251,6 +253,10 @@ public class ClientHandler extends Thread{
                                 mainClient.lblLiveNews.setText(liveNews+" - "+adminUser);
                             }
                         });
+                    }else if(codeNumber.equals("7")) {
+                        textOutput = text;
+                        isConnection="2";
+                        atualizarClient = "1";
                     }
 
                     if(atualizarClient.equals("1")) {
