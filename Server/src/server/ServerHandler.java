@@ -174,6 +174,10 @@ public class ServerHandler extends Thread{
 
     }
 
+    /**
+     * send to clients
+     * @param textIn
+     */
     private void sendToClients(String textIn) {
 
         for(int i=0;i<server.connections.size();i++) {
