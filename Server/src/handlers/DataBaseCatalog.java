@@ -118,6 +118,22 @@ public class DataBaseCatalog {
         }
         return -1;
     }
+    
+    /**
+     * Add new friend
+     * @param username - The username
+     * @param nameFriend - The friend of username
+     */
+    public void addFriend(String username,String nameFriend) {
+        int user = getID(username);
+        int friend = getID(nameFriend);
+        try {
+            sql.addFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to add new friend!");
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Get user level

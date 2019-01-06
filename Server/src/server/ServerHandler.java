@@ -162,6 +162,15 @@ public class ServerHandler extends Thread{
                         server.adminUser = username;
                     }
 
+                }else if(codeNumber.equals("7")) {
+                    dbh.addFriend(username, text);
+                    JSONObject obj = createObjWithData(codeNumber, username, "Invite of user " + text +" accepted!", null);
+                    for(ServerHandler sh : server.connections) {
+                        if(sh.username.equals(username)) {
+                            sh.sendText(obj.toString());
+                            break;
+                        }
+                    }
                 }
 
             }
