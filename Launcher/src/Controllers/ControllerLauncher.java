@@ -217,7 +217,7 @@ public class ControllerLauncher {
         Label mensagem = new Label(text);
         mensagem.setStyle("-fx-font: normal 11px Helvetica");
         Label actualHour = new Label(hour);
-        actualHour.setStyle("-fx-font: normal 7px Helvetica");
+        actualHour.setStyle("-fx-font: normal 9px Helvetica");
         mensagem.setMaxWidth(200);
         mensagem.setWrapText(true);
         centeredLabel = new GridPane();
