@@ -103,34 +103,29 @@ public class ControllerLauncher {
     private static final Border darkblue = new Border(new BorderStroke(Color.rgb(32,33,35),
             BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(3)));
 
-    Client c;
-    public MediaPlayer mediaPlayer;
+    private Client c;
+    private MediaPlayer mediaPlayer;
     private static final int MAX_CHARS = 12;
-    public String version;
-    public GridPane menuPane;
-    public Pane loginPane;
-    public Stage stage;
+    private String version;
+    private GridPane menuPane;
+    private Pane loginPane;
+    private Stage stage;
     public String user="";
     public String text;
     public String lastUserPrivate=""; 
     public String id="";
-    public Label mensagem;
-    public Label userOfMensagem;
     public int lvlUser;
     public int expUser;
     public int numMensagens;
     public int numWordsWritten;
-    public double xMensagem = 10;
-    public double yMensagem = 30;
-    public double xUserOfMensagem = 10;
-    public double yUserOfMensagem = 10;
-    public double height;
-    public ProtectionBadWords pbw = new ProtectionBadWords();
-    public Informations info = new Informations();
-    public Notifications notify = new Notifications();
-    public Rectangle rec;
+    private double xMensagem = 10;
+    private double yMensagem = 30;
+    private double xUserOfMensagem = 10;
+    private double yUserOfMensagem = 10;
+    private double height;
+    private ProtectionBadWords pbw = new ProtectionBadWords();
+    private Informations info = new Informations();
     public GridPane centeredLabel;
-    public boolean canConnect;
 
 
     @FXML
@@ -269,10 +264,7 @@ public class ControllerLauncher {
 
             c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
             //mediaPlayer.play();
-
-
         }
-
     }
 
     public void updateSceneToMenu() {
@@ -461,7 +453,7 @@ public class ControllerLauncher {
 
 
     public void connectToServer() throws UnknownHostException, IOException {
-        
+
     }
 
 }
