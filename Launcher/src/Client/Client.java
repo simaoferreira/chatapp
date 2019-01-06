@@ -73,7 +73,7 @@ public class Client extends Thread{
     ////////////////CODE 7  ////////////////
     public void sendRequestFriend() {
         String textField = client.text;
-        String userTarget = textField.substring(10);
+        String userTarget = textField.substring(11);
         if(userTarget.equals(client.user)) {
             ch.printError("You can't invite yourself!");
         }else {
