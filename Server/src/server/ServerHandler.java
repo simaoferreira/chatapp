@@ -168,6 +168,7 @@ public class ServerHandler extends Thread{
                     for(ServerHandler sh : server.connections) {
                         if(sh.username.equals(username)) {
                             sh.sendText(obj.toString());
+                            //envia para o cliente respetivo que recebeu pedido de amizade
                             break;
                         }
                     }
