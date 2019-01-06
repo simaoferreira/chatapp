@@ -95,6 +95,18 @@ public class SQLiteHandler {
         }
 
     }
+    
+    protected void addFriend(int username,int intFriend) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+        
+        PreparedStatement prep = con.prepareStatement("INSERT INTO usersFriends values(?,?,?);");
+        prep.setInt(2, username);
+        prep.setInt(3, intFriend);
+        prep.execute();
+        
+    }
 
     protected void removeUser(int id) throws ClassNotFoundException, SQLException {
         if(con == null) {
