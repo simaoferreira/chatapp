@@ -166,7 +166,7 @@ public class ServerHandler extends Thread{
                     dbh.addFriend(username, text);
                     JSONObject obj = createObjWithData(codeNumber, username, "Invite of user " + text +" accepted!", null);
                     // enviar para o destinatário correspondente 
-                    // sh.sendText(obj.toString());
+                    //  sh.sendText(obj.toString());
                 }
 
             }
