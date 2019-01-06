@@ -241,7 +241,7 @@ public class ControllerLauncher {
         }else if(isConnection.equals("3")){
             centeredLabel.add(mensagem, 0, 0);
             centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#0099ff; -fx-padding: 5 5 5 5;");
-            mensagem.setStyle("-fx-text-fill:#bf0000;");
+            mensagem.setStyle("-fx-text-fill:#000000;");
         }else {
             centeredLabel.add(userOfMensagem, 0, 0);
             centeredLabel.add(mensagem, 0, 1);

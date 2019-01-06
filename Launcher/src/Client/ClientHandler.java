@@ -255,7 +255,7 @@ public class ClientHandler extends Thread{
                         });
                     }else if(codeNumber.equals("7")) {
                         textOutput = text;
-                        isConnection="2";
+                        isConnection="3";
                         atualizarClient = "1";
                     }
 
