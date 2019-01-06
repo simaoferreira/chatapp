@@ -1,6 +1,8 @@
-/handlers/
 /server/
+<<<<<<< HEAD
 /controllers/
 /dataHandler/
 /startLaunch/
 /client/
+=======
+>>>>>>> branch 'master' of https://github.com/simaoferreira/chatapp.git
