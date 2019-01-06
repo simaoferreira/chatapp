@@ -384,6 +384,9 @@ public class ControllerLauncher {
             }else if(text.equals("/getinfo")) {
                 c.requestInfoUser();
                 txtField.setText("");
+            }else if(text.equals("/addfriend")){
+                c.sendRequestFriend();
+                txtField.setText("");
             }else {
                 if(text.startsWith("/")) {
                     txtField.setPromptText("Can´t recognize command! Go see info for details please.");

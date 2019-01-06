@@ -12,8 +12,10 @@ public class ConnectDB {
         try {
             //bd.updateWordsWritten("berunoxxx",14);
             //Sbd.removeUser(3);
+            bd.addFriend(1, 2);
             bd.getInfoPlayers();
             bd.getUsers();
+            bd.getFriends();
             //bd.getID("berunoxxx");
             
         } catch (SQLException e) {

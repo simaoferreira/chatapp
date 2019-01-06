@@ -197,6 +197,19 @@ public class SQLiteHandler {
             System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password"));
         }
     }
+    
+    protected void getFriends() throws SQLException, ClassNotFoundException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT * FROM usersFriends");
+        System.out.println("result Friends:");
+        while(res.next()) {
+            System.out.println(res.getInt("id")+" "+res.getInt("idUser")+" "+ res.getInt("idFriend"));
+        }
+    }
 
     protected void getInfoPlayers() throws SQLException, ClassNotFoundException {
         if(con == null) {

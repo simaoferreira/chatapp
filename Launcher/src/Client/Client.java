@@ -68,6 +68,18 @@ public class Client extends Thread{
         }
 
     }
+    
+     
+    ////////////////CODE 7  ////////////////
+    public void sendRequestFriend() {
+        String textField = client.text;
+        String userTarget = textField.substring(10);
+        if(userTarget.equals(client.user)) {
+            ch.printError("You can't invite yourself!");
+        }else {
+            ch.sendMessage("7",user,userTarget);
+        }
+    }
 
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
         if(lastUserPrivate.equals("")) {

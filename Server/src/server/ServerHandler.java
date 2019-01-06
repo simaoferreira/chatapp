@@ -163,7 +163,7 @@ public class ServerHandler extends Thread{
                     }
 
                 }else if(codeNumber.equals("7")) {
-                    dbh.addFriend(username, text);
+                    //dbh.addFriend(username, text);
                     JSONObject obj = createObjWithData(codeNumber, username, "Invite of user " + text +" accepted!", null);
 
                     for(ServerHandler sh : server.connections) {
