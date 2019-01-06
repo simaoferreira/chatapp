@@ -89,7 +89,7 @@ public class Decrypt {
             System.out.println("Could not decrypt file " + filenameImport +", might be corrupted!");
 
             deleteDecryptedFie(filenameImport);
-            
+
         }
     }
 
@@ -163,11 +163,11 @@ public class Decrypt {
                 }
             }
             filename = sb.toString();
-            
+
         }else{
             filename = PREFIX_DECRYPTED + filenamePath;
         }
-        
+
         return filename;
     }
 

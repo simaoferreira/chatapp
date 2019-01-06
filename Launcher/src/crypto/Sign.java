@@ -67,12 +67,12 @@ public class Sign {
             return true;            
         }else{
             System.out.println("Could not verify  file " + filename +", might be corrupted!");
-  
+
             if(Decrypt.decryptedFileExists(filename))
                 Decrypt.deleteDecryptedFie(filename);
-            
+
             return false;            
         }
     }
-    
+
 }
