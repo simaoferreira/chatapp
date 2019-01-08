@@ -177,7 +177,7 @@ public class ServerHandler extends Thread{
                     String userSentRequest = text.split(":")[1];
                     String statusRequest = text.split(":")[0];
 
-                    if(dbh.checkRequestInvite(userSentRequest, userReceivedRequest)) {
+                    if(dbh.checkRequestInvite(userSentRequest,userReceivedRequest)) {
                         if(statusRequest.equals("accept")) {
                             dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
                             dbh.addFriend(userSentRequest, userReceivedRequest);

@@ -294,7 +294,7 @@ public class SQLiteHandler {
         return result;
     }
     
-    protected boolean checkRequestInvite(String username,String userRequestedFriend) throws ClassNotFoundException, SQLException {
+    protected boolean checkRequestInvite(int username,int userRequestedFriend) throws ClassNotFoundException, SQLException {
 
         boolean result = false;
 
@@ -303,7 +303,7 @@ public class SQLiteHandler {
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT idUser,idRequestedFriend FROM users WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
+        ResultSet res = state.executeQuery("SELECT idUser,idRequestedFriend FROM usersRequestsFriends WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
 
         if(res.next()) {
             result=true;

@@ -53,7 +53,7 @@ public class DataBaseCatalog {
         int user = getID(username);
         int friend = getID(nameRequestedFriend);
         try {
-            sql.addRequestFriend(user, friend);
+            sql.removeRequestFriend(user, friend);
         } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Error while trying to remove the request friend!");
             e.printStackTrace();
@@ -116,8 +116,10 @@ public class DataBaseCatalog {
     }
     
     public boolean checkRequestInvite(String username,String userRequestedFriend) {
+        int user = getID(username);
+        int friend = getID(userRequestedFriend);
         try {
-            return sql.checkRequestInvite(username, userRequestedFriend);
+            return sql.checkRequestInvite(user, friend);
         } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Error while trying to check if there is a friend invite!");
             e.printStackTrace();
