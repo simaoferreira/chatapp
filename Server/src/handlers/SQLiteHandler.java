@@ -151,7 +151,8 @@ public class SQLiteHandler {
         }
 
         PreparedStatement prepInfo = con.prepareStatement("DELETE FROM usersRequestsFriends WHERE idUser = ? AND idRequestedFriend = ?");
-        prepInfo.setInt(1, idRequestedFriend);
+        prepInfo.setInt(1, idUser);
+        prepInfo.setInt(2, idRequestedFriend);
         prepInfo.execute();
 
     }
@@ -229,6 +230,7 @@ public class SQLiteHandler {
         while(res.next()) {
             System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password"));
         }
+        System.out.println("Empty");
     }
     
     protected void getFriends() throws SQLException, ClassNotFoundException {
@@ -240,8 +242,23 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT * FROM usersFriends");
         System.out.println("result Friends:");
         while(res.next()) {
-            System.out.println(res.getInt("id")+" "+res.getInt("idUser")+" "+ res.getInt("idFriend"));
+            System.out.println(res.getInt("idUser")+" "+ res.getInt("idFriend"));
         }
+        System.out.println("Empty");
+    }
+    
+    protected void getRequestsFriends() throws SQLException, ClassNotFoundException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT * FROM usersRequestsFriends");
+        System.out.println("result Requests Friends:");
+        while(res.next()) {
+            System.out.println(res.getInt("idUser")+" "+ res.getInt("idRequestedFriend"));
+        }
+        System.out.println("Empty");
     }
 
     protected void getInfoPlayers() throws SQLException, ClassNotFoundException {
@@ -255,6 +272,7 @@ public class SQLiteHandler {
         while(res.next()) {
             System.out.println(res.getInt("id")+" "+res.getInt("userLvl")+" "+ res.getInt("userExp")+" "+res.getInt("messagesSent")+" "+ res.getInt("wordsWritten"));
         }
+        System.out.println("Empty");
     }
 
     protected boolean checkLogin(String username,String password) throws ClassNotFoundException, SQLException {

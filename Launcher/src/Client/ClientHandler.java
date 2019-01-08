@@ -257,6 +257,10 @@ public class ClientHandler extends Thread{
                         textOutput = text;
                         isConnection="3";
                         atualizarClient = "1";
+                    }else if(codeNumber.equals("9")) {
+                        textOutput = text;
+                        isConnection = "3";
+                        atualizarClient = "1";
                     }
 
                     if(atualizarClient.equals("1")) {

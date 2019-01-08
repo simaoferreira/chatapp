@@ -176,12 +176,7 @@ public class ServerHandler extends Thread{
                     String userReceivedRequest = username;
                     String userSentRequest = text.split(":")[1];
                     String statusRequest = text.split(":")[0];
-                    //verficar se pedido existe para aceitar
-                    //   se aceitar, remover da db o request e adicionar a lista de amigos a nova amizade
-                    //               e dar feedback
-                    //   se recusar, remover da db o request e dar feedback...
-                    // se nao existir nenhum pedido referente
-                    //  dar feedback que nao consegue aceitar o pedido
+
                     if(dbh.checkRequestInvite(userSentRequest, userReceivedRequest)) {
                         if(statusRequest.equals("accept")) {
                             dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
