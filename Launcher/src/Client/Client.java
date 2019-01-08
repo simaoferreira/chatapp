@@ -88,7 +88,7 @@ public class Client extends Thread{
             
         }else {
            String userTarget = textField.substring(11);
-           ch.sendMessage("8", user, userTarget);
+           ch.sendMessage("8", user, "accept:"+userTarget);
         }
         
     }

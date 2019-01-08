@@ -75,9 +75,9 @@ public class SQLiteHandler {
                 Statement state2 = con.createStatement();
                 state2.execute("CREATE TABLE usersRequestsFriends(id integer,"
                         + "idUser integer,"
-                        + "idFriend integer,"
+                        + "idRequestedFriend integer,"
                         + "foreign key(idUser) references users(id),"
-                        + "foreign key(idFriend) references users(id),"
+                        + "foreign key(idRequestedFriend) references users(id),"
                         + "primary key(id));");
             }
         }
@@ -142,6 +142,17 @@ public class SQLiteHandler {
         PreparedStatement prep = con.prepareStatement("DELETE FROM users WHERE id = ?");
         prep.setInt(1, id);
         prep.execute();
+
+    }
+    
+    protected void removeRequestFriend(int idUser,int idRequestedFriend) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        PreparedStatement prepInfo = con.prepareStatement("DELETE FROM usersRequestsFriends WHERE idUser = ? AND idRequestedFriend = ?");
+        prepInfo.setInt(1, idRequestedFriend);
+        prepInfo.execute();
 
     }
 
@@ -256,6 +267,25 @@ public class SQLiteHandler {
 
         Statement state = con.createStatement();
         ResultSet res = state.executeQuery("SELECT username,password FROM users WHERE username='" + username + "' AND password='"+ password +"'");
+
+        if(res.next()) {
+            result=true;
+
+        }
+
+        return result;
+    }
+    
+    protected boolean checkRequestInvite(String username,String userRequestedFriend) throws ClassNotFoundException, SQLException {
+
+        boolean result = false;
+
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT idUser,idRequestedFriend FROM users WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
 
         if(res.next()) {
             result=true;

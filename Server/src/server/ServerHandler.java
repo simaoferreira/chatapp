@@ -173,7 +173,45 @@ public class ServerHandler extends Thread{
                         }
                     }
                 }else if(codeNumber.equals("8")) {
-                    JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
+                    String userReceivedRequest = username;
+                    String userSentRequest = text.split(":")[1];
+                    String statusRequest = text.split(":")[0];
+                    //verficar se pedido existe para aceitar
+                    //   se aceitar, remover da db o request e adicionar a lista de amigos a nova amizade
+                    //               e dar feedback
+                    //   se recusar, remover da db o request e dar feedback...
+                    // se nao existir nenhum pedido referente
+                    //  dar feedback que nao consegue aceitar o pedido
+                    if(dbh.checkRequestInvite(userSentRequest, userReceivedRequest)) {
+                        if(statusRequest.equals("accept")) {
+                            dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
+                            dbh.addFriend(userSentRequest, userReceivedRequest);
+                            JSONObject obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " accepted your invite!", null);
+                            for(ServerHandler sh : server.connections) {
+                                if(sh.username.equals(userSentRequest)) {
+                                    sh.sendText(obj.toString());
+                                    break;
+                                }
+                            }
+                        }else {
+                            dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
+                            JSONObject obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " declined your invite!", null);
+                            for(ServerHandler sh : server.connections) {
+                                if(sh.username.equals(userSentRequest)) {
+                                    sh.sendText(obj.toString());
+                                    break;
+                                }
+                            }
+                        }
+                    }else {
+                        JSONObject obj = createObjWithData("9", username, "Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
+                        for(ServerHandler sh : server.connections) {
+                            if(sh.username.equals(userReceivedRequest)) {
+                                sh.sendText(obj.toString());
+                                break;
+                            }
+                        }
+                    }
                 }
 
             }

@@ -17,7 +17,7 @@ public class DataBaseCatalog {
         try {
             sql.initialize();
         } catch (ClassNotFoundException | SQLException e) {
-            // TODO Auto-generated catch block
+            System.err.println("Error while trying to initialize database!");
             e.printStackTrace();
         }
     }
@@ -44,7 +44,18 @@ public class DataBaseCatalog {
         try {
             sql.removeUser(id);
         } catch (ClassNotFoundException | SQLException e) {
-            // TODO Auto-generated catch block
+            System.err.println("Error while trying to remove user!");
+            e.printStackTrace();
+        }
+    }
+    
+    public void removeRequestFriend(String username,String nameRequestedFriend) {
+        int user = getID(username);
+        int friend = getID(nameRequestedFriend);
+        try {
+            sql.addRequestFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to remove the request friend!");
             e.printStackTrace();
         }
     }
@@ -98,7 +109,17 @@ public class DataBaseCatalog {
         try {
             return sql.checkLogin(username, password);
         } catch (ClassNotFoundException | SQLException e) {
-            // TODO Auto-generated catch block
+            System.err.println("Error while trying to check if the login is correct or not!");
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public boolean checkRequestInvite(String username,String userRequestedFriend) {
+        try {
+            return sql.checkRequestInvite(username, userRequestedFriend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to check if there is a friend invite!");
             e.printStackTrace();
         }
         return false;
