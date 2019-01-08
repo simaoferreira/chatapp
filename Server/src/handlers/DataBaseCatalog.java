@@ -134,6 +134,22 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Add new request friend
+     * @param username - the user that request the friendship
+     * @param nameFriend -  the target user of the request
+     */
+    public void addRequestFriend(String username,String nameFriend) {
+        int user = getID(username);
+        int friend = getID(nameFriend);
+        try {
+            sql.addRequestFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to add new request friend!");
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Get user level

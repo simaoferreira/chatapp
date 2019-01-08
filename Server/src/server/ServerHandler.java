@@ -163,9 +163,8 @@ public class ServerHandler extends Thread{
                     }
 
                 }else if(codeNumber.equals("7")) {
-                    //dbh.addFriend(username, text);
+                    dbh.addRequestFriend(username, text);
                     JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
-
                     for(ServerHandler sh : server.connections) {
                         if(sh.username.equals(text)) {
                             sh.sendText(obj.toString());

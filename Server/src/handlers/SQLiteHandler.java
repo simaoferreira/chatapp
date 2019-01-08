@@ -69,6 +69,17 @@ public class SQLiteHandler {
                         + "foreign key(idFriend) references users(id),"
                         + "primary key(id));");
             }
+            
+            ResultSet resTabelaUsersRequestsFriends = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersRequestsFriends'");
+            if( !resTabelaUsersRequestsFriends.next()) {
+                Statement state2 = con.createStatement();
+                state2.execute("CREATE TABLE usersRequestsFriends(id integer,"
+                        + "idUser integer,"
+                        + "idFriend integer,"
+                        + "foreign key(idUser) references users(id),"
+                        + "foreign key(idFriend) references users(id),"
+                        + "primary key(id));");
+            }
         }
 
     }
@@ -94,6 +105,17 @@ public class SQLiteHandler {
             System.err.println("já esta registado");
         }
 
+    }
+    
+    protected void addRequestFriend(int username,int targetRequest) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+        
+        PreparedStatement prep = con.prepareStatement("INSERT INTO usersRequestsFriends values(?,?,?);");
+        prep.setInt(2, username);
+        prep.setInt(3, targetRequest);
+        prep.execute();
     }
     
     protected void addFriend(int username,int intFriend) throws ClassNotFoundException, SQLException {

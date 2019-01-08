@@ -80,6 +80,18 @@ public class Client extends Thread{
             ch.sendMessage("7",user,userTarget);
         }
     }
+    
+    ////////////////CODE 8  ////////////////
+    public void acceptFriendRequest() {
+        String textField = client.text;
+        if (textField.equals("/accept")) {
+            
+        }else {
+           String userTarget = textField.substring(11);
+           ch.sendMessage("8", user, userTarget);
+        }
+        
+    }
 
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
         if(lastUserPrivate.equals("")) {

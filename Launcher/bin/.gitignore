@@ -1,4 +1,6 @@
-/handlers/
 /Controllers/
 /Client/
+/DataHandler/
+/StartLaunch/
+/handlers/
 /server/

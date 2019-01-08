@@ -338,6 +338,9 @@ public class ControllerLauncher {
         }else if(text.startsWith("/addfriend")){
             c.sendRequestFriend();
             txtField.setText("");
+        }else if(text.startsWith("/accept")){
+            c.acceptFriendRequest();
+            txtField.setText("");
         }else {
             if(text.startsWith("/")) {
                 txtField.setPromptText("Can´t recognize command! Go see info for details please.");
@@ -393,6 +396,9 @@ public class ControllerLauncher {
                 txtField.setText("");
             }else if(text.startsWith("/addfriend")){
                 c.sendRequestFriend();
+                txtField.setText("");
+            }else if(text.startsWith("/accept")){
+                c.acceptFriendRequest();
                 txtField.setText("");
             }else {
                 if(text.startsWith("/")) {
