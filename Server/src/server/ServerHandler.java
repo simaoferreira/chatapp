@@ -163,34 +163,45 @@ public class ServerHandler extends Thread{
                     }
 
                 }else if(codeNumber.equals("7")) {
-                    boolean existsFriendship = dbh.checksFriendship(username,text);
-                    boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
-                    
-                    if(!existsFriendship && !existsFriendRequest) {
-                        dbh.addRequestFriend(username, text);
-                        JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
-                        for(ServerHandler sh : server.connections) {
-                            if(sh.username.equals(text)) {
-                                sh.sendText(obj.toString());
-                                break;
+                    if(dbh.checkUser(text)) {
+                        boolean existsFriendship = dbh.checksFriendship(username,text);
+                        boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
+                        
+                        if(!existsFriendship && !existsFriendRequest) {
+                            dbh.addRequestFriend(username, text);
+                            JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
+                            for(ServerHandler sh : server.connections) {
+                                if(sh.username.equals(text)) {
+                                    sh.sendText(obj.toString());
+                                    break;
+                                }
+                            }
+                        }else {
+                            if(existsFriendship) {
+                                JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " is already your friend!", null);
+                                for(ServerHandler sh : server.connections) {
+                                    if(sh.username.equals(username)) {
+                                        sh.sendText(obj.toString());
+                                        break;
+                                    }
+                                }
+                            }else if(existsFriendRequest) {
+                                JSONObject obj = createObjWithData(codeNumber, username, "You already sent a friend request to "+ text + " !", null);
+                                for(ServerHandler sh : server.connections) {
+                                    if(sh.username.equals(username)) {
+                                        sh.sendText(obj.toString());
+                                        break;
+                                    }
+                                }
                             }
                         }
+                        
                     }else {
-                        if(existsFriendship) {
-                            JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " is already your friend!", null);
-                            for(ServerHandler sh : server.connections) {
-                                if(sh.username.equals(username)) {
-                                    sh.sendText(obj.toString());
-                                    break;
-                                }
-                            }
-                        }else if(existsFriendRequest) {
-                            JSONObject obj = createObjWithData(codeNumber, username, "You already sent a friend request to "+ text + " !", null);
-                            for(ServerHandler sh : server.connections) {
-                                if(sh.username.equals(username)) {
-                                    sh.sendText(obj.toString());
-                                    break;
-                                }
+                        JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " doesn't exist!", null);
+                        for(ServerHandler sh : server.connections) {
+                            if(sh.username.equals(username)) {
+                                sh.sendText(obj.toString());
+                                break;
                             }
                         }
                     }
