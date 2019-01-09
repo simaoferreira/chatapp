@@ -147,6 +147,18 @@ public class DataBaseCatalog {
         }
         return false;
     }
+    
+    public boolean checksFriendship(String username, String userFriend) {
+        int user = getID(username);
+        int friend = getID(userFriend);
+        try {
+            return sql.checkFriendship(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to check frindship!");
+            e.printStackTrace();
+        }
+        return false;
+    }   
 
     /**
      * Get user id in system
@@ -253,5 +265,6 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
         return -1;
-    }    
+    }
+ 
 }

@@ -324,6 +324,25 @@ public class SQLiteHandler {
 
         return result;
     }
+    
+    protected boolean checkFriendship(int username,int userFriend) throws ClassNotFoundException, SQLException {
+
+        boolean result = false;
+
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT idUser,idFriend FROM usersFriends WHERE (idUser='" + username + "' AND idFriend='"+ userFriend +"') OR (idUser='" + userFriend + "' AND idFriend='"+ username +"')");
+
+        if(res.next()) {
+            result=true;
+
+        }
+
+        return result;
+    }
 
     protected boolean estaRegistado(String username) throws ClassNotFoundException, SQLException {
 

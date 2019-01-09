@@ -99,7 +99,7 @@ public class Client extends Thread{
         if (textField.equals("/decline")) {
 
         }else {
-            String userTarget = textField.substring(8);
+            String userTarget = textField.substring(9);
             ch.sendMessage("8", user, "decline:"+userTarget);
         }
 
