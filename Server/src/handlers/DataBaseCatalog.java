@@ -59,6 +59,17 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
+    
+    public void removeFriend(String username,String nameFriend) {
+        int user = getID(username);
+        int friend = getID(nameFriend);
+        try {
+            sql.removeFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to remove friend!");
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Update words written of user

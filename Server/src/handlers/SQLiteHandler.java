@@ -156,6 +156,18 @@ public class SQLiteHandler {
         prepInfo.execute();
 
     }
+    
+    protected void removeFriend(int idUser,int idRequestedFriend) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        PreparedStatement prepInfo = con.prepareStatement("DELETE FROM usersFriends WHERE idUser = ? AND idRequestedFriend = ?");
+        prepInfo.setInt(1, idUser);
+        prepInfo.setInt(2, idRequestedFriend);
+        prepInfo.execute();
+
+    }
 
     protected void updateMessagesSent(String username) throws SQLException, ClassNotFoundException {
         if(con == null) {
