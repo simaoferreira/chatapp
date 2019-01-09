@@ -60,6 +60,11 @@ public class DataBaseCatalog {
         }
     }
     
+    /**
+     * Remove friend
+     * @param username - The first name
+     * @param nameFriend - The second name
+     */
     public void removeFriend(String username,String nameFriend) {
         int user = getID(username);
         int friend = getID(nameFriend);
