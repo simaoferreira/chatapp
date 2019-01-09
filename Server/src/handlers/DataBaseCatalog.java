@@ -49,6 +49,11 @@ public class DataBaseCatalog {
         }
     }
     
+    /**
+     * Remove request friend
+     * @param username - the user that request
+     * @param nameRequestedFriend - the user that receive the invite
+     */
     public void removeRequestFriend(String username,String nameRequestedFriend) {
         int user = getID(username);
         int friend = getID(nameRequestedFriend);
