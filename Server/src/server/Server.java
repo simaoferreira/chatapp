@@ -39,6 +39,7 @@ public class Server {
     public Server() {
         try {
             ss = new ServerSocket(PORT);
+            //initializeRequestsSocket()
             dbh = new DataBaseCatalog();
             dbh.initialize();
 
