@@ -27,6 +27,7 @@ import javafx.scene.control.TextFormatter;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderStrokeStyle;
@@ -170,7 +171,11 @@ public class ControllerLauncher {
 
     @FXML
     public Button infoButton;
-
+    
+    @FXML
+    public Label usernameText;
+    
+    //////////////////////////////
 
     @FXML
     public Label lblversionFirst;
@@ -416,7 +421,7 @@ public class ControllerLauncher {
     @FXML
     void openInfo(ActionEvent event) throws IOException {
         Stage infoStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Controllers/info.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../controllers/info.fxml"));
         Pane infoPane = (Pane) loader.load();
         infoPane.setBorder(darkblue);
         infoPane.setStyle("-fx-background: #cc4b2a;");
@@ -443,6 +448,11 @@ public class ControllerLauncher {
          */
 
 
+    }
+    
+    @FXML
+    void seeProfile(MouseEvent event) {
+        c.requestInfoUser();
     }
 
     static void fastScrollToBottom(ScrollPane scrollPane) {

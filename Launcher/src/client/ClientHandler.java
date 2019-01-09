@@ -192,6 +192,7 @@ public class ClientHandler extends Thread{
                                         e.printStackTrace();
                                     }
                                     mainClient.updateSceneToMenu();
+                                    mainClient.usernameText.setText(username);
                                 }
                             });
 

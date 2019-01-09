@@ -34,6 +34,11 @@
                   </Pane>
                </content>
             </ScrollPane>
+            <Label fx:id="usernameText" layoutX="14.0" layoutY="6.0" onMouseClicked="#seeProfile" prefHeight="21.0" prefWidth="219.0" text="" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane prefHeight="597.0" prefWidth="411.0" GridPane.columnIndex="1">
