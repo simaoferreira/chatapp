@@ -7,7 +7,7 @@ import Controllers.ControllerLauncher;
 import DataHandler.AlertBox;
 
 public class Client extends Thread{
-    
+
     private ClientHandler ch;
     private String user;
     private Socket socket;
@@ -68,8 +68,8 @@ public class Client extends Thread{
         }
 
     }
-    
-     
+
+
     ////////////////CODE 7  ////////////////
     public void sendRequestFriend() {
         String textField = client.text;
@@ -80,17 +80,29 @@ public class Client extends Thread{
             ch.sendMessage("7",user,userTarget);
         }
     }
-    
+
     ////////////////CODE 8  ////////////////
     public void acceptFriendRequest() {
         String textField = client.text;
         if (textField.equals("/accept")) {
-            
+
         }else {
-           String userTarget = textField.substring(8);
-           ch.sendMessage("8", user, "accept:"+userTarget);
+            String userTarget = textField.substring(8);
+            ch.sendMessage("8", user, "accept:"+userTarget);
         }
-        
+
+    }
+
+    ////////////////CODE 8  ////////////////
+    public void declineFriendRequest() {
+        String textField = client.text;
+        if (textField.equals("/decline")) {
+
+        }else {
+            String userTarget = textField.substring(8);
+            ch.sendMessage("8", user, "decline:"+userTarget);
+        }
+
     }
 
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
