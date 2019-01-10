@@ -1,4 +1,4 @@
-package dataHandler;
+package DataHandler;
 
 import javafx.stage.*;
 import javafx.scene.*;

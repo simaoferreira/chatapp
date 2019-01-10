@@ -3,8 +3,9 @@ package client;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
+import DataHandler.AlertBox;
 import controllers.ControllerLauncher;
-import dataHandler.AlertBox;
 
 public class Client extends Thread{
 

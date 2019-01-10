@@ -1,4 +1,4 @@
-package dataHandler;
+package DataHandler;
 
 public class ProtectionBadWords {
 
