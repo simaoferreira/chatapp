@@ -22,9 +22,6 @@
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>
-         <font>
-            <Font name="Comic Sans MS" size="12.0" />
-         </font>
       </TextField>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -37,24 +34,11 @@
                   </Pane>
                </content>
             </ScrollPane>
-            <ScrollPane fx:id="scrollPaneFriends" layoutX="630.0" layoutY="71.0" prefHeight="525.0" prefWidth="200.0" style="-fx-background-color: transparent;">
-               <content>
-                  <Pane prefHeight="200.0" prefWidth="183.0">
-                     <children>
-                        <Label fx:id="lblFriends" layoutX="1.0" layoutY="14.0" textFill="WHITE">
-                           <font>
-                              <Font name="Comic Sans MS" size="12.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </Pane>
-               </content></ScrollPane>
-            <Label fx:id="labelFriends" layoutX="630.0" layoutY="40.0" text="Friends" textFill="WHITE">
+            <Label fx:id="usernameText" layoutX="14.0" layoutY="6.0" onMouseClicked="#seeProfile" prefHeight="21.0" prefWidth="219.0" text="" textFill="WHITE">
                <font>
-                  <Font name="Comic Sans MS" size="18.0" />
+                  <Font size="15.0" />
                </font>
             </Label>
-            <Line endY="570.0" layoutX="620.0" layoutY="40.0" strokeWidth="2.0" />
          </children>
       </Pane>
       <Pane prefHeight="597.0" prefWidth="411.0" GridPane.columnIndex="1">
@@ -67,30 +51,22 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <ScrollPane fx:id="connectionsScrollPane" layoutX="20.0" layoutY="72.0" prefHeight="329.0" prefWidth="219.0" style="-fx-background-color: transparent;">
+            <ScrollPane fx:id="connectionsScrollPane" layoutX="14.0" layoutY="30.0" prefHeight="329.0" prefWidth="219.0" style="-fx-background-color: transparent;">
                <content>
                   <Pane>
                      <children>
-                        <Label fx:id="lblConnections" layoutX="1.0" layoutY="6.0" underline="true" />
+                        <Label fx:id="lblListConnections" layoutX="13.0" layoutY="25.0" />
+                        <Label fx:id="lblConnections" layoutX="13.0" layoutY="6.0" underline="true" />
                      </children>
                   </Pane>
                </content>
             </ScrollPane>
             <Label fx:id="titleLiveNews" layoutX="20.0" layoutY="424.0" text="Live News:" textFill="RED" underline="true">
                <font>
-                  <Font name="Comic Sans MS" size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblLiveNews" layoutX="20.0" layoutY="454.0" prefWidth="200.0" text="No Live news at the moment!" wrapText="true">
-               <font>
-                  <Font name="Comic Sans MS" size="13.0" />
-               </font></Label>
-            <Label fx:id="labelUsersOnline" layoutX="20.0" layoutY="40.0" text="Users Online" textFill="WHITE">
-               <font>
-                  <Font name="Comic Sans MS" size="18.0" />
-               </font>
-            </Label>
-            <Line endY="570.0" layoutX="13.0" layoutY="40.0" strokeWidth="2.0" />
+            <Label fx:id="lblLiveNews" layoutX="20.0" layoutY="454.0" prefWidth="200.0" text="No Live news at the moment!" wrapText="true" />
          </children>
       </Pane>
       <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -98,18 +74,12 @@
             <Button fx:id="sendMessage" layoutX="0.0" layoutY="30.0" mnemonicParsing="false" onAction="#onSendMessage" prefHeight="25.0" prefWidth="130.0" text="Send">
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="Comic Sans MS" size="12.0" />
-               </font></Button>
+               </cursor></Button>
             <Label fx:id="lblversionSecond" layoutX="300.0" layoutY="69.0" />
             <Button fx:id="infoButton" layoutX="275.0" layoutY="58.0" mnemonicParsing="false" onAction="#openInfo" stylesheets="@button.css" text="?">
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="Comic Sans MS" size="12.0" />
-               </font></Button>
+               </cursor></Button>
          </children>
       </Pane>
    </children>

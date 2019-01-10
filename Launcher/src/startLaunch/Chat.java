@@ -1,6 +1,6 @@
-package StartLaunch;
+package startLaunch;
 
-import Controllers.ControllerLauncher;
+import controllers.ControllerLauncher;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

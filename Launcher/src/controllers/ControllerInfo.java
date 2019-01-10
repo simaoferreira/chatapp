@@ -1,4 +1,5 @@
-package Controllers;
+package controllers;
+
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -7,7 +8,7 @@ import javafx.stage.Stage;
 
 public class ControllerInfo {
 
-    public Stage stage;
+    private Stage stage;
 
     @FXML
     public Label infoTitle;
@@ -19,7 +20,7 @@ public class ControllerInfo {
     public Label lblFixBugs;
 
     @FXML
-    public Button closeInfoButton;
+    private Button closeInfoButton;
 
     @FXML
     public Label commandTitle;
@@ -28,11 +29,11 @@ public class ControllerInfo {
     public Label lblCommands;
 
     @FXML
-    void closeInfo(ActionEvent event) {
+    private void closeInfo(ActionEvent event) {
         stage.close();
     }
 
-    public void setStageAndSetupListeners(Stage stage) {
+    protected void setStageAndSetupListeners(Stage stage) {
         this.stage = stage;
     }
 

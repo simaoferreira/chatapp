@@ -15,7 +15,6 @@ public class TesteBD {
             bd.initialize();
             bd.addUser("simon", "mastir");
             bd.addUser("berunoxxx", "bruno");
-            //bd.addRequestFriend(1, 2);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 
 import org.sqlite.SQLiteConfig;
 
@@ -70,17 +69,6 @@ public class SQLiteHandler {
                         + "foreign key(idFriend) references users(id),"
                         + "primary key(id));");
             }
-            
-            ResultSet resTabelaUsersRequestsFriends = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersRequestsFriends'");
-            if( !resTabelaUsersRequestsFriends.next()) {
-                Statement state2 = con.createStatement();
-                state2.execute("CREATE TABLE usersRequestsFriends(id integer,"
-                        + "idUser integer,"
-                        + "idRequestedFriend integer,"
-                        + "foreign key(idUser) references users(id),"
-                        + "foreign key(idRequestedFriend) references users(id),"
-                        + "primary key(id));");
-            }
         }
 
     }
@@ -108,17 +96,6 @@ public class SQLiteHandler {
 
     }
     
-    protected void addRequestFriend(int username,int targetRequest) throws ClassNotFoundException, SQLException {
-        if(con == null) {
-            getConnection();
-        }
-        
-        PreparedStatement prep = con.prepareStatement("INSERT INTO usersRequestsFriends values(?,?,?);");
-        prep.setInt(2, username);
-        prep.setInt(3, targetRequest);
-        prep.execute();
-    }
-    
     protected void addFriend(int username,int intFriend) throws ClassNotFoundException, SQLException {
         if(con == null) {
             getConnection();
@@ -143,30 +120,6 @@ public class SQLiteHandler {
         PreparedStatement prep = con.prepareStatement("DELETE FROM users WHERE id = ?");
         prep.setInt(1, id);
         prep.execute();
-
-    }
-    
-    protected void removeRequestFriend(int idUser,int idRequestedFriend) throws ClassNotFoundException, SQLException {
-        if(con == null) {
-            getConnection();
-        }
-
-        PreparedStatement prepInfo = con.prepareStatement("DELETE FROM usersRequestsFriends WHERE idUser = ? AND idRequestedFriend = ?");
-        prepInfo.setInt(1, idUser);
-        prepInfo.setInt(2, idRequestedFriend);
-        prepInfo.execute();
-
-    }
-    
-    protected void removeFriend(int idUser,int idRequestedFriend) throws ClassNotFoundException, SQLException {
-        if(con == null) {
-            getConnection();
-        }
-
-        PreparedStatement prepInfo = con.prepareStatement("DELETE FROM usersFriends WHERE idUser = ? AND idRequestedFriend = ?");
-        prepInfo.setInt(1, idUser);
-        prepInfo.setInt(2, idRequestedFriend);
-        prepInfo.execute();
 
     }
 
@@ -243,35 +196,6 @@ public class SQLiteHandler {
         while(res.next()) {
             System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password"));
         }
-        System.out.println("Empty");
-    }
-    
-    protected void getFriends() throws SQLException, ClassNotFoundException {
-        if(con == null) {
-            getConnection();
-        }
-
-        Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT * FROM usersFriends");
-        System.out.println("result Friends:");
-        while(res.next()) {
-            System.out.println(res.getInt("idUser")+" "+ res.getInt("idFriend"));
-        }
-        System.out.println("Empty");
-    }
-    
-    protected void getRequestsFriends() throws SQLException, ClassNotFoundException {
-        if(con == null) {
-            getConnection();
-        }
-
-        Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT * FROM usersRequestsFriends");
-        System.out.println("result Requests Friends:");
-        while(res.next()) {
-            System.out.println(res.getInt("idUser")+" "+ res.getInt("idRequestedFriend"));
-        }
-        System.out.println("Empty");
     }
 
     protected void getInfoPlayers() throws SQLException, ClassNotFoundException {
@@ -285,7 +209,6 @@ public class SQLiteHandler {
         while(res.next()) {
             System.out.println(res.getInt("id")+" "+res.getInt("userLvl")+" "+ res.getInt("userExp")+" "+res.getInt("messagesSent")+" "+ res.getInt("wordsWritten"));
         }
-        System.out.println("Empty");
     }
 
     protected boolean checkLogin(String username,String password) throws ClassNotFoundException, SQLException {
@@ -298,63 +221,6 @@ public class SQLiteHandler {
 
         Statement state = con.createStatement();
         ResultSet res = state.executeQuery("SELECT username,password FROM users WHERE username='" + username + "' AND password='"+ password +"'");
-
-        if(res.next()) {
-            result=true;
-
-        }
-
-        return result;
-    }
-    
-    protected boolean checkRequestInvite(int username,int userRequestedFriend) throws ClassNotFoundException, SQLException {
-
-        boolean result = false;
-
-        if(con == null) {
-            getConnection();
-        }
-
-        Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT idUser,idRequestedFriend FROM usersRequestsFriends WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
-
-        if(res.next()) {
-            result=true;
-
-        }
-
-        return result;
-    }
-    
-    protected boolean checkFriendship(int username,int userFriend) throws ClassNotFoundException, SQLException {
-
-        boolean result = false;
-
-        if(con == null) {
-            getConnection();
-        }
-
-        Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT idUser,idFriend FROM usersFriends WHERE (idUser='" + username + "' AND idFriend='"+ userFriend +"') OR (idUser='" + userFriend + "' AND idFriend='"+ username +"')");
-
-        if(res.next()) {
-            result=true;
-
-        }
-
-        return result;
-    }
-    
-    protected boolean checkUser(String username) throws ClassNotFoundException, SQLException {
-
-        boolean result = false;
-
-        if(con == null) {
-            getConnection();
-        }
-
-        Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT username FROM users WHERE username='" + username + "'");
 
         if(res.next()) {
             result=true;
@@ -431,27 +297,6 @@ public class SQLiteHandler {
         Statement state = con.createStatement();
         ResultSet res = state.executeQuery("SELECT wordsWritten FROM usersInfo WHERE id='" + id + "'");
         return res.getInt("wordsWritten");
-    }
-
-     protected ArrayList<String> getFriendsOfID(int id) throws ClassNotFoundException, SQLException {
-        if(con == null) {
-            getConnection();
-        }
-
-        Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT users.username FROM users INNER JOIN usersFriends ON users.id = usersFriends.idFriend WHERE usersFriends.idUser='"+id+"'");
-        ArrayList<String> friends = new ArrayList<String>();
-
-        while(res.next()) {
-            friends.add(res.getString("username"));
-        }
-        
-        ResultSet res2 = state.executeQuery("SELECT users.username FROM users INNER JOIN usersFriends ON users.id = usersFriends.idUser WHERE usersFriends.idFriend='"+id+"'");
-        while(res2.next()) {
-            friends.add(res.getString("username"));
-        }
-        
-        return friends;
     }
 
 

@@ -1,4 +1,4 @@
-package DataHandler;
+package dataHandler;
 
 public class Informations {
 

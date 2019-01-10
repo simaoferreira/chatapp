@@ -1,6 +1,4 @@
-package Client;
-
-
+package client;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -18,9 +16,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import Controllers.ControllerLauncher;
-import DataHandler.AlertBox;
-import DataHandler.Notifications;
+import controllers.ControllerLauncher;
+import dataHandler.AlertBox;
+import dataHandler.Notifications;
 import javafx.application.Platform;
 
 public class ClientHandler extends Thread{
@@ -35,7 +33,6 @@ public class ClientHandler extends Thread{
     private JSONObject objData;
     private String codeNumber;
     private String username;
-    private String friends;
     private String text;
     private String id;
     private String liveNews;
@@ -179,25 +176,23 @@ public class ClientHandler extends Thread{
                                 mainClient.user = lastUser;
                             }
 
-                            connections = text.split("/")[0];
-                            
+                            connections = text;
 
                             textOutput = "The user '"+lastUser+"' just connected";
                             side = "left";
 
-                            
+
                             Platform.runLater(new Runnable() {
                                 @Override public void run() {
-                                    if(username.equals(lastUser)) {
-                                        try {
-                                            notify.displayTray(lastUser);
-                                        } catch (MalformedURLException e) {
-                                            e.printStackTrace();
-                                        } catch (AWTException e) {
-                                            e.printStackTrace();
-                                        }
+                                    try {
+                                        notify.displayTray(lastUser);
+                                    } catch (MalformedURLException e) {
+                                        e.printStackTrace();
+                                    } catch (AWTException e) {
+                                        e.printStackTrace();
                                     }
                                     mainClient.updateSceneToMenu();
+                                    mainClient.usernameText.setText(username);
                                 }
                             });
 
@@ -207,7 +202,6 @@ public class ClientHandler extends Thread{
                                 mainClient.expUser = Integer.parseInt(info.get("expUser").toString());
                                 mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
                                 mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());
-                                friends = text.split("/")[1];
 
                             }
 
@@ -256,14 +250,6 @@ public class ClientHandler extends Thread{
                                 mainClient.lblLiveNews.setText(liveNews+" - "+adminUser);
                             }
                         });
-                    }else if(codeNumber.equals("7")) {
-                        textOutput = text;
-                        isConnection="3";
-                        atualizarClient = "1";
-                    }else if(codeNumber.equals("9")) {
-                        textOutput = text;
-                        isConnection = "3";
-                        atualizarClient = "1";
                     }
 
                     if(atualizarClient.equals("1")) {
@@ -271,8 +257,7 @@ public class ClientHandler extends Thread{
                             @Override public void run() {
                                 mainClient.initialize("> "+textOutput,userToSend,actualTime,side,isConnection);
                                 mainClient.chatPane.getChildren().add(mainClient.centeredLabel);
-                                mainClient.lblConnections.setText(connections);	
-                                mainClient.lblFriends.setText(friends);
+                                mainClient.lblListConnections.setText(connections);	
                             }
                         });
                     }
