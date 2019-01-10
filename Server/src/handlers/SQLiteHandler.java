@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import org.sqlite.SQLiteConfig;
 
@@ -430,6 +431,27 @@ public class SQLiteHandler {
         Statement state = con.createStatement();
         ResultSet res = state.executeQuery("SELECT wordsWritten FROM usersInfo WHERE id='" + id + "'");
         return res.getInt("wordsWritten");
+    }
+
+     protected ArrayList<String> getFriendsOfID(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT users.username FROM users INNER JOIN usersFriends ON users.id = usersFriends.idFriend WHERE usersFriends.idUser='"+id+"'");
+        ArrayList<String> friends = new ArrayList<String>();
+
+        while(res.next()) {
+            friends.add(res.getString("username"));
+        }
+        
+        ResultSet res2 = state.executeQuery("SELECT users.username FROM users INNER JOIN usersFriends ON users.id = usersFriends.idUser WHERE usersFriends.idFriend='"+id+"'");
+        while(res2.next()) {
+            friends.add(res.getString("username"));
+        }
+        
+        return friends;
     }
 
 

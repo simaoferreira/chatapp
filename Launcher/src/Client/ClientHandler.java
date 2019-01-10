@@ -35,6 +35,7 @@ public class ClientHandler extends Thread{
     private JSONObject objData;
     private String codeNumber;
     private String username;
+    private String friends;
     private String text;
     private String id;
     private String liveNews;
@@ -178,7 +179,8 @@ public class ClientHandler extends Thread{
                                 mainClient.user = lastUser;
                             }
 
-                            connections = text;
+                            connections = text.split("/")[0];
+                            
 
                             textOutput = "The user '"+lastUser+"' just connected";
                             side = "left";
@@ -205,6 +207,7 @@ public class ClientHandler extends Thread{
                                 mainClient.expUser = Integer.parseInt(info.get("expUser").toString());
                                 mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
                                 mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());
+                                friends = text.split("/")[1];
 
                             }
 
@@ -268,7 +271,8 @@ public class ClientHandler extends Thread{
                             @Override public void run() {
                                 mainClient.initialize("> "+textOutput,userToSend,actualTime,side,isConnection);
                                 mainClient.chatPane.getChildren().add(mainClient.centeredLabel);
-                                mainClient.lblListConnections.setText(connections);	
+                                mainClient.lblConnections.setText(connections);	
+                                mainClient.lblFriends.setText(friends);
                             }
                         });
                     }

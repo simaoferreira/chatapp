@@ -165,16 +165,24 @@ public class ControllerLauncher {
 
     @FXML
     public Label lblConnections;
-
-    @FXML
-    public Label lblListConnections;
-
+    
     @FXML
     public Button minimizeButton;
 
     @FXML
     public Button infoButton;
-
+    
+    @FXML
+    public Label labelFriends;
+    
+    @FXML
+    public ScrollPane scrollPaneFriends;
+    
+    @FXML
+    public Label labelUsersOnline;
+    
+    @FXML
+    public Label lblFriends;
 
     @FXML
     public Label lblversionFirst;
@@ -217,12 +225,12 @@ public class ControllerLauncher {
     public void initialize(String text,String user, String hour,String side,String isConnection) {
 
         Label userOfMensagem = new Label(user);
-        userOfMensagem.setStyle("-fx-font: normal 11px Helvetica");
+        userOfMensagem.setStyle("-fx-font: normal 11px \"Comic Sans MS\"");
         userOfMensagem.setUnderline(true);
         Label mensagem = new Label(text);
-        mensagem.setStyle("-fx-font: normal 11px Helvetica");
+        mensagem.setStyle("-fx-font: normal 11px \" Comic Sans MS\"");
         Label actualHour = new Label(hour);
-        actualHour.setStyle("-fx-font: normal 7px Helvetica");
+        actualHour.setStyle("-fx-font: normal 7px \" Comic Sans MS\"");
         mensagem.setMaxWidth(200);
         mensagem.setWrapText(true);
         centeredLabel = new GridPane();

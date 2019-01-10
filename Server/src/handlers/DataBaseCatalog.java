@@ -1,6 +1,7 @@
 package handlers;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class DataBaseCatalog {
 
@@ -276,6 +277,21 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
         return -1;
+    }
+
+    public String getFriends(int idBD) {
+        try {
+            ArrayList<String> friends = sql.getFriendsOfID(idBD);
+            StringBuilder output = new StringBuilder();
+            for(String username : friends) {
+                output.append(username + "\n");
+            }
+            return output.toString();
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while obtaining friends of the user!");
+            e.printStackTrace();
+        }
+        return "nenhum";
     }
  
 }

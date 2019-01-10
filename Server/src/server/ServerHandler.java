@@ -93,8 +93,9 @@ public class ServerHandler extends Thread{
                             }
                             String infoUser = username+":"+id;
                             int idBD = dbh.getID(username);
+                            String friends = dbh.getFriends(idBD);
                             JSONObject infoUserObj = createObjWithInfo(idBD);
-                            JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString(),infoUserObj);
+                            JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString()+"/"+friends,infoUserObj);
 
                             sendToClients(obj2.toString());
 
