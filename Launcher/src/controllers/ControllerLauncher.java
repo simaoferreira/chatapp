@@ -1,14 +1,15 @@
-package Controllers;
+package controllers;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import java.io.IOException;
 import java.net.UnknownHostException;
-import Client.Client;
-import DataHandler.AlertBox;
-import DataHandler.Informations;
-import DataHandler.Notifications;
-import DataHandler.ProtectionBadWords;
+
+import client.Client;
+import dataHandler.AlertBox;
+import dataHandler.Informations;
+import dataHandler.Notifications;
+import dataHandler.ProtectionBadWords;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;

@@ -1,4 +1,4 @@
-package DataHandler;
+package dataHandler;
 import java.awt.*;
 import java.awt.TrayIcon.MessageType;
 import java.net.MalformedURLException;

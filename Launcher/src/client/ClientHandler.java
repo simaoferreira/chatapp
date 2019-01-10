@@ -1,4 +1,4 @@
-package Client;
+package client;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,9 +16,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import Controllers.ControllerLauncher;
-import DataHandler.AlertBox;
-import DataHandler.Notifications;
+import controllers.ControllerLauncher;
+import dataHandler.AlertBox;
+import dataHandler.Notifications;
 import javafx.application.Platform;
 
 public class ClientHandler extends Thread{
