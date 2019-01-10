@@ -1,6 +1,7 @@
 package handlers;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class DataBaseCatalog {
 
@@ -17,7 +18,7 @@ public class DataBaseCatalog {
         try {
             sql.initialize();
         } catch (ClassNotFoundException | SQLException e) {
-            // TODO Auto-generated catch block
+            System.err.println("Error while trying to initialize database!");
             e.printStackTrace();
         }
     }
@@ -44,7 +45,39 @@ public class DataBaseCatalog {
         try {
             sql.removeUser(id);
         } catch (ClassNotFoundException | SQLException e) {
-            // TODO Auto-generated catch block
+            System.err.println("Error while trying to remove user!");
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Remove request friend
+     * @param username - the user that request
+     * @param nameRequestedFriend - the user that receive the invite
+     */
+    public void removeRequestFriend(String username,String nameRequestedFriend) {
+        int user = getID(username);
+        int friend = getID(nameRequestedFriend);
+        try {
+            sql.removeRequestFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to remove the request friend!");
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Remove friend
+     * @param username - The first name
+     * @param nameFriend - The second name
+     */
+    public void removeFriend(String username,String nameFriend) {
+        int user = getID(username);
+        int friend = getID(nameFriend);
+        try {
+            sql.removeFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to remove friend!");
             e.printStackTrace();
         }
     }
@@ -98,11 +131,46 @@ public class DataBaseCatalog {
         try {
             return sql.checkLogin(username, password);
         } catch (ClassNotFoundException | SQLException e) {
-            // TODO Auto-generated catch block
+            System.err.println("Error while trying to check if the login is correct or not!");
             e.printStackTrace();
         }
         return false;
     }
+    
+    public boolean checkRequestInvite(String username,String userRequestedFriend) {
+        int user = getID(username);
+        int friend = getID(userRequestedFriend);
+        try {
+            return sql.checkRequestInvite(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to check if there is a friend invite!");
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public boolean checksFriendship(String username, String userFriend) {
+        int user = getID(username);
+        int friend = getID(userFriend);
+        try {
+            return sql.checkFriendship(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to check frindship!");
+            e.printStackTrace();
+        }
+        return false;
+    }   
+    
+    public boolean checkUser(String username) {
+        try {
+            return sql.checkUser(username);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to check user!");
+            e.printStackTrace();
+        }
+        return false;
+    }  
+    
 
     /**
      * Get user id in system
@@ -131,6 +199,22 @@ public class DataBaseCatalog {
             sql.addFriend(user, friend);
         } catch (ClassNotFoundException | SQLException e) {
             System.err.println("Error while trying to add new friend!");
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Add new request friend
+     * @param username - the user that request the friendship
+     * @param nameFriend -  the target user of the request
+     */
+    public void addRequestFriend(String username,String nameFriend) {
+        int user = getID(username);
+        int friend = getID(nameFriend);
+        try {
+            sql.addRequestFriend(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while trying to add new request friend!");
             e.printStackTrace();
         }
     }
@@ -193,5 +277,21 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
         return -1;
-    }    
+    }
+
+    public String getFriends(int idBD) {
+        try {
+            ArrayList<String> friends = sql.getFriendsOfID(idBD);
+            StringBuilder output = new StringBuilder();
+            for(String username : friends) {
+                output.append(username + "\n");
+            }
+            return output.toString();
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("Error while obtaining friends of the user!");
+            e.printStackTrace();
+        }
+        return "nenhum";
+    }
+ 
 }

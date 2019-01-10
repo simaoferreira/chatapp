@@ -1,5 +1,7 @@
 package client;
 
+
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -33,6 +35,7 @@ public class ClientHandler extends Thread{
     private JSONObject objData;
     private String codeNumber;
     private String username;
+    private String friends;
     private String text;
     private String id;
     private String liveNews;
@@ -176,23 +179,25 @@ public class ClientHandler extends Thread{
                                 mainClient.user = lastUser;
                             }
 
-                            connections = text;
+                            connections = text.split("/")[0];
+                            
 
                             textOutput = "The user '"+lastUser+"' just connected";
                             side = "left";
 
-
+                            
                             Platform.runLater(new Runnable() {
                                 @Override public void run() {
-                                    try {
-                                        notify.displayTray(lastUser);
-                                    } catch (MalformedURLException e) {
-                                        e.printStackTrace();
-                                    } catch (AWTException e) {
-                                        e.printStackTrace();
+                                    if(username.equals(lastUser)) {
+                                        try {
+                                            notify.displayTray(lastUser);
+                                        } catch (MalformedURLException e) {
+                                            e.printStackTrace();
+                                        } catch (AWTException e) {
+                                            e.printStackTrace();
+                                        }
                                     }
                                     mainClient.updateSceneToMenu();
-                                    mainClient.usernameText.setText(username);
                                 }
                             });
 
@@ -202,6 +207,7 @@ public class ClientHandler extends Thread{
                                 mainClient.expUser = Integer.parseInt(info.get("expUser").toString());
                                 mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
                                 mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());
+                                friends = text.split("/")[1];
 
                             }
 
@@ -250,6 +256,14 @@ public class ClientHandler extends Thread{
                                 mainClient.lblLiveNews.setText(liveNews+" - "+adminUser);
                             }
                         });
+                    }else if(codeNumber.equals("7")) {
+                        textOutput = text;
+                        isConnection="3";
+                        atualizarClient = "1";
+                    }else if(codeNumber.equals("9")) {
+                        textOutput = text;
+                        isConnection = "3";
+                        atualizarClient = "1";
                     }
 
                     if(atualizarClient.equals("1")) {
@@ -257,7 +271,8 @@ public class ClientHandler extends Thread{
                             @Override public void run() {
                                 mainClient.initialize("> "+textOutput,userToSend,actualTime,side,isConnection);
                                 mainClient.chatPane.getChildren().add(mainClient.centeredLabel);
-                                mainClient.lblListConnections.setText(connections);	
+                                mainClient.lblConnections.setText(connections);	
+                                mainClient.lblFriends.setText(friends);
                             }
                         });
                     }

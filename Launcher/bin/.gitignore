@@ -1,12 +1,10 @@
+/Client/
+/Controllers/
+/DataHandler/
+/StartLaunch/
+/handlers/
 /server/
-<<<<<<< HEAD
-<<<<<<< HEAD
+/client/
 /controllers/
 /dataHandler/
 /startLaunch/
-/client/
-=======
->>>>>>> branch 'master' of https://github.com/simaoferreira/chatapp.git
-=======
->>>>>>> refs/remotes/origin/func_friends
-/handlers/

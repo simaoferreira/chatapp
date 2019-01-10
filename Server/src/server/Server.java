@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import handlers.DataBaseCatalog;
 import handlers.SQLiteHandler;
@@ -23,6 +25,7 @@ public class Server {
     protected BufferedReader bfr;
     protected boolean run = true;
     protected ArrayList<ServerHandler> connections = new ArrayList<ServerHandler>();
+    protected Map<String,String> friendsRequest = new HashMap<String,String>();
     protected String liveNews="";
     protected String adminUser;
     protected SQLiteHandler bd = new SQLiteHandler();
@@ -47,5 +50,13 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    
+    protected void addNewFriendRequest(String nome,String friend) {
+        friendsRequest.put(nome, friend);
+    }
+    
+    protected void removeFriendRequest(String nome,String friend) {
+        friendsRequest.remove(nome, friend);
     }
 }
