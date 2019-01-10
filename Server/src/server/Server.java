@@ -7,9 +7,8 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-
-import javax.net.ssl.SSLServerSocket;
-import javax.net.ssl.SSLServerSocketFactory;
+import java.util.HashMap;
+import java.util.Map;
 
 import handlers.DataBaseCatalog;
 import handlers.SQLiteHandler;
@@ -20,13 +19,13 @@ public class Server {
     private static final int PORT = 32456;
 
     protected ServerSocket ss;
-    protected SSLServerSocket connsSocket;
     protected Socket s;
     protected DataInputStream dis;
     protected DataOutputStream dos;
     protected BufferedReader bfr;
     protected boolean run = true;
     protected ArrayList<ServerHandler> connections = new ArrayList<ServerHandler>();
+    protected Map<String,String> friendsRequest = new HashMap<String,String>();
     protected String liveNews="";
     protected String adminUser;
     protected SQLiteHandler bd = new SQLiteHandler();
@@ -39,7 +38,6 @@ public class Server {
     public Server() {
         try {
             ss = new ServerSocket(PORT);
-            //initializeRequestsSocket()
             dbh = new DataBaseCatalog();
             dbh.initialize();
 
@@ -54,24 +52,11 @@ public class Server {
         }
     }
     
-    /**
-     * Configures serverSocket port to listen to new conn requests
-     */
-    private void initializeRequestsSocket() {
-        try {
-            //Security.addProvider(new Provider());
-            System.setProperty("javax.net.ssl.KeyStore","photoshare.store");
-            System.setProperty("javax.net.ssl.keyStorePassword", "server");
-
-            SSLServerSocketFactory sslSrvFact =(SSLServerSocketFactory)SSLServerSocketFactory.getDefault();
-            connsSocket =(SSLServerSocket)sslSrvFact.createServerSocket(PORT);
-
-            String[] availableCiphers = sslSrvFact.getSupportedCipherSuites();
-            //connsSocket.setNeedClientAuth(true);
-            connsSocket.setEnabledCipherSuites(availableCiphers);
-
-        } catch (Exception e) {
-            //stopServer("Unable to open serverSocket: " + e.getMessage(), true);
-        }
+    protected void addNewFriendRequest(String nome,String friend) {
+        friendsRequest.put(nome, friend);
+    }
+    
+    protected void removeFriendRequest(String nome,String friend) {
+        friendsRequest.remove(nome, friend);
     }
 }

@@ -93,8 +93,9 @@ public class ServerHandler extends Thread{
                             }
                             String infoUser = username+":"+id;
                             int idBD = dbh.getID(username);
+                            String friends = dbh.getFriends(idBD);
                             JSONObject infoUserObj = createObjWithInfo(idBD);
-                            JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString(),infoUserObj);
+                            JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString()+"/"+friends,infoUserObj);
 
                             sendToClients(obj2.toString());
 
@@ -162,6 +163,86 @@ public class ServerHandler extends Thread{
                         server.adminUser = username;
                     }
 
+                }else if(codeNumber.equals("7")) {
+                    if(dbh.checkUser(text)) {
+                        boolean existsFriendship = dbh.checksFriendship(username,text);
+                        boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
+                        
+                        if(!existsFriendship && !existsFriendRequest) {
+                            dbh.addRequestFriend(username, text);
+                            JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
+                            for(ServerHandler sh : server.connections) {
+                                if(sh.username.equals(text)) {
+                                    sh.sendText(obj.toString());
+                                    break;
+                                }
+                            }
+                        }else {
+                            if(existsFriendship) {
+                                JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " is already your friend!", null);
+                                for(ServerHandler sh : server.connections) {
+                                    if(sh.username.equals(username)) {
+                                        sh.sendText(obj.toString());
+                                        break;
+                                    }
+                                }
+                            }else if(existsFriendRequest) {
+                                JSONObject obj = createObjWithData(codeNumber, username, "You already sent a friend request to "+ text + " !", null);
+                                for(ServerHandler sh : server.connections) {
+                                    if(sh.username.equals(username)) {
+                                        sh.sendText(obj.toString());
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }else {
+                        JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " doesn't exist!", null);
+                        for(ServerHandler sh : server.connections) {
+                            if(sh.username.equals(username)) {
+                                sh.sendText(obj.toString());
+                                break;
+                            }
+                        }
+                    }
+                    
+                    
+                }else if(codeNumber.equals("8")) {
+                    String userReceivedRequest = username;
+                    String userSentRequest = text.split(":")[1];
+                    String statusRequest = text.split(":")[0];
+
+                    if(dbh.checkRequestInvite(userSentRequest,userReceivedRequest)) {
+                        if(statusRequest.equals("accept")) {
+                            dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
+                            dbh.addFriend(userSentRequest, userReceivedRequest);
+                            JSONObject obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " accepted your invite!", null);
+                            for(ServerHandler sh : server.connections) {
+                                if(sh.username.equals(userSentRequest)) {
+                                    sh.sendText(obj.toString());
+                                    break;
+                                }
+                            }
+                        }else {
+                            dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
+                            JSONObject obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " declined your invite!", null);
+                            for(ServerHandler sh : server.connections) {
+                                if(sh.username.equals(userSentRequest)) {
+                                    sh.sendText(obj.toString());
+                                    break;
+                                }
+                            }
+                        }
+                    }else {
+                        JSONObject obj = createObjWithData("9", username, "Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
+                        for(ServerHandler sh : server.connections) {
+                            if(sh.username.equals(userReceivedRequest)) {
+                                sh.sendText(obj.toString());
+                                break;
+                            }
+                        }
+                    }
                 }
 
             }

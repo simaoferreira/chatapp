@@ -3,11 +3,12 @@ package client;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
 import controllers.ControllerLauncher;
 import dataHandler.AlertBox;
 
 public class Client extends Thread{
-    
+
     private ClientHandler ch;
     private String user;
     private Socket socket;
@@ -21,7 +22,7 @@ public class Client extends Thread{
     }
 
     public void runConnection() throws UnknownHostException, IOException {
-        socket = new Socket("127.0.0.1",32456);
+        socket = new Socket("localhost",32456);
         socket.setTcpNoDelay(true);
         ch = new ClientHandler(socket,this,client);
         ch.start();  	
@@ -65,6 +66,42 @@ public class Client extends Thread{
             String users = user+":"+userTarget;
             String code = "5";
             ch.sendMessage(code,users,text);
+        }
+
+    }
+
+
+    ////////////////CODE 7  ////////////////
+    public void sendRequestFriend() {
+        String textField = client.text;
+        String userTarget = textField.substring(11);
+        if(userTarget.equals(client.user)) {
+            ch.printError("You can't invite yourself!");
+        }else {
+            ch.sendMessage("7",user,userTarget);
+        }
+    }
+
+    ////////////////CODE 8  ////////////////
+    public void acceptFriendRequest() {
+        String textField = client.text;
+        if (textField.equals("/accept")) {
+
+        }else {
+            String userTarget = textField.substring(8);
+            ch.sendMessage("8", user, "accept:"+userTarget);
+        }
+
+    }
+
+    ////////////////CODE 8  ////////////////
+    public void declineFriendRequest() {
+        String textField = client.text;
+        if (textField.equals("/decline")) {
+
+        }else {
+            String userTarget = textField.substring(9);
+            ch.sendMessage("8", user, "decline:"+userTarget);
         }
 
     }

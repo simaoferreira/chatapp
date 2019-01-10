@@ -104,29 +104,34 @@ public class ControllerLauncher {
     private static final Border darkblue = new Border(new BorderStroke(Color.rgb(32,33,35),
             BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(3)));
 
-    private Client c;
-    private MediaPlayer mediaPlayer;
+    Client c;
+    public MediaPlayer mediaPlayer;
     private static final int MAX_CHARS = 12;
-    private String version;
-    private GridPane menuPane;
-    private Pane loginPane;
-    private Stage stage;
+    public String version;
+    public GridPane menuPane;
+    public Pane loginPane;
+    public Stage stage;
     public String user="";
     public String text;
     public String lastUserPrivate=""; 
     public String id="";
+    public Label mensagem;
+    public Label userOfMensagem;
     public int lvlUser;
     public int expUser;
     public int numMensagens;
     public int numWordsWritten;
-    private double xMensagem = 10;
-    private double yMensagem = 30;
-    private double xUserOfMensagem = 10;
-    private double yUserOfMensagem = 10;
-    private double height;
-    private ProtectionBadWords pbw = new ProtectionBadWords();
-    private Informations info = new Informations();
+    public double xMensagem = 10;
+    public double yMensagem = 30;
+    public double xUserOfMensagem = 10;
+    public double yUserOfMensagem = 10;
+    public double height;
+    public ProtectionBadWords pbw = new ProtectionBadWords();
+    public Informations info = new Informations();
+    public Notifications notify = new Notifications();
+    public Rectangle rec;
     public GridPane centeredLabel;
+    public boolean canConnect;
 
 
     @FXML
@@ -161,16 +166,24 @@ public class ControllerLauncher {
 
     @FXML
     public Label lblConnections;
-
-    @FXML
-    public Label lblListConnections;
-
+    
     @FXML
     public Button minimizeButton;
 
     @FXML
     public Button infoButton;
-
+    
+    @FXML
+    public Label labelFriends;
+    
+    @FXML
+    public ScrollPane scrollPaneFriends;
+    
+    @FXML
+    public Label labelUsersOnline;
+    
+    @FXML
+    public Label lblFriends;
 
     @FXML
     public Label lblversionFirst;
@@ -213,12 +226,12 @@ public class ControllerLauncher {
     public void initialize(String text,String user, String hour,String side,String isConnection) {
 
         Label userOfMensagem = new Label(user);
-        userOfMensagem.setStyle("-fx-font: normal 11px Helvetica");
+        userOfMensagem.setStyle("-fx-font: normal 11px \"Comic Sans MS\"");
         userOfMensagem.setUnderline(true);
         Label mensagem = new Label(text);
-        mensagem.setStyle("-fx-font: normal 11px Helvetica");
+        mensagem.setStyle("-fx-font: normal 11px \" Comic Sans MS\"");
         Label actualHour = new Label(hour);
-        actualHour.setStyle("-fx-font: normal 9px Helvetica");
+        actualHour.setStyle("-fx-font: normal 7px \" Comic Sans MS\"");
         mensagem.setMaxWidth(200);
         mensagem.setWrapText(true);
         centeredLabel = new GridPane();
@@ -234,6 +247,10 @@ public class ControllerLauncher {
             centeredLabel.add(mensagem, 0, 0);
             centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
             mensagem.setStyle("-fx-text-fill:#bf0000;");
+        }else if(isConnection.equals("3")){
+            centeredLabel.add(mensagem, 0, 0);
+            centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#0099ff; -fx-padding: 5 5 5 5;");
+            mensagem.setStyle("-fx-text-fill:#000000;");
         }else {
             centeredLabel.add(userOfMensagem, 0, 0);
             centeredLabel.add(mensagem, 0, 1);
@@ -265,7 +282,10 @@ public class ControllerLauncher {
 
             c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
             //mediaPlayer.play();
+
+
         }
+
     }
 
     public void updateSceneToMenu() {
@@ -324,6 +344,15 @@ public class ControllerLauncher {
         }else if(text.equals("/getinfo")) {
             c.requestInfoUser();
             txtField.setText("");
+        }else if(text.startsWith("/addfriend")){
+            c.sendRequestFriend();
+            txtField.setText("");
+        }else if(text.startsWith("/accept")){
+            c.acceptFriendRequest();
+            txtField.setText("");
+        }else if(text.startsWith("/decline")){
+            c.declineFriendRequest();
+            txtField.setText("");
         }else {
             if(text.startsWith("/")) {
                 txtField.setPromptText("Can´t recognize command! Go see info for details please.");
@@ -376,6 +405,15 @@ public class ControllerLauncher {
                 txtField.setText("");
             }else if(text.equals("/getinfo")) {
                 c.requestInfoUser();
+                txtField.setText("");
+            }else if(text.startsWith("/addfriend")){
+                c.sendRequestFriend();
+                txtField.setText("");
+            }else if(text.startsWith("/accept")){
+                c.acceptFriendRequest();
+                txtField.setText("");
+            }else if(text.startsWith("/decline")){
+                c.declineFriendRequest();
                 txtField.setText("");
             }else {
                 if(text.startsWith("/")) {
@@ -454,7 +492,7 @@ public class ControllerLauncher {
 
 
     public void connectToServer() throws UnknownHostException, IOException {
-
+        
     }
 
 }
