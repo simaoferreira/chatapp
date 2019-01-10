@@ -5,10 +5,10 @@ public class Informations {
     public String getTextCommands() {
         String text = " -> '/close'-close chat(terminate of process);\r\n" + 
                 " -> '/clear' - clear chat;\r\n" +
-                " -> '/getinfo' - get statistics;"
-                + " -> /addfriend username - add new friend"
-                + " -> /accept username - accept friend invite sent by username"
-                + " -> /decline username - decline friend invite sent by username";
+                " -> '/getinfo' - get statistics;\r\n"
+                + " -> /addfriend username - add new friend\r\n"
+                + " -> /accept username - accept friend invite sent by username\r\n"
+                + " -> /decline username - decline friend invite sent by username\r\n";
         return text;
     }
 
@@ -28,7 +28,7 @@ public class Informations {
                 + " -> Now is displayed time of messages.\n"
                 + " -> New Launcher!\n"
                 + " -> NEW statistics!\n"
-                + " -> NOW you can have friends! Go make friends right now!";
+                + " -> NOW you can have friends! Go make friends right now!\n";
 
         return text;
     }

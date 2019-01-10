@@ -454,7 +454,7 @@ public class ControllerLauncher {
     @FXML
     void openInfo(ActionEvent event) throws IOException {
         Stage infoStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../Controllers/info.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../controllers/info.fxml"));
         Pane infoPane = (Pane) loader.load();
         infoPane.setBorder(darkblue);
         infoPane.setStyle("-fx-background: #cc4b2a;");
