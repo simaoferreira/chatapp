@@ -166,22 +166,22 @@ public class ControllerLauncher {
 
     @FXML
     public Label lblConnections;
-    
+
     @FXML
     public Button minimizeButton;
 
     @FXML
     public Button infoButton;
-    
+
     @FXML
     public Label labelFriends;
-    
+
     @FXML
     public ScrollPane scrollPaneFriends;
-    
+
     @FXML
     public Label labelUsersOnline;
-    
+
     @FXML
     public Label lblFriends;
 
@@ -492,7 +492,7 @@ public class ControllerLauncher {
 
 
     public void connectToServer() throws UnknownHostException, IOException {
-        
+
     }
 
 }

@@ -171,40 +171,20 @@ public class ServerHandler extends Thread{
                         if(!existsFriendship && !existsFriendRequest) {
                             dbh.addRequestFriend(username, text);
                             JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
-                            for(ServerHandler sh : server.connections) {
-                                if(sh.username.equals(text)) {
-                                    sh.sendText(obj.toString());
-                                    break;
-                                }
-                            }
+                            sendToOneClient(text,obj.toString());
                         }else {
                             if(existsFriendship) {
                                 JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " is already your friend!", null);
-                                for(ServerHandler sh : server.connections) {
-                                    if(sh.username.equals(username)) {
-                                        sh.sendText(obj.toString());
-                                        break;
-                                    }
-                                }
+                                sendToOneClient(username,obj.toString());
                             }else if(existsFriendRequest) {
                                 JSONObject obj = createObjWithData(codeNumber, username, "You already sent a friend request to "+ text + " !", null);
-                                for(ServerHandler sh : server.connections) {
-                                    if(sh.username.equals(username)) {
-                                        sh.sendText(obj.toString());
-                                        break;
-                                    }
-                                }
+                                sendToOneClient(username,obj.toString());
                             }
                         }
                         
                     }else {
                         JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " doesn't exist!", null);
-                        for(ServerHandler sh : server.connections) {
-                            if(sh.username.equals(username)) {
-                                sh.sendText(obj.toString());
-                                break;
-                            }
-                        }
+                        sendToOneClient(username,obj.toString());
                     }
                     
                     
@@ -214,34 +194,21 @@ public class ServerHandler extends Thread{
                     String statusRequest = text.split(":")[0];
 
                     if(dbh.checkRequestInvite(userSentRequest,userReceivedRequest)) {
+                        JSONObject obj = null;
+                        
                         if(statusRequest.equals("accept")) {
                             dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
                             dbh.addFriend(userSentRequest, userReceivedRequest);
-                            JSONObject obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " accepted your invite!", null);
-                            for(ServerHandler sh : server.connections) {
-                                if(sh.username.equals(userSentRequest)) {
-                                    sh.sendText(obj.toString());
-                                    break;
-                                }
-                            }
+                            obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " accepted your invite!", null);
                         }else {
                             dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
-                            JSONObject obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " declined your invite!", null);
-                            for(ServerHandler sh : server.connections) {
-                                if(sh.username.equals(userSentRequest)) {
-                                    sh.sendText(obj.toString());
-                                    break;
-                                }
-                            }
+                            obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " declined your invite!", null);
                         }
+                        sendToOneClient(userSentRequest,obj.toString());
+                        
                     }else {
                         JSONObject obj = createObjWithData("9", username, "Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
-                        for(ServerHandler sh : server.connections) {
-                            if(sh.username.equals(userReceivedRequest)) {
-                                sh.sendText(obj.toString());
-                                break;
-                            }
-                        }
+                        sendToOneClient(userSentRequest,obj.toString());
                     }
                 }
 
@@ -253,6 +220,15 @@ public class ServerHandler extends Thread{
             e1.printStackTrace();
         }
 
+    }
+    
+    private void sendToOneClient(String username, String text) {
+        for(ServerHandler sh : server.connections) {
+            if(sh.username.equals(username)) {
+                sh.sendText(text);
+                break;
+            }
+        }
     }
 
     private void sendToClients(String textIn) {
@@ -272,7 +248,6 @@ public class ServerHandler extends Thread{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
     }
 

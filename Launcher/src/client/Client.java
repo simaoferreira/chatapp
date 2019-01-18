@@ -123,7 +123,6 @@ public class Client extends Thread{
 
     public void printError(String string) {
         ch.printError(string);
-
     }
 
     public void requestInfoUser() {

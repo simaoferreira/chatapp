@@ -1,7 +1,5 @@
 package client;
 
-
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -110,10 +108,12 @@ public class ClientHandler extends Thread{
                     }
 
                     codeNumber = objData.get("code").toString();
+
                     if(codeNumber.equals("6")) {
                         liveNews = objData.get("text").toString();
                         adminUser = username = objData.get("username").toString();
                     }
+
                     username = objData.get("username").toString();
                     text = objData.get("text").toString();
 
@@ -124,8 +124,6 @@ public class ClientHandler extends Thread{
                         mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
                         mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());	                    
                     }
-
-
 
                     Calendar cal = Calendar.getInstance();
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -180,12 +178,12 @@ public class ClientHandler extends Thread{
                             }
 
                             connections = text.split("/")[0];
-                            
+
 
                             textOutput = "The user '"+lastUser+"' just connected";
                             side = "left";
 
-                            
+
                             Platform.runLater(new Runnable() {
                                 @Override public void run() {
                                     if(username.equals(lastUser)) {

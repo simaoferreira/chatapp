@@ -51,12 +51,5 @@ public class Server {
             e.printStackTrace();
         }
     }
-    
-    protected void addNewFriendRequest(String nome,String friend) {
-        friendsRequest.put(nome, friend);
-    }
-    
-    protected void removeFriendRequest(String nome,String friend) {
-        friendsRequest.remove(nome, friend);
-    }
+
 }
