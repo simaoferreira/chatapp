@@ -17,7 +17,7 @@ public class ServerHandler extends Thread{
     private DataOutputStream dos;
     private String username;
     private String text;
-    private String codeNumber;
+    private int codeNumber;
     private String id;
     private boolean run = true;
     private String desconnectedUser;
@@ -57,159 +57,167 @@ public class ServerHandler extends Thread{
                 }
 
 
-                codeNumber = objData.get("code").toString();
+                codeNumber = Integer.parseInt(objData.get("code").toString());
                 username = objData.get("username").toString();
                 text = objData.get("text").toString();
 
 
                 System.out.println("Mensagem recebida "+objData.toString());
+                
+                JSONObject obj;
+                JSONObject infoUserObj;
+                String[] words;
+                int idBD;
+                
+                switch(codeNumber) {
+                    case 3: 
+                        obj = createObjWithData(codeNumber,"null","null",null);
+                        sendText(obj.toString());
+                        break;
+                    case 0:
+                        if(dbh.checkLogin(username, text)) {
+                            server.connections.add(this);
+                            if(!server.liveNews.equals("")) {
+                                JSONObject objNews = createObjWithData(6,server.adminUser,server.liveNews,null);
+                                this.sendText(objNews.toString());
+                            }
+                            System.out.println(this.getName());
+                            StringBuilder connections = new StringBuilder();
 
+                            if(server.connections.isEmpty()) {
+                                try {
+                                    dos.writeUTF("Nenhuma conexão!");
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }else {
+                                for(int i=0;i<server.connections.size();i++) {
+                                    connections.append(i+": "+server.connections.get(i).username+"\n");
+                                    if(server.connections.get(i).username.equals(username)) {
+                                        id=Integer.toString(i);
+                                    }
+                                }
+                                String infoUser = username+":"+id;
+                                idBD = dbh.getID(username);
+                                String friends = dbh.getFriends(idBD);
+                                infoUserObj = createObjWithInfo(idBD);
+                                JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString()+"/"+friends,infoUserObj);
 
-                if(codeNumber.equals("3")) {
-                    JSONObject obj = createObjWithData(codeNumber,"null","null",null);
-                    sendText(obj.toString());
-                }else if(codeNumber.equals("0")) { 
-                    if(dbh.checkLogin(username, text)) {
-                        server.connections.add(this);
-                        if(!server.liveNews.equals("")) {
-                            JSONObject objNews = createObjWithData("6",server.adminUser,server.liveNews,null);
-                            this.sendText(objNews.toString());
+                                sendToClients(obj2.toString());
+
+                            }
+                        }else {
+                            obj = createObjWithData(codeNumber,"User not found","",null);
+                            sendText(obj.toString());
                         }
-                        System.out.println(this.getName());
+                        break;
+                        
+                    case 2:
                         StringBuilder connections = new StringBuilder();
 
-                        if(server.connections.isEmpty()) {
-                            try {
-                                dos.writeUTF("Nenhuma conexão!");
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                        for(ServerHandler sh : server.connections) {
+                            if(sh.username.equals(username)) {
+                                desconnectedUser = sh.username;
+                                obj = createObjWithData(4,desconnectedUser,"null",null);
+                                sh.sendText(obj.toString());
+                                server.connections.remove(sh);
+                                break;
                             }
-                        }else {
-                            for(int i=0;i<server.connections.size();i++) {
-                                connections.append(i+": "+server.connections.get(i).username+"\n");
-                                if(server.connections.get(i).username.equals(username)) {
-                                    id=Integer.toString(i);
+                        }
+
+                        for(int i=0;i<server.connections.size();i++) {
+                            connections.append(i+": "+server.connections.get(i).username+"\n");
+                        }
+                        obj = createObjWithData(codeNumber,desconnectedUser,connections.toString(),null);
+                        System.out.println(obj.toString());
+
+                        sendToClients(obj.toString());
+                        break;
+                    case 1:
+                        words = text.split(" ");
+                        dbh.updateWordsWritten(username, words.length);
+                        idBD = dbh.getID(username);
+                        infoUserObj = createObjWithInfo(idBD);
+                        obj = createObjWithData(codeNumber,username,text,infoUserObj);
+                        sendToClients(obj.toString());
+                        break;
+                    case 5:
+                        String[] users = username.split(":");
+                        username = users[0];
+                        String targetUser = users[1];
+                        words = text.split(" ");
+                        dbh.updateWordsWritten(username, words.length);
+                        idBD = dbh.getID(username);
+                        infoUserObj = createObjWithInfo(idBD);
+                        int count=0;
+                        for(ServerHandler sh : server.connections) {
+                            if(sh.username.equals(username)) {
+                                obj = createObjWithData(codeNumber,username,text,infoUserObj);
+                                sh.sendText(obj.toString());
+                            }
+                            if(sh.username.equals(targetUser) || Integer.toString(count).equals(targetUser)) {
+                                obj = createObjWithData(codeNumber,username,text,infoUserObj);
+                                sh.sendText(obj.toString());
+                            }
+                            count++;
+                        }
+                        break;
+                    case 6:
+                        if(!text.equals("")) {
+                            obj = createObjWithData(codeNumber,username,text,null);
+                            sendToClients(obj.toString());
+                            server.liveNews = text;
+                            server.adminUser = username;
+                        }
+                        break;
+                    case 7:
+                        if(dbh.checkUser(text)) {
+                            boolean existsFriendship = dbh.checksFriendship(username,text);
+                            boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
+                            
+                            if(!existsFriendship && !existsFriendRequest) {
+                                dbh.addRequestFriend(username, text);
+                                obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
+                                sendToOneClient(text,obj.toString());
+                            }else {
+                                if(existsFriendship) {
+                                    obj = createObjWithData(codeNumber, username, "The user "+ text + " is already your friend!", null);
+                                    sendToOneClient(username,obj.toString());
+                                }else if(existsFriendRequest) {
+                                    obj = createObjWithData(codeNumber, username, "You already sent a friend request to "+ text + " !", null);
+                                    sendToOneClient(username,obj.toString());
                                 }
                             }
-                            String infoUser = username+":"+id;
-                            int idBD = dbh.getID(username);
-                            String friends = dbh.getFriends(idBD);
-                            JSONObject infoUserObj = createObjWithInfo(idBD);
-                            JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString()+"/"+friends,infoUserObj);
-
-                            sendToClients(obj2.toString());
-
-                        }
-                    }else {
-                        JSONObject obj = createObjWithData(codeNumber,"User not found","",null);
-                        sendText(obj.toString());
-                    }
-
-                }else if(codeNumber.equals("2")) {
-                    StringBuilder connections = new StringBuilder();
-
-                    for(ServerHandler sh : server.connections) {
-                        if(sh.username.equals(username)) {
-                            desconnectedUser = sh.username;
-                            JSONObject obj = createObjWithData("4",desconnectedUser,"null",null);
-                            sh.sendText(obj.toString());
-                            server.connections.remove(sh);
-                            break;
-                        }
-                    }
-
-                    for(int i=0;i<server.connections.size();i++) {
-                        connections.append(i+": "+server.connections.get(i).username+"\n");
-                    }
-                    JSONObject obj = createObjWithData(codeNumber,desconnectedUser,connections.toString(),null);
-                    System.out.println(obj.toString());
-
-                    sendToClients(obj.toString());
-
-                }else if(codeNumber.equals("1")){
-                    String[] words = text.split(" ");
-                    dbh.updateWordsWritten(username, words.length);
-                    int idBD = dbh.getID(username);
-                    JSONObject infoUserObj = createObjWithInfo(idBD);
-                    JSONObject obj = createObjWithData(codeNumber,username,text,infoUserObj);
-                    sendToClients(obj.toString());
-
-                }else if(codeNumber.equals("5")) {
-                    String[] users = username.split(":");
-                    username = users[0];
-                    String targetUser = users[1];
-                    String[] words = text.split(" ");
-                    dbh.updateWordsWritten(username, words.length);
-                    int idBD = dbh.getID(username);
-                    JSONObject infoUserObj = createObjWithInfo(idBD);
-                    int count=0;
-                    for(ServerHandler sh : server.connections) {
-                        if(sh.username.equals(username)) {
-                            JSONObject obj = createObjWithData(codeNumber,username,text,infoUserObj);
-                            sh.sendText(obj.toString());
-                        }
-                        if(sh.username.equals(targetUser) || Integer.toString(count).equals(targetUser)) {
-                            JSONObject obj = createObjWithData(codeNumber,username,text,infoUserObj);
-                            sh.sendText(obj.toString());
-                        }
-                        count++;
-                    }
-
-                }else if(codeNumber.equals("6")) {
-                    if(!text.equals("")) {
-                        JSONObject obj = createObjWithData(codeNumber,username,text,null);
-                        sendToClients(obj.toString());
-                        server.liveNews = text;
-                        server.adminUser = username;
-                    }
-
-                }else if(codeNumber.equals("7")) {
-                    if(dbh.checkUser(text)) {
-                        boolean existsFriendship = dbh.checksFriendship(username,text);
-                        boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
-                        
-                        if(!existsFriendship && !existsFriendRequest) {
-                            dbh.addRequestFriend(username, text);
-                            JSONObject obj = createObjWithData(codeNumber, username, "The user "+ username + " sent you a friend request!", null);
-                            sendToOneClient(text,obj.toString());
+                            
                         }else {
-                            if(existsFriendship) {
-                                JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " is already your friend!", null);
-                                sendToOneClient(username,obj.toString());
-                            }else if(existsFriendRequest) {
-                                JSONObject obj = createObjWithData(codeNumber, username, "You already sent a friend request to "+ text + " !", null);
-                                sendToOneClient(username,obj.toString());
+                            obj = createObjWithData(codeNumber, username, "The user "+ text + " doesn't exist!", null);
+                            sendToOneClient(username,obj.toString());
+                        }
+                        
+                        break;
+                    case 8:
+                        String userReceivedRequest = username;
+                        String userSentRequest = text.split(":")[1];
+                        String statusRequest = text.split(":")[0];
+
+                        if(dbh.checkRequestInvite(userSentRequest,userReceivedRequest)) {
+                            obj = null;
+                            
+                            if(statusRequest.equals("accept")) {
+                                dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
+                                dbh.addFriend(userSentRequest, userReceivedRequest);
+                                obj = createObjWithData(9, username, "The user "+ userReceivedRequest + " accepted your invite!", null);
+                            }else {
+                                dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
+                                obj = createObjWithData(9, username, "The user "+ userReceivedRequest + " declined your invite!", null);
                             }
-                        }
-                        
-                    }else {
-                        JSONObject obj = createObjWithData(codeNumber, username, "The user "+ text + " doesn't exist!", null);
-                        sendToOneClient(username,obj.toString());
-                    }
-                    
-                    
-                }else if(codeNumber.equals("8")) {
-                    String userReceivedRequest = username;
-                    String userSentRequest = text.split(":")[1];
-                    String statusRequest = text.split(":")[0];
-
-                    if(dbh.checkRequestInvite(userSentRequest,userReceivedRequest)) {
-                        JSONObject obj = null;
-                        
-                        if(statusRequest.equals("accept")) {
-                            dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
-                            dbh.addFriend(userSentRequest, userReceivedRequest);
-                            obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " accepted your invite!", null);
+                            sendToOneClient(userSentRequest,obj.toString());
+                            
                         }else {
-                            dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
-                            obj = createObjWithData("9", username, "The user "+ userReceivedRequest + " declined your invite!", null);
+                            obj = createObjWithData(9, username, "Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
+                            sendToOneClient(userSentRequest,obj.toString());
                         }
-                        sendToOneClient(userSentRequest,obj.toString());
-                        
-                    }else {
-                        JSONObject obj = createObjWithData("9", username, "Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
-                        sendToOneClient(userSentRequest,obj.toString());
-                    }
+                        break;
                 }
 
             }
@@ -222,7 +230,7 @@ public class ServerHandler extends Thread{
 
     }
     
-    private void sendToOneClient(String username, String text) {
+    private void sendToOneClient(String username, String text) throws IOException {
         for(ServerHandler sh : server.connections) {
             if(sh.username.equals(username)) {
                 sh.sendText(text);
@@ -231,7 +239,7 @@ public class ServerHandler extends Thread{
         }
     }
 
-    private void sendToClients(String textIn) {
+    private void sendToClients(String textIn) throws IOException {
 
         for(int i=0;i<server.connections.size();i++) {
             ServerHandler sh = server.connections.get(i);
@@ -239,22 +247,27 @@ public class ServerHandler extends Thread{
         }
 
     }
-
-    private void sendText(String textIn) {
-
-        try {
-            dos.writeUTF(textIn);
-            dos.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
+    
+    protected void updateInfoConnections() throws IOException {
+        StringBuilder connections = new StringBuilder();
+        
+        for(int i=0;i<server.connections.size();i++) {
+            connections.append(i+": "+server.connections.get(i).username+"\n");
         }
+        
+        JSONObject obj = createObjWithData(10,null,connections.toString(),null);
+        sendToClients(obj.toString()); 
+    }
 
+    protected void sendText(String textIn) throws IOException {
+        dos.writeUTF(textIn);
+        dos.flush();
     }
 
     @SuppressWarnings("unchecked")
-    private JSONObject createObjWithData(String code, String user, String text,JSONObject info) {
+    private JSONObject createObjWithData(int code, String user, String text,JSONObject info) {
         JSONObject obj = new JSONObject();
-        obj.put("code", code);
+        obj.put("code", String.valueOf(code));
         obj.put("username", user);
         obj.put("text",text);
         obj.put("info", info);

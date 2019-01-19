@@ -8,6 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import handlers.DataBaseCatalog;
@@ -42,6 +43,17 @@ public class Server {
             dbh.initialize();
 
             while(run) {
+                Iterator<ServerHandler> iter = connections.iterator();
+                while(iter.hasNext()){
+                    ServerHandler sh = iter.next();
+                    try {
+                        sh.sendText("");
+                    }catch (IOException e) {
+                        sh.updateInfoConnections();
+                        iter.remove();
+                    }
+
+                }
                 Socket s = ss.accept();
                 ServerHandler sh = new ServerHandler(dbh,s,this);
                 sh.start();
