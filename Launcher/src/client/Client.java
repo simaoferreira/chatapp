@@ -105,6 +105,11 @@ public class Client extends Thread{
         }
 
     }
+    
+    ////////////////CODE 10  ////////////////
+    public void registerAccount(String username,String password) {
+        ch.sendMessage("10", username, password);
+    }
 
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
         if(lastUserPrivate.equals("")) {
@@ -126,7 +131,6 @@ public class Client extends Thread{
     }
 
     public void requestInfoUser() {
-        System.out.println(client.lvlUser);
         String text = client.user + "\r\n\r\n"+
                 " Level: "+client.lvlUser+"\r\n" + 
                 " Experience: "+client.expUser+"\r\n" + 

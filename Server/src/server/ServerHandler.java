@@ -100,6 +100,9 @@ public class ServerHandler extends Thread{
                             String infoUser = username+":"+id;
                             idBD = dbh.getID(username);
                             String friends = dbh.getFriends(idBD);
+                            if(friends.equals("")) {
+                                friends = "You don't have friends yet!";
+                            }
                             infoUserObj = createObjWithInfo(idBD);
                             JSONObject obj2 = createObjWithData(codeNumber,infoUser,connections.toString()+"/"+friends,infoUserObj);
 
@@ -218,6 +221,8 @@ public class ServerHandler extends Thread{
                         sendToOneClient(userSentRequest,obj.toString());
                     }
                     break;
+                case 10:
+                    dbh.addUser(username, text);
                 }
 
             }

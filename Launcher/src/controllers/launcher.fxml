@@ -19,10 +19,6 @@
          </image>
       </ImageView>
       <Circle fx:id="circleLogin" fill="#202123" layoutX="600.0" layoutY="520.0" radius="156.0" stroke="#d4af37" strokeType="INSIDE" strokeWidth="3.0" />
-      <Button fx:id="loginButton" layoutX="532.0" layoutY="566.0" mnemonicParsing="false" onAction="#loginKeyButton" prefHeight="66.0" prefWidth="135.0" stylesheets="@buttonLogin.css" text="Login">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
       <ImageView fitHeight="219.0" fitWidth="629.0" layoutX="286.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@PowerOfGemsLogo.png" />
@@ -39,18 +35,68 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="usernameTextField" layoutX="522.0" layoutY="428.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Username..." style="-fx-background-color: null; -fx-text-fill: white;">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextField>
-      <PasswordField fx:id="passwordTextField" layoutX="522.0" layoutY="488.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Password..." style="-fx-background-color: null; -fx-text-fill: white;">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </PasswordField>
-      <Separator layoutX="530.0" layoutY="456.0" prefHeight="0.0" prefWidth="142.0" />
-      <Separator layoutX="530.0" layoutY="519.0" prefHeight="0.0" prefWidth="142.0" />
-      <Label fx:id="lblerror" layoutX="512.0" layoutY="533.0" text="Username or password incorrect!" textFill="#da1414" visible="false" />
+      <Pane fx:id="loginPaneFields" layoutX="493.0" layoutY="413.0" prefHeight="213.0" prefWidth="216.0">
+         <children>
+            <Button fx:id="loginButton" layoutX="61.0" layoutY="131.0" mnemonicParsing="false" onAction="#loginKeyButton" prefHeight="49.0" prefWidth="95.0" stylesheets="@buttonLogin.css" text="Login">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="usernameTextField" layoutX="31.0" layoutY="20.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Username..." style="-fx-background-color: null; -fx-text-fill: white;">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordTextField" layoutX="31.0" layoutY="57.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Password..." style="-fx-background-color: null; -fx-text-fill: white;">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </PasswordField>
+            <Separator layoutX="38.0" layoutY="48.0" prefHeight="0.0" prefWidth="142.0" />
+            <Separator layoutX="38.0" layoutY="87.0" prefHeight="0.0" prefWidth="142.0" />
+            <Label fx:id="lblerror" layoutX="22.0" layoutY="98.0" text="Username or password incorrect!" textFill="#da1414" visible="false">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCreateAccount" layoutX="50.0" layoutY="190.0" onMouseClicked="#changeToRegister" text="Create a new account" textFill="#d9b216" underline="true">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="registerPane" layoutX="493.0" layoutY="413.0" prefHeight="213.0" prefWidth="216.0" visible="false">
+         <children>
+            <Button fx:id="registerButton" layoutX="37.0" layoutY="139.0" mnemonicParsing="false" onAction="#registerKeyButton" prefHeight="51.0" prefWidth="142.0" stylesheets="@buttonLogin.css" text="Register">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="usernameTextFieldRegister" layoutX="33.0" layoutY="20.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Username..." style="-fx-background-color: null; -fx-text-fill: white;">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordTextFieldRegister" layoutX="31.0" layoutY="59.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Password..." style="-fx-background-color: null; -fx-text-fill: white;">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </PasswordField>
+            <Separator layoutX="37.0" layoutY="49.0" prefHeight="0.0" prefWidth="142.0" />
+            <Separator layoutX="40.0" layoutY="88.0" prefHeight="0.0" prefWidth="142.0" />
+            <Label fx:id="lblLoginAccount" layoutX="37.0" layoutY="199.0" onMouseClicked="#changeToLogin" text="I already have an account" textFill="#d9b216" underline="true">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="38.0" layoutY="120.0" prefHeight="0.0" prefWidth="142.0" />
+            <PasswordField fx:id="passwordAgainTextFieldRegister" layoutX="31.0" layoutY="91.0" onKeyPressed="#loginKeyPressed" prefHeight="31.0" prefWidth="155.0" promptText="Repeat Password..." style="-fx-background-color: null; -fx-text-fill: white;">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
    </children>
 </Pane>

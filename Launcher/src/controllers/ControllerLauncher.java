@@ -27,6 +27,7 @@ import javafx.scene.control.TextFormatter;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderStrokeStyle;
@@ -109,7 +110,7 @@ public class ControllerLauncher {
     private static final int MAX_CHARS = 12;
     public String version;
     public GridPane menuPane;
-    public Pane loginPane;
+    private Pane loginPane;
     public Stage stage;
     public String user="";
     public String text;
@@ -132,6 +133,30 @@ public class ControllerLauncher {
     public Rectangle rec;
     public GridPane centeredLabel;
     public boolean canConnect;
+
+    @FXML
+    private TextField passwordTextFieldRegister;
+
+    @FXML
+    private Pane loginPaneFields;
+    
+    @FXML
+    private Label lblCreateAccount;
+
+    @FXML
+    private Label lblLoginAccount;
+
+    @FXML
+    private TextField passwordAgainTextFieldRegister;
+
+    @FXML
+    private Button registerButton;
+
+    @FXML
+    private Pane registerPane;
+
+    @FXML
+    private TextField usernameTextFieldRegister;
 
     @FXML
     public Label userLbl;
@@ -276,7 +301,36 @@ public class ControllerLauncher {
 
     }
 
+    
+    @FXML
+    void changeToLogin(MouseEvent event) {
+        registerPane.setVisible(false);
+        loginPaneFields.setVisible(true);
+    }
+    
+    @FXML
+    void registerKeyButton(ActionEvent event) {
+        String username = usernameTextFieldRegister.getText();
+        String password = passwordTextFieldRegister.getText();
+        String passwordAgain = passwordAgainTextFieldRegister.getText();
+        if(passwordAgain.equals(password)) {
+            c.registerAccount(username, password);
+        }else {
+            passwordAgainTextFieldRegister.promptTextProperty().set("Passwords don't match!");
+        }
+        
+    }
+    
+    @FXML
+    void changeToRegister(MouseEvent event) {
+        loginPaneFields.setVisible(false);
+        registerPane.setVisible(true);
+    }
 
+    @FXML
+    void openInfoByLabel(MouseEvent  event) {
+        c.requestInfoUser();
+    }
 
     @FXML
     void loginKeyPressed(KeyEvent event) throws IOException {
