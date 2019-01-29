@@ -55,6 +55,11 @@
                </font>
             </Label>
             <Line endY="570.0" layoutX="620.0" layoutY="40.0" strokeWidth="2.0" />
+            <Label fx:id="userLbl" layoutX="13.0" layoutY="7.0" onMouseClicked="#openInfoByLabel">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane prefHeight="597.0" prefWidth="411.0" GridPane.columnIndex="1">

@@ -133,6 +133,8 @@ public class ControllerLauncher {
     public GridPane centeredLabel;
     public boolean canConnect;
 
+    @FXML
+    public Label userLbl;
 
     @FXML
     public ScrollPane connectionsScrollPane;

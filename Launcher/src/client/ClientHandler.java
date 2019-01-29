@@ -186,6 +186,7 @@ public class ClientHandler extends Thread{
 
                             Platform.runLater(new Runnable() {
                                 @Override public void run() {
+                                    /**
                                     if(username.equals(lastUser)) {
                                         try {
                                             notify.displayTray(lastUser);
@@ -195,7 +196,9 @@ public class ClientHandler extends Thread{
                                             e.printStackTrace();
                                         }
                                     }
+                                    */
                                     mainClient.updateSceneToMenu();
+                                    mainClient.userLbl.setText(lastUser);
                                 }
                             });
 
