@@ -270,6 +270,14 @@ public class ControllerLauncher {
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
 			mensagem.setStyle("-fx-text-fill:#e5ff00;");
+			
+			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			    @Override
+			    public void handle(MouseEvent mouseEvent) {
+			    	AlertBox.display("Details", user + " connected at "+hour,false);
+			    }
+			});
+			
 		}else if(isConnection.equals("2")){
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
@@ -283,21 +291,39 @@ public class ControllerLauncher {
 			centeredLabel.add(mensagem, 0, 1);
 			centeredLabel.add(actualHour, 0, 2);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
+			
 		}
 
 		if(side.equals("left")) {
 			centeredLabel.setLayoutX(xUserOfMensagem);
 			centeredLabel.setLayoutY(yUserOfMensagem);
+			
+			if(!isConnection.equals("1") && !isConnection.equals("2") && !isConnection.equals("3")) {
+				centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+				    @Override
+				    public void handle(MouseEvent mouseEvent) {
+				    	AlertBox.display("Details", user + " sent this message at "+hour,false);
+				    }
+				});
+			}
 		}else {
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#1e3563; -fx-padding: 5 5 5 5;");
 			centeredLabel.setLayoutX(xUserOfMensagem+300);
 			centeredLabel.setLayoutY(yUserOfMensagem);
+			
+			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			    @Override
+			    public void handle(MouseEvent mouseEvent) {
+			    	AlertBox.display("Details", "You sent message at "+hour,false);
+			    }
+			});
 		}
 
 		centeredLabel.heightProperty().addListener((obs, oldVal, newVal) -> {
 			height = centeredLabel.getHeight();
 			yUserOfMensagem = yUserOfMensagem+height+10;
 		});
+		
 
 	}
 
