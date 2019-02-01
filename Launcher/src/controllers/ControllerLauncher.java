@@ -282,10 +282,26 @@ public class ControllerLauncher {
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
 			mensagem.setStyle("-fx-text-fill:#bf0000;");
+			
+			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			    @Override
+			    public void handle(MouseEvent mouseEvent) {
+			    	AlertBox.display("Details", user + " disconnected at "+hour,false);
+			    }
+			});
+			
 		}else if(isConnection.equals("3")){
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#0099ff; -fx-padding: 5 5 5 5;");
 			mensagem.setStyle("-fx-text-fill:#000000;");
+			
+			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			    @Override
+			    public void handle(MouseEvent mouseEvent) {
+			    	AlertBox.display("Details", text+ " at "+hour,false);
+			    }
+			});
+			
 		}else {
 			centeredLabel.add(userOfMensagem, 0, 0);
 			centeredLabel.add(mensagem, 0, 1);
