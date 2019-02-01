@@ -59,7 +59,18 @@ public class SQLiteHandler {
                         + "foreign key(id) references users(id),"
                         + "primary key(id));");
             }
-            
+            /**
+            ResultSet resTabelaUsersProfile = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersProfile'");
+            if( !resTabelaUsersProfile.next()) {
+                Statement state2 = con.createStatement();
+                state2.execute("CREATE TABLE usersProfile(id integer,"
+                        + "firstName varchar(20),"
+                        + "lastName varchar(20),"
+                        + "age integer,"
+                        + "foreign key(id) references users(id),"
+                        + "primary key(id));");
+            }
+            */
             ResultSet resTabelaUsersFriends = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersFriends'");
             if( !resTabelaUsersFriends.next()) {
                 Statement state2 = con.createStatement();
@@ -107,6 +118,7 @@ public class SQLiteHandler {
         }
 
     }
+    
     
     protected void addRequestFriend(int username,int targetRequest) throws ClassNotFoundException, SQLException {
         if(con == null) {
@@ -182,7 +194,42 @@ public class SQLiteHandler {
         prep.setInt(2,id);
         prep.executeUpdate();
     }
+    
+    protected void changeFirstName(String username,String newFirstName) throws SQLException, ClassNotFoundException {
+        if(con == null) {
+            getConnection();
+        }
 
+        int id = getID(username);
+        PreparedStatement prep = con.prepareStatement("UPDATE usersProfile SET firstName = ? WHERE id = ?");
+        prep.setString(1, newFirstName);
+        prep.setInt(2,id);
+        prep.executeUpdate();
+    }
+    
+    protected void changeLastName(String username,String newLastName) throws SQLException, ClassNotFoundException {
+        if(con == null) {
+            getConnection();
+        }
+
+        int id = getID(username);
+        PreparedStatement prep = con.prepareStatement("UPDATE usersProfile SET lastName = ? WHERE id = ?");
+        prep.setString(1, newLastName);
+        prep.setInt(2,id);
+        prep.executeUpdate();
+    }
+    
+    protected void changeAge(String username,int age) throws SQLException, ClassNotFoundException {
+        if(con == null) {
+            getConnection();
+        }
+
+        int id = getID(username);
+        PreparedStatement prep = con.prepareStatement("UPDATE usersProfile SET age = ? WHERE id = ?");
+        prep.setInt(1,age);
+        prep.setInt(2,id);
+        prep.executeUpdate();
+    }
 
     protected void updateWordsWritten(String username, int n) throws SQLException, ClassNotFoundException {
         if(con == null) {

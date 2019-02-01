@@ -95,7 +95,49 @@ public class DataBaseCatalog {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Change first name of user
+     * @param username - the user that wants to change first name
+     * @param newFirstName -  the new first name
+     */
+    public void changeFirstName(String username,String newFirstName) {
+    	try {
+			sql.changeFirstName(username, newFirstName);
+		} catch (ClassNotFoundException | SQLException e) {
+			System.err.println("Error changing first name of user!");
+			e.printStackTrace();
+		}
+    }
 
+    /**
+     * Change last name of user
+     * @param username - the user that wants to change last name
+     * @param newFirstName -  the new last name
+     */
+    public void changeLastName(String username,String newLastName) {
+    	try {
+			sql.changeLastName(username, newLastName);
+		} catch (ClassNotFoundException | SQLException e) {
+			System.err.println("Error changing last name of user!");
+			e.printStackTrace();
+		}
+    }
+    
+    /**
+     * Change age of user
+     * @param username - the user that wants to change age
+     * @param age -  the new age
+     */
+    public void changeAge(String username,int age) {
+    	try {
+			sql.changeAge(username, age);
+		} catch (ClassNotFoundException | SQLException e) {
+			System.err.println("Error changing age of user!");
+			e.printStackTrace();
+		}
+    }
+    
     /**
      * Update user experience
      * @param username - Username of user
@@ -137,6 +179,12 @@ public class DataBaseCatalog {
         return false;
     }
     
+    /**
+     * Checks if already exists a request invite from username to userRequestedFriend
+     * @param username - the username that send request
+     * @param userRequestedFriend -  the username that got the request
+     * @return true if already exists this request otherwise false
+     */
     public boolean checkRequestInvite(String username,String userRequestedFriend) {
         int user = getID(username);
         int friend = getID(userRequestedFriend);
@@ -149,6 +197,12 @@ public class DataBaseCatalog {
         return false;
     }
     
+    /**
+     * Checks if a specific friendship exists
+     * @param username - username one
+     * @param userFriend - username two
+     * @return true if already exists otherwise false
+     */
     public boolean checksFriendship(String username, String userFriend) {
         int user = getID(username);
         int friend = getID(userFriend);
