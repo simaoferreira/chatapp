@@ -161,16 +161,6 @@ public class DataBaseCatalog {
         return false;
     }   
     
-    public boolean checkUser(String username) {
-        try {
-            return sql.checkUser(username);
-        } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to check user!");
-            e.printStackTrace();
-        }
-        return false;
-    }  
-    
 
     /**
      * Get user id in system

@@ -174,7 +174,7 @@ public class ServerHandler extends Thread{
                     }
                     break;
                 case 7:
-                    if(dbh.checkUser(text)) {
+                    if(dbh.estaRegistado(text)) {
                         boolean existsFriendship = dbh.checksFriendship(username,text);
                         boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
 
@@ -222,7 +222,14 @@ public class ServerHandler extends Thread{
                     }
                     break;
                 case 10:
-                    dbh.addUser(username, text);
+                	if(dbh.estaRegistado(username)) {
+                		obj = createObjWithData(codeNumber,"null","The username \""+username+"\" is already registered",null);
+                	}else {
+                		obj = createObjWithData(codeNumber,username,"User registered! Now you can login!",null);
+                		dbh.addUser(username, text);
+                	}
+                	sendText(obj.toString());
+                    
                 }
 
             }

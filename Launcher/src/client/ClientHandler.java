@@ -17,7 +17,12 @@ import org.json.simple.parser.ParseException;
 import controllers.ControllerLauncher;
 import dataHandler.AlertBox;
 import dataHandler.Notifications;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.util.Duration;
 
 public class ClientHandler extends Thread{
 
@@ -128,14 +133,14 @@ public class ClientHandler extends Thread{
                     actualTime = sdf.format(cal.getTime());
                     System.out.println("Reply:" +reply);
 
-                    /**
+                    
 					Animation animation = new Timeline(
 					        new KeyFrame(Duration.seconds(0.1),
 					            new KeyValue(mainClient.chatScrollPane.vvalueProperty(), 1)),
 							new KeyFrame(Duration.seconds(0.1),
 									new KeyValue(mainClient.connectionsScrollPane.vvalueProperty(), 1)));
 					animation.play();
-                     */
+                     
 
                     if(codeNumber.equals("3")){
                         stChat.setLength(0);
@@ -144,7 +149,7 @@ public class ClientHandler extends Thread{
                         if(username.equals("User not found")) {
                             Platform.runLater(new Runnable() {
                                 @Override public void run() {
-                                    mainClient.passwordTextField.setText("");
+                                    mainClient.passwordTextField.clear();
                                     mainClient.lblerror.setVisible(true);
                                     Timer t = new Timer(1500, new ActionListener() {
 
@@ -263,6 +268,22 @@ public class ClientHandler extends Thread{
                         textOutput = text;
                         isConnection = "3";
                         atualizarClient = "1";
+                    }else if(codeNumber.equals("10")){
+                    	Platform.runLater(new Runnable() {
+                            @Override public void run() {
+                            	AlertBox.display("Details",text,false);
+                            }
+                        });
+                    	if(username.equals("null")) {
+                    		mainClient.clearRegisterPane();
+                    		Platform.runLater(new Runnable() {
+                                @Override public void run() {
+                                	mainClient.usernameTextFieldRegister.requestFocus();
+                                }
+                            });
+                    	}else {
+                    		mainClient.changeToLoginAlternative();
+                    	}
                     }
 
                     if(atualizarClient.equals("1")) {
