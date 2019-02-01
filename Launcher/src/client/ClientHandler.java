@@ -5,12 +5,10 @@ import java.util.Calendar;
 
 import javax.swing.Timer;
 
-import java.awt.AWTException;
 import java.awt.event.ActionListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.Socket;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

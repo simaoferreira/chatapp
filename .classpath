@@ -3,9 +3,9 @@
 	<classpathentry kind="src" path="Launcher/src"/>
 	<classpathentry kind="src" path="Server/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/simao/OneDrive/Ambiente de Trabalho/Libraries/gson-2.6.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/simao/OneDrive/Ambiente de Trabalho/Libraries/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/simao/OneDrive/Ambiente de Trabalho/Libraries/mysql-connector-java-8.0.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/simao/OneDrive/Ambiente de Trabalho/Libraries/sqlite-jdbc-3.8.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/simao/Desktop/eclipse/Libraries/gson-2.6.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/simao/Desktop/eclipse/Libraries/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/simao/Desktop/eclipse/Libraries/mysql-connector-java-8.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/simao/Desktop/eclipse/Libraries/sqlite-jdbc-3.8.6.jar"/>
 	<classpathentry kind="output" path="Launcher/bin"/>
 </classpath>
