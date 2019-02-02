@@ -13,7 +13,7 @@ public class ConnectDB {
             //bd.updateWordsWritten("berunoxxx",14);
             //bd.addFriend(1, 2);
             //bd.removeRequestFriend(1, 2);
-        	bd.removeFriend(1, 5);
+        	//bd.removeFriend(1, 5);
             bd.getInfoPlayers();
             bd.getUsers();
             bd.getFriends();

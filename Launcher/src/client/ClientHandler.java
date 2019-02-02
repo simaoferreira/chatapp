@@ -82,7 +82,7 @@ public class ClientHandler extends Thread{
         return obj;
     }
 
-    public void run() {
+    public synchronized void run() {
         try {
             dis = new DataInputStream(socket.getInputStream());
             dos = new DataOutputStream(socket.getOutputStream());
@@ -99,33 +99,29 @@ public class ClientHandler extends Thread{
 
                     isConnection = "0";
                     atualizarClient = "0";
+                    codeNumber = "-1";
+                    username = "";
+                    text = "";
 
                     String reply = dis.readUTF();
                     JSONParser parser = new JSONParser();
 
+                    if(!reply.equals("")) {
+                    	try {
+                            objData = (JSONObject) parser.parse(reply);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                    	
+                    	codeNumber = objData.get("code").toString();
 
-                    try {
-                        objData = (JSONObject) parser.parse(reply);
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
+                        if(codeNumber.equals("6")) {
+                            liveNews = objData.get("text").toString();
+                            adminUser = username = objData.get("username").toString();
+                        }
 
-                    codeNumber = objData.get("code").toString();
-
-                    if(codeNumber.equals("6")) {
-                        liveNews = objData.get("text").toString();
-                        adminUser = username = objData.get("username").toString();
-                    }
-
-                    username = objData.get("username").toString();
-                    text = objData.get("text").toString();
-
-                    if((codeNumber.equals("5") || codeNumber.equals("1"))) {
-                        info = (JSONObject) objData.get("info");
-                        mainClient.lvlUser = Integer.parseInt(info.get("lvlUser").toString());
-                        mainClient.expUser = Integer.parseInt(info.get("expUser").toString());
-                        mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
-                        mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());	                    
+                        username = objData.get("username").toString();
+                        text = objData.get("text").toString();
                     }
 
                     Calendar cal = Calendar.getInstance();
@@ -140,7 +136,7 @@ public class ClientHandler extends Thread{
 							new KeyFrame(Duration.seconds(0.1),
 									new KeyValue(mainClient.connectionsScrollPane.vvalueProperty(), 1)));
 					animation.play();
-                     
+                    
 
                     if(codeNumber.equals("3")){
                         stChat.setLength(0);
@@ -200,7 +196,7 @@ public class ClientHandler extends Thread{
                                         }
                                     }
                                     */
-                                    mainClient.updateSceneToMenu();
+                                	mainClient.updateSceneToMenu();
                                     mainClient.userLbl.setText(lastUser);
                                 }
                             });
@@ -248,6 +244,11 @@ public class ClientHandler extends Thread{
                     }else if(codeNumber.equals("1")){
                         if (username.equals(mainClient.user)) {
                             side = "right";
+                            info = (JSONObject) objData.get("info");
+                            mainClient.lvlUser = Integer.parseInt(info.get("lvlUser").toString());
+                            mainClient.expUser = Integer.parseInt(info.get("expUser").toString());
+                            mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
+                            mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());	
                         }else {
                             side = "left";
                         }
@@ -316,11 +317,12 @@ public class ClientHandler extends Thread{
                     		mainClient.changeToLoginAlternative();
                     	}
                     }
-
+                    
+					
                     if(atualizarClient.equals("1")) {
                         Platform.runLater(new Runnable() {
                             @Override public void run() {
-                                mainClient.initialize("> "+textOutput,userToSend,actualTime,side,isConnection);
+                                mainClient.printMessage("> "+textOutput,userToSend,actualTime,side,isConnection);
                                 mainClient.chatPane.getChildren().add(mainClient.centeredLabel);
                                 mainClient.lblConnections.setText(connections);	
                             }

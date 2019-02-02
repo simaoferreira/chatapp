@@ -292,7 +292,6 @@ public class ControllerLauncher {
 
 	@FXML
 	public void addFriendPane(String nome) {
-		System.out.println("y: "+ yFriendUser);
 		Label mensagem = new Label(nome);
 		Label infoUser = new Label("Details not implemented yet!");
 		infoUser.setStyle("-fx-font: normal 11px \" Comic Sans MS\"");
@@ -315,7 +314,7 @@ public class ControllerLauncher {
 	}
 	
 	@FXML
-	public void initialize(String text,String user, String hour,String side,String isConnection) {
+	public void printMessage(String text,String user, String hour,String side,String isConnection) {
 
 		Label userOfMensagem = new Label(user);
 		userOfMensagem.setStyle("-fx-font: normal 11px \"Comic Sans MS\"");

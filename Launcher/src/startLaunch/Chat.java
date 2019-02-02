@@ -9,7 +9,10 @@ public class Chat extends Application{
     private static final String version = "v0.1.50";
 
     public static void main(String[] args) {
-        Application.launch(args);
+    	try {
+    	    Application.launch(args);
+    	    
+    	} catch (IllegalStateException e) {}
     }
 
     @Override
