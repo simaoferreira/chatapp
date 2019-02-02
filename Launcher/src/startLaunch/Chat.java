@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 public class Chat extends Application{
 
-    private static final String version = "v0.1.00";
+    private static final String version = "v0.1.50";
 
     public static void main(String[] args) {
         Application.launch(args);

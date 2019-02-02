@@ -209,15 +209,19 @@ public class ServerHandler extends Thread{
                         if(statusRequest.equals("accept")) {
                             dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
                             dbh.addFriend(userSentRequest, userReceivedRequest);
-                            obj = createObjWithData(9, username, "The user "+ userReceivedRequest + " accepted your invite!", null);
+                            obj = createObjWithData(9, userReceivedRequest, "accept:The user "+ userReceivedRequest + " accepted your invite!", null);
+                            sendToOneClient(userSentRequest,obj.toString());
+                            obj = createObjWithData(9, userSentRequest, "info:The user "+ userSentRequest + " see that you accepted your invite!", null);
+                            sendToOneClient(userReceivedRequest,obj.toString());
                         }else {
                             dbh.removeRequestFriend(userSentRequest, userReceivedRequest);
-                            obj = createObjWithData(9, username, "The user "+ userReceivedRequest + " declined your invite!", null);
+                            obj = createObjWithData(9, username, "decline:The user "+ userReceivedRequest + " declined your invite!", null);
+                            sendToOneClient(userSentRequest,obj.toString());
                         }
-                        sendToOneClient(userSentRequest,obj.toString());
+                        
 
                     }else {
-                        obj = createObjWithData(9, username, "Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
+                        obj = createObjWithData(9, username, "decline:Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
                         sendToOneClient(userSentRequest,obj.toString());
                     }
                     break;

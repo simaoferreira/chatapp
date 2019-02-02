@@ -39,7 +39,7 @@
             </ScrollPane>
             <ScrollPane fx:id="scrollPaneFriends" layoutX="630.0" layoutY="71.0" prefHeight="525.0" prefWidth="200.0" style="-fx-background-color: transparent;">
                <content>
-                  <Pane prefHeight="200.0" prefWidth="183.0">
+                  <Pane fx:id="friendsPane">
                      <children>
                         <Label fx:id="lblFriends" layoutX="1.0" layoutY="14.0" textFill="WHITE">
                            <font>

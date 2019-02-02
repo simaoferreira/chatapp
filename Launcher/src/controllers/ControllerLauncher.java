@@ -48,6 +48,9 @@ import javafx.scene.input.KeyCodeCombination;
 public class ControllerLauncher {
 
 
+	private static double xOffset = 0;
+    private static double yOffset = 0;
+    
 	public ControllerLauncher(Stage primaryStage,String version) throws IOException {
 
 		this.stage = primaryStage;
@@ -91,6 +94,22 @@ public class ControllerLauncher {
 		menuPane = (GridPane) loader.load();
 		menuPane.setBorder(darkblue);
 		menuPane.setStyle("-fx-background: #4e5460;");
+		
+		menuPane.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = stage.getX() - event.getScreenX();
+                yOffset = stage.getY() - event.getScreenY();
+            }
+        });
+		
+		menuPane.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+            	stage.setX(event.getScreenX() + xOffset);
+            	stage.setY(event.getScreenY() + yOffset);
+            }
+        });
 
 	}
 
@@ -99,12 +118,28 @@ public class ControllerLauncher {
 		loader.setController(this);
 		loginPane = (Pane) loader.load();
 		loginPane.setBorder(darkblue);
-		loginPane.setStyle("-fx-background: #4e5460;");	
+		loginPane.setStyle("-fx-background: #4e5460;");
+		
+		loginPane.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = stage.getX() - event.getScreenX();
+                yOffset = stage.getY() - event.getScreenY();
+            }
+        });
+		
+		loginPane.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+            	stage.setX(event.getScreenX() + xOffset);
+            	stage.setY(event.getScreenY() + yOffset);
+            }
+        });
 	}
 
 	private static final Border darkblue = new Border(new BorderStroke(Color.rgb(32,33,35),
 			BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(3)));
-
+	
 	Client c;
 	public MediaPlayer mediaPlayer;
 	private static final int MAX_CHARS = 12;
@@ -122,16 +157,20 @@ public class ControllerLauncher {
 	public int expUser;
 	public int numMensagens;
 	public int numWordsWritten;
-	public double xMensagem = 10;
-	public double yMensagem = 30;
+	//private double xMensagem = 10;
+	//public double yMensagem = 30;
 	public double xUserOfMensagem = 10;
 	public double yUserOfMensagem = 10;
+	public double yFriendUser = 0;
+	public double xFriendUser = 0;
 	public double height;
+	public double heightFriend;
 	public ProtectionBadWords pbw = new ProtectionBadWords();
 	public Informations info = new Informations();
 	public Notifications notify = new Notifications();
 	public Rectangle rec;
 	public GridPane centeredLabel;
+	public GridPane friendsLabel;
 	public boolean canConnect;
 
 	@FXML
@@ -166,6 +205,9 @@ public class ControllerLauncher {
 
 	@FXML
 	public Pane chatPane;
+	
+	@FXML
+	public Pane friendsPane;
 
 	@FXML
 	public ScrollPane chatScrollPane;
@@ -248,7 +290,30 @@ public class ControllerLauncher {
 	@FXML
 	public Label lblerror;
 
-
+	@FXML
+	public void addFriendPane(String nome) {
+		System.out.println("y: "+ yFriendUser);
+		Label mensagem = new Label(nome);
+		Label infoUser = new Label("Details not implemented yet!");
+		infoUser.setStyle("-fx-font: normal 11px \" Comic Sans MS\"");
+		mensagem.setStyle("-fx-font: normal 15px \" Comic Sans MS\"");
+		friendsLabel = new GridPane();
+		friendsLabel.setPrefWidth(190);
+		friendsLabel.add(mensagem, 0, 0);
+		friendsLabel.add(infoUser, 0, 1);
+		friendsLabel.setStyle("-fx-background-color:#0099ff; -fx-padding: 5 5 5 5;");
+		friendsLabel.setLayoutX(xFriendUser);
+		friendsLabel.setLayoutY(yFriendUser);
+		yFriendUser = yFriendUser+52;
+		
+		friendsLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+		    @Override
+		    public void handle(MouseEvent mouseEvent) {
+		    	AlertBox.display("Details", nome,false);
+		    }
+		});
+	}
+	
 	@FXML
 	public void initialize(String text,String user, String hour,String side,String isConnection) {
 

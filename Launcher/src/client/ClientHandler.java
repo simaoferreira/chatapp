@@ -212,7 +212,23 @@ public class ClientHandler extends Thread{
                                 mainClient.numMensagens = Integer.parseInt(info.get("numMessages").toString());
                                 mainClient.numWordsWritten = Integer.parseInt(info.get("numWords").toString());
                                 friends = text.split("/")[1];
-
+                                String[] listFriends = friends.split("\n");
+                                Platform.runLater(new Runnable() {
+                                    @Override public void run() {
+                                    	for(String s :  listFriends) {
+                                    		if(!s.startsWith("You")) {
+                                    			mainClient.addFriendPane(s);
+                                            	mainClient.friendsPane.getChildren().add(mainClient.friendsLabel);
+                                            	mainClient.lblFriends.setText("");
+                                            }else {
+                                            	mainClient.lblFriends.setText(s);	
+                                            }
+                                        }
+                                    }
+                                });
+                                
+                                
+                                
                             }
 
                             isConnection="1";
@@ -265,9 +281,24 @@ public class ClientHandler extends Thread{
                         isConnection="3";
                         atualizarClient = "1";
                     }else if(codeNumber.equals("9")) {
-                        textOutput = text;
-                        isConnection = "3";
-                        atualizarClient = "1";
+                    	
+                    	String codeString = text.split(":")[0];
+                    	if(codeString.equals("accept") || codeString.equals("info")) {
+	                    	Platform.runLater(new Runnable() {
+	                            @Override public void run() {
+	                            	mainClient.addFriendPane(username);
+	                            	mainClient.friendsPane.getChildren().add(mainClient.friendsLabel);
+	                            }
+	                        });
+                    	}
+                    	
+                    	if(!codeString.equals("info")) {
+                    		textOutput = text.split(":")[1];
+                    		isConnection = "3";
+                            atualizarClient = "1";
+                    	}
+                        
+                        
                     }else if(codeNumber.equals("10")){
                     	Platform.runLater(new Runnable() {
                             @Override public void run() {
@@ -292,7 +323,6 @@ public class ClientHandler extends Thread{
                                 mainClient.initialize("> "+textOutput,userToSend,actualTime,side,isConnection);
                                 mainClient.chatPane.getChildren().add(mainClient.centeredLabel);
                                 mainClient.lblConnections.setText(connections);	
-                                mainClient.lblFriends.setText(friends);
                             }
                         });
                     }
