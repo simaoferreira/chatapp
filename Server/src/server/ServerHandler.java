@@ -3,50 +3,257 @@ package server;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
 import handlers.DataBaseCatalog;
+import handlers.LoggerHandle;
 
 public class ServerHandler extends Thread{
 
-    private Socket socket;
-    private Server server;
-    private DataInputStream dis;
-    private DataOutputStream dos;
-    private String username;
-    private String text;
-    private int codeNumber;
-    private String id;
-    private boolean run = true;
-    private String desconnectedUser;
-    private JSONObject objData;
-    private DataBaseCatalog dbh;
+	private Socket             socket;
+	private Server             server;
+	//private DataInputStream  dis;
+	//private DataOutputStream dos;
+	private ObjectOutputStream out = null;
+	private ObjectInputStream  in = null;
+	private String             username;
+	private String             text;
+	private int                codeNumber;
+	private int                id;
+	private boolean            run = true;
+	private String             desconnectedUser;
+	private JSONObject         objData;
+	private DataBaseCatalog    dbh;
+	private LoggerHandle       lh;
+	private ArrayList<ServerHandler> friendsThreads = new ArrayList<ServerHandler>();
 
-    public ServerHandler(DataBaseCatalog dbh, Socket socket,Server server) {
-        this.socket = socket;
-        this.server= server;
-        this.dbh = dbh;
+	public ServerHandler(DataBaseCatalog dbh, LoggerHandle lh, Socket socket,Server server) {
+		this.socket = socket;
+		this.server= server;
+		this.dbh = dbh;
+		this.lh = lh;
+	}
 
-    }
+	private boolean checkUserLogged(String username) {
+		for(ServerHandler sh : server.connections) {
+			if(sh.username.equals(username)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
-    public void run() {
+	public synchronized void run() {
 
-        try {
-            dis = new DataInputStream(socket.getInputStream());
-            dos = new DataOutputStream(socket.getOutputStream());
+		try {
+			
+			//dis = new DataInputStream(socket.getInputStream());
+			//dos = new DataOutputStream(socket.getOutputStream());
+			out = new ObjectOutputStream(socket.getOutputStream());
+			in  = new ObjectInputStream (socket.getInputStream ());
 
-            while(run) {
+			while(run) {
 
-                while(dis.available()==0) {
-                    try {
-                        Thread.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+				try {
+					StringBuilder connectionsUpdated = new StringBuilder();
+					
+					//receber o codigo
+					try {
+						codeNumber  = (int) in.readObject();
+                    } catch (Exception e) {
+                        run = false;
+                        if (username==null) {
+                        	lh.log("INFO", "Lost a connection;");
+                        }else {
+                        	lh.log("INFO", "User "+username+" disconnected;");
+                        	server.connections.remove(this);
+    						
+    						for(int i=0;i<server.connections.size();i++) {
+    	                        connectionsUpdated.append(i+": "+server.connections.get(i).username+"\n");
+    	                    }
+    						
+    						//enviar o codigo 2
+    						sendToClients(2,false);
+    						
+    						//enviar o username que disconectou
+    						sendToClients(dbh.getFullName(dbh.getID(username)),false);
+    						
+    						//enviar as conexoes atuais
+    						sendToClients(connectionsUpdated.toString(),false);
+    						
+                        }
+                        Thread.currentThread().interrupt();
+                        break;
                     }
-                }
+					
 
+					int idBD;
+					JSONObject infoUserObj;
+					
+
+					switch(codeNumber) {
+					case 0:
+						//receber o nome do user
+						String user   = (String) in.readObject();
+						//receber a pass do user
+	                    String password = (String) in.readObject();
+	                    lh.log("INFO", "User " + user + " trying to login into the server;");
+	                    
+						if(dbh.checkLogin(user, password) && !checkUserLogged(user)) {
+							username = user;
+							server.connections.add(this);
+							/**
+							if(!server.liveNews.equals("")) {
+								//enviar o codigo 6
+								out.writeObject(6);
+								//enviar o nome do admin
+								out.writeObject(server.adminUser);
+								//enviar a live news
+								out.writeObject(server.liveNews);
+							}
+							*/
+
+							connectionsUpdated = new StringBuilder();
+
+							for(int i=0;i<server.connections.size();i++) {
+								connectionsUpdated.append(i+": "+server.connections.get(i).username+"\n");
+								if(server.connections.get(i).username.equals(username)) {
+									id=i;
+								}
+							}
+							
+							//enviar o codigo 0
+							out.writeObject(codeNumber);
+							//enviar True
+							out.writeObject(new Boolean(true));
+							//enviar id
+							out.writeObject(id);
+							//enviar conexoes ativas
+							out.writeObject(connectionsUpdated.toString());
+							
+							idBD = dbh.getID(username);
+							infoUserObj = createObjWithInfo(idBD);
+							//enviar info do username
+							out.writeObject(infoUserObj);
+							
+							ArrayList<Integer> friends = dbh.getFriends(idBD);
+							//createArrayWithSHOfFriends(friends);
+							//enviar numero de amigos
+							int size = friends.size();
+							out.writeObject(size);
+							
+							if(size!=0) {
+								for(Integer i : friends) {
+									infoUserObj = createObjWithInfo(i);
+									//enviar a info do amigo com id i
+									out.writeObject(infoUserObj);
+								}
+							}
+							
+							
+							//enviar informação para os restantes clientes com code 1
+							sendToClients(1,false);
+							
+							//enviar o user que se conectou
+							sendToClients(dbh.getFullName(idBD),false);
+							
+							//enviar lista de conexoes atualizadas
+							sendToClients(connectionsUpdated.toString(),false);
+							
+							lh.log("INFO", "User " + user + " logged in the server");
+						}else{
+							//enviar o codigo 0
+							out.writeObject(codeNumber);
+							//enviar False
+							out.writeObject(new Boolean(false));
+							
+							if(!dbh.checkLogin(user, password)) {
+								out.writeObject("Username or password incorrect!");
+							}else {
+								out.writeObject("This user is already logged in!");
+							}
+							lh.log("INFO", "User " + user + " couldn not login into the server");
+						}
+						break;
+					case 3:
+						//receber o nome do user que estah a enviar a mensagem
+						String ownerOfMessage = (String) in.readObject();
+						//receber o conteudo da mensagem
+						String message = (String) in.readObject();
+						String[] words = message.split(" ");
+						dbh.updateWordsWritten(ownerOfMessage, words.length);
+						
+						//enviar o codigo 3
+						sendToClients(codeNumber,true);
+						//enviar o username que enviou mensagem
+						idBD = dbh.getID(ownerOfMessage);
+						sendToClients(dbh.getFullName(idBD),true);
+						//enviar o texto se esta thread nao pertencer ao dono
+						sendToClients(message, true);
+						
+						infoUserObj = createObjWithStats(idBD);
+						//enviar info do username para os amigos do owner
+						
+						//sendToClients(infoUserObj,true);
+						break;
+					case 6:
+						//receber o user do admin
+						//receber a live new
+						
+						//enviar o codigo 6
+						//enviar o username do admin
+						//enviar a live news
+						break;
+					case 7:
+						//receber o nome do user que pediu convite
+						//receber o nome do user que vai receber convite
+						
+						//enviar o codigo 7
+						//enviar o texto
+						break;
+					case 8:
+						//receber o resultado final do convite (accept ou decline)
+						//receber o nome do user que respondeu ao convite
+						//receber o nome do user que enviou o pedido
+						
+						//enviar o codigo 9
+						//enviar o resultado do convite 
+						//enviar username se convite for aceite
+						//enviar texto
+						break;
+					case 10:
+						//receber o username 
+						//receber a password
+						
+						//enviar o codigo 10
+						//enviar texto
+						//enviar username
+						break;
+					}
+				} catch (ClassNotFoundException e) {
+					lh.log("SEVERE","Could not read the codeNumber",e);
+				}
+			}
+
+			in.close();
+			out.close();
+			socket.close();
+
+
+
+
+
+
+
+
+			/**
                 String dataIn = dis.readUTF();
                 JSONParser parser = new JSONParser();
 
@@ -63,19 +270,19 @@ public class ServerHandler extends Thread{
 
 
                 System.out.println("Mensagem recebida "+objData.toString());
+			 */
 
+			/**
                 JSONObject obj;
                 JSONObject infoUserObj;
                 String[] words;
                 int idBD;
+			 */
 
+			/**
                 switch(codeNumber) {
-                case 3: 
-                    obj = createObjWithData(codeNumber,"null","null",null);
-                    sendText(obj.toString());
-                    break;
                 case 0:
-                    if(dbh.checkLogin(username, text)) {
+                	if(dbh.checkLogin(username, text)) {
                         server.connections.add(this);
                         if(!server.liveNews.equals("")) {
                             JSONObject objNews = createObjWithData(6,server.adminUser,server.liveNews,null);
@@ -113,10 +320,17 @@ public class ServerHandler extends Thread{
                         obj = createObjWithData(codeNumber,"User not found","",null);
                         sendText(obj.toString());
                     }
-                    break;
-
+                	break;
+                case 1:
+                	words = text.split(" ");
+                    dbh.updateWordsWritten(username, words.length);
+                    idBD = dbh.getID(username);
+                    infoUserObj = createObjWithInfo(idBD);
+                    obj = createObjWithData(codeNumber,username,text,infoUserObj);
+                    sendToClients(obj.toString());
+                	break;
                 case 2:
-                    StringBuilder connections = new StringBuilder();
+                	StringBuilder connections = new StringBuilder();
 
                     for(ServerHandler sh : server.connections) {
                         if(sh.username.equals(username)) {
@@ -135,17 +349,15 @@ public class ServerHandler extends Thread{
                     System.out.println(obj.toString());
 
                     sendToClients(obj.toString());
-                    break;
-                case 1:
-                    words = text.split(" ");
-                    dbh.updateWordsWritten(username, words.length);
-                    idBD = dbh.getID(username);
-                    infoUserObj = createObjWithInfo(idBD);
-                    obj = createObjWithData(codeNumber,username,text,infoUserObj);
-                    sendToClients(obj.toString());
-                    break;
+                	break;
+                case 3:
+                	obj = createObjWithData(codeNumber,"null","null",null);
+                    sendText(obj.toString());
+                	break;
+                case 4:
+                	break;
                 case 5:
-                    String[] users = username.split(":");
+                	String[] users = username.split(":");
                     username = users[0];
                     String targetUser = users[1];
                     words = text.split(" ");
@@ -164,17 +376,17 @@ public class ServerHandler extends Thread{
                         }
                         count++;
                     }
-                    break;
+                	break;
                 case 6:
-                    if(!text.equals("")) {
+                	if(!text.equals("")) {
                         obj = createObjWithData(codeNumber,username,text,null);
                         sendToClients(obj.toString());
                         server.liveNews = text;
                         server.adminUser = username;
                     }
-                    break;
+                	break;
                 case 7:
-                    if(dbh.estaRegistado(text)) {
+                	if(dbh.estaRegistado(text)) {
                         boolean existsFriendship = dbh.checksFriendship(username,text);
                         boolean existsFriendRequest = dbh.checkRequestInvite(username, text);
 
@@ -196,10 +408,9 @@ public class ServerHandler extends Thread{
                         obj = createObjWithData(codeNumber, username, "The user "+ text + " doesn't exist!", null);
                         sendToOneClient(username,obj.toString());
                     }
-
-                    break;
+                	break;
                 case 8:
-                    String userReceivedRequest = username;
+                	String userReceivedRequest = username;
                     String userSentRequest = text.split(":")[1];
                     String statusRequest = text.split(":")[0];
 
@@ -218,13 +429,15 @@ public class ServerHandler extends Thread{
                             obj = createObjWithData(9, username, "decline:The user "+ userReceivedRequest + " declined your invite!", null);
                             sendToOneClient(userSentRequest,obj.toString());
                         }
-                        
+
 
                     }else {
                         obj = createObjWithData(9, username, "decline:Invite declined because you didn't receive an invite from " +userSentRequest+"!", null);
                         sendToOneClient(userSentRequest,obj.toString());
                     }
-                    break;
+                	break;
+                case 9:
+                	break;
                 case 10:
                 	if(dbh.estaRegistado(username)) {
                 		obj = createObjWithData(codeNumber,"null","The username \""+username+"\" is already registered",null);
@@ -233,37 +446,84 @@ public class ServerHandler extends Thread{
                 		dbh.addUser(username, text);
                 	}
                 	sendText(obj.toString());
-                    
+                	break;
                 }
+			 */
 
-            }
-            dis.close();
-            dos.close();
-            socket.close();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
+		} catch (Exception e) {
+			e.printStackTrace();
+			lh.log("WARNING", "Error trying creating the streams!");
+		}
 
-    }
+	}
 
-    private void sendToOneClient(String username, String text) throws IOException {
-        for(ServerHandler sh : server.connections) {
-            if(sh.username.equals(username)) {
-                sh.sendText(text);
-                break;
-            }
-        }
-    }
+	private void sendToFriends(JSONObject infoUserObj, boolean sendToThisClient) throws IOException {
+		ArrayList<Integer> friends = dbh.getFriends(dbh.getID(this.username));
+		
+		for(ServerHandler sh : server.connections) {
+			if(ehFriend(sh,friends)) {
+				sh.sendText(infoUserObj);
+			}
+		}
+		
+		if(sendToThisClient) {
+			out.writeObject(infoUserObj);
+		}
+		
+		
+	}
+	
+	private Boolean ehFriend(ServerHandler sh, ArrayList<Integer> friends) {
+		
+		for(Integer f :  friends) {
+			if(dbh.getID(sh.username) == f) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
 
-    private void sendToClients(String textIn) throws IOException {
+	private void createArrayWithSHOfFriends(ArrayList<Integer> friends) {
+		for(Integer i :  friends) {
+			String user = dbh.getUsername(i);
+			System.out.println(user);
+			for(ServerHandler sh : server.connections) {
+				if(sh.username.equals(user) && sh != this) {
+					System.out.println(this.username +":"+sh.username);
+					friendsThreads.add(sh);
+				}
+			}
+		}
+		
+	}
 
-        for(int i=0;i<server.connections.size();i++) {
-            ServerHandler sh = server.connections.get(i);
-            sh.sendText(textIn);
-        }
+	private void sendToOneClient(String username, Object obj) throws IOException {
+		for(ServerHandler sh : server.connections) {
+			if(sh.username.equals(username)) {
+				sh.sendText(obj);
+				break;
+			}
+		}
+	}
 
-    }
+	private void sendToClients(Object obj,Boolean sendToThisClient) throws IOException {
 
+		for(int i=0;i<server.connections.size();i++) {
+			ServerHandler sh = server.connections.get(i);
+			if(!sendToThisClient) {
+				if(!sh.equals(this)) {
+					sh.sendText(obj);
+				}
+			}else {
+				sh.sendText(obj);
+			}
+			
+		}
+
+	}
+
+	/**
     protected void updateInfoConnections() throws IOException {
         StringBuilder connections = new StringBuilder();
 
@@ -274,12 +534,13 @@ public class ServerHandler extends Thread{
         JSONObject obj = createObjWithData(10,null,connections.toString(),null);
         sendToClients(obj.toString()); 
     }
+	 */
 
-    protected void sendText(String textIn) throws IOException {
-        dos.writeUTF(textIn);
-        dos.flush();
-    }
+	protected void sendText(Object obj) throws IOException {
+		out.writeObject(obj);
+	}
 
+	/**
     @SuppressWarnings("unchecked")
     private JSONObject createObjWithData(int code, String user, String text,JSONObject info) {
         JSONObject obj = new JSONObject();
@@ -291,16 +552,30 @@ public class ServerHandler extends Thread{
         return obj;
 
     }
+	 */
 
-    @SuppressWarnings("unchecked")
-    private JSONObject createObjWithInfo(int id) {
+	@SuppressWarnings("unchecked")
+    private JSONObject createObjWithStats(int id) {
         JSONObject obj = new JSONObject();
         obj.put("lvlUser", dbh.getLvlUser(id));
         obj.put("expUser", dbh.getExpUser(id));
         obj.put("numMessages", dbh.getMessagesSent(id));
         obj.put("numWords", dbh.getWordsWritten(id));
         return obj;
-
+    }
+	
+    @SuppressWarnings("unchecked")
+    private JSONObject createObjWithInfo(int id) {
+        JSONObject obj = new JSONObject();
+        obj.put("username",dbh.getUsername(id));
+        obj.put("firstName", dbh.getFirstName(id));
+        obj.put("lastName", dbh.getLastName(id));
+        obj.put("age", dbh.getAge(id));
+        obj.put("lvlUser", dbh.getLvlUser(id));
+        obj.put("expUser", dbh.getExpUser(id));
+        obj.put("numMessages", dbh.getMessagesSent(id));
+        obj.put("numWords", dbh.getWordsWritten(id));
+        return obj;
     }
 
 }

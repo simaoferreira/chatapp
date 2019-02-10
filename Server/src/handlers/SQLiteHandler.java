@@ -43,8 +43,9 @@ public class SQLiteHandler {
             if( !resTabelaUsersConfig.next()) {
                 Statement state2 = con.createStatement();
                 state2.execute("CREATE TABLE users(id integer,"
-                        + "username varchar(12) unique,"
-                        + "password varchar(12),"
+                        + "username varchar(16) unique,"
+                        + "password varchar(16),"
+                        + "salt varchar(100),"
                         + "primary key(id));");
             }
 
@@ -52,6 +53,9 @@ public class SQLiteHandler {
             if( !resTabelaUsersInfo.next()) {
                 Statement state2 = con.createStatement();
                 state2.execute("CREATE TABLE usersInfo(id integer,"
+                		+ "firstName varchar(16),"
+                		+ "lastName varchar(16),"
+                		+ "age integer,"
                         + "userLvl integer,"
                         + "userExp integer,"
                         + "messagesSent integer,"
@@ -59,18 +63,7 @@ public class SQLiteHandler {
                         + "foreign key(id) references users(id),"
                         + "primary key(id));");
             }
-            /**
-            ResultSet resTabelaUsersProfile = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersProfile'");
-            if( !resTabelaUsersProfile.next()) {
-                Statement state2 = con.createStatement();
-                state2.execute("CREATE TABLE usersProfile(id integer,"
-                        + "firstName varchar(20),"
-                        + "lastName varchar(20),"
-                        + "age integer,"
-                        + "foreign key(id) references users(id),"
-                        + "primary key(id));");
-            }
-            */
+            
             ResultSet resTabelaUsersFriends = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='usersFriends'");
             if( !resTabelaUsersFriends.next()) {
                 Statement state2 = con.createStatement();
@@ -96,22 +89,26 @@ public class SQLiteHandler {
 
     }
 
-    protected void addUser(String username,String password) throws SQLException, ClassNotFoundException {
+    protected void addUser(String username,String password, String salt) throws SQLException, ClassNotFoundException {
         if(con == null) {
             getConnection();
         }
 
         if(!estaRegistado(username)){
-            PreparedStatement prep = con.prepareStatement("INSERT INTO users values(?,?,?);");
+            PreparedStatement prep = con.prepareStatement("INSERT INTO users values(?,?,?,?);");
             prep.setString(2, username);
             prep.setString(3, password);
+            prep.setString(4, salt);
             prep.execute();
 
-            PreparedStatement prepInfo = con.prepareStatement("INSERT INTO usersInfo values(?,?,?,?,?)");
-            prepInfo.setInt(2, 1);
-            prepInfo.setInt(3, 0);
-            prepInfo.setInt(4, 0);
-            prepInfo.setInt(5, 0);
+            PreparedStatement prepInfo = con.prepareStatement("INSERT INTO usersInfo values(?,?,?,?,?,?,?,?)");
+            prepInfo.setString(2, "nome");
+            prepInfo.setString(3, "ultimo");
+            prepInfo.setInt(4, 21);
+            prepInfo.setInt(5, 1);
+            prepInfo.setInt(6, 0);
+            prepInfo.setInt(7, 0);
+            prepInfo.setInt(8, 0);
             prepInfo.execute();
         }else {
             System.err.println("já esta registado");
@@ -203,7 +200,7 @@ public class SQLiteHandler {
         }
 
         int id = getID(username);
-        PreparedStatement prep = con.prepareStatement("UPDATE usersProfile SET firstName = ? WHERE id = ?");
+        PreparedStatement prep = con.prepareStatement("UPDATE usersInfo SET firstName = ? WHERE id = ?");
         prep.setString(1, newFirstName);
         prep.setInt(2,id);
         prep.executeUpdate();
@@ -215,7 +212,7 @@ public class SQLiteHandler {
         }
 
         int id = getID(username);
-        PreparedStatement prep = con.prepareStatement("UPDATE usersProfile SET lastName = ? WHERE id = ?");
+        PreparedStatement prep = con.prepareStatement("UPDATE usersInfo SET lastName = ? WHERE id = ?");
         prep.setString(1, newLastName);
         prep.setInt(2,id);
         prep.executeUpdate();
@@ -227,7 +224,7 @@ public class SQLiteHandler {
         }
 
         int id = getID(username);
-        PreparedStatement prep = con.prepareStatement("UPDATE usersProfile SET age = ? WHERE id = ?");
+        PreparedStatement prep = con.prepareStatement("UPDATE usersInfo SET age = ? WHERE id = ?");
         prep.setInt(1,age);
         prep.setInt(2,id);
         prep.executeUpdate();
@@ -290,7 +287,7 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT * FROM users");
         System.out.println("result Users:");
         while(res.next()) {
-            System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password"));
+            System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password")+" "+res.getString("salt"));
         }
         System.out.println("Empty");
     }
@@ -329,10 +326,10 @@ public class SQLiteHandler {
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT id,userLvl,userExp,messagesSent,wordsWritten FROM usersInfo");
+        ResultSet res = state.executeQuery("SELECT id,firstName,lastName,age,userLvl,userExp,messagesSent,wordsWritten FROM usersInfo");
         System.out.println("result Info (id,lvlUser,ExpUser,messages,words):");
         while(res.next()) {
-            System.out.println(res.getInt("id")+" "+res.getInt("userLvl")+" "+ res.getInt("userExp")+" "+res.getInt("messagesSent")+" "+ res.getInt("wordsWritten"));
+            System.out.println(res.getInt("id")+" "+res.getString("firstName")+" "+res.getString("lastName")+" "+res.getInt("age")+" "+res.getInt("userLvl")+" "+ res.getInt("userExp")+" "+res.getInt("messagesSent")+" "+ res.getInt("wordsWritten"));
         }
         System.out.println("Empty");
     }
@@ -422,6 +419,26 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT id FROM users WHERE username='" + username + "'");
         return res.getInt("id");
     }
+    
+    protected String getSalt(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT salt FROM users WHERE id='" + id + "'");
+        return res.getString("salt");
+    }
+    
+    protected String getHashedPassword(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT password FROM users WHERE id='" + id + "'");
+        return res.getString("password");
+    }
 
     protected int getLvlUser(int id) throws ClassNotFoundException, SQLException {
         if(con == null) {
@@ -462,23 +479,63 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT wordsWritten FROM usersInfo WHERE id='" + id + "'");
         return res.getInt("wordsWritten");
     }
-
-     protected ArrayList<String> getFriendsOfID(int id) throws ClassNotFoundException, SQLException {
+    
+    protected String getFirstName(int id) throws ClassNotFoundException, SQLException {
         if(con == null) {
             getConnection();
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT users.username FROM users INNER JOIN usersFriends ON users.id = usersFriends.idFriend WHERE usersFriends.idUser='"+id+"'");
-        ArrayList<String> friends = new ArrayList<String>();
+        ResultSet res = state.executeQuery("SELECT firstName FROM usersInfo WHERE id='" + id + "'");
+        return res.getString("firstName");
+    }
+    
+    protected String getLastName(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT lastName FROM usersInfo WHERE id='" + id + "'");
+        return res.getString("lastName");
+    }
+    
+    protected int getAge(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT age FROM usersInfo WHERE id='" + id + "'");
+        return res.getInt("age");
+    }
+    
+    protected String getUsername(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT username FROM users WHERE id='" + id + "'");
+        return res.getString("username");
+    }
+
+     protected ArrayList<Integer> getFriendsOfID(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT users.id FROM users INNER JOIN usersFriends ON users.id = usersFriends.idFriend WHERE usersFriends.idUser='"+id+"'");
+        ArrayList<Integer> friends = new ArrayList<Integer>();
 
         while(res.next()) {
-            friends.add(res.getString("username"));
+            friends.add(res.getInt("id"));
         }
         
-        ResultSet res2 = state.executeQuery("SELECT users.username FROM users INNER JOIN usersFriends ON users.id = usersFriends.idUser WHERE usersFriends.idFriend='"+id+"'");
+        ResultSet res2 = state.executeQuery("SELECT users.id FROM users INNER JOIN usersFriends ON users.id = usersFriends.idUser WHERE usersFriends.idFriend='"+id+"'");
         while(res2.next()) {
-            friends.add(res.getString("username"));
+            friends.add(res.getInt("id"));
         }
         
         return friends;

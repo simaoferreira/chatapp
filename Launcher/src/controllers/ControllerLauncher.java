@@ -10,7 +10,9 @@ import dataHandler.AlertBox;
 import dataHandler.Informations;
 import dataHandler.Notifications;
 import dataHandler.ProtectionBadWords;
+import dataHandler.User;
 import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -40,6 +42,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.input.KeyCombination;
@@ -77,7 +80,17 @@ public class ControllerLauncher {
 			lblversionFirst.setText(version);
 			lblversionSecond.setText(version);
 			lbl.setVisible(false);
-			stage.setScene(new Scene(loginPane));
+			Scene scene = new Scene(loginPane);
+			scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+				final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+						KeyCombination.ALT_DOWN);
+				public void handle(KeyEvent ke) {
+					if (keyComb.match(ke)) {
+						System.exit(0);
+					}
+				}
+			});
+			stage.setScene(scene);
 			stage.show();   
 		} catch (IOException e) {
 			Platform.runLater(new Runnable() {
@@ -147,16 +160,13 @@ public class ControllerLauncher {
 	public GridPane menuPane;
 	private Pane loginPane;
 	public Stage stage;
-	public String user="";
 	public String text;
+	public String connections;
 	public String lastUserPrivate=""; 
-	public String id="";
+	public int id= -1;
 	public Label mensagem;
 	public Label userOfMensagem;
-	public int lvlUser;
-	public int expUser;
-	public int numMensagens;
-	public int numWordsWritten;
+	public User user = null;
 	//private double xMensagem = 10;
 	//public double yMensagem = 30;
 	public double xUserOfMensagem = 10;
@@ -177,7 +187,7 @@ public class ControllerLauncher {
 	private TextField passwordTextFieldRegister;
 
 	@FXML
-	private Pane loginPaneFields;
+	public Pane loginPaneFields;
 
 	@FXML
 	private Label lblCreateAccount;
@@ -289,11 +299,12 @@ public class ControllerLauncher {
 
 	@FXML
 	public Label lblerror;
+	
 
 	@FXML
-	public void addFriendPane(String nome) {
-		Label mensagem = new Label(nome);
-		Label infoUser = new Label("Details not implemented yet!");
+	public void addFriendPane(User u) {
+		Label mensagem = new Label(u.getFullName());
+		Label infoUser = new Label("Level: "+ u.getUserLvl() + "  Exp: "+u.getUserExp());
 		infoUser.setStyle("-fx-font: normal 11px \" Comic Sans MS\"");
 		mensagem.setStyle("-fx-font: normal 15px \" Comic Sans MS\"");
 		friendsLabel = new GridPane();
@@ -308,13 +319,13 @@ public class ControllerLauncher {
 		friendsLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 		    @Override
 		    public void handle(MouseEvent mouseEvent) {
-		    	AlertBox.display("Details", nome,false);
+		    	AlertBox.display("Details", u.getFullName(),false);
 		    }
 		});
 	}
 	
 	@FXML
-	public void printMessage(String text,String user, String hour,String side,String isConnection) {
+	public void printMessage(String text,String user, String hour,Side side,Type type) {
 
 		Label userOfMensagem = new Label(user);
 		userOfMensagem.setStyle("-fx-font: normal 11px \"Comic Sans MS\"");
@@ -330,7 +341,7 @@ public class ControllerLauncher {
 		centeredLabel.setPrefWidth(250);
 
 
-		if(isConnection.equals("1")) {
+		if(type == Type.LOGIN) {
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
 			mensagem.setStyle("-fx-text-fill:#e5ff00;");
@@ -342,7 +353,7 @@ public class ControllerLauncher {
 			    }
 			});
 			
-		}else if(isConnection.equals("2")){
+		}else if(type == Type.LOGOUT){
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#8a909b; -fx-padding: 5 5 5 5;");
 			mensagem.setStyle("-fx-text-fill:#bf0000;");
@@ -354,7 +365,7 @@ public class ControllerLauncher {
 			    }
 			});
 			
-		}else if(isConnection.equals("3")){
+		}else if(type == Type.FRIENDS){
 			centeredLabel.add(mensagem, 0, 0);
 			centeredLabel.setStyle("-fx-background-radius: 10 10 10 10; -fx-background-color:#0099ff; -fx-padding: 5 5 5 5;");
 			mensagem.setStyle("-fx-text-fill:#000000;");
@@ -374,11 +385,11 @@ public class ControllerLauncher {
 			
 		}
 
-		if(side.equals("left")) {
+		if(side == Side.LEFT) {
 			centeredLabel.setLayoutX(xUserOfMensagem);
 			centeredLabel.setLayoutY(yUserOfMensagem);
 			
-			if(!isConnection.equals("1") && !isConnection.equals("2") && !isConnection.equals("3")) {
+			if(type != Type.LOGIN && type != Type.LOGOUT && type != Type.FRIENDS) {
 				centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 				    @Override
 				    public void handle(MouseEvent mouseEvent) {
@@ -397,8 +408,9 @@ public class ControllerLauncher {
 			    	AlertBox.display("Details", "You sent message at "+hour,false);
 			    }
 			});
+			
 		}
-
+		
 		centeredLabel.heightProperty().addListener((obs, oldVal, newVal) -> {
 			height = centeredLabel.getHeight();
 			yUserOfMensagem = yUserOfMensagem+height+10;
@@ -479,6 +491,7 @@ public class ControllerLauncher {
 	void loginKeyPressed(KeyEvent event) throws IOException {
 		if (event.getCode() == KeyCode.ENTER) {
 			c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
+			loginPaneFields.setVisible(false);
 			//mediaPlayer.play();
 		}
 	}
@@ -486,19 +499,49 @@ public class ControllerLauncher {
 	@FXML
 	void loginKeyButton(ActionEvent event) throws IOException {
 		c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
+		loginPaneFields.setVisible(false);
+		
 	}
 
-
+	private void makeFadeOut() {
+		
+	}
 
 	public void updateSceneToMenu() {
+		
+		FadeTransition fadeTransition = new FadeTransition();
+		fadeTransition.setDuration(Duration.millis(1000));
+		fadeTransition.setNode(loginPane);
+		fadeTransition.setFromValue(1);
+		fadeTransition.setToValue(0);
+		fadeTransition.play();
+		
 		Scene scene = new Scene(menuPane);
-		stage.setScene(scene);
+		
+		fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				stage.setScene(scene);
+			}
+		});
+		
+		
 		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.I,
 					KeyCombination.CONTROL_DOWN);
 			public void handle(KeyEvent ke) {
 				if (keyComb.match(ke)) {
 					c.requestInfoUser();
+				}
+			}
+		});
+		
+		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+					KeyCombination.ALT_DOWN);
+			public void handle(KeyEvent ke) {
+				if (keyComb.match(ke)) {
+					System.exit(0);
 				}
 			}
 		});
@@ -509,7 +552,21 @@ public class ControllerLauncher {
 
 	@FXML
 	void onSendMessage(ActionEvent event) throws InterruptedException {
+		handleInput();
+		txtField.requestFocus();
+	}
 
+
+	@FXML
+	void keyListener(KeyEvent event) {    	
+		if (event.getCode() == KeyCode.UP) {
+			System.out.println("deu!");
+		}else if (event.getCode() == KeyCode.ENTER) {
+			handleInput();
+		}
+	}
+	
+	private void handleInput() {
 		text = pbw.findAnDeleteBadWords(txtField.getText());
 
 		fastScrollToBottom(chatScrollPane);
@@ -524,9 +581,11 @@ public class ControllerLauncher {
 				}
 			});
 			c.requestCloseConnection();
+		/**
 		}else if(text.startsWith("/send")) {
 			c.sendPrivateMessageToChat(user);
 			txtField.clear();
+		
 		}else if(text.startsWith("/r")){
 			if(lastUserPrivate.equals("")) {
 				System.err.print("Don't know the user!\n");
@@ -536,20 +595,20 @@ public class ControllerLauncher {
 				c.replyPrivateMessageToChat(user,lastUserPrivate);
 				txtField.clear();
 			}
-
+		*/
 		}else if(text.equals("/clear")) {
-			c.requestClearChat();
+			// limpar baloes de chat
 			txtField.clear();
 		}else if(text.equals("/getinfo")) {
 			c.requestInfoUser();
 			txtField.clear();
-		}else if(text.startsWith("/addfriend")){
+		}else if(text.startsWith("/addfriend ")){
 			c.sendRequestFriend();
 			txtField.clear();
-		}else if(text.startsWith("/accept")){
+		}else if(text.startsWith("/accept ")){
 			c.acceptFriendRequest();
 			txtField.clear();
-		}else if(text.startsWith("/decline")){
+		}else if(text.startsWith("/decline ")){
 			c.declineFriendRequest();
 			txtField.clear();
 		}else {
@@ -557,70 +616,7 @@ public class ControllerLauncher {
 				txtField.setPromptText("Can´t recognize command! Go see info for details please.");
 			}else {
 				txtField.clear();
-				c.sendMessagesToChat(user);
-			}
-		}
-
-		txtField.requestFocus();
-
-	}
-
-
-	@FXML
-	void keyListener(KeyEvent event) {    	
-		if (event.getCode() == KeyCode.UP) {
-			System.out.println("deu!");
-		}else if (event.getCode() == KeyCode.ENTER) {
-
-			text = pbw.findAnDeleteBadWords(txtField.getText());
-
-			fastScrollToBottom(chatScrollPane);
-			if(text.equals("")) {
-
-			}else if(text.equals("/close")){
-				Platform.runLater(new Runnable() {
-					@Override 
-					public void run() {
-						stage.close(); 
-
-					}
-				});
-				c.requestCloseConnection();
-			}else if(text.startsWith("/send")) {
-				c.sendPrivateMessageToChat(user);
-				txtField.clear();
-			}else if(text.startsWith("/r")){
-				if(lastUserPrivate.equals("")) {
-					System.err.print("Don't know the user!\n");
-					txtField.setPromptText("You can't reply! Please send a new message or you wait for a new message");
-					txtField.clear();
-				}else {
-					c.replyPrivateMessageToChat(user,lastUserPrivate);
-					txtField.clear();
-				}
-
-			}else if(text.equals("/clear")) {
-				c.requestClearChat();
-				txtField.clear();
-			}else if(text.equals("/getinfo")) {
-				c.requestInfoUser();
-				txtField.clear();
-			}else if(text.startsWith("/addfriend ")){
-				c.sendRequestFriend();
-				txtField.clear();
-			}else if(text.startsWith("/accept ")){
-				c.acceptFriendRequest();
-				txtField.clear();
-			}else if(text.startsWith("/decline ")){
-				c.declineFriendRequest();
-				txtField.clear();
-			}else {
-				if(text.startsWith("/")) {
-					txtField.setPromptText("Can´t recognize command! Go see info for details please.");
-				}else {
-					txtField.clear();
-					c.sendMessagesToChat(user);
-				}
+				c.sendMessagesToChat(user.getUsername());
 			}
 		}
 	}
@@ -634,8 +630,8 @@ public class ControllerLauncher {
 
 			}
 		});
-		c.requestCloseConnection();
-		System.exit(-1);
+		//c.requestCloseConnection();
+		System.exit(0);
 	}
 
 	@FXML

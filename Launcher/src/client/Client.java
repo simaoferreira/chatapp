@@ -27,33 +27,31 @@ public class Client extends Thread{
         ch = new ClientHandler(socket,this,client);
         ch.start();  	
     }
-
+    
     ////////////////  CODE 0  ////////////////
     public void requestUpdateConnections(String user, String pass) {
         this.user=user;
-        String code = "0";
-        ch.sendMessage(code,user,pass);
+        ch.sendMessageCase0(user, pass);
     }
-
-    ////////////////  CODE 1  ////////////////
-    public void sendMessagesToChat(String user) {
-        String inputText = client.text;
-        String code = "1";
-        ch.sendMessage(code,user,inputText);
-    }
-
+    
     ////////////////  CODE 2  ////////////////
     public void requestCloseConnection() {
-        String code = "2";
-        ch.sendMessage(code, user, "null");
+    	ch.sendMessageCase2(user);
+        //String code = "2";
+        //ch.sendMessage(code, user, "null");
     }
 
     ////////////////  CODE 3  ////////////////
-    public void requestClearChat() {
-        String code = "3";
-        ch.sendMessage(code, "null", "null");
+    public void sendMessagesToChat(String user) {
+        String inputText = client.text;
+        ch.sendMessageCase3(user, inputText);
+        //String code = "1";
+        //ch.sendMessage(code,user,inputText);
     }
 
+
+
+    /**
     ////////////////  CODE 5  ////////////////
     public void sendPrivateMessageToChat(String user) {
         String textField = client.text;
@@ -69,6 +67,7 @@ public class Client extends Thread{
         }
 
     }
+    */
 
 
     ////////////////CODE 7  ////////////////
@@ -76,9 +75,10 @@ public class Client extends Thread{
         String textField = client.text;
         String userTarget = textField.substring(11);
         if(userTarget.equals(client.user)) {
-            ch.printError("You can't invite yourself!");
+            //ch.printError("You can't invite yourself!");
         }else {
-            ch.sendMessage("7",user,userTarget);
+            //ch.sendMessage("7",user,userTarget);
+        	ch.sendMessageCase7(user, userTarget);
         }
     }
 
@@ -88,8 +88,9 @@ public class Client extends Thread{
         if (textField.equals("/accept")) {
 
         }else {
-            String userTarget = textField.substring(8);
-            ch.sendMessage("8", user, "accept:"+userTarget);
+            String userSentInvite = textField.substring(8);
+            //ch.sendMessage("8", user, "accept:"+userSentInvite);
+            ch.sendMessageCase8(true, user, userSentInvite);
         }
 
     }
@@ -100,17 +101,20 @@ public class Client extends Thread{
         if (textField.equals("/decline")) {
 
         }else {
-            String userTarget = textField.substring(9);
-            ch.sendMessage("8", user, "decline:"+userTarget);
+            String userSentInvite = textField.substring(9);
+            ch.sendMessageCase8(false, user, userSentInvite);
+            //ch.sendMessage("8", user, "decline:"+userSentInvite);
         }
 
     }
     
     ////////////////CODE 10  ////////////////
     public void registerAccount(String username,String password) {
-        ch.sendMessage("10", username, password);
+    	ch.sendMessageCase10(username, password);
+        //ch.sendMessage("10", username, password);
     }
-
+    
+    /**
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
         if(lastUserPrivate.equals("")) {
             ch.printError("You can't reply! Wait for a new message");
@@ -121,21 +125,15 @@ public class Client extends Thread{
             String code = "5";
             ch.sendMessage(code, users, text);
         }
-
-
-
     }
-
-    public void printError(String string) {
-        ch.printError(string);
-    }
+    */
 
     public void requestInfoUser() {
-        String text = client.user + "\r\n\r\n"+
-                " Level: "+client.lvlUser+"\r\n" + 
-                " Experience: "+client.expUser+"\r\n" + 
-                " Number of messages sent: "+client.numMensagens+"\r\n" +
-                " Number of words written: "+client.numWordsWritten+"\r\n";
+        String text = client.user.getFullName() + "\r\n\r\n"+
+                " Level: "+client.user.getUserLvl()+"\r\n" + 
+                " Experience: "+client.user.getUserExp()+"\r\n" + 
+                " Number of messages sent: "+client.user.getMessagesSent()+"\r\n" +
+                " Number of words written: "+client.user.getWordsWritten()+"\r\n";
         AlertBox.display("Details", text,false);
     }
 }

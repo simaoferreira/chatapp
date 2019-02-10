@@ -1,0 +1,973 @@
+--INFO (Tue 05.02.2019 at 10:44:33) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:44:33) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:44:33) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:44:33) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:44:41) : New connection was accepted: /81.84.174.114:1025
+--INFO (Tue 05.02.2019 at 10:44:45) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:44:46) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 10:47:18) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 10:47:35) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:47:36) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:47:36) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:47:36) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:47:42) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 10:47:45) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:47:46) : User simon logged in the server
+--INFO (Tue 05.02.2019 at 10:50:56) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:50:56) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:50:57) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:50:57) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:51:03) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 10:51:06) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:51:07) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 10:51:43) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 10:51:53) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:51:53) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:51:53) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:51:53) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:51:58) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 10:52:01) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:52:02) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 10:53:27) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 10:53:35) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:53:35) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:53:35) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:53:35) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:53:41) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 10:53:44) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:53:45) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 10:54:27) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 10:54:35) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:54:35) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:54:35) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:54:35) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:54:52) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 10:54:56) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:54:57) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 10:59:29) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 10:59:47) : Server restarted;
+--INFO (Tue 05.02.2019 at 10:59:47) : Database initialized;
+--INFO (Tue 05.02.2019 at 10:59:47) : Server initialized;
+--INFO (Tue 05.02.2019 at 10:59:47) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 10:59:52) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 10:59:56) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 10:59:56) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 11:06:01) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 11:06:09) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:06:10) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:06:10) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:06:10) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:06:14) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:06:18) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:06:19) : User simon logged in the server
+--SEVERE (Tue 05.02.2019 at 11:06:26) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 11:12:04) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:12:04) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:12:04) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:12:04) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:12:08) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:12:12) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:12:13) : User simon logged in the server
+--INFO (Tue 05.02.2019 at 11:12:31) : New connection was accepted: /81.84.174.114:1025
+--INFO (Tue 05.02.2019 at 11:12:37) : User berunoxxx trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:12:37) : User berunoxxx logged in the server
+--WARNING (Tue 05.02.2019 at 11:13:26) : User berunoxxx disconnected
+--WARNING (Tue 05.02.2019 at 11:13:34) : User simon disconnected
+--INFO (Tue 05.02.2019 at 11:13:53) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:13:53) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:13:53) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:13:53) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:13:58) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:14:03) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:14:04) : User simon logged in the server
+--INFO (Tue 05.02.2019 at 11:14:12) : New connection was accepted: /81.84.174.114:1025
+--INFO (Tue 05.02.2019 at 11:14:20) : User berunoxxx trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:14:20) : User berunoxxx logged in the server
+--WARNING (Tue 05.02.2019 at 11:15:10) : User berunoxxx disconnected
+--INFO (Tue 05.02.2019 at 11:16:23) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:16:24) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:16:24) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:16:24) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:16:29) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:16:33) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:16:34) : User simon logged in the server
+--INFO (Tue 05.02.2019 at 11:16:40) : New connection was accepted: /81.84.174.114:1025
+--INFO (Tue 05.02.2019 at 11:16:45) : User berunoxxx trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:16:45) : User berunoxxx logged in the server
+--WARNING (Tue 05.02.2019 at 11:20:31) : User berunoxxx disconnected
+--INFO (Tue 05.02.2019 at 11:21:41) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:21:41) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:21:41) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:21:41) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:21:48) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:21:51) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:21:52) : User simon logged in the server
+--INFO (Tue 05.02.2019 at 11:22:13) : New connection was accepted: /81.84.174.114:1025
+--INFO (Tue 05.02.2019 at 11:22:25) : User berunoxxx trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:22:25) : User berunoxxx logged in the server
+--WARNING (Tue 05.02.2019 at 11:24:32) : User berunoxxx disconnected
+--WARNING (Tue 05.02.2019 at 11:24:37) : User simon disconnected
+--INFO (Tue 05.02.2019 at 11:30:31) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:30:32) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:30:32) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:30:32) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:30:33) : Server restarted;
+--WARNING (Tue 05.02.2019 at 11:30:33) : Could not initialize server!
+--INFO (Tue 05.02.2019 at 11:30:57) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:31:03) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:31:04) : User simon logged in the server
+--INFO (Tue 05.02.2019 at 11:34:02) : Server restarted;
+--WARNING (Tue 05.02.2019 at 11:34:02) : Could not initialize server!
+--INFO (Tue 05.02.2019 at 11:34:14) : New connection was accepted: /81.84.174.114:1025
+--INFO (Tue 05.02.2019 at 11:34:18) : User simon trying to login into the server;
+--WARNING (Tue 05.02.2019 at 11:34:18) : Error while trying to get user id!
+--WARNING (Tue 05.02.2019 at 11:34:18) : Error while trying to check if the login is correct or not!
+--INFO (Tue 05.02.2019 at 11:34:18) : User simon couldn not login into the server
+--INFO (Tue 05.02.2019 at 11:35:47) : User simon trying to login into the server;
+--WARNING (Tue 05.02.2019 at 11:35:47) : Error while trying to get user id!
+--WARNING (Tue 05.02.2019 at 11:35:47) : Error while trying to check if the login is correct or not!
+--INFO (Tue 05.02.2019 at 11:35:47) : User simon couldn not login into the server
+--WARNING (Tue 05.02.2019 at 11:35:50) : User null disconnected
+--INFO (Tue 05.02.2019 at 11:35:58) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:35:58) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:35:58) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:35:58) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:36:03) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:36:07) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:36:08) : User simon logged in the server
+--WARNING (Tue 05.02.2019 at 11:36:28) : User simon disconnected
+--INFO (Tue 05.02.2019 at 11:37:56) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:37:56) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:37:56) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:37:56) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:38:03) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:38:07) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:38:08) : User simon logged in the server
+--WARNING (Tue 05.02.2019 at 11:38:25) : User simon disconnected
+--INFO (Tue 05.02.2019 at 11:41:37) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:41:38) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:41:38) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:41:38) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:41:42) : New connection was accepted: /81.84.174.114:1024
+--WARNING (Tue 05.02.2019 at 11:41:55) : User null disconnected
+--INFO (Tue 05.02.2019 at 11:46:27) : New connection was accepted: /81.84.174.114:1024
+--WARNING (Tue 05.02.2019 at 11:46:30) : User null disconnected
+--INFO (Tue 05.02.2019 at 11:47:02) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:47:08) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:47:09) : User simon logged in the server
+--WARNING (Tue 05.02.2019 at 11:47:18) : User simon disconnected
+--INFO (Tue 05.02.2019 at 11:47:51) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:47:51) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:47:51) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:47:51) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:47:55) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:48:01) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:48:01) : User simon logged in the server
+--WARNING (Tue 05.02.2019 at 11:48:03) : User simon disconnected
+--INFO (Tue 05.02.2019 at 11:52:55) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:52:56) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:52:56) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:52:56) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:53:01) : New connection was accepted: /81.84.174.114:1024
+--WARNING (Tue 05.02.2019 at 11:53:04) : Lost a connection;
+--INFO (Tue 05.02.2019 at 11:53:09) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:53:13) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:53:14) : User simon logged in the server
+--WARNING (Tue 05.02.2019 at 11:53:16) : User simon disconnected;
+--SEVERE (Tue 05.02.2019 at 11:53:16) : Error trying creating the streams!
+--INFO (Tue 05.02.2019 at 11:55:54) : Server restarted;
+--INFO (Tue 05.02.2019 at 11:55:54) : Database initialized;
+--INFO (Tue 05.02.2019 at 11:55:54) : Server initialized;
+--INFO (Tue 05.02.2019 at 11:55:54) : Server started to wait for new connections;
+--INFO (Tue 05.02.2019 at 11:56:00) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:56:03) : User simon trying to login into the server;
+--INFO (Tue 05.02.2019 at 11:56:04) : User simon logged in the server
+--WARNING (Tue 05.02.2019 at 11:56:09) : User simon disconnected;
+--INFO (Tue 05.02.2019 at 11:56:53) : New connection was accepted: /81.84.174.114:1024
+--INFO (Tue 05.02.2019 at 11:56:56) : User simon trying to login into the server;
+--WARNING (Tue 05.02.2019 at 11:56:56) : Error while trying to get user id!
+--WARNING (Tue 05.02.2019 at 11:56:56) : Error while trying to check if the login is correct or not!
+--INFO (Tue 05.02.2019 at 11:56:56) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:01:12) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:01:12) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:01:12) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:01:12) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:01:18) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:02:24) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:02:24) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:02:24) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:02:24) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:02:35) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:02:39) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:02:39) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 12:02:51) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 12:02:56) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:02:57) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 12:03:11) : User simon disconnected;
+--WARNING (Wed 06.02.2019 at 12:03:15) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 12:04:38) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:04:40) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:04:40) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:04:40) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:05:04) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:05:10) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:05:12) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 12:05:38) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 12:05:50) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:05:54) : User simon trying to login into the server;
+--WARNING (Wed 06.02.2019 at 12:05:54) : Error while trying to get user id!
+--WARNING (Wed 06.02.2019 at 12:05:54) : Error while trying to check if the login is correct or not!
+--INFO (Wed 06.02.2019 at 12:05:54) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:06:57) : User simon trying to login into the server;
+--WARNING (Wed 06.02.2019 at 12:06:57) : Error while trying to get user id!
+--WARNING (Wed 06.02.2019 at 12:06:57) : Error while trying to check if the login is correct or not!
+--INFO (Wed 06.02.2019 at 12:06:57) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:07:29) : User simon trying to login into the server;
+--WARNING (Wed 06.02.2019 at 12:07:29) : Error while trying to get user id!
+--WARNING (Wed 06.02.2019 at 12:07:29) : Error while trying to check if the login is correct or not!
+--INFO (Wed 06.02.2019 at 12:07:29) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:10:05) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:10:05) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:10:05) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:10:05) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:10:12) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:10:16) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:10:17) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 12:10:20) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 12:10:55) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:11:00) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:11:00) : User simon couldn not login into the server
+--WARNING (Wed 06.02.2019 at 12:14:20) : Lost a connection;
+--INFO (Wed 06.02.2019 at 12:16:38) : New connection was accepted: /81.84.174.114:1024
+--WARNING (Wed 06.02.2019 at 12:16:41) : Lost a connection;
+--INFO (Wed 06.02.2019 at 12:16:47) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:16:47) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:16:47) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:16:47) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:16:54) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:16:57) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:16:58) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 12:17:15) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 12:17:19) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:17:23) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:17:23) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:18:10) : User berunoxxx trying to login into the server;
+--SEVERE (Wed 06.02.2019 at 12:18:10) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 12:19:04) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:19:04) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:19:04) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:19:04) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:19:09) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:19:13) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:19:14) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 12:19:43) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 12:20:47) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:20:48) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:20:48) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:20:48) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:20:56) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:20:59) : User mastir trying to login into the server;
+--WARNING (Wed 06.02.2019 at 12:20:59) : Error while trying to get user id!
+--WARNING (Wed 06.02.2019 at 12:20:59) : Error while trying to check if the login is correct or not!
+--WARNING (Wed 06.02.2019 at 12:20:59) : Error while trying to get user id!
+--WARNING (Wed 06.02.2019 at 12:20:59) : Error while trying to check if the login is correct or not!
+--INFO (Wed 06.02.2019 at 12:20:59) : User mastir couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:21:06) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:21:07) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:21:13) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:21:13) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:21:18) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:21:18) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:21:20) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:21:20) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:23:20) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:23:21) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:23:21) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:23:21) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:23:26) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:23:33) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:23:34) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:24:16) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:24:16) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:24:16) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:24:16) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:24:21) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:24:26) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:24:27) : User simon couldn not login into the server
+--WARNING (Wed 06.02.2019 at 12:25:32) : Lost a connection;
+--INFO (Wed 06.02.2019 at 12:25:37) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:25:38) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:25:38) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:25:38) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:25:42) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:25:45) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:25:46) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:26:12) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:26:12) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:26:12) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:26:12) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:26:16) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:26:21) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:26:22) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:26:44) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:26:44) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:26:44) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:26:44) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:26:48) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:26:53) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:26:54) : User simon couldn not login into the server
+--WARNING (Wed 06.02.2019 at 12:27:52) : Lost a connection;
+--INFO (Wed 06.02.2019 at 12:28:00) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:28:00) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:28:00) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:28:00) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:28:04) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:28:08) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:28:09) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:36:04) : Server restarted;
+--WARNING (Wed 06.02.2019 at 12:36:04) : Could not initialize server!
+--INFO (Wed 06.02.2019 at 12:36:24) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:36:25) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:36:25) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:36:25) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:36:30) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:36:34) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:36:35) : User simon couldn not login into the server
+--WARNING (Wed 06.02.2019 at 12:39:33) : Lost a connection;
+--INFO (Wed 06.02.2019 at 12:39:51) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:39:52) : User simon added successfully;
+--INFO (Wed 06.02.2019 at 12:39:52) : User berunoxxx added successfully;
+--INFO (Wed 06.02.2019 at 12:40:46) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:40:46) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:40:46) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:40:46) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:40:56) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:40:59) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:41:00) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:42:03) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:42:04) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:42:04) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:42:04) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:42:08) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:42:12) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:42:13) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:48:01) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:48:02) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:48:02) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:48:02) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:48:07) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:48:11) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:48:12) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 12:49:39) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 12:49:48) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:49:52) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:49:52) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:49:55) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:49:55) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:50:22) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:50:22) : User berunoxxx couldn not login into the server
+--INFO (Wed 06.02.2019 at 12:50:23) : User berunoxxx trying to login into the server;
+--SEVERE (Wed 06.02.2019 at 12:50:23) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 12:51:37) : Server restarted;
+--INFO (Wed 06.02.2019 at 12:51:37) : Database initialized;
+--INFO (Wed 06.02.2019 at 12:51:37) : Server initialized;
+--INFO (Wed 06.02.2019 at 12:51:37) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 12:51:42) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 12:51:53) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 12:51:54) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 12:52:07) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 01:14:20) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:14:20) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:14:20) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:14:20) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:14:26) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:14:33) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:14:33) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 01:14:38) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:14:38) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 01:14:45) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 01:20:31) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:20:31) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:20:31) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:20:31) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:20:37) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:20:40) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:20:41) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 01:20:46) : User simon disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 01:20:46) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 01:22:18) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:22:18) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:22:19) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:22:19) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:22:24) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:22:28) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:22:29) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 01:22:32) : User simon disconnected in wrong way;
+--INFO (Wed 06.02.2019 at 01:23:25) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:23:25) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:23:25) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:23:25) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:23:43) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:23:47) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:23:48) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 01:23:50) : User simon disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 01:23:50) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 01:27:27) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:27:27) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:27:27) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:27:27) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:27:33) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:27:36) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:27:37) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 01:27:39) : User simon disconnected in wrong way;
+--INFO (Wed 06.02.2019 at 01:30:10) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:30:14) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:30:14) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 01:30:20) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 01:30:24) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:30:24) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 01:30:29) : User simon disconnected in wrong way;
+--WARNING (Wed 06.02.2019 at 01:30:45) : User berunoxxx disconnected in wrong way;
+--INFO (Wed 06.02.2019 at 01:32:48) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:32:48) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:32:48) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:32:48) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:32:54) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:32:58) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:32:58) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 01:33:02) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 01:33:12) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:33:12) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 01:33:16) : User simon disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 01:33:16) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 01:35:35) : Server restarted;
+--INFO (Wed 06.02.2019 at 01:35:35) : Database initialized;
+--INFO (Wed 06.02.2019 at 01:35:35) : Server initialized;
+--INFO (Wed 06.02.2019 at 01:35:35) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 01:35:42) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 01:35:46) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 01:35:47) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:13:46) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:13:47) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:13:47) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:13:47) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:13:53) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:13:58) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:13:58) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:14:06) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:14:17) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:14:17) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:14:23) : User simon disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 02:14:23) : Error trying creating the streams!
+--WARNING (Wed 06.02.2019 at 02:14:30) : User berunoxxx disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 02:14:30) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:14:41) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:14:46) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:14:46) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:14:52) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:14:56) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:14:56) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:14:59) : User simon disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 02:14:59) : Error trying creating the streams!
+--WARNING (Wed 06.02.2019 at 02:15:48) : User berunoxxx disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 02:15:48) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:16:29) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:16:29) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:16:29) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:16:29) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:16:34) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:16:39) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:16:40) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:16:44) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:16:50) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:16:50) : User berunoxxx couldn not login into the server
+--INFO (Wed 06.02.2019 at 02:16:56) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:16:56) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:17:21) : User berunoxxx disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 02:17:21) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:22:26) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:22:26) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:22:26) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:22:26) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:22:32) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:22:33) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:22:36) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:22:37) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:22:46) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:22:46) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:22:50) : User berunoxxx disconnected in wrong way;
+--SEVERE (Wed 06.02.2019 at 02:22:50) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:26:10) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:26:10) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:26:10) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:26:10) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:26:17) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:26:21) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:26:22) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:26:26) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:26:32) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:26:32) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:26:39) : User berunoxxx disconnected;
+--SEVERE (Wed 06.02.2019 at 02:26:39) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:29:58) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:29:58) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:29:58) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:29:58) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:30:07) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:30:13) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:30:14) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:30:28) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:30:33) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:30:33) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:30:37) : User berunoxxx disconnected;
+--SEVERE (Wed 06.02.2019 at 02:30:37) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:34:56) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:34:56) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:34:56) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:34:56) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:35:02) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:35:07) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:35:08) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 02:35:11) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:35:11) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:35:16) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:35:21) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:35:21) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:35:27) : User berunoxxx disconnected;
+--WARNING (Wed 06.02.2019 at 02:35:27) : Error trying creating the streams!
+--INFO (Wed 06.02.2019 at 02:36:21) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:36:21) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:36:21) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:36:21) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:36:31) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:36:35) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:36:36) : User simon logged in the server
+--WARNING (Wed 06.02.2019 at 02:36:38) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 02:37:03) : Server restarted;
+--INFO (Wed 06.02.2019 at 02:37:03) : Database initialized;
+--INFO (Wed 06.02.2019 at 02:37:03) : Server initialized;
+--INFO (Wed 06.02.2019 at 02:37:03) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 02:37:12) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 02:37:16) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:37:17) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 02:37:20) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 02:37:40) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:37:40) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 02:37:55) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 02:37:55) : User berunoxxx logged in the server
+--WARNING (Wed 06.02.2019 at 02:38:01) : User berunoxxx disconnected;
+--WARNING (Wed 06.02.2019 at 02:38:34) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 03:18:15) : Server restarted;
+--INFO (Wed 06.02.2019 at 03:18:15) : Database initialized;
+--INFO (Wed 06.02.2019 at 03:18:15) : Server initialized;
+--INFO (Wed 06.02.2019 at 03:18:15) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 03:18:20) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 03:18:24) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:18:25) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 03:18:27) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 03:31:06) : Server restarted;
+--INFO (Wed 06.02.2019 at 03:31:06) : Database initialized;
+--INFO (Wed 06.02.2019 at 03:31:06) : Server initialized;
+--INFO (Wed 06.02.2019 at 03:31:06) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 03:31:12) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 03:31:22) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:31:22) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 03:31:53) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 03:31:58) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 03:32:03) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:32:03) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 03:32:21) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 03:32:49) : Server restarted;
+--INFO (Wed 06.02.2019 at 03:32:50) : Database initialized;
+--INFO (Wed 06.02.2019 at 03:32:50) : Server initialized;
+--INFO (Wed 06.02.2019 at 03:32:50) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 03:32:56) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 03:32:59) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:33:00) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 03:35:20) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 03:35:25) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 03:35:29) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:35:29) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 03:35:54) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 03:36:05) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 03:36:08) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:36:08) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 03:36:13) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 03:36:19) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 03:36:19) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 03:36:47) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 03:37:04) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 08:24:14) : Server restarted;
+--INFO (Wed 06.02.2019 at 08:24:14) : Database initialized;
+--INFO (Wed 06.02.2019 at 08:24:14) : Server initialized;
+--INFO (Wed 06.02.2019 at 08:24:14) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 08:24:25) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 08:24:31) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 08:24:33) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 08:24:41) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 08:24:46) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 08:25:30) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 08:25:30) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 08:44:35) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 10:55:23) : Server restarted;
+--INFO (Wed 06.02.2019 at 10:55:24) : Database initialized;
+--INFO (Wed 06.02.2019 at 10:55:24) : Server initialized;
+--INFO (Wed 06.02.2019 at 10:55:24) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 10:55:37) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 10:55:43) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 10:55:45) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 10:56:03) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 10:56:08) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 10:56:08) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 10:56:17) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 10:59:20) : Server restarted;
+--INFO (Wed 06.02.2019 at 10:59:20) : Database initialized;
+--INFO (Wed 06.02.2019 at 10:59:20) : Server initialized;
+--INFO (Wed 06.02.2019 at 10:59:20) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 10:59:25) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 10:59:27) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 10:59:31) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 10:59:32) : User simon couldn not login into the server
+--INFO (Wed 06.02.2019 at 10:59:34) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 10:59:34) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 10:59:40) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 10:59:40) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 10:59:46) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:00:30) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:00:50) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:00:56) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:01:16) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:01:23) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:02:53) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:02:53) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:02:53) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:02:53) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:03:00) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:03:02) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:03:05) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:03:06) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:03:11) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:03:11) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:03:16) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:03:39) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:10:28) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:10:32) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:11:56) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:11:56) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:11:56) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:11:56) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:12:04) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:12:04) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:12:09) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:12:09) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:12:13) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:12:13) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:12:23) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:13:36) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:13:42) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:13:43) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:13:43) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:13:43) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:13:46) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:13:49) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:13:50) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:13:51) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:13:57) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:13:57) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:14:02) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:14:57) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:15:02) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:15:02) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:15:02) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:15:02) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:15:11) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:15:15) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:15:16) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:15:20) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:15:32) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:15:32) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:15:38) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:19:00) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:23:44) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:23:55) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:23:55) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:23:55) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:23:55) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:24:24) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:24:26) : New connection was accepted: /81.84.174.114:1026
+--INFO (Wed 06.02.2019 at 11:24:28) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:24:29) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:24:36) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:24:36) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:24:41) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:24:59) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:25:07) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:25:49) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:25:51) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:26:48) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:26:48) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:26:48) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:26:48) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:26:55) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:27:02) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:27:03) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:27:07) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:27:11) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:27:11) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:27:21) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:27:23) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:27:25) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:28:13) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:28:16) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:29:20) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:29:21) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:29:21) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:29:21) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:29:25) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:29:29) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:29:30) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:29:34) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:29:38) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:29:39) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:29:42) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:29:46) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:29:47) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:29:53) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:29:59) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:34:59) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:34:59) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:34:59) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:34:59) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:35:06) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:35:06) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:35:10) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:35:11) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:35:20) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:35:20) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:35:27) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:35:35) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:39:53) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:40:15) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:40:15) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:40:15) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:40:15) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:40:20) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:40:24) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:40:25) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:40:29) : New connection was accepted: /81.84.174.114:1026
+--INFO (Wed 06.02.2019 at 11:40:35) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:40:35) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:40:41) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:41:32) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:41:43) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:41:46) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:41:48) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:42:33) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:42:33) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:42:33) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:42:33) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:42:38) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:42:40) : New connection was accepted: /81.84.174.114:1026
+--INFO (Wed 06.02.2019 at 11:42:44) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:42:45) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:42:49) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:42:49) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:42:57) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:43:23) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:43:25) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:44:29) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:44:30) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:44:30) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:44:30) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:44:40) : New connection was accepted: /81.84.174.114:1026
+--INFO (Wed 06.02.2019 at 11:44:48) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:44:48) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:44:53) : New connection was accepted: /81.84.174.114:1027
+--INFO (Wed 06.02.2019 at 11:45:52) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:45:53) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:45:53) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:45:53) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:45:58) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:46:01) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:46:02) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:46:09) : New connection was accepted: /81.84.174.114:1026
+--INFO (Wed 06.02.2019 at 11:46:14) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:46:14) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:47:46) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:47:46) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:47:46) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:47:46) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:48:01) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:48:07) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:48:07) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:48:15) : New connection was accepted: /81.84.174.114:1026
+--INFO (Wed 06.02.2019 at 11:48:20) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:48:20) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:48:26) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:48:30) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 06.02.2019 at 11:48:39) : Length of words written by simon successfully updated
+--INFO (Wed 06.02.2019 at 11:48:48) : User simon disconnected;
+--INFO (Wed 06.02.2019 at 11:48:49) : User berunoxxx disconnected;
+--INFO (Wed 06.02.2019 at 11:50:10) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:50:10) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:50:10) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:50:10) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:50:16) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:50:21) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:50:22) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:50:34) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:50:38) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:50:38) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:53:07) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:53:07) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:53:07) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:53:07) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:53:10) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:53:16) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:53:17) : User berunoxxx logged in the server
+--INFO (Wed 06.02.2019 at 11:53:22) : New connection was accepted: /81.84.174.114:1025
+--INFO (Wed 06.02.2019 at 11:53:27) : User simon trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:53:27) : User simon logged in the server
+--INFO (Wed 06.02.2019 at 11:54:21) : Server restarted;
+--INFO (Wed 06.02.2019 at 11:54:21) : Database initialized;
+--INFO (Wed 06.02.2019 at 11:54:21) : Server initialized;
+--INFO (Wed 06.02.2019 at 11:54:21) : Server started to wait for new connections;
+--INFO (Wed 06.02.2019 at 11:54:25) : New connection was accepted: /81.84.174.114:1024
+--INFO (Wed 06.02.2019 at 11:54:33) : User berunoxxx trying to login into the server;
+--INFO (Wed 06.02.2019 at 11:54:34) : User berunoxxx logged in the server
+--INFO (Thu 07.02.2019 at 12:03:04) : User berunoxxx disconnected;
+--INFO (Thu 07.02.2019 at 12:03:13) : Server restarted;
+--INFO (Thu 07.02.2019 at 12:03:13) : Database initialized;
+--INFO (Thu 07.02.2019 at 12:03:13) : Server initialized;
+--INFO (Thu 07.02.2019 at 12:03:13) : Server started to wait for new connections;
+--INFO (Thu 07.02.2019 at 12:03:20) : New connection was accepted: /81.84.174.114:1024
+--INFO (Thu 07.02.2019 at 12:03:25) : User berunoxxx trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:03:26) : User berunoxxx logged in the server
+--INFO (Thu 07.02.2019 at 12:03:33) : New connection was accepted: /81.84.174.114:1025
+--INFO (Thu 07.02.2019 at 12:03:40) : User simon trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:03:40) : User simon logged in the server
+--INFO (Thu 07.02.2019 at 12:03:45) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 07.02.2019 at 12:03:54) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:04:01) : User berunoxxx disconnected;
+--INFO (Thu 07.02.2019 at 12:04:03) : User simon disconnected;
+--INFO (Thu 07.02.2019 at 12:06:38) : Server restarted;
+--WARNING (Thu 07.02.2019 at 12:06:38) : Could not initialize server!
+--INFO (Thu 07.02.2019 at 12:06:44) : Server restarted;
+--INFO (Thu 07.02.2019 at 12:06:44) : Database initialized;
+--INFO (Thu 07.02.2019 at 12:06:44) : Server initialized;
+--INFO (Thu 07.02.2019 at 12:06:44) : Server started to wait for new connections;
+--INFO (Thu 07.02.2019 at 12:06:49) : New connection was accepted: /81.84.174.114:1025
+--INFO (Thu 07.02.2019 at 12:06:52) : User simon trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:06:53) : User simon logged in the server
+--INFO (Thu 07.02.2019 at 12:07:00) : New connection was accepted: /81.84.174.114:1026
+--INFO (Thu 07.02.2019 at 12:07:04) : User berunoxxx trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:07:04) : User berunoxxx logged in the server
+--INFO (Thu 07.02.2019 at 12:07:11) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:07:17) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:07:20) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 07.02.2019 at 12:07:25) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 07.02.2019 at 12:07:30) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:08:24) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 07.02.2019 at 12:09:34) : Server restarted;
+--INFO (Thu 07.02.2019 at 12:09:34) : Database initialized;
+--INFO (Thu 07.02.2019 at 12:09:34) : Server initialized;
+--INFO (Thu 07.02.2019 at 12:09:34) : Server started to wait for new connections;
+--INFO (Thu 07.02.2019 at 12:09:40) : New connection was accepted: /81.84.174.114:1024
+--INFO (Thu 07.02.2019 at 12:09:44) : User simon trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:09:44) : User simon logged in the server
+--INFO (Thu 07.02.2019 at 12:09:49) : New connection was accepted: /81.84.174.114:1025
+--INFO (Thu 07.02.2019 at 12:09:53) : User berunoxxx trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:09:53) : User berunoxxx logged in the server
+--INFO (Thu 07.02.2019 at 12:09:58) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 07.02.2019 at 12:10:38) : Server restarted;
+--INFO (Thu 07.02.2019 at 12:10:38) : Database initialized;
+--INFO (Thu 07.02.2019 at 12:10:38) : Server initialized;
+--INFO (Thu 07.02.2019 at 12:10:38) : Server started to wait for new connections;
+--INFO (Thu 07.02.2019 at 12:10:43) : New connection was accepted: /81.84.174.114:1024
+--INFO (Thu 07.02.2019 at 12:10:47) : User simon trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:10:47) : User simon logged in the server
+--INFO (Thu 07.02.2019 at 12:10:53) : New connection was accepted: /81.84.174.114:1025
+--INFO (Thu 07.02.2019 at 12:10:57) : User berunoxxx trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:10:57) : User berunoxxx logged in the server
+--INFO (Thu 07.02.2019 at 12:11:00) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:11:09) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 07.02.2019 at 12:11:26) : User simon disconnected;
+--INFO (Thu 07.02.2019 at 12:11:41) : User berunoxxx disconnected;
+--INFO (Thu 07.02.2019 at 12:19:51) : Server restarted;
+--WARNING (Thu 07.02.2019 at 12:19:51) : Could not initialize server!
+--INFO (Thu 07.02.2019 at 12:19:58) : New connection was accepted: /81.84.174.114:1024
+--INFO (Thu 07.02.2019 at 12:19:59) : New connection was accepted: /81.84.174.114:1025
+--INFO (Thu 07.02.2019 at 12:20:06) : User simon trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:20:06) : User simon logged in the server
+--INFO (Thu 07.02.2019 at 12:20:11) : User berunoxxx trying to login into the server;
+--INFO (Thu 07.02.2019 at 12:20:11) : User berunoxxx logged in the server
+--INFO (Thu 07.02.2019 at 12:20:13) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:14) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:14) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:14) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:14) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:14) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:15) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:15) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:15) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:15) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:15) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:16) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:16) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:16) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:16) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:16) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:17) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:17) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:17) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:17) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:17) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:18) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:18) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:18) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:18) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:19) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:19) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:19) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:19) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:19) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:20) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:20) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:20) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:21) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:21) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:21) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:21) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:22) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:22) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:22) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:22) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:23) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:23) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:23) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:24) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:24) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:24) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:24) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:24) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:25) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:25) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:25) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:25) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:26) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:26) : Length of words written by simon successfully updated
+--INFO (Thu 07.02.2019 at 12:20:40) : User berunoxxx disconnected;
+--INFO (Thu 07.02.2019 at 12:20:45) : User simon disconnected;
+--INFO (Sat 09.02.2019 at 12:19:58) : Server restarted;
+--INFO (Sat 09.02.2019 at 12:19:58) : Database initialized;
+--INFO (Sat 09.02.2019 at 12:19:58) : Server initialized;
+--INFO (Sat 09.02.2019 at 12:19:58) : Server started to wait for new connections;
+--INFO (Sat 09.02.2019 at 12:20:07) : New connection was accepted: /81.84.174.114:1024
+--INFO (Sat 09.02.2019 at 12:20:13) : Lost a connection;
+--INFO (Sat 09.02.2019 at 12:20:46) : New connection was accepted: /81.84.174.114:1024
+--INFO (Sat 09.02.2019 at 12:22:46) : User simon trying to login into the server;
+--INFO (Sat 09.02.2019 at 12:22:48) : User simon couldn not login into the server
+--INFO (Sat 09.02.2019 at 12:22:53) : User simon trying to login into the server;
+--INFO (Sat 09.02.2019 at 12:22:53) : User simon logged in the server
+--INFO (Sat 09.02.2019 at 12:33:02) : Length of words written by simon successfully updated
+--INFO (Sat 09.02.2019 at 12:33:06) : User simon disconnected;

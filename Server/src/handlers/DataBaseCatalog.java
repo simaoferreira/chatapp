@@ -1,26 +1,89 @@
 package handlers;
 
+import java.math.BigInteger;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
 
 public class DataBaseCatalog {
 
     private SQLiteHandler sql;
+    private LoggerHandle lh;
 
     /**
      * Handle the Database
+     * @param lh - The Logger Handler 
      */
-    public DataBaseCatalog() {
+    public DataBaseCatalog(LoggerHandle lh) {
         sql = new SQLiteHandler();
+        this.lh = lh;
     }
 
     public void initialize() {
         try {
             sql.initialize();
+            lh.log("INFO", "Database initialized;");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to initialize database!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to initialize database!",e);
         }
+    }
+    
+    /**
+     * Returns a random salt to be used to hash a password.
+     * @return a 16 bytes random salt
+     */
+    public byte[] getNextSalt() {
+        SecureRandom sr;
+        byte[] salt=new byte[16];
+        try {
+            sr = SecureRandom.getInstance("SHA1PRNG");
+            sr.nextBytes(salt);
+        } catch (NoSuchAlgorithmException e) {
+            lh.log("WARNING", "Error while trying to generate salt!", e);
+        }
+        return salt;
+    }
+    
+    /**
+     * Returns a salted and hashed password using the provided hash.
+     * @param password the password to be hashed
+     * @param salt A 16 bytes salt
+     * @return the hashed password with the salt
+     */
+    public String hash(char[] password, byte[] salt) {
+        try {
+            PBEKeySpec spec = new PBEKeySpec(password, salt, 1000, 64 * 8);
+            SecretKeyFactory skf;
+            skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+            byte[] hash = skf.generateSecret(spec).getEncoded();
+            return toHex(hash);
+        } catch (Exception e) {
+            lh.log("WARNING","Error trying to hash password",e);
+        }
+        return null;
+    }
+
+    /**
+     * Conversion byte[] to hex
+     * 
+     * @param array to be converted
+     * @return the conversation in hex from byte[]
+     * @throws NoSuchAlgorithmException
+     */
+    private String toHex(byte[] array) throws NoSuchAlgorithmException{
+        BigInteger bi = new BigInteger(1, array);
+        String hex = bi.toString(16);
+        int paddingLength = (array.length * 2) - hex.length();
+        
+        if(paddingLength > 0)
+            return String.format("%0"  +paddingLength + "d", 0) + hex;
+        else
+            return hex;
+        
     }
 
     /**
@@ -30,10 +93,12 @@ public class DataBaseCatalog {
      */
     public void addUser(String username,String password) {
         try {
-            sql.addUser(username, password);
-        } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error adding new user!");
-            e.printStackTrace();
+        	byte[] salt = getNextSalt();
+            String passw = hash(password.toCharArray(),salt);
+            sql.addUser(username,passw,toHex(salt));
+            lh.log("INFO", "User "+username+" added successfully;");
+        } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException e) {
+            lh.log("WARNING", "Error while trying to add user", e);
         }
     }
 
@@ -44,9 +109,9 @@ public class DataBaseCatalog {
     public void removeUser(int id) {
         try {
             sql.removeUser(id);
+            lh.log("INFO", "User with id "+id+" removed successfully;");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to remove user!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to remove user!", e);
         }
     }
     
@@ -60,9 +125,9 @@ public class DataBaseCatalog {
         int friend = getID(nameRequestedFriend);
         try {
             sql.removeRequestFriend(user, friend);
+            lh.log("INFO", "Request friendship sent by "+username+" to "+nameRequestedFriend+" removed successfully;");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to remove the request friend!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to remove the request friend!", e);
         }
     }
     
@@ -76,9 +141,9 @@ public class DataBaseCatalog {
         int friend = getID(nameFriend);
         try {
             sql.removeFriend(user, friend);
+            lh.log("INFO", "Friend "+nameFriend+" of "+username+" removed successfully;");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to remove friend!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to remove friend!", e);
         }
     }
 
@@ -90,9 +155,9 @@ public class DataBaseCatalog {
     public void updateWordsWritten(String username,int length) {
         try {
             sql.updateWordsWritten(username, length);
+            lh.log("INFO", "Length of words written by "+username+" successfully updated");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error updating words written!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error updating words written!", e);
         }
     }
     
@@ -104,9 +169,9 @@ public class DataBaseCatalog {
     public void changeFirstName(String username,String newFirstName) {
     	try {
 			sql.changeFirstName(username, newFirstName);
+			lh.log("INFO", "User "+username+" changed successfully the first name to "+newFirstName+";");
 		} catch (ClassNotFoundException | SQLException e) {
-			System.err.println("Error changing first name of user!");
-			e.printStackTrace();
+			lh.log("WARNING", "Error changing first name of user!", e);
 		}
     }
 
@@ -118,9 +183,9 @@ public class DataBaseCatalog {
     public void changeLastName(String username,String newLastName) {
     	try {
 			sql.changeLastName(username, newLastName);
+			lh.log("INFO", "User "+username+" changed successfully the last name to "+newLastName+";");
 		} catch (ClassNotFoundException | SQLException e) {
-			System.err.println("Error changing last name of user!");
-			e.printStackTrace();
+			lh.log("WARNING", "Error changing last name of user!", e);
 		}
     }
     
@@ -132,9 +197,9 @@ public class DataBaseCatalog {
     public void changeAge(String username,int age) {
     	try {
 			sql.changeAge(username, age);
+			lh.log("INFO", "User "+username+" changed successfully the the age to "+age+";");
 		} catch (ClassNotFoundException | SQLException e) {
-			System.err.println("Error changing age of user!");
-			e.printStackTrace();
+			lh.log("WARNING", "Error changing age of user!", e);
 		}
     }
     
@@ -146,9 +211,9 @@ public class DataBaseCatalog {
     public void updateExpUser(String username, int n) {
         try {
             sql.updateExpUser(username, n);
+            lh.log("INFO", "Experience of user "+username+" updated and increased by "+n+";");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error updating experience of user!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error updating experience of user!", e);
         }
     }
 
@@ -162,8 +227,7 @@ public class DataBaseCatalog {
         try {
             return sql.estaRegistado(username);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to see if user is registered!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to see if user is registered!", e);
         }
 
         return false;
@@ -171,12 +235,48 @@ public class DataBaseCatalog {
 
     public boolean checkLogin(String username,String password) {
         try {
-            return sql.checkLogin(username, password);
+        	int user = getID(username);
+        	String salt = sql.getSalt(user);
+        	String hashedPass = sql.getHashedPassword(user);
+            return isExpectedPassword(password,salt,hashedPass);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to check if the login is correct or not!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to check if the login is correct or not!", e);
         }
         return false;
+    }
+    
+    private boolean isExpectedPassword(String pass, String salt, String hashedPassword) {
+        byte[] pwdHash;
+        try {
+            pwdHash = fromHex(hashedPassword);
+            byte[] saltHex = fromHex(salt);
+            PBEKeySpec spec = new PBEKeySpec(pass.toCharArray(), saltHex, 1000, pwdHash.length * 8);
+            SecretKeyFactory skf;
+            skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+            byte[] calculatedHash = skf.generateSecret(spec).getEncoded();
+            if (pwdHash.length != calculatedHash.length) 
+                return false;
+            
+            for (int i = 0; i < calculatedHash.length; i++)
+                if (calculatedHash[i] != pwdHash[i])
+                    return false;
+            
+            return true;
+        } catch (Exception e) {
+            lh.log("WARNING", "Error while trying to check if passwords match or not!", e);
+        }
+        
+        return false;
+
+    }
+
+    private byte[] fromHex(String hex) throws NoSuchAlgorithmException
+    {
+        byte[] bytes = new byte[hex.length() / 2];
+        for(int i = 0; i<bytes.length ;i++)
+        	bytes[i] = (byte)Integer.parseInt(hex.substring(2 * i, 2 * i + 2), 16);
+        
+        return bytes;
     }
     
     /**
@@ -191,8 +291,7 @@ public class DataBaseCatalog {
         try {
             return sql.checkRequestInvite(user, friend);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to check if there is a friend invite!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to check if there is a friend invite!", e);
         }
         return false;
     }
@@ -209,8 +308,7 @@ public class DataBaseCatalog {
         try {
             return sql.checkFriendship(user, friend);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to check frindship!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to check frindship!", e);
         }
         return false;
     }   
@@ -225,8 +323,7 @@ public class DataBaseCatalog {
         try {
             return sql.getID(username);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to get user id!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to get user id!", e);
         }
         return -1;
     }
@@ -241,9 +338,9 @@ public class DataBaseCatalog {
         int friend = getID(nameFriend);
         try {
             sql.addFriend(user, friend);
+            lh.log("INFO", "User "+friend+" added successfully to list of friends of "+username+";");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to add new friend!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to add new friend!", e);
         }
     }
     
@@ -257,11 +354,12 @@ public class DataBaseCatalog {
         int friend = getID(nameFriend);
         try {
             sql.addRequestFriend(user, friend);
+            lh.log("INFO", "Request friendship sent by "+username+" to "+nameFriend+" added successfully;");
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to add new request friend!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to add new request friend!", e);
         }
     }
+    
 
     /**
      * Get user level
@@ -272,8 +370,7 @@ public class DataBaseCatalog {
         try {
             return sql.getLvlUser(id);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to get user level!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to get user level!", e);
         }
         return -1;
     }
@@ -287,8 +384,7 @@ public class DataBaseCatalog {
         try {
             return sql.getExpUser(id);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to get user experience!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to get user experience!", e);
         }
         return -1;
     }
@@ -302,8 +398,7 @@ public class DataBaseCatalog {
         try {
             return sql.getMessagesSent(id);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while trying to get sent messages from the user!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying to get sent messages from the user!", e);
         }
         return -1;
     }
@@ -317,25 +412,83 @@ public class DataBaseCatalog {
         try {
             return sql.getWordsWritten(id);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while obtaining the amount of words written by the user!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying obtaining the amount of words written by the user!", e);
         }
         return -1;
     }
-
-    public String getFriends(int idBD) {
-        try {
-            ArrayList<String> friends = sql.getFriendsOfID(idBD);
-            StringBuilder output = new StringBuilder();
-            for(String username : friends) {
-                output.append(username + "\n");
-            }
-            return output.toString();
+    
+    /**
+     * Get the Firstname of the user
+     * @param id - the id of the user
+     * @return the firstname of the user
+     */
+    public String getFirstName(int id) {
+    	try {
+            return sql.getFirstName(id);
         } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error while obtaining friends of the user!");
-            e.printStackTrace();
+            lh.log("WARNING", "Error while trying obtaining the firstname of the user with id "+id+"!", e);
         }
-        return "nenhum";
+        return null;
+    }
+    
+    /**
+     * Get the lastname of the user
+     * @param id - the id of the user
+     * @return the lastname of the user
+     */
+    public String getLastName(int id) {
+    	try {
+            return sql.getLastName(id);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying obtaining the lastname of the user with id "+id+"!", e);
+        }
+        return null;
+    }
+    
+    /**
+     * Get the age of the user
+     * @param id - the id of the user
+     * @return the age of the user
+     */
+    public int getAge(int id) {
+    	try {
+            return sql.getAge(id);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying obtaining the age of the user with id "+id+"!", e);
+        }
+        return -1;
+    }
+    
+    /**
+     * Get the username of the user
+     * @param id - the id of the user
+     * @return the username of the user
+     */
+    public String getUsername(int id) {
+    	try {
+            return sql.getUsername(id);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying to obtaining the username of the user with id "+id+"!", e);
+        }
+        return null;
+    }
+    
+    public String getFullName(int id) {
+    	String fn = getFirstName(id);
+		String ln = getLastName(id);
+		return fn+" "+ln;
+    }
+    
+    public ArrayList<Integer> getFriends(int id) {
+    	ArrayList<Integer> friends = new ArrayList<Integer>();
+    	
+        try {
+        	friends = sql.getFriendsOfID(id);
+            return friends;
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while obtaining friends of the user!", e);
+        }
+        return friends;
     }
  
 }
