@@ -15,7 +15,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="launcherAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../../../Desktop/New%20GUI/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane fx:id="launcherAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
@@ -156,7 +157,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </VBox>
-                        <JFXButton fx:id="launcher_VBox_Pane_RegisterVBox_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#registerWithButton" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #0fafe0; -fx-background-radius: 0;" text="Register" textFill="WHITE">
+                        <JFXButton fx:id="launcher_VBox_Pane_RegisterVBox_Button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="200.0" ripplerFill="WHITE" style="-fx-background-color: #0fafe0; -fx-background-radius: 0;" text="Register" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="15.0" />
                            </font>
@@ -204,25 +205,7 @@
             </VBox>
          </children>
       </VBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="300.0" layoutY="680.0" prefHeight="40.0" prefWidth="980.0">
-         <children>
-            <HBox fx:id="launcher_HBox_Right_Version_HBox" alignment="CENTER" maxHeight="50.0" minHeight="40.0" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #202123;">
-               <children>
-                  <Label fx:id="launcher_Label_Version" textFill="#7c8184">
-                     <font>
-                        <Font name="Calibri Light" size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-      <VBox fx:id="notifications_VBox" layoutX="500.0" prefHeight="30.0" prefWidth="400.0">
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </VBox>
-      <HBox fx:id="launcher_HBox_Top" alignment="CENTER_RIGHT" layoutX="300.0" prefHeight="25.0" prefWidth="980.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="300.0" prefHeight="16.0" prefWidth="980.0">
          <children>
             <FontAwesomeIconView fx:id="launcher_Button_Minimize" fill="#e8e8e8" glyphName="MINUS" onMouseClicked="#minimizeWindow" size="1.5EM">
                <cursor>
@@ -240,6 +223,19 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="300.0" layoutY="680.0" prefHeight="40.0" prefWidth="980.0">
+         <children>
+            <HBox fx:id="dashboardPane_HBox_Right_Version_HBox" alignment="CENTER" maxHeight="50.0" minHeight="40.0" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #202123;">
+               <children>
+                  <Label fx:id="launcher_Label_Version" textFill="#7c8184">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </HBox>
    </children>
