@@ -238,6 +238,35 @@ public class ControllerChat {
 				}
 			}
 		});
+		
+		Timer t = new Timer(1500, new ActionListener() {
+
+			@Override
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+				Platform.runLater(new Runnable() {
+					@Override public void run() {
+						FadeTransition fadeTransition = new FadeTransition();
+						fadeTransition.setDuration(Duration.millis(1000));
+						fadeTransition.setNode(loadingScreen);
+						fadeTransition.setFromValue(1);
+						fadeTransition.setToValue(0);
+						fadeTransition.play();
+						
+						fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+							@Override
+							public void handle(ActionEvent event) {
+								loadingScreen.setVisible(false);
+							}
+						});
+						
+					}
+				});
+			}
+		});
+		t.setRepeats(false);
+		t.start();
+		
+		
 
 	}
 
@@ -323,6 +352,9 @@ public class ControllerChat {
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////CHAT FXML VARIABLES/////////////////////
 	/////////////////////////////////////////////////////////////////
+	
+    @FXML
+    private VBox loadingScreen;
 
 	@FXML
 	private AnchorPane mainAnchorPane;
