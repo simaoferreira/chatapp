@@ -5,6 +5,7 @@ public class User {
 	private String username;
 	private String firstName;
 	private String lastName;
+	private String email;
 	private int age;
 	private int userLvl;
 	private int userExp;
@@ -12,12 +13,13 @@ public class User {
 	private int wordsWritten;
 	
 	
-	public User(String username,String firstName, String lastName, int age, int userLvl, int userExp, int messagesSent,
+	public User(String username,String firstName, String lastName, int age, String email, int userLvl, int userExp, int messagesSent,
 			int wordsWritten) {
 		this.username = username;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
+		this.email = email;
 		this.userLvl = userLvl;
 		this.userExp = userExp;
 		this.messagesSent = messagesSent;
@@ -66,7 +68,15 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public int getUserLvl() {
 		return userLvl;

@@ -23,23 +23,29 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import controllers.ControllerChat;
 import controllers.ControllerLauncher;
 import controllers.Side;
 import controllers.Type;
 import dataHandler.AlertBox;
 import dataHandler.Notifications;
 import dataHandler.User;
+import handlers.LoggerHandle;
 import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.util.Duration;
 
 public class ClientHandler extends Thread{
 
-	private ControllerLauncher mainClient;
+	private ControllerChat mainClient;
 	private Socket socket;
+	private LoggerHandle lh = null;
 	//private DataInputStream dis;
 	//private DataOutputStream dos;
 	private ObjectOutputStream out = null;
@@ -64,43 +70,11 @@ public class ClientHandler extends Thread{
 	private JSONObject info;
 	private Notifications notify = new Notifications();
 
-	public ClientHandler(Socket socket,Client client,ControllerLauncher launcher) {
+	public ClientHandler(Socket socket,Client client,ControllerChat mainClient, LoggerHandle lh) {
 		this.socket = socket;
-		this.mainClient = launcher;
+		this.mainClient = mainClient;
+		this.lh = lh;
 	}
-
-	/**
-	public void sendMessage(String code,String user,String text) {
-		try {
-			JSONObject obj = createObjWithData(code,user,text);
-			dos.writeUTF(obj.toString());
-			dos.flush();
-		} catch (IOException e) {
-			run = false;
-			System.err.println("Não conseguiu escrever!");
-			Platform.runLater(new Runnable() {
-				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
-				}
-			});
-			close();
-		}
-
-	}
-	 */
-
-	/**
-	@SuppressWarnings("unchecked")
-	private JSONObject createObjWithData(String code, String user, String text) {
-		JSONObject obj = new JSONObject();
-		obj.put("code", code);
-		obj.put("username", user);
-		obj.put("text",text);
-		return obj;
-	}
-	 * @throws IOException 
-	 */
-
 
 	protected void sendMessageCase0(String user,String password) {
 		int code = 0;
@@ -113,10 +87,12 @@ public class ClientHandler extends Thread{
 
 			// enviar a pass do user
 			out.writeObject(password);
+			lh.log("INFO", "Login authentication requested sucessfully");
 		}catch(Exception e) {
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
+					lh.log("WARNING", "Could not connect to server");
+					AlertBox.display("Error", "Can't connect to server",false);
 				}
 			});
 		}
@@ -225,9 +201,7 @@ public class ClientHandler extends Thread{
 
 					Animation animation = new Timeline(
 							new KeyFrame(Duration.seconds(0.1),
-									new KeyValue(mainClient.chatScrollPane.vvalueProperty(), 1)),
-							new KeyFrame(Duration.seconds(0.1),
-									new KeyValue(mainClient.connectionsScrollPane.vvalueProperty(), 1)));
+									new KeyValue(mainClient.chatPane_HBox_Left_ScrollPane.vvalueProperty(), 1)));
 					animation.play();
 
 					try {
@@ -235,9 +209,9 @@ public class ClientHandler extends Thread{
 							codeNumber = (int) in.readObject();
 						} catch (Exception e) {
 							run = false;
-							System.err.println("server offline!");
-							mainClient.txtField.setDisable(true);
-							mainClient.sendMessage.setDisable(true);
+							lh.log("WARNING", "Connecting with server has been lost!", e);
+							mainClient.chatPane_HBox_Left_Handle_Input_TextArea.setDisable(true);
+							mainClient.chatPane_HBox_Left_Handle_Input_Button.setDisable(true);
 							Platform.runLater(new Runnable() {
 								@Override public void run() {
 									AlertBox.display("Error", "Connecting with server has been lost!",false);
@@ -252,76 +226,98 @@ public class ClientHandler extends Thread{
 							Boolean authBool = (Boolean) in.readObject();
 
 							if(authBool) {
-								//receber id  
-								mainClient.id = (int) in.readObject();
-								//receber conexoes ativas
-								mainClient.connections = (String) in.readObject();
 								//receber info do username
 								JSONObject infoUser = (JSONObject) in.readObject();
-								mainClient.user = createUserFromJSON(infoUser);
-
-								//receber numero de amigos
-								int numberFriends = (int) in.readObject();
-
-								if(numberFriends != 0) {
-									ArrayList<JSONObject> friendsJSON= new ArrayList<JSONObject>(numberFriends);
-									for(int i=0;i<numberFriends;i++) {
-										JSONObject infoFriend = (JSONObject) in.readObject();
-										friendsJSON.add(infoFriend);
-									}
-
-									for(JSONObject info : friendsJSON) {
-										User friend = createUserFromJSON(info);
-										friends.add(friend);
-									}
-								}
-
+								User user = mainClient.user = createUserFromJSON(infoUser);
+								lh.log("INFO", "User: "+user.getUsername());
+								lh.log("INFO", "Started to loading the aplication with the detail of user.");
+								//inicio
 								Platform.runLater(new Runnable() {
 									@Override public void run() {
 										mainClient.updateSceneToMenu();
-										mainClient.userLbl.setText(mainClient.user.getFullName());
+										mainClient.dashboardPane.setVisible(true);
+										mainClient.loadingScreen_Label.setText("Welcome, "+user.getFullName()+", to Our Chat");
+										mainClient.main_Vbox_Left_QuickInfo_label_FullName.setText(user.getFullName());
+										mainClient.main_Vbox_Left_QuickInfo_Label_Lvl.setText(String.valueOf(user.getUserLvl()));
+										mainClient.profilePane_Label_Level.setText(String.valueOf(user.getUserLvl()));
+										mainClient.profilePane_Details_Label_Firstname.setText(user.getFirstName());
+										mainClient.profilePane_Details_Label_Lastname.setText(user.getLastName());
+										mainClient.profilePane_Details_Label_Age.setText(String.valueOf(user.getAge()));
+										mainClient.profilePane_Details_Label_Email.setText(user.getEmail());
+										mainClient.profilePane_Statistics_Label_MessagesSend.setText(String.valueOf(user.getMessagesSent()));
+										mainClient.profilePane_Statistics_Label_WordsWritten.setText(String.valueOf(user.getWordsWritten()));
+										mainClient.profilePane_Statistics_Label_ArchivementsCompleted.setText("0");
+										mainClient.profilePane_Statistics_Label_TotalExperience.setText(String.valueOf(user.getUserExp()));
+										mainClient.settingsPane_TextField_Firstname.setPromptText(user.getFirstName());
+										mainClient.settingsPane_TextField_Lastname.setPromptText(user.getLastName());
+										mainClient.settingsPane_TextField_Age.setPromptText(String.valueOf(user.getAge()));
+										mainClient.settingsPane_TextField_Email.setPromptText(user.getEmail());
 									}
 								});
 
-								if(numberFriends != 0) {
-									Platform.runLater(new Runnable() {
-										@Override public void run() {
-											for(User u :  friends) {
-												mainClient.addFriendPane(u);
-												mainClient.friendsPane.getChildren().add(mainClient.friendsLabel);
-												mainClient.lblFriends.setText("");
-											}
-										}
-									});
-								}else {
-									Platform.runLater(new Runnable() {
-										@Override public void run() {
-											mainClient.lblFriends.setText("You don't have friends yet!");
-										}
-									});
+								//receber numero de amigos
+								int numberUsers = (int) in.readObject();
+								
+								Platform.runLater(new Runnable() {
+									@Override public void run() {
+										mainClient.dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.setText(String.valueOf(numberUsers));
+									}
+								});
+								
+								if(numberUsers != 0) {
+									for(int i=0;i<numberUsers;i++) {
+										JSONObject userOnline = (JSONObject) in.readObject();
+										User u = createUserFromJSON(userOnline);
+										mainClient.usersOnline.add(u);
+									}
 								}
+								
+								//final
+								Timer t = new Timer(4000, new ActionListener() {
 
-								textOutput = "You connected to the server!";
-								side = Side.LEFT;
-								type= Type.LOGIN;
-								userToSend = mainClient.user.getFullName();
-								atualizarClient = true;
-
+									@Override
+									public void actionPerformed(java.awt.event.ActionEvent e) {
+										Platform.runLater(new Runnable() {
+											@Override public void run() {
+												FadeTransition fadeTransition = new FadeTransition();
+												fadeTransition.setDuration(Duration.millis(1000));
+												fadeTransition.setNode(mainClient.loadingScreen);
+												fadeTransition.setFromValue(1);
+												fadeTransition.setToValue(0);
+												fadeTransition.play();
+												
+												fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+													@Override
+													public void handle(ActionEvent event) {
+														mainClient.loadingScreen.setVisible(false);
+													}
+												});
+												
+											}
+										});
+									}
+								});
+								t.setRepeats(false);
+								t.start();
+								
+								lh.log("INFO", "Loading the aplication with the detail of user terminated.");
 							}else {
 								String error = (String) in.readObject();
 								Platform.runLater(new Runnable() {
 									@Override public void run() {
-										mainClient.passwordTextField.clear();
-										mainClient.lblerror.setText(error);
-										mainClient.loginPaneFields.setVisible(true);
-										mainClient.lblerror.setVisible(true);
+										lh.log("INFO", "Client could not login because "+error);
+										mainClient.launcher_VBox_Pane_LoginVBox_TextField_Username.clear();
+										mainClient.launcher_VBox_Pane_LoginVBox_TextField_Password.clear();
+										mainClient.launcher_VBox_Pane_LoginVBox_TextField_Username.requestFocus();
+										mainClient.launcher_VBox_Pane_LoginVBox_Label_ErrorLogin.setText(error);
+										mainClient.launcher_VBox_Pane_LoginVBox_Label_ErrorLogin.setVisible(true);
 										Timer t = new Timer(1500, new ActionListener() {
 
 											@Override
 											public void actionPerformed(java.awt.event.ActionEvent e) {
 												Platform.runLater(new Runnable() {
 													@Override public void run() {
-														mainClient.lblerror.setVisible(false);
+														mainClient.launcher_VBox_Pane_LoginVBox_Label_ErrorLogin.setVisible(false);
 													}
 												});
 											}
@@ -333,6 +329,7 @@ public class ClientHandler extends Thread{
 							}
 							break;
 						case 1:
+							/**
 							//receber o user que se conectou
 							String userConnected = (String) in.readObject();
 							//receber a lista com as conexoes atualizadas
@@ -342,8 +339,10 @@ public class ClientHandler extends Thread{
 							type= Type.LOGIN;
 							userToSend = userConnected;
 							atualizarClient = true;
+							*/
 							break;
 						case 2:
+							/**
 							//receber o user que se desconectou
 							String userDisconnect = (String) in.readObject();
 
@@ -355,8 +354,10 @@ public class ClientHandler extends Thread{
 							type=Type.LOGOUT;
 							userToSend = userDisconnect;
 							atualizarClient = true;
+							*/
 							break;
 						case 3:
+							/**
 							//receber o owner da mensagem enviada para o servidor
 							String ownerOfMessage = (String) in.readObject();
 							textOutput = (String) in.readObject();
@@ -378,7 +379,7 @@ public class ClientHandler extends Thread{
 								//JSONObject infoUserUpdated = (JSONObject) in.readObject();
 								//updatedInfoUserFromJSON(infoUserUpdated);
 							}
-
+							*/
 							break;
 						case 5:
 							break;
@@ -390,16 +391,6 @@ public class ClientHandler extends Thread{
 							break;
 						case 10:
 							break;
-						}
-
-						if(atualizarClient) {
-							Platform.runLater(new Runnable() {
-								@Override public void run() {
-									mainClient.printMessage("> "+textOutput,userToSend,actualTime,side,type);
-									mainClient.chatPane.getChildren().add(mainClient.centeredLabel);
-									mainClient.lblConnections.setText(mainClient.connections);	
-								}
-							});
 						}
 
 					} catch (Exception e) {
@@ -662,12 +653,13 @@ public class ClientHandler extends Thread{
 		String username = info.get("username").toString();
 		String firstName = info.get("firstName").toString();
 		String lastName = info.get("lastName").toString();
+		String email = info.get("email").toString();
 		int age = Integer.parseInt(info.get("age").toString());
 		int lvlUser = Integer.parseInt(info.get("lvlUser").toString());
 		int expUser = Integer.parseInt(info.get("expUser").toString());
 		int numMensagens = Integer.parseInt(info.get("numMessages").toString());
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
-		User u = new User(username,firstName,lastName,age,lvlUser,expUser,numMensagens,numWordsWritten);
+		User u = new User(username,firstName,lastName,age,email,lvlUser,expUser,numMensagens,numWordsWritten);
 		return u;
 	}
 

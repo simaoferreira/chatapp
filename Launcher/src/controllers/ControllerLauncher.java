@@ -65,40 +65,32 @@ public class ControllerLauncher {
 
 	}
 
-	public void iniciarController() {
+	public void startController() {
 
 		//String musicFile = "C:/Users/simao/eclipse-workspace/Launcher/src/Controllers/mastir.mp3";
 		//Media sound = new Media(new File(musicFile).toURI().toString());
 		//mediaPlayer = new MediaPlayer(sound);
 
-		try {
-			c = new Client(this);
-			usernameTextField.setTextFormatter(new TextFormatter<String>(change -> 
-			change.getControlNewText().length() <= MAX_CHARS ? change : null));
-			passwordTextField.setTextFormatter(new TextFormatter<String>(change -> 
-			change.getControlNewText().length() <= MAX_CHARS+8 ? change : null));
-			lblversionFirst.setText(version);
-			lblversionSecond.setText(version);
-			lbl.setVisible(false);
-			Scene scene = new Scene(loginPane);
-			scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
-				final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
-						KeyCombination.ALT_DOWN);
-				public void handle(KeyEvent ke) {
-					if (keyComb.match(ke)) {
-						System.exit(0);
-					}
+		//c = new Client(this);
+		usernameTextField.setTextFormatter(new TextFormatter<String>(change -> 
+		change.getControlNewText().length() <= MAX_CHARS ? change : null));
+		passwordTextField.setTextFormatter(new TextFormatter<String>(change -> 
+		change.getControlNewText().length() <= MAX_CHARS+8 ? change : null));
+		lblversionFirst.setText(version);
+		lblversionSecond.setText(version);
+		lbl.setVisible(false);
+		Scene scene = new Scene(loginPane);
+		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+					KeyCombination.ALT_DOWN);
+			public void handle(KeyEvent ke) {
+				if (keyComb.match(ke)) {
+					System.exit(0);
 				}
-			});
-			stage.setScene(scene);
-			stage.show();   
-		} catch (IOException e) {
-			Platform.runLater(new Runnable() {
-				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
-				}
-			});
-		}
+			}
+		});
+		stage.setScene(scene);
+		stage.show();
 	}
 
 	private void loadMenu() throws IOException {
@@ -449,7 +441,7 @@ public class ControllerLauncher {
 		String password = passwordTextFieldRegister.getText();
 		String passwordAgain = passwordAgainTextFieldRegister.getText();
 		if(passwordAgain.equals(password)) {
-			c.registerAccount(username, password);
+			//c.registerAccount(username, password);
 		}else {
 			AlertBox.display("Details", "Passwords don't match!",false);
 			passwordTextFieldRegister.clear();
@@ -464,7 +456,7 @@ public class ControllerLauncher {
 			String password = passwordTextFieldRegister.getText();
 			String passwordAgain = passwordAgainTextFieldRegister.getText();
 			if(passwordAgain.equals(password)) {
-				c.registerAccount(username, password);
+				//c.registerAccount(username, password);
 			}else {
 				AlertBox.display("Details", "Passwords don't match!",false);
 				passwordTextFieldRegister.clear();
@@ -484,13 +476,13 @@ public class ControllerLauncher {
 
 	@FXML
 	void openInfoByLabel(MouseEvent  event) {
-		c.requestInfoUser();
+		//c.requestInfoUser();
 	}
 
 	@FXML
 	void loginKeyPressed(KeyEvent event) throws IOException {
 		if (event.getCode() == KeyCode.ENTER) {
-			c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
+			//c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
 			loginPaneFields.setVisible(false);
 			//mediaPlayer.play();
 		}
@@ -498,7 +490,7 @@ public class ControllerLauncher {
 
 	@FXML
 	void loginKeyButton(ActionEvent event) throws IOException {
-		c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
+		//c.requestUpdateConnections(usernameTextField.getText(),passwordTextField.getText());
 		loginPaneFields.setVisible(false);
 		
 	}
@@ -531,7 +523,7 @@ public class ControllerLauncher {
 					KeyCombination.CONTROL_DOWN);
 			public void handle(KeyEvent ke) {
 				if (keyComb.match(ke)) {
-					c.requestInfoUser();
+					//c.requestInfoUser();
 				}
 			}
 		});
@@ -580,7 +572,7 @@ public class ControllerLauncher {
 
 				}
 			});
-			c.requestCloseConnection();
+			//c.requestCloseConnection();
 		/**
 		}else if(text.startsWith("/send")) {
 			c.sendPrivateMessageToChat(user);
@@ -600,23 +592,23 @@ public class ControllerLauncher {
 			// limpar baloes de chat
 			txtField.clear();
 		}else if(text.equals("/getinfo")) {
-			c.requestInfoUser();
+			//c.requestInfoUser();
 			txtField.clear();
 		}else if(text.startsWith("/addfriend ")){
-			c.sendRequestFriend();
+			//c.sendRequestFriend();
 			txtField.clear();
 		}else if(text.startsWith("/accept ")){
-			c.acceptFriendRequest();
+			//c.acceptFriendRequest();
 			txtField.clear();
 		}else if(text.startsWith("/decline ")){
-			c.declineFriendRequest();
+			//c.declineFriendRequest();
 			txtField.clear();
 		}else {
 			if(text.startsWith("/")) {
 				txtField.setPromptText("Can´t recognize command! Go see info for details please.");
 			}else {
 				txtField.clear();
-				c.sendMessagesToChat(user.getUsername());
+				//c.sendMessagesToChat(user.getUsername());
 			}
 		}
 	}

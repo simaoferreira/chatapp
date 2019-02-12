@@ -45,6 +45,7 @@ public class SQLiteHandler {
                 state2.execute("CREATE TABLE users(id integer,"
                         + "username varchar(16) unique,"
                         + "password varchar(16),"
+                        + "email varchar(60) unique,"
                         + "salt varchar(100),"
                         + "primary key(id));");
             }
@@ -89,21 +90,22 @@ public class SQLiteHandler {
 
     }
 
-    protected void addUser(String username,String password, String salt) throws SQLException, ClassNotFoundException {
+    protected void addUser(String username,String password, String email, String salt, String firstname,String lastname) throws SQLException, ClassNotFoundException {
         if(con == null) {
             getConnection();
         }
 
         if(!estaRegistado(username)){
-            PreparedStatement prep = con.prepareStatement("INSERT INTO users values(?,?,?,?);");
+            PreparedStatement prep = con.prepareStatement("INSERT INTO users values(?,?,?,?,?);");
             prep.setString(2, username);
             prep.setString(3, password);
-            prep.setString(4, salt);
+            prep.setString(4, email);
+            prep.setString(5, salt);
             prep.execute();
 
             PreparedStatement prepInfo = con.prepareStatement("INSERT INTO usersInfo values(?,?,?,?,?,?,?,?)");
-            prepInfo.setString(2, "nome");
-            prepInfo.setString(3, "ultimo");
+            prepInfo.setString(2, firstname);
+            prepInfo.setString(3, lastname);
             prepInfo.setInt(4, 21);
             prepInfo.setInt(5, 1);
             prepInfo.setInt(6, 0);
@@ -287,7 +289,7 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT * FROM users");
         System.out.println("result Users:");
         while(res.next()) {
-            System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password")+" "+res.getString("salt"));
+            System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password")+" "+res.getString("email")+" "+res.getString("salt"));
         }
         System.out.println("Empty");
     }
@@ -334,7 +336,7 @@ public class SQLiteHandler {
         System.out.println("Empty");
     }
 
-    protected boolean checkLogin(String username,String password) throws ClassNotFoundException, SQLException {
+    protected boolean checkUserExists(String username) throws ClassNotFoundException, SQLException {
 
         boolean result = false;
 
@@ -343,7 +345,7 @@ public class SQLiteHandler {
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT username,password FROM users WHERE username='" + username + "' AND password='"+ password +"'");
+        ResultSet res = state.executeQuery("SELECT username,password FROM users WHERE username='" + username + "'");
 
         if(res.next()) {
             result=true;
@@ -408,6 +410,25 @@ public class SQLiteHandler {
         }
 
         return result;
+    }
+    
+    protected ArrayList<String> getRequestsInvite(int username,int userRequestedFriend) throws ClassNotFoundException, SQLException {
+
+    	ArrayList<String> requests = new ArrayList<String>();
+
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT idUser FROM usersRequestsFriends WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
+
+        if(res.next()) {
+        	int id = res.getInt("idUser");
+            requests.add(getFirstName(id)+" " + getLastName(id));
+        }
+
+        return requests;
     }
 
     protected int getID(String username) throws ClassNotFoundException, SQLException {
@@ -510,6 +531,16 @@ public class SQLiteHandler {
         return res.getInt("age");
     }
     
+    protected String getEmail(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT email FROM users WHERE id='" + id + "'");
+        return res.getString("email");
+    }
+    
     protected String getUsername(int id) throws ClassNotFoundException, SQLException {
         if(con == null) {
             getConnection();
@@ -519,6 +550,8 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT username FROM users WHERE id='" + id + "'");
         return res.getString("username");
     }
+    
+    
 
      protected ArrayList<Integer> getFriendsOfID(int id) throws ClassNotFoundException, SQLException {
         if(con == null) {

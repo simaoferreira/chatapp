@@ -9026,3 +9026,3206 @@
   <thread>13</thread>
   <message>User simon disconnected;</message>
 </record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T00:30:29</date>
+  <millis>1549931429810</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Error while trying to initialize database!</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (near "uniquesalt": syntax error)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>execute</method>
+      <line>60</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>initialize</method>
+      <line>45</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>initialize</method>
+      <line>28</line>
+    </frame>
+    <frame>
+      <class>handlers.TesteBD</class>
+      <method>main</method>
+      <line>12</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:30:31</date>
+  <millis>1549931431994</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Error while trying to add usersimon</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such table: users)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>estaRegistado</method>
+      <line>404</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.TesteBD</class>
+      <method>main</method>
+      <line>13</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:30:32</date>
+  <millis>1549931432012</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Error while trying to add userberunoxxx</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such table: users)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>estaRegistado</method>
+      <line>404</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.TesteBD</class>
+      <method>main</method>
+      <line>14</line>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T00:31:45</date>
+  <millis>1549931505421</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Error while trying to initialize database!</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (near "uniquesalt": syntax error)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>execute</method>
+      <line>60</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>initialize</method>
+      <line>45</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>initialize</method>
+      <line>28</line>
+    </frame>
+    <frame>
+      <class>handlers.TesteBD</class>
+      <method>main</method>
+      <line>12</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:31:46</date>
+  <millis>1549931506646</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Error while trying to add usersimon</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such table: users)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>estaRegistado</method>
+      <line>405</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.TesteBD</class>
+      <method>main</method>
+      <line>13</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:31:46</date>
+  <millis>1549931506686</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Error while trying to add userberunoxxx</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such table: users)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>estaRegistado</method>
+      <line>405</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>addUser</method>
+      <line>98</line>
+    </frame>
+    <frame>
+      <class>handlers.TesteBD</class>
+      <method>main</method>
+      <line>14</line>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T00:32:17</date>
+  <millis>1549931537676</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:32:19</date>
+  <millis>1549931539165</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>User simon added successfully;</message>
+</record>
+<record>
+  <date>2019-02-12T00:32:19</date>
+  <millis>1549931539399</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>User berunoxxx added successfully;</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T00:32:54</date>
+  <millis>1549931574996</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T00:32:55</date>
+  <millis>1549931575400</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:32:55</date>
+  <millis>1549931575405</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:32:55</date>
+  <millis>1549931575411</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T00:37:09</date>
+  <millis>1549931829311</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51021</message>
+</record>
+<record>
+  <date>2019-02-12T00:38:29</date>
+  <millis>1549931909328</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:38:40</date>
+  <millis>1549931920976</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51024</message>
+</record>
+<record>
+  <date>2019-02-12T00:38:44</date>
+  <millis>1549931924745</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:39:36</date>
+  <millis>1549931976202</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51028</message>
+</record>
+<record>
+  <date>2019-02-12T00:40:34</date>
+  <millis>1549932034556</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:40:35</date>
+  <millis>1549932035664</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Error while trying obtaining the email of the user with id 1!</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such column: email)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getEmail</method>
+      <line>540</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getEmail</method>
+      <line>469</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>createObjWithInfo</method>
+      <line>542</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>115</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:40:35</date>
+  <millis>1549932035727</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Error while trying obtaining the email of the user with id 1!</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such column: email)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getEmail</method>
+      <line>540</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getEmail</method>
+      <line>469</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>createObjWithInfo</method>
+      <line>542</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>126</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:40:35</date>
+  <millis>1549932035742</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T00:42:14</date>
+  <millis>1549932134641</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:42:14</date>
+  <millis>1549932134696</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T00:42:22</date>
+  <millis>1549932142931</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T00:42:29</date>
+  <millis>1549932149210</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51029</message>
+</record>
+<record>
+  <date>2019-02-12T00:42:34</date>
+  <millis>1549932154343</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:42:34</date>
+  <millis>1549932154365</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Error while trying obtaining the email of the user with id 1!</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such column: email)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getEmail</method>
+      <line>540</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getEmail</method>
+      <line>469</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>createObjWithInfo</method>
+      <line>542</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>115</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:42:34</date>
+  <millis>1549932154373</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Error while trying obtaining the email of the user with id 1!</message>
+  <exception>
+    <message>java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (no such column: email)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>890</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>901</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>868</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>prepare</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>prepare</method>
+      <line>211</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeQuery</method>
+      <line>81</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getEmail</method>
+      <line>540</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getEmail</method>
+      <line>469</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>createObjWithInfo</method>
+      <line>542</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>126</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T00:42:34</date>
+  <millis>1549932154385</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon logged in the server</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T00:45:28</date>
+  <millis>1549932328327</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T00:45:28</date>
+  <millis>1549932328649</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:45:28</date>
+  <millis>1549932328654</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:45:28</date>
+  <millis>1549932328658</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T00:45:36</date>
+  <millis>1549932336008</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51037</message>
+</record>
+<record>
+  <date>2019-02-12T00:45:40</date>
+  <millis>1549932340295</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:45:41</date>
+  <millis>1549932341295</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T00:46:06</date>
+  <millis>1549932366482</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T00:46:53</date>
+  <millis>1549932413716</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51039</message>
+</record>
+<record>
+  <date>2019-02-12T00:46:59</date>
+  <millis>1549932419613</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:46:59</date>
+  <millis>1549932419641</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T00:47:12</date>
+  <millis>1549932432758</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T00:48:42</date>
+  <millis>1549932522890</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51042</message>
+</record>
+<record>
+  <date>2019-02-12T00:48:46</date>
+  <millis>1549932526345</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:49:09</date>
+  <millis>1549932549172</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51044</message>
+</record>
+<record>
+  <date>2019-02-12T00:49:18</date>
+  <millis>1549932558616</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:49:18</date>
+  <millis>1549932558639</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T00:49:22</date>
+  <millis>1549932562596</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T00:52:43</date>
+  <millis>1549932763286</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T00:52:43</date>
+  <millis>1549932763693</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:52:43</date>
+  <millis>1549932763701</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T00:52:43</date>
+  <millis>1549932763705</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T00:52:50</date>
+  <millis>1549932770907</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51048</message>
+</record>
+<record>
+  <date>2019-02-12T00:52:54</date>
+  <millis>1549932774918</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:54:58</date>
+  <millis>1549932898872</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51053</message>
+</record>
+<record>
+  <date>2019-02-12T00:55:02</date>
+  <millis>1549932902453</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:56:35</date>
+  <millis>1549932995500</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51057</message>
+</record>
+<record>
+  <date>2019-02-12T00:56:39</date>
+  <millis>1549932999534</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:58:20</date>
+  <millis>1549933100177</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51060</message>
+</record>
+<record>
+  <date>2019-02-12T00:58:23</date>
+  <millis>1549933103710</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T00:59:36</date>
+  <millis>1549933176007</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51064</message>
+</record>
+<record>
+  <date>2019-02-12T00:59:58</date>
+  <millis>1549933198193</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T00:59:59</date>
+  <millis>1549933199894</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T01:00:41</date>
+  <millis>1549933241495</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:01</date>
+  <millis>1549933321312</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51087</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:06</date>
+  <millis>1549933326069</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:06</date>
+  <millis>1549933326104</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:12</date>
+  <millis>1549933332590</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:23</date>
+  <millis>1549933343599</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51089</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:28</date>
+  <millis>1549933348874</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:28</date>
+  <millis>1549933348917</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T01:02:39</date>
+  <millis>1549933359353</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T01:03:45</date>
+  <millis>1549933425332</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51115</message>
+</record>
+<record>
+  <date>2019-02-12T01:03:52</date>
+  <millis>1549933432197</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T01:03:52</date>
+  <millis>1549933432216</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T01:04:04</date>
+  <millis>1549933444038</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T13:18:02</date>
+  <millis>1549977482547</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:03</date>
+  <millis>1549977483185</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:03</date>
+  <millis>1549977483189</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:03</date>
+  <millis>1549977483195</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:17</date>
+  <millis>1549977497067</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51448</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:24</date>
+  <millis>1549977504353</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:25</date>
+  <millis>1549977505108</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:18:29</date>
+  <millis>1549977509027</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T13:20:22</date>
+  <millis>1549977622636</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T13:20:22</date>
+  <millis>1549977622880</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T13:20:22</date>
+  <millis>1549977622884</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T13:20:22</date>
+  <millis>1549977622888</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T13:20:30</date>
+  <millis>1549977630990</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51471</message>
+</record>
+<record>
+  <date>2019-02-12T13:22:14</date>
+  <millis>1549977734194</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T13:24:23</date>
+  <millis>1549977863909</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51494</message>
+</record>
+<record>
+  <date>2019-02-12T13:24:27</date>
+  <millis>1549977867023</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T13:25:20</date>
+  <millis>1549977920552</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51495</message>
+</record>
+<record>
+  <date>2019-02-12T13:25:23</date>
+  <millis>1549977923813</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T13:26:54</date>
+  <millis>1549978014243</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51499</message>
+</record>
+<record>
+  <date>2019-02-12T13:26:54</date>
+  <millis>1549978014871</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T13:29:04</date>
+  <millis>1549978144779</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51525</message>
+</record>
+<record>
+  <date>2019-02-12T13:29:14</date>
+  <millis>1549978154787</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:29:15</date>
+  <millis>1549978155558</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:29:51</date>
+  <millis>1549978191234</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:31:49</date>
+  <millis>1549978309124</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51546</message>
+</record>
+<record>
+  <date>2019-02-12T13:31:56</date>
+  <millis>1549978316747</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:31:56</date>
+  <millis>1549978316776</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:32:44</date>
+  <millis>1549978364870</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:36:28</date>
+  <millis>1549978588143</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51651</message>
+</record>
+<record>
+  <date>2019-02-12T13:36:36</date>
+  <millis>1549978596316</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:36:36</date>
+  <millis>1549978596341</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:37:48</date>
+  <millis>1549978668703</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:38:27</date>
+  <millis>1549978707513</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51663</message>
+</record>
+<record>
+  <date>2019-02-12T13:38:32</date>
+  <millis>1549978712093</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:38:32</date>
+  <millis>1549978712115</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:40:22</date>
+  <millis>1549978822273</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:41:01</date>
+  <millis>1549978861672</millis>
+  <sequence>28</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51670</message>
+</record>
+<record>
+  <date>2019-02-12T13:41:05</date>
+  <millis>1549978865409</millis>
+  <sequence>29</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:41:05</date>
+  <millis>1549978865429</millis>
+  <sequence>30</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:41:24</date>
+  <millis>1549978884182</millis>
+  <sequence>31</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:42:30</date>
+  <millis>1549978950010</millis>
+  <sequence>32</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51702</message>
+</record>
+<record>
+  <date>2019-02-12T13:42:35</date>
+  <millis>1549978955622</millis>
+  <sequence>33</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:42:35</date>
+  <millis>1549978955645</millis>
+  <sequence>34</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:42:40</date>
+  <millis>1549978960031</millis>
+  <sequence>35</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:43:47</date>
+  <millis>1549979027636</millis>
+  <sequence>36</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51703</message>
+</record>
+<record>
+  <date>2019-02-12T13:43:51</date>
+  <millis>1549979031387</millis>
+  <sequence>37</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:43:51</date>
+  <millis>1549979031401</millis>
+  <sequence>38</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:44:11</date>
+  <millis>1549979051882</millis>
+  <sequence>39</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:45:53</date>
+  <millis>1549979153928</millis>
+  <sequence>40</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51704</message>
+</record>
+<record>
+  <date>2019-02-12T13:45:57</date>
+  <millis>1549979157726</millis>
+  <sequence>41</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:45:57</date>
+  <millis>1549979157745</millis>
+  <sequence>42</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:46:46</date>
+  <millis>1549979206122</millis>
+  <sequence>43</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:22</date>
+  <millis>1549979242435</millis>
+  <sequence>44</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51709</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:27</date>
+  <millis>1549979247490</millis>
+  <sequence>45</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User simonn trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:27</date>
+  <millis>1549979247547</millis>
+  <sequence>46</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to get user id!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>406</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getID</method>
+      <line>441</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getID</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>238</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>105</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:27</date>
+  <millis>1549979247565</millis>
+  <sequence>47</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to check if the login is correct or not!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getString</method>
+      <line>448</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getSalt</method>
+      <line>451</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>239</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>105</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:27</date>
+  <millis>1549979247576</millis>
+  <sequence>48</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to get user id!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>406</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getID</method>
+      <line>441</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getID</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>238</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>145</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:27</date>
+  <millis>1549979247583</millis>
+  <sequence>49</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to check if the login is correct or not!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getString</method>
+      <line>448</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getSalt</method>
+      <line>451</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>239</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>145</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:27</date>
+  <millis>1549979247587</millis>
+  <sequence>50</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User simonn couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:35</date>
+  <millis>1549979255431</millis>
+  <sequence>51</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User qweqw trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:35</date>
+  <millis>1549979255435</millis>
+  <sequence>52</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to get user id!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>406</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getID</method>
+      <line>441</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getID</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>238</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>105</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:35</date>
+  <millis>1549979255442</millis>
+  <sequence>53</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to check if the login is correct or not!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getString</method>
+      <line>448</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getSalt</method>
+      <line>451</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>239</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>105</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:35</date>
+  <millis>1549979255446</millis>
+  <sequence>54</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to get user id!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>406</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getID</method>
+      <line>441</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getID</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>238</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>145</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:35</date>
+  <millis>1549979255450</millis>
+  <sequence>55</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>Error while trying to check if the login is correct or not!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getString</method>
+      <line>448</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getSalt</method>
+      <line>451</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>239</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>145</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T13:47:35</date>
+  <millis>1549979255456</millis>
+  <sequence>56</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User qweqw couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:42</date>
+  <millis>1549979262339</millis>
+  <sequence>57</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:42</date>
+  <millis>1549979262353</millis>
+  <sequence>58</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:52</date>
+  <millis>1549979272817</millis>
+  <sequence>59</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51710</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:56</date>
+  <millis>1549979276614</millis>
+  <sequence>60</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>25</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:47:56</date>
+  <millis>1549979276633</millis>
+  <sequence>61</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>25</thread>
+  <message>User simon couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:48:00</date>
+  <millis>1549979280271</millis>
+  <sequence>62</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>25</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-12T13:48:04</date>
+  <millis>1549979284624</millis>
+  <sequence>63</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T13:48:50</date>
+  <millis>1549979330241</millis>
+  <sequence>64</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51716</message>
+</record>
+<record>
+  <date>2019-02-12T13:48:56</date>
+  <millis>1549979336088</millis>
+  <sequence>65</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:48:56</date>
+  <millis>1549979336107</millis>
+  <sequence>66</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:49:05</date>
+  <millis>1549979345357</millis>
+  <sequence>67</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T13:49:05</date>
+  <millis>1549979345372</millis>
+  <sequence>68</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T13:49:50</date>
+  <millis>1549979390230</millis>
+  <sequence>69</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T14:13:07</date>
+  <millis>1549980787828</millis>
+  <sequence>70</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51728</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T14:14:46</date>
+  <millis>1549980886228</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T14:14:46</date>
+  <millis>1549980886803</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:14:46</date>
+  <millis>1549980886807</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:14:46</date>
+  <millis>1549980886812</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T14:14:54</date>
+  <millis>1549980894259</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51729</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T14:15:27</date>
+  <millis>1549980927509</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T14:15:27</date>
+  <millis>1549980927777</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:15:27</date>
+  <millis>1549980927781</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:15:27</date>
+  <millis>1549980927787</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T14:28:51</date>
+  <millis>1549981731740</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T14:28:51</date>
+  <millis>1549981731990</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:28:51</date>
+  <millis>1549981731995</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:28:51</date>
+  <millis>1549981731999</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T14:29:05</date>
+  <millis>1549981745311</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51751</message>
+</record>
+<record>
+  <date>2019-02-12T14:29:15</date>
+  <millis>1549981755888</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simonn trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T14:29:15</date>
+  <millis>1549981755893</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Error while trying to get user id!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>406</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getID</method>
+      <line>441</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getID</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>238</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>105</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T14:29:15</date>
+  <millis>1549981755905</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Error while trying to check if the login is correct or not!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getString</method>
+      <line>448</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getSalt</method>
+      <line>451</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>239</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>105</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T14:29:15</date>
+  <millis>1549981755913</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Error while trying to get user id!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getInt</method>
+      <line>406</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getID</method>
+      <line>441</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>getID</method>
+      <line>324</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>238</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>145</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T14:29:15</date>
+  <millis>1549981755917</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Error while trying to check if the login is correct or not!</message>
+  <exception>
+    <message>java.sql.SQLException: ResultSet closed</message>
+    <frame>
+      <class>org.sqlite.core.CoreResultSet</class>
+      <method>checkOpen</method>
+      <line>66</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>findColumn</method>
+      <line>39</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3ResultSet</class>
+      <method>getString</method>
+      <line>448</line>
+    </frame>
+    <frame>
+      <class>handlers.SQLiteHandler</class>
+      <method>getSalt</method>
+      <line>451</line>
+    </frame>
+    <frame>
+      <class>handlers.DataBaseCatalog</class>
+      <method>checkLogin</method>
+      <line>239</line>
+    </frame>
+    <frame>
+      <class>server.ServerHandler</class>
+      <method>run</method>
+      <line>145</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-12T14:29:15</date>
+  <millis>1549981755923</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simonn couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T14:36:51</date>
+  <millis>1549982211807</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>Lost a connection;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T14:36:57</date>
+  <millis>1549982217421</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T14:36:57</date>
+  <millis>1549982217672</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:36:57</date>
+  <millis>1549982217677</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:36:57</date>
+  <millis>1549982217681</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T14:37:40</date>
+  <millis>1549982260581</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51759</message>
+</record>
+<record>
+  <date>2019-02-12T14:37:50</date>
+  <millis>1549982270715</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User ijw trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T14:37:50</date>
+  <millis>1549982270724</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User ijw couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-12T14:38:35</date>
+  <millis>1549982315678</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T14:38:36</date>
+  <millis>1549982316873</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T14:38:56</date>
+  <millis>1549982336272</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T14:44:29</date>
+  <millis>1549982669936</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T14:44:30</date>
+  <millis>1549982670176</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:44:30</date>
+  <millis>1549982670181</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:44:30</date>
+  <millis>1549982670185</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-12T14:44:46</date>
+  <millis>1549982686343</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-12T14:44:46</date>
+  <millis>1549982686570</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:44:46</date>
+  <millis>1549982686575</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-12T14:44:46</date>
+  <millis>1549982686580</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-12T14:45:02</date>
+  <millis>1549982702296</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51766</message>
+</record>
+<record>
+  <date>2019-02-12T14:45:06</date>
+  <millis>1549982706428</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T14:45:07</date>
+  <millis>1549982707184</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T14:47:00</date>
+  <millis>1549982820212</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-12T14:47:03</date>
+  <millis>1549982823807</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:51772</message>
+</record>
+<record>
+  <date>2019-02-12T14:47:07</date>
+  <millis>1549982827637</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-12T14:47:07</date>
+  <millis>1549982827667</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-12T14:48:30</date>
+  <millis>1549982910599</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon disconnected;</message>
+</record>

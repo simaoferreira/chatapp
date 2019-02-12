@@ -10,8 +10,8 @@ public class TesteBD {
 		DataBaseCatalog db = new DataBaseCatalog(lh);
 		
 		db.initialize();
-		db.addUser("simon", "mastir");
-		db.addUser("berunoxxx", "bruno");
+		db.addUser("simon", "mastir","mastirofgames@gmail.com","Simão","Ferreira");
+		db.addUser("berunoxxx", "bruno","berunoxxx@gmail.com","Bruno","Ribeiro");
 		//bd.addRequestFriend(1, 2);
 	}
 

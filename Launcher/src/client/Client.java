@@ -4,36 +4,46 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import controllers.ControllerLauncher;
+import controllers.ControllerChat;
 import dataHandler.AlertBox;
+import handlers.LoggerHandle;
+import javafx.application.Platform;
 
 public class Client extends Thread{
 
-    private ClientHandler ch;
-    private String user;
-    private Socket socket;
-    private ControllerLauncher client;
-    private static final String ip = "81.84.174.114";
+	private ClientHandler ch;
+	private Socket socket;
+	private ControllerChat client;
+	private static final String ip = "81.84.174.114";
+	private LoggerHandle lh = null;
 
-    public Client(ControllerLauncher controllerLauncher) throws UnknownHostException, IOException {
-        this.client = controllerLauncher;
-        this.start();
-        runConnection();
-    }
+	public Client(ControllerChat controllerChat, LoggerHandle lh) throws UnknownHostException, IOException {
+		this.lh = lh;
+		this.client = controllerChat;
+		this.start();
+		runConnection();
+	}
 
-    public void runConnection() throws UnknownHostException, IOException {
-        socket = new Socket(ip,32456);
-        socket.setTcpNoDelay(true);
-        ch = new ClientHandler(socket,this,client);
-        ch.start();  	
-    }
-    
-    ////////////////  CODE 0  ////////////////
-    public void requestUpdateConnections(String user, String pass) {
-        this.user=user;
-        ch.sendMessageCase0(user, pass);
-    }
-    
+	public void runConnection() {
+		try {
+			socket = new Socket("localhost",32456);
+			socket.setTcpNoDelay(true);
+			ch = new ClientHandler(socket,this,client,lh);
+			ch.start(); 
+			lh.log("INFO", "Connected successfully to server!");
+		}catch(Exception e) {
+			lh.log("SEVERE", "Could not connect to server!");
+		}
+
+	}
+
+	////////////////  CODE 0  ////////////////
+	public void requestLoginAuthentication(String user, String pass) {
+		ch.sendMessageCase0(user, pass);
+	}
+
+	/**
+
     ////////////////  CODE 2  ////////////////
     public void requestCloseConnection() {
     	ch.sendMessageCase2(user);
@@ -49,9 +59,9 @@ public class Client extends Thread{
         //ch.sendMessage(code,user,inputText);
     }
 
+	 */
 
-
-    /**
+	/**
     ////////////////  CODE 5  ////////////////
     public void sendPrivateMessageToChat(String user) {
         String textField = client.text;
@@ -67,9 +77,9 @@ public class Client extends Thread{
         }
 
     }
-    */
+	 */
 
-
+	/**
     ////////////////CODE 7  ////////////////
     public void sendRequestFriend() {
         String textField = client.text;
@@ -107,14 +117,14 @@ public class Client extends Thread{
         }
 
     }
-    
+
     ////////////////CODE 10  ////////////////
     public void registerAccount(String username,String password) {
     	ch.sendMessageCase10(username, password);
         //ch.sendMessage("10", username, password);
     }
-    
-    /**
+
+
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
         if(lastUserPrivate.equals("")) {
             ch.printError("You can't reply! Wait for a new message");
@@ -126,8 +136,9 @@ public class Client extends Thread{
             ch.sendMessage(code, users, text);
         }
     }
-    */
+	 */
 
+	/**
     public void requestInfoUser() {
         String text = client.user.getFullName() + "\r\n\r\n"+
                 " Level: "+client.user.getUserLvl()+"\r\n" + 
@@ -136,4 +147,5 @@ public class Client extends Thread{
                 " Number of words written: "+client.user.getWordsWritten()+"\r\n";
         AlertBox.display("Details", text,false);
     }
+	 */
 }

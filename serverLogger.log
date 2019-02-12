@@ -971,3 +971,248 @@
 --INFO (Sat 09.02.2019 at 12:22:53) : User simon logged in the server
 --INFO (Sat 09.02.2019 at 12:33:02) : Length of words written by simon successfully updated
 --INFO (Sat 09.02.2019 at 12:33:06) : User simon disconnected;
+--WARNING (Tue 12.02.2019 at 12:30:29) : Error while trying to initialize database!
+--WARNING (Tue 12.02.2019 at 12:30:31) : Error while trying to add usersimon
+--WARNING (Tue 12.02.2019 at 12:30:32) : Error while trying to add userberunoxxx
+--WARNING (Tue 12.02.2019 at 12:31:45) : Error while trying to initialize database!
+--WARNING (Tue 12.02.2019 at 12:31:46) : Error while trying to add usersimon
+--WARNING (Tue 12.02.2019 at 12:31:46) : Error while trying to add userberunoxxx
+--INFO (Tue 12.02.2019 at 12:32:17) : Database initialized;
+--INFO (Tue 12.02.2019 at 12:32:19) : User simon added successfully;
+--INFO (Tue 12.02.2019 at 12:32:19) : User berunoxxx added successfully;
+--INFO (Tue 12.02.2019 at 12:32:55) : Server restarted;
+--INFO (Tue 12.02.2019 at 12:32:55) : Database initialized;
+--INFO (Tue 12.02.2019 at 12:32:55) : Server initialized;
+--INFO (Tue 12.02.2019 at 12:32:55) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 12:37:09) : New connection was accepted: /127.0.0.1:51021
+--INFO (Tue 12.02.2019 at 12:38:29) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:38:40) : New connection was accepted: /127.0.0.1:51024
+--INFO (Tue 12.02.2019 at 12:38:44) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:39:36) : New connection was accepted: /127.0.0.1:51028
+--INFO (Tue 12.02.2019 at 12:40:34) : User simon trying to login into the server;
+--WARNING (Tue 12.02.2019 at 12:40:35) : Error while trying obtaining the email of the user with id 1!
+--WARNING (Tue 12.02.2019 at 12:40:35) : Error while trying obtaining the email of the user with id 1!
+--INFO (Tue 12.02.2019 at 12:40:35) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 12:42:14) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 12:42:14) : User simon couldn not login into the server
+--INFO (Tue 12.02.2019 at 12:42:22) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 12:42:29) : New connection was accepted: /127.0.0.1:51029
+--INFO (Tue 12.02.2019 at 12:42:34) : User simon trying to login into the server;
+--WARNING (Tue 12.02.2019 at 12:42:34) : Error while trying obtaining the email of the user with id 1!
+--WARNING (Tue 12.02.2019 at 12:42:34) : Error while trying obtaining the email of the user with id 1!
+--INFO (Tue 12.02.2019 at 12:42:34) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 12:45:28) : Server restarted;
+--INFO (Tue 12.02.2019 at 12:45:28) : Database initialized;
+--INFO (Tue 12.02.2019 at 12:45:28) : Server initialized;
+--INFO (Tue 12.02.2019 at 12:45:28) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 12:45:36) : New connection was accepted: /127.0.0.1:51037
+--INFO (Tue 12.02.2019 at 12:45:40) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 12:45:41) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 12:46:06) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 12:46:53) : New connection was accepted: /127.0.0.1:51039
+--INFO (Tue 12.02.2019 at 12:46:59) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 12:46:59) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 12:47:12) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 12:48:42) : New connection was accepted: /127.0.0.1:51042
+--INFO (Tue 12.02.2019 at 12:48:46) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:49:09) : New connection was accepted: /127.0.0.1:51044
+--INFO (Tue 12.02.2019 at 12:49:18) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 12:49:18) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 12:49:22) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 12:52:43) : Server restarted;
+--INFO (Tue 12.02.2019 at 12:52:43) : Database initialized;
+--INFO (Tue 12.02.2019 at 12:52:43) : Server initialized;
+--INFO (Tue 12.02.2019 at 12:52:43) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 12:52:50) : New connection was accepted: /127.0.0.1:51048
+--INFO (Tue 12.02.2019 at 12:52:54) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:54:58) : New connection was accepted: /127.0.0.1:51053
+--INFO (Tue 12.02.2019 at 12:55:02) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:56:35) : New connection was accepted: /127.0.0.1:51057
+--INFO (Tue 12.02.2019 at 12:56:39) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:58:20) : New connection was accepted: /127.0.0.1:51060
+--INFO (Tue 12.02.2019 at 12:58:23) : Lost a connection;
+--INFO (Tue 12.02.2019 at 12:59:36) : New connection was accepted: /127.0.0.1:51064
+--INFO (Tue 12.02.2019 at 12:59:58) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 12:59:59) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:00:41) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:02:01) : New connection was accepted: /127.0.0.1:51087
+--INFO (Tue 12.02.2019 at 01:02:06) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:02:06) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:02:12) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:02:23) : New connection was accepted: /127.0.0.1:51089
+--INFO (Tue 12.02.2019 at 01:02:28) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:02:28) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:02:39) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:03:45) : New connection was accepted: /127.0.0.1:51115
+--INFO (Tue 12.02.2019 at 01:03:52) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:03:52) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:04:04) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:18:02) : Server restarted;
+--INFO (Tue 12.02.2019 at 01:18:03) : Database initialized;
+--INFO (Tue 12.02.2019 at 01:18:03) : Server initialized;
+--INFO (Tue 12.02.2019 at 01:18:03) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 01:18:17) : New connection was accepted: /127.0.0.1:51448
+--INFO (Tue 12.02.2019 at 01:18:24) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:18:25) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:18:29) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:20:22) : Server restarted;
+--INFO (Tue 12.02.2019 at 01:20:22) : Database initialized;
+--INFO (Tue 12.02.2019 at 01:20:22) : Server initialized;
+--INFO (Tue 12.02.2019 at 01:20:22) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 01:20:30) : New connection was accepted: /127.0.0.1:51471
+--INFO (Tue 12.02.2019 at 01:22:14) : Lost a connection;
+--INFO (Tue 12.02.2019 at 01:24:23) : New connection was accepted: /127.0.0.1:51494
+--INFO (Tue 12.02.2019 at 01:24:27) : Lost a connection;
+--INFO (Tue 12.02.2019 at 01:25:20) : New connection was accepted: /127.0.0.1:51495
+--INFO (Tue 12.02.2019 at 01:25:23) : Lost a connection;
+--INFO (Tue 12.02.2019 at 01:26:54) : New connection was accepted: /127.0.0.1:51499
+--INFO (Tue 12.02.2019 at 01:26:54) : Lost a connection;
+--INFO (Tue 12.02.2019 at 01:29:04) : New connection was accepted: /127.0.0.1:51525
+--INFO (Tue 12.02.2019 at 01:29:14) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:29:15) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:29:51) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:31:49) : New connection was accepted: /127.0.0.1:51546
+--INFO (Tue 12.02.2019 at 01:31:56) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:31:56) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:32:44) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:36:28) : New connection was accepted: /127.0.0.1:51651
+--INFO (Tue 12.02.2019 at 01:36:36) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:36:36) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:37:48) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:38:27) : New connection was accepted: /127.0.0.1:51663
+--INFO (Tue 12.02.2019 at 01:38:32) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:38:32) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:40:22) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:41:01) : New connection was accepted: /127.0.0.1:51670
+--INFO (Tue 12.02.2019 at 01:41:05) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:41:05) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:41:24) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:42:30) : New connection was accepted: /127.0.0.1:51702
+--INFO (Tue 12.02.2019 at 01:42:35) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:42:35) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:42:40) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:43:47) : New connection was accepted: /127.0.0.1:51703
+--INFO (Tue 12.02.2019 at 01:43:51) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:43:51) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:44:11) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:45:53) : New connection was accepted: /127.0.0.1:51704
+--INFO (Tue 12.02.2019 at 01:45:57) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:45:57) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:46:46) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:47:22) : New connection was accepted: /127.0.0.1:51709
+--INFO (Tue 12.02.2019 at 01:47:27) : User simonn trying to login into the server;
+--WARNING (Tue 12.02.2019 at 01:47:27) : Error while trying to get user id!
+--WARNING (Tue 12.02.2019 at 01:47:27) : Error while trying to check if the login is correct or not!
+--WARNING (Tue 12.02.2019 at 01:47:27) : Error while trying to get user id!
+--WARNING (Tue 12.02.2019 at 01:47:27) : Error while trying to check if the login is correct or not!
+--INFO (Tue 12.02.2019 at 01:47:27) : User simonn couldn not login into the server
+--INFO (Tue 12.02.2019 at 01:47:35) : User qweqw trying to login into the server;
+--WARNING (Tue 12.02.2019 at 01:47:35) : Error while trying to get user id!
+--WARNING (Tue 12.02.2019 at 01:47:35) : Error while trying to check if the login is correct or not!
+--WARNING (Tue 12.02.2019 at 01:47:35) : Error while trying to get user id!
+--WARNING (Tue 12.02.2019 at 01:47:35) : Error while trying to check if the login is correct or not!
+--INFO (Tue 12.02.2019 at 01:47:35) : User qweqw couldn not login into the server
+--INFO (Tue 12.02.2019 at 01:47:42) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:47:42) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:47:52) : New connection was accepted: /127.0.0.1:51710
+--INFO (Tue 12.02.2019 at 01:47:56) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:47:56) : User simon couldn not login into the server
+--INFO (Tue 12.02.2019 at 01:48:00) : Lost a connection;
+--INFO (Tue 12.02.2019 at 01:48:04) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 01:48:50) : New connection was accepted: /127.0.0.1:51716
+--INFO (Tue 12.02.2019 at 01:48:56) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:48:56) : User simon couldn not login into the server
+--INFO (Tue 12.02.2019 at 01:49:05) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 01:49:05) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 01:49:50) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 02:13:07) : Launcher loaded
+--INFO (Tue 12.02.2019 at 02:13:07) : Chat loaded
+--INFO (Tue 12.02.2019 at 02:13:07) : New connection was accepted: /127.0.0.1:51728
+--INFO (Tue 12.02.2019 at 02:13:07) : Connected successfully to server!
+--INFO (Tue 12.02.2019 at 02:13:08) : Launcher scene was set succefully in stage.
+--INFO (Tue 12.02.2019 at 02:14:46) : Server restarted;
+--INFO (Tue 12.02.2019 at 02:14:46) : Database initialized;
+--INFO (Tue 12.02.2019 at 02:14:46) : Server initialized;
+--INFO (Tue 12.02.2019 at 02:14:46) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 02:14:53) : Launcher loaded
+--INFO (Tue 12.02.2019 at 02:14:54) : Chat loaded
+--INFO (Tue 12.02.2019 at 02:14:54) : New connection was accepted: /127.0.0.1:51729
+--INFO (Tue 12.02.2019 at 02:14:54) : Connected successfully to server!
+--INFO (Tue 12.02.2019 at 02:14:55) : Launcher scene was set succefully in stage.
+--INFO (Tue 12.02.2019 at 02:15:27) : Server restarted;
+--INFO (Tue 12.02.2019 at 02:15:27) : Database initialized;
+--INFO (Tue 12.02.2019 at 02:15:27) : Server initialized;
+--INFO (Tue 12.02.2019 at 02:15:27) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 02:28:51) : Server restarted;
+--INFO (Tue 12.02.2019 at 02:28:51) : Database initialized;
+--INFO (Tue 12.02.2019 at 02:28:51) : Server initialized;
+--INFO (Tue 12.02.2019 at 02:28:52) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 02:29:04) : Launcher loaded
+--INFO (Tue 12.02.2019 at 02:29:05) : Chat loaded
+--INFO (Tue 12.02.2019 at 02:29:05) : New connection was accepted: /127.0.0.1:51751
+--INFO (Tue 12.02.2019 at 02:29:05) : Connected successfully to server!
+--INFO (Tue 12.02.2019 at 02:29:06) : Launcher scene was set succefully in stage.
+--INFO (Tue 12.02.2019 at 02:29:15) : Login authentication requested sucessfully
+--INFO (Tue 12.02.2019 at 02:29:15) : User simonn trying to login into the server;
+--WARNING (Tue 12.02.2019 at 02:29:15) : Error while trying to get user id!
+--WARNING (Tue 12.02.2019 at 02:29:15) : Error while trying to check if the login is correct or not!
+--WARNING (Tue 12.02.2019 at 02:29:15) : Error while trying to get user id!
+--WARNING (Tue 12.02.2019 at 02:29:15) : Error while trying to check if the login is correct or not!
+--INFO (Tue 12.02.2019 at 02:29:15) : User simonn couldn not login into the server
+--INFO (Tue 12.02.2019 at 02:29:15) : Client could not login because Username or password incorrect!
+--INFO (Tue 12.02.2019 at 02:36:51) : Lost a connection;
+--INFO (Tue 12.02.2019 at 02:36:57) : Server restarted;
+--INFO (Tue 12.02.2019 at 02:36:57) : Database initialized;
+--INFO (Tue 12.02.2019 at 02:36:57) : Server initialized;
+--INFO (Tue 12.02.2019 at 02:36:57) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 02:37:40) : Launcher loaded
+--INFO (Tue 12.02.2019 at 02:37:40) : Chat loaded
+--INFO (Tue 12.02.2019 at 02:37:40) : New connection was accepted: /127.0.0.1:51759
+--INFO (Tue 12.02.2019 at 02:37:40) : Connected successfully to server!
+--INFO (Tue 12.02.2019 at 02:37:41) : Launcher scene was set succefully in stage.
+--INFO (Tue 12.02.2019 at 02:37:50) : Login authentication requested sucessfully
+--INFO (Tue 12.02.2019 at 02:37:50) : User ijw trying to login into the server;
+--INFO (Tue 12.02.2019 at 02:37:50) : User ijw couldn not login into the server
+--INFO (Tue 12.02.2019 at 02:37:50) : Client could not login because Username or password incorrect!
+--INFO (Tue 12.02.2019 at 02:38:35) : Login authentication requested sucessfully
+--INFO (Tue 12.02.2019 at 02:38:35) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 02:38:36) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 02:38:36) : User: simon
+--INFO (Tue 12.02.2019 at 02:38:36) : Started to loading the aplication with the detail of user.
+--INFO (Tue 12.02.2019 at 02:38:36) : Loading the aplication with the detail of user terminated.
+--INFO (Tue 12.02.2019 at 02:38:36) : Updated scene succesfully to chat
+--INFO (Tue 12.02.2019 at 02:38:56) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 02:44:29) : Server restarted;
+--INFO (Tue 12.02.2019 at 02:44:30) : Database initialized;
+--INFO (Tue 12.02.2019 at 02:44:30) : Server initialized;
+--INFO (Tue 12.02.2019 at 02:44:30) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 02:44:46) : Server restarted;
+--INFO (Tue 12.02.2019 at 02:44:46) : Database initialized;
+--INFO (Tue 12.02.2019 at 02:44:46) : Server initialized;
+--INFO (Tue 12.02.2019 at 02:44:46) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 02:45:01) : Launcher loaded
+--INFO (Tue 12.02.2019 at 02:45:02) : Chat loaded
+--INFO (Tue 12.02.2019 at 02:45:02) : New connection was accepted: /127.0.0.1:51766
+--INFO (Tue 12.02.2019 at 02:45:02) : Connected successfully to server!
+--INFO (Tue 12.02.2019 at 02:45:03) : Launcher scene was set succefully in stage.
+--INFO (Tue 12.02.2019 at 02:45:06) : Login authentication requested sucessfully
+--INFO (Tue 12.02.2019 at 02:45:06) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 02:45:07) : User: simon
+--INFO (Tue 12.02.2019 at 02:45:07) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 02:45:07) : Started to loading the aplication with the detail of user.
+--INFO (Tue 12.02.2019 at 02:45:07) : Loading the aplication with the detail of user terminated.
+--INFO (Tue 12.02.2019 at 02:45:07) : Updated scene succesfully to chat
+--INFO (Tue 12.02.2019 at 02:47:00) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 02:47:03) : Launcher loaded
+--INFO (Tue 12.02.2019 at 02:47:03) : Chat loaded
+--INFO (Tue 12.02.2019 at 02:47:03) : New connection was accepted: /127.0.0.1:51772
+--INFO (Tue 12.02.2019 at 02:47:03) : Connected successfully to server!
+--INFO (Tue 12.02.2019 at 02:47:04) : Launcher scene was set succefully in stage.
+--INFO (Tue 12.02.2019 at 02:47:07) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 02:47:07) : Login authentication requested sucessfully
+--INFO (Tue 12.02.2019 at 02:47:07) : User: simon
+--INFO (Tue 12.02.2019 at 02:47:07) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 02:47:07) : Started to loading the aplication with the detail of user.
+--INFO (Tue 12.02.2019 at 02:47:07) : Loading the aplication with the detail of user terminated.
+--INFO (Tue 12.02.2019 at 02:47:07) : Updated scene succesfully to chat
+--INFO (Tue 12.02.2019 at 02:48:30) : User simon disconnected;

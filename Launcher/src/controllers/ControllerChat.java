@@ -10,6 +10,7 @@ import com.gluonhq.charm.glisten.control.ProgressIndicator;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +24,9 @@ import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
+
+import client.Client;
+
 import static com.sun.jna.platform.win32.WinUser.GWL_STYLE;
 import com.sun.jna.*;
 
@@ -32,6 +36,7 @@ import dataHandler.Notifications;
 import dataHandler.ProtectionBadWords;
 import dataHandler.User;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import handlers.LoggerHandle;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
@@ -64,6 +69,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
@@ -90,14 +96,20 @@ public class ControllerChat {
 
 	private Stage stage;
 	private String version;
+	private LoggerHandle lh = null;
 
 	private AnchorPane launcherPane;
 	private AnchorPane appPane;
+	
+	private Client c;
+	public User user;
+	public ArrayList<User> usersOnline = null;
 
-	public ControllerChat(Stage primaryStage,String version) throws IOException {
-
+	public ControllerChat(Stage primaryStage,String version, LoggerHandle lh) throws IOException {
+		usersOnline = new ArrayList<User>();
 		this.stage = primaryStage;
 		this.version = version;
+		this.lh = lh;
 		stage.initStyle(StageStyle.UNDECORATED);
 
 		loadLauncher();
@@ -105,496 +117,527 @@ public class ControllerChat {
 	}
 
 	private void loadLauncher() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("NewLauncher.fxml"));
-		loader.setController(this);
-		launcherPane = (AnchorPane) loader.load();
-		launcherPane.setBorder(darkblue);
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("NewLauncher.fxml"));
+			loader.setController(this);
+			launcherPane = (AnchorPane) loader.load();
+			launcherPane.setBorder(darkblue);
 
-		launcher_HBox_Top.setOnMousePressed(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setOpacity(0.9);
-				xOffset = stage.getX() - event.getScreenX();
-				yOffset = stage.getY() - event.getScreenY();
-			}
-		});
+			launcher_HBox_Top.setOnMousePressed(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(0.9);
+					xOffset = stage.getX() - event.getScreenX();
+					yOffset = stage.getY() - event.getScreenY();
+				}
+			});
 
-		launcher_HBox_Top.setOnMouseDragged(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setOpacity(0.9);
-				stage.setX(event.getScreenX() + xOffset);
-				stage.setY(event.getScreenY() + yOffset);
-			}
-		});
+			launcher_HBox_Top.setOnMouseDragged(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(0.9);
+					stage.setX(event.getScreenX() + xOffset);
+					stage.setY(event.getScreenY() + yOffset);
+				}
+			});
 
-		launcher_HBox_Top.setOnMouseReleased(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setOpacity(1);
-			}
-		});
+			launcher_HBox_Top.setOnMouseReleased(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(1);
+				}
+			});
+			lh.log("INFO", "Launcher loaded");
+		}catch(Exception e) {
+			lh.log("SEVERE", "Launcher could not be loaded loaded!");
+		}
 
+	}
+	
+	private boolean inHierarchy(Node node, Node potentialHierarchyElement) {
+	    if (potentialHierarchyElement == null) {
+	        return true;
+	    }
+	    while (node != null) {
+	        if (node == potentialHierarchyElement) {
+	            return true;
+	        }
+	        node = node.getParent();
+	    }
+	    return false;
 	}
 
 	private void loadChat() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("NewGui.fxml"));
-		loader.setController(this);
-		appPane = (AnchorPane) loader.load();
-		appPane.setBorder(darkblue);
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("NewGui.fxml"));
+			loader.setController(this);
+			appPane = (AnchorPane) loader.load();
+			appPane.setBorder(darkblue);
+			
+			appPane.addEventFilter(MouseEvent.MOUSE_CLICKED, evt -> {
+		        if (!inHierarchy(evt.getPickResult().getIntersectedNode(), main_Notifications_PopUP)) {
+		        	main_Notifications_PopUP.setVisible(false);
+		        }
+		    });
+			
 
-		main_HBox_Top.setOnMousePressed(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setOpacity(0.9);
-				xOffset = stage.getX() - event.getScreenX();
-				yOffset = stage.getY() - event.getScreenY();
-			}
-		});
+			main_HBox_Top.setOnMousePressed(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(0.9);
+					xOffset = stage.getX() - event.getScreenX();
+					yOffset = stage.getY() - event.getScreenY();
+				}
+			});
 
-		main_HBox_Top.setOnMouseDragged(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setOpacity(0.9);
-				stage.setX(event.getScreenX() + xOffset);
-				stage.setY(event.getScreenY() + yOffset);
-			}
-		});
+			main_HBox_Top.setOnMouseDragged(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(0.9);
+					stage.setX(event.getScreenX() + xOffset);
+					stage.setY(event.getScreenY() + yOffset);
+				}
+			});
 
-		main_HBox_Top.setOnMouseReleased(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) {
-				stage.setOpacity(1);
-			}
-		});
+			main_HBox_Top.setOnMouseReleased(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(1);
+				}
+			});
+			
+			lh.log("INFO", "Chat loaded");
+		}catch(Exception e) {
+			lh.log("SEVERE", "Chat could not be loaded!");
+		}
 
 	}
 
-	public void iniciarController() {
-		launcher_VBox_Pane_LoginVBox_TextField_Username.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
-		launcher_VBox_Pane_LoginVBox_TextField_Password.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
+	public void startController() {
+		
+		
+		try {
+			c = new Client(this,lh);
+			try {
+				launcher_VBox_Pane_LoginVBox_TextField_Username.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				launcher_VBox_Pane_LoginVBox_TextField_Password.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
 
-		launcher_VBox_Pane_RegisterVBox_TextField_Firstname.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
-		launcher_VBox_Pane_RegisterVBox_TextField_Lastname.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
-		launcher_VBox_Pane_RegisterVBox_TextField_Username.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
-		launcher_VBox_Pane_RegisterVBox_TextField_Password.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
-		launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain.setTextFormatter(new TextFormatter<String>(change -> 
-		change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				launcher_VBox_Pane_RegisterVBox_TextField_Firstname.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				launcher_VBox_Pane_RegisterVBox_TextField_Lastname.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				launcher_VBox_Pane_RegisterVBox_TextField_Username.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				launcher_VBox_Pane_RegisterVBox_TextField_Password.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain.setTextFormatter(new TextFormatter<String>(change -> 
+				change.getControlNewText().length() <= MAX_CHARS ? change : null));
 
-		launcher_Label_Version.setText(version);
+				launcher_Label_Version.setText(version);
 
-		Scene scene = new Scene(launcherPane);
-		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
-			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
-					KeyCombination.ALT_DOWN);
-			public void handle(KeyEvent ke) {
-				if (keyComb.match(ke)) {
-					System.exit(0);
-				}
+				Scene scene = new Scene(launcherPane);
+				
+				scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+					final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+							KeyCombination.ALT_DOWN);
+					public void handle(KeyEvent ke) {
+						if (keyComb.match(ke)) {
+							System.exit(0);
+						}
+					}
+				});
+
+				stage.setScene(scene);
+				stage.show(); 
+				
+				long lhwnd = com.sun.glass.ui.Window.getWindows().get(0).getNativeWindow();
+				Pointer lpVoid = new Pointer(lhwnd);
+				WinDef.HWND hwnd = new WinDef.HWND(lpVoid);
+				final User32 user32 = User32.INSTANCE;
+				int oldStyle = user32.GetWindowLong(hwnd, GWL_STYLE);
+				int newStyle = oldStyle | 0x00020000;//WS_MINIMIZEBOX
+				user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
+				
+				lh.log("INFO", "Launcher scene was set succefully in stage.");
+			}catch(Exception e) {
+				lh.log("SEVERE", "Could not set scene Launcher to stage!");
 			}
-		});
-
-		stage.setScene(scene);
-		stage.show(); 
-		long lhwnd = com.sun.glass.ui.Window.getWindows().get(0).getNativeWindow();
-		Pointer lpVoid = new Pointer(lhwnd);
-		WinDef.HWND hwnd = new WinDef.HWND(lpVoid);
-		final User32 user32 = User32.INSTANCE;
-		int oldStyle = user32.GetWindowLong(hwnd, GWL_STYLE);
-		int newStyle = oldStyle | 0x00020000;//WS_MINIMIZEBOX
-		user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
+			
+		} catch (IOException e) {
+			lh.log("WARNING", "Could not connect to the server!");
+			AlertBox.display("Error", "Can't connect to server",true);
+		}
+		
 	}
 
 	public void updateSceneToMenu() {
+		
+		try {
+			Scene scene = new Scene(appPane);
+			
+			FadeTransition fadeTransition = new FadeTransition();
+			fadeTransition.setDuration(Duration.millis(500));
+			fadeTransition.setNode(launcherPane);
+			fadeTransition.setFromValue(1);
+			fadeTransition.setToValue(0);
+			fadeTransition.play();
 
-		FadeTransition fadeTransition = new FadeTransition();
-		fadeTransition.setDuration(Duration.millis(1000));
-		fadeTransition.setNode(launcherPane);
-		fadeTransition.setFromValue(1);
-		fadeTransition.setToValue(0);
-		fadeTransition.play();
 
-		Scene scene = new Scene(appPane);
-
-		fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				stage.setScene(scene);
-			}
-		});
-
-		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
-			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
-					KeyCombination.ALT_DOWN);
-			public void handle(KeyEvent ke) {
-				if (keyComb.match(ke)) {
-					System.exit(0);
+			fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(ActionEvent event) {
+					stage.setScene(scene);
 				}
-			}
-		});
-		
-		Timer t = new Timer(1500, new ActionListener() {
+			});
 
-			@Override
-			public void actionPerformed(java.awt.event.ActionEvent e) {
-				Platform.runLater(new Runnable() {
-					@Override public void run() {
-						FadeTransition fadeTransition = new FadeTransition();
-						fadeTransition.setDuration(Duration.millis(1000));
-						fadeTransition.setNode(loadingScreen);
-						fadeTransition.setFromValue(1);
-						fadeTransition.setToValue(0);
-						fadeTransition.play();
-						
-						fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
-							@Override
-							public void handle(ActionEvent event) {
-								loadingScreen.setVisible(false);
-							}
-						});
-						
+			scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+				final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+						KeyCombination.ALT_DOWN);
+				public void handle(KeyEvent ke) {
+					if (keyComb.match(ke)) {
+						System.exit(0);
 					}
-				});
-			}
-		});
-		t.setRepeats(false);
-		t.start();
-		
+				}
+			});
+			
+			lh.log("INFO", "Updated scene succesfully to chat");
+		}catch(Exception e) {
+			lh.log("SEVERE", "Could not update scene to chat");
+		}
 		
 
 	}
 
 	@FXML
-	private AnchorPane launcherAnchorPane;
+	public AnchorPane launcherAnchorPane;
 
 	@FXML
-	private VBox launcher_VBox;
+	public VBox launcher_VBox;
 
 	@FXML
-	private Pane launcher_VBox_Pane;
+	public Pane launcher_VBox_Pane;
 
 	@FXML
-	private VBox launcher_VBox_Pane_LoginVBox;
+	public VBox launcher_VBox_Pane_LoginVBox;
 
 	@FXML
-	private JFXTextField launcher_VBox_Pane_LoginVBox_TextField_Username;
+	public JFXTextField launcher_VBox_Pane_LoginVBox_TextField_Username;
 
 	@FXML
-	private JFXPasswordField launcher_VBox_Pane_LoginVBox_TextField_Password;
+	public JFXPasswordField launcher_VBox_Pane_LoginVBox_TextField_Password;
 
 	@FXML
-	private JFXButton launcher_VBox_Pane_LoginVBox_Button;
+	public JFXButton launcher_VBox_Pane_LoginVBox_Button;
 
 	@FXML
-	private Label launcher_VBox_Pane_LoginVBox_Label_ChangeToRegister;
+	public Label launcher_VBox_Pane_LoginVBox_Label_ChangeToRegister;
 
 	@FXML
-	private Label launcher_VBox_Pane_LoginVBox_Label_ErrorLogin;
+	public Label launcher_VBox_Pane_LoginVBox_Label_ErrorLogin;
 
 	@FXML
-	private VBox launcher_VBox_Pane_RegisterVBox;
+	public VBox launcher_VBox_Pane_RegisterVBox;
 
 	@FXML
-	private JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Firstname;
+	public JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Firstname;
 
 	@FXML
-	private JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Lastname;
+	public JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Lastname;
 
 	@FXML
-	private JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Age;
+	public JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Age;
 
 	@FXML
-	private JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Username;
+	public JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Username;
 
 	@FXML
-	private JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Email;
+	public JFXTextField launcher_VBox_Pane_RegisterVBox_TextField_Email;
 
 	@FXML
-	private JFXPasswordField launcher_VBox_Pane_RegisterVBox_TextField_Password;
+	public JFXPasswordField launcher_VBox_Pane_RegisterVBox_TextField_Password;
 
 	@FXML
-	private JFXPasswordField launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain;
+	public JFXPasswordField launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain;
 
 	@FXML
-	private JFXButton launcher_VBox_Pane_RegisterVBox_Button;
+	public JFXButton launcher_VBox_Pane_RegisterVBox_Button;
 
 	@FXML
-	private Label launcher_VBox_Pane_RegisterVBox_Label_ChangeToLogin;
+	public Label launcher_VBox_Pane_RegisterVBox_Label_ChangeToLogin;
 
 	@FXML
-	private Label launcher_VBox_Pane_RegisterVBox_Label_ErrorRegister;
+	public Label launcher_VBox_Pane_RegisterVBox_Label_ErrorRegister;
 
 	@FXML
-	private HBox launcher_HBox_Top;
+	public HBox launcher_HBox_Top;
 
 	@FXML
-	private FontAwesomeIconView launcher_Button_Minimize;
+	public FontAwesomeIconView launcher_Button_Minimize;
 
 	@FXML
-	private FontAwesomeIconView launcher_Button_Quit;
+	public FontAwesomeIconView launcher_Button_Quit;
 
 	@FXML
-	private HBox launcher_HBox_Right_Version_HBox;
+	public HBox launcher_HBox_Right_Version_HBox;
 
 	@FXML
-	private Label launcher_Label_Version;
+	public Label launcher_Label_Version;
 
 
 	@FXML
-	private VBox notifications_VBox;
+	public VBox notifications_VBox;
 
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////CHAT FXML VARIABLES/////////////////////
 	/////////////////////////////////////////////////////////////////
 	
     @FXML
-    private VBox loadingScreen;
+    public VBox loadingScreen;
+    
+    @FXML
+    public Label loadingScreen_Label;
 
 	@FXML
-	private AnchorPane mainAnchorPane;
+	public AnchorPane mainAnchorPane;
 
 	@FXML
-	private VBox main_Vbox_Left;
+	public VBox main_Vbox_Left;
 
 	@FXML
-	private Pane main_Vbox_Left_QuickInfo;
+	public Pane main_Vbox_Left_QuickInfo;
 
 	@FXML
-	private ProgressBar main_Vbox_Left_QuickInfo_ProgressBar;
+	public ProgressBar main_Vbox_Left_QuickInfo_ProgressBar;
 
 	@FXML
-	private Label main_Vbox_Left_QuickInfo_Label_Lvl;
+	public Label main_Vbox_Left_QuickInfo_Label_Lvl;
 
 	@FXML
-	private Label main_Vbox_Left_QuickInfo_label_FullName;
+	public Label main_Vbox_Left_QuickInfo_label_FullName;
 
 	@FXML
-	private HBox main_Vbox_Left_HBox_Search;
+	public HBox main_Vbox_Left_HBox_Search;
 
 	@FXML
-	private TextField main_Vbox_Left_HBox_Search_TextField;
+	public TextField main_Vbox_Left_HBox_Search_TextField;
 
 	@FXML
-	private HBox main_Vbox_Left_HBox_Dashboard;
+	public HBox main_Vbox_Left_HBox_Dashboard;
 
 	@FXML
-	private HBox main_Vbox_Left_HBox_Chat;
+	public HBox main_Vbox_Left_HBox_Chat;
 
 	@FXML
-	private Label main_Vbox_Left_HBox_Chat_Notify;
+	public Label main_Vbox_Left_HBox_Chat_Notify;
 
 	@FXML
-	private HBox main_Vbox_Left_HBox_Profile;
+	public HBox main_Vbox_Left_HBox_Profile;
 
 	@FXML
-	private HBox main_Vbox_Left_HBox_Friends;
+	public HBox main_Vbox_Left_HBox_Friends;
 
 	@FXML
-	private Label main_Vbox_Left_HBox_Friends_Notify;
+	public Label main_Vbox_Left_HBox_Friends_Notify;
 
 	@FXML
-	private HBox main_Vbox_Left_HBox_Settings;
+	public HBox main_Vbox_Left_HBox_Settings;
 
 	@FXML
-	private Label linkedIn_Url;
+	public Label linkedIn_Url;
 
 	@FXML
-	private Label github_Url;
+	public Label github_Url;
 
 	@FXML
-	private VBox dashboardPane;
+	public VBox dashboardPane;
 
 	@FXML
-	private Pane dashboardPane_titlePane;
+	public Pane dashboardPane_titlePane;
 
 	@FXML
-	private Label dashboardPane_TitlePane_Label;
+	public Label dashboardPane_TitlePane_Label;
 
 	@FXML
-	private HBox dashboardPane_HBox;
+	public HBox dashboardPane_HBox;
 
 	@FXML
-	private VBox dashboardPane_HBox_Left;
+	public VBox dashboardPane_HBox_Left;
 
 	@FXML
-	private ScrollPane dashboardPane_HBox_Left_ScrollPane;
+	public ScrollPane dashboardPane_HBox_Left_ScrollPane;
 
 	@FXML
-	private VBox dashboardPane_HBox_Left_ScrollPane_VBox;
+	public VBox dashboardPane_HBox_Left_ScrollPane_VBox;
 
 	@FXML
-	private VBox dashboardPane_HBox_Right;
+	public VBox dashboardPane_HBox_Right;
 
 	@FXML
-	private VBox dashboardPane_HBox_Right_VBox_Servers_Status;
+	public VBox dashboardPane_HBox_Right_VBox_Servers_Status;
 
 	@FXML
-	private VBox dashboardPane_HBox_Right_VBox_Servers_Status_Main_Server;
+	public VBox dashboardPane_HBox_Right_VBox_Servers_Status_Main_Server;
 
 	@FXML
-	private Label dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_Status;
+	public Label dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_Status;
 
 	@FXML
-	private Label dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers;
+	public Label dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers;
 
 	@FXML
-	private VBox chatPane;
+	public VBox chatPane;
 
 	@FXML
-	private Pane chatPane_titlePane;
+	public Pane chatPane_titlePane;
 
 	@FXML
-	private Label chatPane_TitlePane_Label;
+	public Label chatPane_TitlePane_Label;
 
 	@FXML
-	private HBox chatPane_HBox;
+	public HBox chatPane_HBox;
 
 	@FXML
-	private VBox chatPane_HBox_Left;
+	public VBox chatPane_HBox_Left;
 
 	@FXML
-	private ScrollPane chatPane_HBox_Left_ScrollPane;
+	public ScrollPane chatPane_HBox_Left_ScrollPane;
 
 	@FXML
-	private VBox chatPane_HBox_Left_ScrollPane_VBox;
+	public VBox chatPane_HBox_Left_ScrollPane_VBox;
 
 	@FXML
-	private HBox chatPane_HBox_Left_Handle_Input;
+	public HBox chatPane_HBox_Left_Handle_Input;
 
 	@FXML
-	private TextArea chatPane_HBox_Left_Handle_Input_TextArea;
+	public TextArea chatPane_HBox_Left_Handle_Input_TextArea;
 
 	@FXML
-	private FontAwesomeIconView chatPane_HBox_Left_Handle_Input_Button;
+	public FontAwesomeIconView chatPane_HBox_Left_Handle_Input_Button;
 
 	@FXML
-	private VBox chatPane_HBox_Right;
+	public VBox chatPane_HBox_Right;
 
 	@FXML
-	private ScrollPane chatPane_HBox_Right_ScrollPane;
+	public ScrollPane chatPane_HBox_Right_ScrollPane;
 
 	@FXML
-	private VBox chatPane_HBox_Right_ScrollPane_VBox;
+	public VBox chatPane_HBox_Right_ScrollPane_VBox;
 
 	@FXML
-	private VBox profilePane;
+	public VBox profilePane;
 
 	@FXML
-	private Pane profilePane_titlePane;
+	public Pane profilePane_titlePane;
 
 	@FXML
-	private Label profilePane_TitlePane_Label;
+	public Label profilePane_TitlePane_Label;
 
 	@FXML
-	private ProgressIndicator profilePane_ProgressIndicator;
+	public ProgressIndicator profilePane_ProgressIndicator;
 
 	@FXML
-	private Label profilePane_Label_Level;
+	public Label profilePane_Label_Level;
 
 	@FXML
-	private Label profilePane_Label_Percentage_Experience;
+	public Label profilePane_Label_Percentage_Experience;
 
 	@FXML
-	private Label profilePane_Details_Label_Firstname;
+	public Label profilePane_Details_Label_Firstname;
 
 	@FXML
-	private Label profilePane_Details_Label_Lastname;
+	public Label profilePane_Details_Label_Lastname;
 
 	@FXML
-	private Label profilePane_Details_Label_Age;
+	public Label profilePane_Details_Label_Age;
 
 	@FXML
-	private Label profilePane_Details_Label_Email;
+	public Label profilePane_Details_Label_Email;
 
 	@FXML
-	private JFXButton profilePane_Details_Button_changeDetails;
+	public JFXButton profilePane_Details_Button_changeDetails;
 
 	@FXML
-	private Label profilePane_Statistics_Label_MessagesSend;
+	public Label profilePane_Statistics_Label_MessagesSend;
 
 	@FXML
-	private Label profilePane_Statistics_Label_WordsWritten;
+	public Label profilePane_Statistics_Label_WordsWritten;
 
 	@FXML
-	private Label profilePane_Statistics_Label_ArchivementsCompleted;
+	public Label profilePane_Statistics_Label_ArchivementsCompleted;
 
 	@FXML
-	private Label profilePane_Statistics_Label_TotalExperience;
+	public Label profilePane_Statistics_Label_TotalExperience;
 
 	@FXML
-	private VBox friendsPane;
+	public VBox friendsPane;
 
 	@FXML
-	private ScrollPane friendsPane_ScrollPane_FriendsFeed;
+	public ScrollPane friendsPane_ScrollPane_FriendsFeed;
 
 	@FXML
-	private VBox friendsPane_ScrollPane_FriendsFeed_VBox;
+	public VBox friendsPane_ScrollPane_FriendsFeed_VBox;
 
 	@FXML
-	private ScrollPane friendsPane_ScrollPane_Requests;
+	public ScrollPane friendsPane_ScrollPane_Requests;
 
 	@FXML
-	private VBox friendsPane_ScrollPane_Requests_VBox;
+	public VBox friendsPane_ScrollPane_Requests_VBox;
 
 	@FXML
-	private ScrollPane friendsPane_ScrollPane_Friends;
+	public ScrollPane friendsPane_ScrollPane_Friends;
 
 	@FXML
-	private VBox friendsPane_ScrollPane_Friends_VBox;
+	public VBox friendsPane_ScrollPane_Friends_VBox;
 
 	@FXML
-	private VBox settingsPane;
+	public VBox settingsPane;
 
 	@FXML
-	private JFXTextField settingsPane_TextField_Firstname;
+	public JFXTextField settingsPane_TextField_Firstname;
 
 	@FXML
-	private JFXTextField settingsPane_TextField_Lastname;
+	public JFXTextField settingsPane_TextField_Lastname;
 
 	@FXML
-	private JFXTextField settingsPane_TextField_Age;
+	public JFXTextField settingsPane_TextField_Age;
 
 	@FXML
-	private JFXTextField settingsPane_TextField_Email;
+	public JFXTextField settingsPane_TextField_Email;
 
 	@FXML
-	private JFXButton settingsPane_Button_UpdateChanges;
+	public JFXButton settingsPane_Button_UpdateChanges;
 
 	@FXML
-	private FontAwesomeIconView settingsPane_Button_Clear;
+	public FontAwesomeIconView settingsPane_Button_Clear;
 
 	@FXML
-	private HBox main_HBox_Top;
+	public HBox main_HBox_Top;
 
 	@FXML
-	private FontAwesomeIconView button_Minimize;
+	public FontAwesomeIconView button_Minimize;
 
 	@FXML
-	private FontAwesomeIconView button_Quit;
+	public FontAwesomeIconView button_Quit;
 
 	@FXML
-	private FontAwesomeIconView main_bell_notifications;
+	public FontAwesomeIconView main_bell_notifications;
 
 	@FXML
-	private Label main_bell_notifications_Label;
+	public Label main_bell_notifications_Label;
 
 	@FXML
-	private VBox main_Notifications_PopUP;
+	public VBox main_Notifications_PopUP;
 
 	@FXML
-	private FontAwesomeIconView main_Notifications_PopUP_Close_Button;
+	public FontAwesomeIconView main_Notifications_PopUP_Close_Button;
 
 	@FXML
-	private VBox main_Notifications_PopUP_VBox;
+	public VBox main_Notifications_PopUP_VBox;
 
 	@FXML
-	private Label main_Version_Label;
+	public Label main_Version_Label;
 
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////
@@ -632,8 +675,18 @@ public class ControllerChat {
 		if(validateInputLogin()) {
 			String username = launcher_VBox_Pane_LoginVBox_TextField_Username.getText();
 			String password = launcher_VBox_Pane_LoginVBox_TextField_Password.getText();
-			updateSceneToMenu();
-			//send info
+			c.requestLoginAuthentication(username, password);
+		}
+	}
+	
+	@FXML
+	void loginWithEnterKey(KeyEvent event) {
+		if (event.getCode() == KeyCode.ENTER) {
+			if(validateInputLogin()) {
+				String username = launcher_VBox_Pane_LoginVBox_TextField_Username.getText();
+				String password = launcher_VBox_Pane_LoginVBox_TextField_Password.getText();
+				c.requestLoginAuthentication(username, password);
+			}
 		}
 	}
 
@@ -679,16 +732,6 @@ public class ControllerChat {
 		return res;
 	}
 
-	@FXML
-	void loginWithEnterKey(KeyEvent event) {
-		if (event.getCode() == KeyCode.ENTER) {
-			if(validateInputLogin()) {
-				String username = launcher_VBox_Pane_LoginVBox_TextField_Username.getText();
-				String password = launcher_VBox_Pane_LoginVBox_TextField_Password.getText();
-				//send info
-			}
-		}
-	}
 
 	@FXML
 	void minimizeWindow(MouseEvent event) {
@@ -880,7 +923,14 @@ public class ControllerChat {
 	}
 
 	@FXML
-	void updateChanges(MouseEvent event) {
+	void updateChanges(KeyEvent event) {
+		if (event.getCode() == KeyCode.ENTER) {
+			
+		}
+	}
+	
+	@FXML
+	void updateChangesWithMouse(MouseEvent event) {
 
 	}
 

@@ -18,7 +18,7 @@ public class ConnectDB {
         	//bd.changeLastName("simon", "Ferreira");
         	//bd.changeFirstName("berunoxxx", "Bruno");
         	//bd.changeLastName("berunoxxx", "Ribeiro");
-        	bd.addFriend(1, 2);
+        	//bd.addFriend(1, 2);
             bd.getInfoPlayers();
             bd.getUsers();
             bd.getFriends();

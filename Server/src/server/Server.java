@@ -20,18 +20,14 @@ public class Server {
 
     private static final int PORT = 32456;
 
-    protected ServerSocket             ss;
-    protected Socket                   s;
-    protected DataInputStream          dis;
-    protected DataOutputStream         dos;
-    protected BufferedReader           bfr;
+    protected ServerSocket             ss = null;
+    protected Socket                   s = null;
+    protected DataInputStream          dis = null;
+    protected DataOutputStream         dos = null;
+    protected BufferedReader           bfr = null;
     protected boolean                  run = true;
     protected ArrayList<ServerHandler> connections = new ArrayList<ServerHandler>();
-    protected Map<String,String>       friendsRequest = new HashMap<String,String>();
-    protected String                   liveNews="";
-    protected String                   adminUser;
-    protected SQLiteHandler            bd = new SQLiteHandler();
-    protected DataBaseCatalog          dbh;
+    protected DataBaseCatalog          dbh = null;
     protected LoggerHandle             lh = null;
 
     public static void main(String[] args) {

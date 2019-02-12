@@ -24,12 +24,8 @@ public class ServerHandler extends Thread{
 	private ObjectOutputStream out = null;
 	private ObjectInputStream  in = null;
 	private String             username;
-	private String             text;
 	private int                codeNumber;
-	private int                id;
 	private boolean            run = true;
-	private String             desconnectedUser;
-	private JSONObject         objData;
 	private DataBaseCatalog    dbh;
 	private LoggerHandle       lh;
 	private ArrayList<ServerHandler> friendsThreads = new ArrayList<ServerHandler>();
@@ -109,63 +105,35 @@ public class ServerHandler extends Thread{
 						if(dbh.checkLogin(user, password) && !checkUserLogged(user)) {
 							username = user;
 							server.connections.add(this);
-							/**
-							if(!server.liveNews.equals("")) {
-								//enviar o codigo 6
-								out.writeObject(6);
-								//enviar o nome do admin
-								out.writeObject(server.adminUser);
-								//enviar a live news
-								out.writeObject(server.liveNews);
-							}
-							*/
 
-							connectionsUpdated = new StringBuilder();
-
-							for(int i=0;i<server.connections.size();i++) {
-								connectionsUpdated.append(i+": "+server.connections.get(i).username+"\n");
-								if(server.connections.get(i).username.equals(username)) {
-									id=i;
-								}
-							}
-							
 							//enviar o codigo 0
 							out.writeObject(codeNumber);
 							//enviar True
 							out.writeObject(new Boolean(true));
-							//enviar id
-							out.writeObject(id);
-							//enviar conexoes ativas
-							out.writeObject(connectionsUpdated.toString());
 							
 							idBD = dbh.getID(username);
-							infoUserObj = createObjWithInfo(idBD);
+							JSONObject userObjInfo = createObjWithInfo(idBD);
 							//enviar info do username
-							out.writeObject(infoUserObj);
+							out.writeObject(userObjInfo);
 							
-							ArrayList<Integer> friends = dbh.getFriends(idBD);
-							//createArrayWithSHOfFriends(friends);
-							//enviar numero de amigos
-							int size = friends.size();
+							//enviar numero de users online
+							int size = server.connections.size();
 							out.writeObject(size);
 							
 							if(size!=0) {
-								for(Integer i : friends) {
+								for(ServerHandler sh : server.connections) {
+									int i = dbh.getID(sh.username);
 									infoUserObj = createObjWithInfo(i);
 									//enviar a info do amigo com id i
 									out.writeObject(infoUserObj);
 								}
 							}
 							
-							
 							//enviar informação para os restantes clientes com code 1
 							sendToClients(1,false);
 							
 							//enviar o user que se conectou
-							sendToClients(dbh.getFullName(idBD),false);
-							
-							//enviar lista de conexoes atualizadas
-							sendToClients(connectionsUpdated.toString(),false);
+							sendToClients(userObjInfo,false);
 							
 							lh.log("INFO", "User " + user + " logged in the server");
 						}else{
@@ -571,6 +539,7 @@ public class ServerHandler extends Thread{
         obj.put("firstName", dbh.getFirstName(id));
         obj.put("lastName", dbh.getLastName(id));
         obj.put("age", dbh.getAge(id));
+        obj.put("email",dbh.getEmail(id));
         obj.put("lvlUser", dbh.getLvlUser(id));
         obj.put("expUser", dbh.getExpUser(id));
         obj.put("numMessages", dbh.getMessagesSent(id));

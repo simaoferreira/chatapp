@@ -1,6 +1,7 @@
 package startLaunch;
 
-import controllers.ControllerLauncher;
+import controllers.ControllerChat;
+import handlers.LoggerHandle;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
@@ -9,11 +10,14 @@ import javafx.stage.WindowEvent;
 
 public class Chat extends Application{
 
-    private static final String version = "v0.2.00";
+    private static final String version = "v0.3.0";
+    private static LoggerHandle             lh = null;
 
     public static void main(String[] args) {
+    	lh = new LoggerHandle();
     	try {
     	    Application.launch(args);
+    	    lh.log("INFO", "Aplication started");
     	    
     	} catch (IllegalStateException e) {}
     }
@@ -28,8 +32,8 @@ public class Chat extends Application{
 		    }
 		});
 
-        ControllerLauncher c = new ControllerLauncher(primaryStage,version);
-        c.iniciarController();
+        ControllerChat c = new ControllerChat(primaryStage,version,lh);
+        c.startController();
 
     }
 }

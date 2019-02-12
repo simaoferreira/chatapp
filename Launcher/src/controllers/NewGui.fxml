@@ -4,6 +4,7 @@
 <?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
 <?import com.jfoenix.controls.JFXBadge?>
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
@@ -30,9 +31,9 @@
          <children>
             <Pane fx:id="main_Vbox_Left_QuickInfo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="300.0" styleClass="bottom-border-blue">
                <children>
-                  <ProgressBar fx:id="main_Vbox_Left_QuickInfo_ProgressBar" layoutX="39.0" layoutY="53.0" prefHeight="4.0" prefWidth="248.0" progress="0.5" />
-                  <Label fx:id="main_Vbox_Left_QuickInfo_Label_Lvl" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="5.0" prefWidth="25.0" style="-fx-background-color: #5188bc; -fx-background-radius: 10%;" text="23" textAlignment="CENTER" textFill="WHITE" />
-                  <Label fx:id="main_Vbox_Left_QuickInfo_label_FullName" layoutX="5.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" text="Simão Ferreira" textFill="WHITE">
+                  <ProgressBar fx:id="main_Vbox_Left_QuickInfo_ProgressBar" layoutX="39.0" layoutY="53.0" prefHeight="4.0" prefWidth="248.0" progress="0.0" />
+                  <Label fx:id="main_Vbox_Left_QuickInfo_Label_Lvl" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="5.0" prefWidth="25.0" style="-fx-background-color: #5188bc; -fx-background-radius: 10%;" text="-1" textAlignment="CENTER" textFill="WHITE" />
+                  <Label fx:id="main_Vbox_Left_QuickInfo_label_FullName" layoutX="5.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" text="Username" textFill="WHITE">
                      <font>
                         <Font name="Ebrima" size="22.0" />
                      </font>
@@ -90,7 +91,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="main_Vbox_Left_HBox_Chat_Notify" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="20" textFill="WHITE">
+                  <Label fx:id="main_Vbox_Left_HBox_Chat_Notify" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="-1" textFill="WHITE" visible="false">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -109,7 +110,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </HBox>
-            <HBox fx:id="main_Vbox_Left_HBox_Profile" alignment="CENTER_LEFT" layoutX="10.0" layoutY="177.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToAbout" prefHeight="40.0" prefWidth="300.0" styleClass="buttons">
+            <HBox fx:id="main_Vbox_Left_HBox_Profile" alignment="CENTER_LEFT" layoutX="10.0" layoutY="177.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#changeToProfile" prefHeight="40.0" prefWidth="300.0" styleClass="buttons">
                <children>
                   <FontAwesomeIconView fill="#7c8184" glyphName="USER" size="1.5em">
                      <HBox.margin>
@@ -143,7 +144,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="main_Vbox_Left_HBox_Friends_Notify" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="2" textFill="WHITE">
+                  <Label fx:id="main_Vbox_Left_HBox_Friends_Notify" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="-1" textFill="WHITE" visible="false">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -194,7 +195,7 @@
                            <children>
                               <ImageView fitHeight="78.0" fitWidth="66.0" preserveRatio="true">
                                  <image>
-                                    <Image url="@res/simao.jpg" />
+                                    <Image url="@../../../../../Desktop/New%20GUI/res/simao.jpg" />
                                  </image>
                               </ImageView>
                               <VBox alignment="CENTER_LEFT">
@@ -256,7 +257,7 @@
                <children>
                   <ImageView fitHeight="71.0" fitWidth="239.0" preserveRatio="true">
                      <image>
-                        <Image url="@res/logo.png" />
+                        <Image url="@../../../../../Desktop/New%20GUI/res/logo.png" />
                      </image>
                   </ImageView>
                   <VBox alignment="CENTER" maxHeight="20.0" prefHeight="20.0" styleClass="box">
@@ -274,7 +275,7 @@
             </VBox>
          </children>
       </VBox>
-      <VBox fx:id="dashboardPane" layoutX="300.0" layoutY="19.0" prefHeight="700.0" prefWidth="980.0">
+      <VBox fx:id="dashboardPane" layoutX="300.0" layoutY="19.0" prefHeight="700.0" prefWidth="980.0" visible="false">
          <children>
             <Pane fx:id="dashboardPane_titlePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="980.0">
                <children>
@@ -298,7 +299,7 @@
                      <children>
                         <ImageView fitHeight="143.0" fitWidth="408.0" preserveRatio="true">
                            <image>
-                              <Image url="@res/logo.png" />
+                              <Image url="@../../../../../Desktop/New%20GUI/res/logo.png" />
                            </image>
                         </ImageView>
                         <ScrollPane fx:id="dashboardPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefWidth="800.0" stylesheets="@stylesheet.css">
@@ -466,7 +467,7 @@
                                     <HBox>
                                        <children>
                                           <Label text="Users Online:" textFill="#7c8184" />
-                                          <Label fx:id="dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers" text="5" textFill="#7c8184">
+                                          <Label fx:id="dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers" text="-1" textFill="#7c8184">
                                              <font>
                                                 <Font name="System Bold" size="12.0" />
                                              </font>
@@ -515,287 +516,7 @@
                      <children>
                         <ScrollPane fx:id="chatPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css">
                            <content>
-                              <VBox fx:id="chatPane_HBox_Left_ScrollPane_VBox" maxHeight="-Infinity" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="780.0" style="-fx-background-color: #fff;">
-                                 <children>
-                                    <VBox alignment="CENTER" style="-fx-background-color: #4d9b20;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="You connected to the server" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="15.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="15:37:30" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" right="20.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER" layoutX="20.0" layoutY="10.0" style="-fx-background-color: #4d9b20;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="User Bruno Ribeiro just connected to the server" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="15.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="15:38:40" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" right="20.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="73.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #5188bc;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Simão Ferreira" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="Olá berunoxxx como vai isso?" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="380.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="420.0" layoutY="136.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #67696d;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Bruno Ribeiro" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="Yoooo, vai fixe e contigo?" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="420.0" layoutY="136.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #5188bc;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Simão Ferreira" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="nice também!" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="380.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="230.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #67696d;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Bruno Ribeiro" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="Design tão louco!!! " textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="410.0" layoutY="324.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #5188bc;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Simão Ferreira" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="Thanks! Está mesmo fixe agora!" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="380.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="410.0" layoutY="512.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #5188bc;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Simão Ferreira" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="Olá berunoxxx como vai isso?" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="380.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="418.0" maxWidth="380.0" prefWidth="400.0" style="-fx-background-color: #67696d;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="Bruno Ribeiro" textFill="WHITE" underline="true">
-                                             <font>
-                                                <Font name="Calibri Light" size="17.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="Yoooo, vai fixe e contigo?" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="15.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <Label layoutX="20.0" layoutY="20.0" text="15:38:50" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                    <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #cc3d3d;" styleClass="chat-messages">
-                                       <children>
-                                          <Label text="The user Bruno Ribeiro has disconnected from server." textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri Light" size="15.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="252.0" layoutY="20.0" text="15:37:30" textFill="WHITE">
-                                             <font>
-                                                <Font name="Calibri" size="12.0" />
-                                             </font>
-                                          </Label>
-                                       </children>
-                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                       </padding>
-                                       <VBox.margin>
-                                          <Insets right="20.0" />
-                                       </VBox.margin>
-                                    </VBox>
-                                 </children>
-                              </VBox>
+                              <VBox fx:id="chatPane_HBox_Left_ScrollPane_VBox" maxHeight="-Infinity" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="780.0" style="-fx-background-color: #fff;" />
                            </content>
                            <VBox.margin>
                               <Insets right="5.0" />
@@ -840,274 +561,7 @@
                         </Label>
                         <ScrollPane fx:id="chatPane_HBox_Right_ScrollPane" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="545.0" prefWidth="180.0" style="-fx-background-color: transparent;">
                            <content>
-                              <VBox fx:id="chatPane_HBox_Right_ScrollPane_VBox" prefHeight="570.0" prefWidth="180.0" style="-fx-background-color: transparent;">
-                                 <children>
-                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Ribeiro" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1000" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Cruz" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1500" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="Bernardo Santos" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 1 Exp: 100" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS João Lobo" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1200" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="Rodrigo Santos" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 1 Exp: 150" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Ribeiro" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1000" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Cruz" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1500" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="Bernardo Santos" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 1 Exp: 100" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS João Lobo" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1200" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="226.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="Rodrigo Santos" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 1 Exp: 150" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Ribeiro" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1000" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="334.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Cruz" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1500" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="388.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="Bernardo Santos" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 1 Exp: 100" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="442.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS João Lobo" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1200" textFill="#7c8184" />
-                                          <FontAwesomeIconView glyphName="USER" glyphStyle="-fx-fill:#7C8184" layoutX="139.0" layoutY="33.0" size="1.5EM" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="496.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="Rodrigo Santos" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 1 Exp: 150" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                       <styleClass>
-                                          <String fx:value="userBox" />
-                                          <String fx:value="buttons" />
-                                       </styleClass>
-                                    </Pane>
-                                 </children>
-                              </VBox>
+                              <VBox fx:id="chatPane_HBox_Right_ScrollPane_VBox" prefHeight="540.0" prefWidth="180.0" style="-fx-background-color: transparent;" />
                            </content>
                            <VBox.margin>
                               <Insets right="2.0" />
@@ -1148,20 +602,20 @@
                                  <children>
                                     <HBox alignment="CENTER" layoutX="35.0" layoutY="135.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="230.0" style="-fx-border-color: #72D3FE;" styleClass="round-box">
                                        <children>
-                                          <ProgressIndicator fx:id="profilePane_ProgressIndicator" progress="0.5" radius="105.0" rotate="180.0" />
+                                          <ProgressIndicator fx:id="profilePane_ProgressIndicator" progress="0.0" radius="105.0" rotate="180.0" />
                                        </children>
                                        <padding>
                                           <Insets bottom="3.0" right="2.0" />
                                        </padding>
                                     </HBox>
-                                    <Label fx:id="profilePane_Label_Level" alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="25.0" minWidth="-Infinity" prefWidth="45.0" style="-fx-background-color: #5188bc; -fx-background-radius: 10%;" text="23" textAlignment="CENTER" textFill="WHITE">
+                                    <Label fx:id="profilePane_Label_Level" alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="25.0" minWidth="-Infinity" prefWidth="45.0" style="-fx-background-color: #5188bc; -fx-background-radius: 10%;" text="-1" textAlignment="CENTER" textFill="WHITE">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </Pane>
-                              <Label fx:id="profilePane_Label_Percentage_Experience" alignment="CENTER" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #0fafe0;" text="50%" textFill="#4a4b4d">
+                              <Label fx:id="profilePane_Label_Percentage_Experience" alignment="CENTER" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #0fafe0;" text="0%" textFill="#4a4b4d">
                                  <font>
                                     <Font name="Ebrima" size="22.0" />
                                  </font>
@@ -1193,7 +647,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Details_Label_Firstname" layoutX="40.0" layoutY="20.0" text="Simão" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Details_Label_Firstname" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1216,7 +670,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Details_Label_Lastname" layoutX="40.0" layoutY="20.0" text="Ferreira" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Details_Label_Lastname" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1239,7 +693,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Details_Label_Age" layoutX="40.0" layoutY="20.0" text="21" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Details_Label_Age" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1262,7 +716,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Details_Label_Email" layoutX="40.0" layoutY="20.0" text="mastirofgames@gmail.com" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Details_Label_Email" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1315,7 +769,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Statistics_Label_MessagesSend" layoutX="40.0" layoutY="20.0" text="1200" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Statistics_Label_MessagesSend" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1338,7 +792,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Statistics_Label_WordsWritten" layoutX="40.0" layoutY="20.0" text="10935" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Statistics_Label_WordsWritten" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1361,7 +815,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Statistics_Label_ArchivementsCompleted" layoutX="40.0" layoutY="20.0" text="10" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Statistics_Label_ArchivementsCompleted" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1381,7 +835,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="profilePane_Statistics_Label_TotalExperience" layoutX="40.0" layoutY="20.0" text="20983" textFill="#4a4b4d">
+                                          <Label fx:id="profilePane_Statistics_Label_TotalExperience" layoutX="40.0" layoutY="20.0" textFill="#4a4b4d">
                                              <font>
                                                 <Font name="Arial" size="17.0" />
                                              </font>
@@ -1438,67 +892,6 @@
                                                    <padding>
                                                       <Insets left="10.0" />
                                                    </padding>
-                                                   <children>
-                                                      <VBox alignment="CENTER_LEFT" style="-fx-background-color: #fff;" styleClass="full-border-grey">
-                                                         <children>
-                                                            <Label text="Level up" textFill="#0fafe0" underline="true">
-                                                               <font>
-                                                                  <Font name="Calibri Light" size="20.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets bottom="5.0" />
-                                                               </VBox.margin>
-                                                            </Label>
-                                                            <Label layoutX="252.0" layoutY="20.0" text="RS Bruno Ribeiro got lvl 3">
-                                                               <font>
-                                                                  <Font name="Calibri" size="15.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets bottom="5.0" />
-                                                               </VBox.margin>
-                                                            </Label>
-                                                            <Label layoutX="20.0" layoutY="20.0" text="15:38:50">
-                                                               <font>
-                                                                  <Font name="Calibri Light" size="12.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                         <padding>
-                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                                         </padding>
-                                                         <VBox.margin>
-                                                            <Insets bottom="10.0" />
-                                                         </VBox.margin>
-                                                      </VBox>
-                                                      <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="10.0" style="-fx-background-color: #fff;" styleClass="full-border-grey">
-                                                         <children>
-                                                            <Label text="Archivement Completed" textFill="#0fafe0" underline="true">
-                                                               <font>
-                                                                  <Font name="Calibri Light" size="20.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets bottom="5.0" />
-                                                               </VBox.margin>
-                                                            </Label>
-                                                            <Label layoutX="252.0" layoutY="20.0" text="RS Bruno Ribeiro completed &quot;Friends are cool&quot; archivement!">
-                                                               <font>
-                                                                  <Font name="Calibri" size="15.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets bottom="5.0" />
-                                                               </VBox.margin>
-                                                            </Label>
-                                                            <Label layoutX="20.0" layoutY="20.0" text="15:40:50">
-                                                               <font>
-                                                                  <Font name="Calibri Light" size="12.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                         <padding>
-                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                                         </padding>
-                                                      </VBox>
-                                                   </children>
                                                 </VBox>
                                              </content>
                                              <padding>
@@ -1519,68 +912,6 @@
                                                    <padding>
                                                       <Insets left="10.0" />
                                                    </padding>
-                                                   <children>
-                                                      <VBox alignment="CENTER_LEFT" style="-fx-background-color: #fff;" styleClass="full-border-grey">
-                                                         <children>
-                                                            <Label text="Request" textFill="#0fafe0" underline="true">
-                                                               <font>
-                                                                  <Font name="Calibri Light" size="20.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets left="10.0" top="10.0" />
-                                                               </VBox.margin>
-                                                            </Label>
-                                                            <Label layoutX="252.0" layoutY="20.0" text="João Gil sent you a friend request.">
-                                                               <font>
-                                                                  <Font name="Calibri" size="15.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets left="10.0" top="5.0" />
-                                                               </VBox.margin>
-                                                            </Label>
-                                                            <Label layoutX="20.0" layoutY="20.0" text="15:38:50">
-                                                               <font>
-                                                                  <Font name="Calibri Light" size="12.0" />
-                                                               </font>
-                                                               <VBox.margin>
-                                                                  <Insets left="10.0" top="5.0" />
-                                                               </VBox.margin>
-                                                               <padding>
-                                                                  <Insets bottom="10.0" />
-                                                               </padding>
-                                                            </Label>
-                                                            <HBox alignment="CENTER_RIGHT" styleClass="top-border-grey">
-                                                               <children>
-                                                                  <JFXButton prefWidth="100.0" style="-fx-background-color: #4a8c44; -fx-background-radius: 0;" text="Accept" textFill="WHITE">
-                                                                     <graphic>
-                                                                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="1.2EM" />
-                                                                     </graphic>
-                                                                     <HBox.margin>
-                                                                        <Insets bottom="5.0" right="10.0" top="5.0" />
-                                                                     </HBox.margin>
-                                                                     <cursor>
-                                                                        <Cursor fx:constant="HAND" />
-                                                                     </cursor>
-                                                                  </JFXButton>
-                                                                  <JFXButton prefWidth="100.0" style="-fx-background-color: #ad2d2d; -fx-background-radius: 0;" text="Reject" textFill="WHITE">
-                                                                     <graphic>
-                                                                        <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="1.2EM" />
-                                                                     </graphic>
-                                                                     <HBox.margin>
-                                                                        <Insets bottom="5.0" right="10.0" top="5.0" />
-                                                                     </HBox.margin>
-                                                                     <cursor>
-                                                                        <Cursor fx:constant="HAND" />
-                                                                     </cursor>
-                                                                  </JFXButton>
-                                                               </children>
-                                                            </HBox>
-                                                         </children>
-                                                         <VBox.margin>
-                                                            <Insets bottom="10.0" />
-                                                         </VBox.margin>
-                                                      </VBox>
-                                                   </children>
                                                 </VBox>
                                              </content>
                                              <padding>
@@ -1625,49 +956,7 @@
                         </Label>
                         <ScrollPane fx:id="friendsPane_ScrollPane_Friends" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="545.0" prefWidth="180.0" style="-fx-background-color: #fff;" stylesheets="@stylesheet.css">
                            <content>
-                              <VBox fx:id="friendsPane_ScrollPane_Friends_VBox" prefHeight="543.0" prefWidth="180.0">
-                                 <children>
-                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0" styleClass="userBox">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Ribeiro" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1000" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0" styleClass="userBox">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS Bruno Cruz" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1500" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Pane>
-                                    <Pane layoutX="10.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="180.0" styleClass="userBox">
-                                       <children>
-                                          <Label layoutX="6.0" layoutY="7.0" text="RS João Lobo" textFill="#7c8184">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="6.0" layoutY="27.0" text="Lvl 2 Exp: 1200" textFill="#7c8184" />
-                                       </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Pane>
-                                 </children>
-                              </VBox>
+                              <VBox fx:id="friendsPane_ScrollPane_Friends_VBox" prefHeight="543.0" prefWidth="180.0" />
                            </content>
                            <VBox.margin>
                               <Insets right="5.0" />
@@ -1713,7 +1002,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXTextField fx:id="settingsPane_TextField_Firstname" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" promptText="Simão" style="-fx-text-fill: #515456;">
+                              <JFXTextField fx:id="settingsPane_TextField_Firstname" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" style="-fx-text-fill: #515456;">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -1736,7 +1025,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXTextField fx:id="settingsPane_TextField_Lastname" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" promptText="Ferreira" style="-fx-text-fill: #515456;">
+                              <JFXTextField fx:id="settingsPane_TextField_Lastname" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" style="-fx-text-fill: #515456;">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -1759,7 +1048,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXTextField fx:id="settingsPane_TextField_Age" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" promptText="21" style="-fx-text-fill: #515456;">
+                              <JFXTextField fx:id="settingsPane_TextField_Age" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" style="-fx-text-fill: #515456;">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -1782,7 +1071,7 @@
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXTextField fx:id="settingsPane_TextField_Email" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" prefHeight="31.0" prefWidth="318.0" promptText="mastirofgames@gmail.com" style="-fx-text-fill: #515456;">
+                              <JFXTextField fx:id="settingsPane_TextField_Email" focusColor="#0fafe0" labelFloat="true" onKeyPressed="#updateChanges" prefHeight="31.0" prefWidth="318.0" style="-fx-text-fill: #515456;">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -1802,7 +1091,7 @@
                   </VBox>
                   <HBox alignment="CENTER_RIGHT" styleClass="top-border-grey">
                      <children>
-                        <JFXButton fx:id="settingsPane_Button_UpdateChanges" onMouseClicked="#updateChanges" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #4a8c44; -fx-background-radius: 0;" text="Submit Changes" textFill="WHITE">
+                        <JFXButton fx:id="settingsPane_Button_UpdateChanges" onMouseClicked="#updateChangesWithMouse" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #4a8c44; -fx-background-radius: 0;" text="Submit Changes" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="1.2EM" />
                            </graphic>
@@ -1868,7 +1157,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
-            <Label fx:id="main_bell_notifications_Label" alignment="CENTER" layoutX="13.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openPopupNotifications" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="2" textFill="WHITE">
+            <Label fx:id="main_bell_notifications_Label" alignment="CENTER" layoutX="13.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openPopupNotifications" prefHeight="20.0" prefWidth="20.0" styleClass="round-lbl" text="-1" textFill="WHITE" visible="false">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -1969,5 +1258,31 @@
             </Label>
          </children>
       </HBox>
+      <VBox fx:id="loadingScreen" alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="484.0" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/New%20GUI/res/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <JFXSpinner prefHeight="152.0" prefWidth="1280.0" />
+            <Label text="Loading...." textFill="#7c8184">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="loadingScreen_Label" text="Welcome, RS Simão Ferreira, to Our Chat" textFill="#7c8184">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Ebrima" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

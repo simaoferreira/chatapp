@@ -91,14 +91,14 @@ public class DataBaseCatalog {
      * @param username - Username of user
      * @param password - Password of user
      */
-    public void addUser(String username,String password) {
+    public void addUser(String username,String password,String email,String firstname,String lastname) {
         try {
         	byte[] salt = getNextSalt();
             String passw = hash(password.toCharArray(),salt);
-            sql.addUser(username,passw,toHex(salt));
+            sql.addUser(username,passw,email,toHex(salt),firstname,lastname);
             lh.log("INFO", "User "+username+" added successfully;");
         } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException e) {
-            lh.log("WARNING", "Error while trying to add user", e);
+            lh.log("WARNING", "Error while trying to add user"+username, e);
         }
     }
 
@@ -235,6 +235,9 @@ public class DataBaseCatalog {
 
     public boolean checkLogin(String username,String password) {
         try {
+        	if(!sql.checkUserExists(username)) {
+        		return false;
+        	}
         	int user = getID(username);
         	String salt = sql.getSalt(user);
         	String hashedPass = sql.getHashedPassword(user);
@@ -458,6 +461,22 @@ public class DataBaseCatalog {
         }
         return -1;
     }
+    
+    /**
+     * Get the email of the user
+     * @param id - the id of the user
+     * @return the age of the user
+     */
+    public String getEmail(int id) {
+    	try {
+            return sql.getEmail(id);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying obtaining the email of the user with id "+id+"!", e);
+        }
+        return null;
+    }
+    
+    
     
     /**
      * Get the username of the user
