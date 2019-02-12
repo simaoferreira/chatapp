@@ -98,7 +98,7 @@ public class DataBaseCatalog {
             sql.addUser(username,passw,email,toHex(salt),firstname,lastname);
             lh.log("INFO", "User "+username+" added successfully;");
         } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException e) {
-            lh.log("WARNING", "Error while trying to add user"+username, e);
+            lh.log("WARNING", "Error while trying to add user "+username, e);
         }
     }
 
@@ -201,20 +201,6 @@ public class DataBaseCatalog {
 		} catch (ClassNotFoundException | SQLException e) {
 			lh.log("WARNING", "Error changing age of user!", e);
 		}
-    }
-    
-    /**
-     * Update user experience
-     * @param username - Username of user
-     * @param length - The amount of experience to add
-     */
-    public void updateExpUser(String username, int n) {
-        try {
-            sql.updateExpUser(username, n);
-            lh.log("INFO", "Experience of user "+username+" updated and increased by "+n+";");
-        } catch (ClassNotFoundException | SQLException e) {
-            lh.log("WARNING", "Error updating experience of user!", e);
-        }
     }
 
     /**
@@ -388,6 +374,20 @@ public class DataBaseCatalog {
             return sql.getExpUser(id);
         } catch (ClassNotFoundException | SQLException e) {
             lh.log("WARNING", "Error while trying to get user experience!", e);
+        }
+        return -1;
+    }
+    
+    /**
+     * Get user experience
+     * @param id - ID of user
+     * @return The experience of user
+     */
+    public int getParcialExpUser(int id) {
+        try {
+            return sql.getParcialExpUser(id);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying to get user parcial experience!", e);
         }
         return -1;
     }

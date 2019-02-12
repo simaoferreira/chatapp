@@ -45,7 +45,6 @@ public class SQLiteHandler {
                 state2.execute("CREATE TABLE users(id integer,"
                         + "username varchar(16) unique,"
                         + "password varchar(16),"
-                        + "email varchar(60) unique,"
                         + "salt varchar(100),"
                         + "primary key(id));");
             }
@@ -57,8 +56,10 @@ public class SQLiteHandler {
                 		+ "firstName varchar(16),"
                 		+ "lastName varchar(16),"
                 		+ "age integer,"
+                		+ "email varchar(60) unique,"
                         + "userLvl integer,"
                         + "userExp integer,"
+                        + "userParcialExp integer,"
                         + "messagesSent integer,"
                         + "wordsWritten integer,"
                         + "foreign key(id) references users(id),"
@@ -96,21 +97,22 @@ public class SQLiteHandler {
         }
 
         if(!estaRegistado(username)){
-            PreparedStatement prep = con.prepareStatement("INSERT INTO users values(?,?,?,?,?);");
+            PreparedStatement prep = con.prepareStatement("INSERT INTO users values(?,?,?,?);");
             prep.setString(2, username);
             prep.setString(3, password);
-            prep.setString(4, email);
-            prep.setString(5, salt);
+            prep.setString(4, salt);
             prep.execute();
 
-            PreparedStatement prepInfo = con.prepareStatement("INSERT INTO usersInfo values(?,?,?,?,?,?,?,?)");
+            PreparedStatement prepInfo = con.prepareStatement("INSERT INTO usersInfo values(?,?,?,?,?,?,?,?,?,?)");
             prepInfo.setString(2, firstname);
             prepInfo.setString(3, lastname);
             prepInfo.setInt(4, 21);
-            prepInfo.setInt(5, 1);
-            prepInfo.setInt(6, 0);
+            prepInfo.setString(5, email);
+            prepInfo.setInt(6, 1);
             prepInfo.setInt(7, 0);
             prepInfo.setInt(8, 0);
+            prepInfo.setInt(9, 0);
+            prepInfo.setInt(10, 0);
             prepInfo.execute();
         }else {
             System.err.println("já esta registado");
@@ -240,30 +242,19 @@ public class SQLiteHandler {
         int id = getID(username);
         int lvlUser = getLvlUser(id);
         int numWords = getWordsWritten(id);
-        int exp = getExpUser(id);
+        int expTotal = getExpUser(id);
+        int expParcial = getParcialExpUser(id);
         int pontuacaoMensagem = Pontuation.calculatePontuation(n);
-        int verifyLvl = Pontuation.verifyLvl(exp+pontuacaoMensagem);
+        int calculatedExpParcial = Pontuation.calculateParcialExp(expParcial+pontuacaoMensagem,lvlUser);
         updateMessagesSent(username);
-        if(verifyLvl > lvlUser) {
-            updateLvlUser(username,verifyLvl);
+        if(calculatedExpParcial <= expParcial) {
+            updateLvlUser(username,lvlUser+1);
         }
-        PreparedStatement prep = con.prepareStatement("UPDATE usersInfo SET wordsWritten = ?,userExp = ? WHERE id = ?");
+        PreparedStatement prep = con.prepareStatement("UPDATE usersInfo SET wordsWritten = ?,userExp = ?,userParcialExp = ? WHERE id = ?");
         prep.setInt(1, numWords + n);
-        prep.setInt(2, exp+pontuacaoMensagem);
-        prep.setInt(3,id);
-        prep.executeUpdate();
-    }
-
-    protected void updateExpUser(String username, int n) throws SQLException, ClassNotFoundException {
-        if(con == null) {
-            getConnection();
-        }
-
-        int id = getID(username);
-        int exp = getExpUser(id);
-        PreparedStatement prep = con.prepareStatement("UPDATE usersInfo SET userExp = ? WHERE id = ?");
-        prep.setInt(1, exp + n);
-        prep.setInt(2,id);
+        prep.setInt(2, expTotal+pontuacaoMensagem);
+        prep.setInt(3, calculatedExpParcial);
+        prep.setInt(4, id);
         prep.executeUpdate();
     }
 
@@ -289,7 +280,7 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT * FROM users");
         System.out.println("result Users:");
         while(res.next()) {
-            System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password")+" "+res.getString("email")+" "+res.getString("salt"));
+            System.out.println(res.getInt("id")+" "+res.getString("username")+" "+ res.getString("password")+" "+res.getString("salt"));
         }
         System.out.println("Empty");
     }
@@ -328,10 +319,10 @@ public class SQLiteHandler {
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT id,firstName,lastName,age,userLvl,userExp,messagesSent,wordsWritten FROM usersInfo");
+        ResultSet res = state.executeQuery("SELECT id,firstName,lastName,age,email,userLvl,userExp,userParcialExp,messagesSent,wordsWritten FROM usersInfo");
         System.out.println("result Info (id,lvlUser,ExpUser,messages,words):");
         while(res.next()) {
-            System.out.println(res.getInt("id")+" "+res.getString("firstName")+" "+res.getString("lastName")+" "+res.getInt("age")+" "+res.getInt("userLvl")+" "+ res.getInt("userExp")+" "+res.getInt("messagesSent")+" "+ res.getInt("wordsWritten"));
+            System.out.println(res.getInt("id")+" "+res.getString("firstName")+" "+res.getString("lastName")+" "+res.getInt("age")+" "+res.getString("email")+" "+res.getInt("userLvl")+" "+ res.getInt("userExp")+" "+res.getInt("userParcialExp")+" "+res.getInt("messagesSent")+" "+ res.getInt("wordsWritten"));
         }
         System.out.println("Empty");
     }
@@ -480,6 +471,16 @@ public class SQLiteHandler {
         ResultSet res = state.executeQuery("SELECT userExp FROM usersInfo WHERE id='" + id + "'");
         return res.getInt("userExp");
     }
+    
+    protected int getParcialExpUser(int id) throws ClassNotFoundException, SQLException {
+        if(con == null) {
+            getConnection();
+        }
+
+        Statement state = con.createStatement();
+        ResultSet res = state.executeQuery("SELECT userParcialExp FROM usersInfo WHERE id='" + id + "'");
+        return res.getInt("userParcialExp");
+    }
 
     protected int getMessagesSent(int id) throws ClassNotFoundException, SQLException {
         if(con == null) {
@@ -537,7 +538,7 @@ public class SQLiteHandler {
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT email FROM users WHERE id='" + id + "'");
+        ResultSet res = state.executeQuery("SELECT email FROM usersInfo WHERE id='" + id + "'");
         return res.getString("email");
     }
     

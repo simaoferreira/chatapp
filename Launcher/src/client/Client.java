@@ -6,7 +6,7 @@ import java.net.UnknownHostException;
 
 import controllers.ControllerChat;
 import dataHandler.AlertBox;
-import handlers.LoggerHandle;
+import dataHandler.LoggerHandle;
 import javafx.application.Platform;
 
 public class Client extends Thread{

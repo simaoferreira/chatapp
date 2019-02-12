@@ -7,33 +7,68 @@ public class Pontuation {
         return valueWord;
     }
 
-    protected static int verifyLvl(int n) {
-        int lvl;
-        if(n>=1 && n<100) {
-            lvl = 1;
-        }else if(n>=100 && n<1000) {
-            lvl = 2;
-        }else if(n>=1000 && n<2500) {
-            lvl = 3;
-        }else if(n>=2500 && n<5000) {
-            lvl = 4;
-        }else if(n>=5000 && n<7500) {
-            lvl = 5;
-        }else if(n>=7500 && n<10000) {
-            lvl = 6;
-        }else if(n>=10000 && n<15000) {
-            lvl = 7;
-        }else if(n>=15000 && n<22000) {
-            lvl = 8;
-        }else if(n>=22000 && n<30000) {
-            lvl = 9;
-        }else if(n>=30000 && n<40000) {
-            lvl = 10;
-        }else {
-            lvl = 10;
-        }
-
-        return lvl;
+    protected static int calculateParcialExp(int exp,int lvl) {
+    	if(lvl == 1) {
+    		if(exp>=0 && exp<100) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-100);
+    		}
+    	}else if(lvl == 2) {
+    		if(exp>=0 && exp<1000) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-1000);
+    		}
+    	}else if(lvl == 3) {
+    		if(exp>=0 && exp<1500) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-1500);
+    		}
+    	}else if(lvl == 4) {
+    		if(exp>=0 && exp<2000) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-2000);
+    		}
+    	}else if(lvl == 5) {
+    		if(exp>=0 && exp<2500) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-2500);
+    		}
+    	}else if(lvl == 6) {
+    		if(exp>=0 && exp<3500) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-3500);
+    		}
+    	}else if(lvl == 7) {
+    		if(exp>=0 && exp<5000) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-5000);
+    		}
+    	}else if(lvl == 8) {
+    		if(exp>=0 && exp<7000) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-7000);
+    		}
+    	}else if(lvl == 9) {
+    		if(exp>=0 && exp<9000) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-1000);
+    		}
+    	}else {
+    		if(exp>=0 && exp<10000) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-10000);
+    		}
+    	}
     }
 
     private static int getValueWord(int n) {

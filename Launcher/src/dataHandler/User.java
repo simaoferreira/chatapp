@@ -1,7 +1,7 @@
 package dataHandler;
 
 public class User {
-	
+
 	private String username;
 	private String firstName;
 	private String lastName;
@@ -9,11 +9,12 @@ public class User {
 	private int age;
 	private int userLvl;
 	private int userExp;
+	private int userParcialExp;
 	private int messagesSent;
 	private int wordsWritten;
-	
-	
-	public User(String username,String firstName, String lastName, int age, String email, int userLvl, int userExp, int messagesSent,
+
+
+	public User(String username,String firstName, String lastName, int age, String email, int userLvl, int userExp, int userParcialExp, int messagesSent,
 			int wordsWritten) {
 		this.username = username;
 		this.firstName = firstName;
@@ -22,14 +23,15 @@ public class User {
 		this.email = email;
 		this.userLvl = userLvl;
 		this.userExp = userExp;
+		this.userParcialExp = userParcialExp;
 		this.messagesSent = messagesSent;
 		this.wordsWritten = wordsWritten;
 	}
-	
+
 	public String getFullName() {
 		return firstName+" "+lastName;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -68,7 +70,7 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 
 	public String getEmail() {
 		return email;
@@ -97,11 +99,17 @@ public class User {
 		this.userExp = userExp;
 	}
 
+	public int getUserParcialExp() {
+		return userParcialExp;
+	}
+
+	public void setUserParcialExp(int userParcialExp) {
+		this.userParcialExp = userParcialExp;
+	}
 
 	public int getMessagesSent() {
 		return messagesSent;
 	}
-
 
 	public void setMessagesSent(int messagesSent) {
 		this.messagesSent = messagesSent;
@@ -116,9 +124,9 @@ public class User {
 	public void setWordsWritten(int wordsWritten) {
 		this.wordsWritten = wordsWritten;
 	}
-	
-	
-	
-	
+
+
+
+
 
 }

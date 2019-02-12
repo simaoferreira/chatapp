@@ -30,7 +30,8 @@ import controllers.Type;
 import dataHandler.AlertBox;
 import dataHandler.Notifications;
 import dataHandler.User;
-import handlers.LoggerHandle;
+import dataHandler.LoggerHandle;
+import dataHandler.Pontuation;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
@@ -252,6 +253,9 @@ public class ClientHandler extends Thread{
 										mainClient.settingsPane_TextField_Lastname.setPromptText(user.getLastName());
 										mainClient.settingsPane_TextField_Age.setPromptText(String.valueOf(user.getAge()));
 										mainClient.settingsPane_TextField_Email.setPromptText(user.getEmail());
+										double parcialExp = Pontuation.getProgressBarValue(user.getUserParcialExp(),user.getUserLvl());
+										mainClient.main_Vbox_Left_QuickInfo_ProgressBar.setProgress(parcialExp);
+										mainClient.profilePane_ProgressIndicator.setProgress(parcialExp);
 									}
 								});
 
@@ -625,10 +629,12 @@ public class ClientHandler extends Thread{
 	private void updatedInfoUserFromJSON(JSONObject info) {
 		int lvlUser = Integer.parseInt(info.get("lvlUser").toString());
 		int expUser = Integer.parseInt(info.get("expUser").toString());
+		int parcialExpUser = Integer.parseInt(info.get("parcialExpUser").toString());
 		int numMensagens = Integer.parseInt(info.get("numMessages").toString());
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
 		mainClient.user.setUserLvl(lvlUser);
 		mainClient.user.setUserExp(expUser);
+		mainClient.user.setUserParcialExp(parcialExpUser);
 		mainClient.user.setMessagesSent(numMensagens);
 		mainClient.user.setWordsWritten(numWordsWritten);
 	}
@@ -636,12 +642,14 @@ public class ClientHandler extends Thread{
 	private void updatedInfoFriendFromJSON(String userFriend, JSONObject info) {
 		int lvlUser = Integer.parseInt(info.get("lvlUser").toString());
 		int expUser = Integer.parseInt(info.get("expUser").toString());
+		int parcialExpUser = Integer.parseInt(info.get("parcialExpUser").toString());
 		int numMensagens = Integer.parseInt(info.get("numMessages").toString());
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
 		for(User u : friends) {
 			if(u.getUsername().equals(userFriend)) {
 				u.setUserLvl(lvlUser);
 				u.setUserExp(expUser);
+				u.setUserParcialExp(parcialExpUser);
 				u.setMessagesSent(numMensagens);
 				u.setWordsWritten(numWordsWritten);
 				break;
@@ -657,9 +665,10 @@ public class ClientHandler extends Thread{
 		int age = Integer.parseInt(info.get("age").toString());
 		int lvlUser = Integer.parseInt(info.get("lvlUser").toString());
 		int expUser = Integer.parseInt(info.get("expUser").toString());
+		int parcialExpUser = Integer.parseInt(info.get("parcialExpUser").toString());
 		int numMensagens = Integer.parseInt(info.get("numMessages").toString());
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
-		User u = new User(username,firstName,lastName,age,email,lvlUser,expUser,numMensagens,numWordsWritten);
+		User u = new User(username,firstName,lastName,age,email,lvlUser,expUser,parcialExpUser,numMensagens,numWordsWritten);
 		return u;
 	}
 

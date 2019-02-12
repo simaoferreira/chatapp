@@ -527,6 +527,7 @@ public class ServerHandler extends Thread{
         JSONObject obj = new JSONObject();
         obj.put("lvlUser", dbh.getLvlUser(id));
         obj.put("expUser", dbh.getExpUser(id));
+        obj.put("parcialExpUser", dbh.getParcialExpUser(id));
         obj.put("numMessages", dbh.getMessagesSent(id));
         obj.put("numWords", dbh.getWordsWritten(id));
         return obj;
@@ -542,6 +543,7 @@ public class ServerHandler extends Thread{
         obj.put("email",dbh.getEmail(id));
         obj.put("lvlUser", dbh.getLvlUser(id));
         obj.put("expUser", dbh.getExpUser(id));
+        obj.put("parcialExpUser", dbh.getParcialExpUser(id));
         obj.put("numMessages", dbh.getMessagesSent(id));
         obj.put("numWords", dbh.getWordsWritten(id));
         return obj;

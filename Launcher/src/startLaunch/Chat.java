@@ -1,7 +1,7 @@
 package startLaunch;
 
 import controllers.ControllerChat;
-import handlers.LoggerHandle;
+import dataHandler.LoggerHandle;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
