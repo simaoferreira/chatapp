@@ -267,7 +267,11 @@ public class ControllerChat {
 			
 		} catch (IOException e) {
 			lh.log("WARNING", "Could not connect to the server!");
-			AlertBox.display("Error", "Can't connect to server",true);
+			Platform.runLater(new Runnable() {
+				@Override public void run() {
+					AlertBox.display("Error", "Can't connect to server",true);
+				}
+			});
 		}
 		
 	}

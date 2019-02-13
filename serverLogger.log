@@ -57,3 +57,32 @@
 --INFO (Tue 12.02.2019 at 11:40:16) : User simon trying to login into the server;
 --INFO (Tue 12.02.2019 at 11:40:16) : User simon logged in the server
 --INFO (Tue 12.02.2019 at 11:44:12) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 11:55:02) : Server restarted;
+--INFO (Tue 12.02.2019 at 11:55:03) : Database initialized;
+--INFO (Tue 12.02.2019 at 11:55:03) : Server initialized;
+--INFO (Tue 12.02.2019 at 11:55:03) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 11:55:15) : New connection was accepted: /127.0.0.1:50244
+--INFO (Tue 12.02.2019 at 11:55:20) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 11:55:21) : User simon logged in the server
+--INFO (Tue 12.02.2019 at 11:57:59) : User simon disconnected;
+--INFO (Tue 12.02.2019 at 11:59:41) : Server restarted;
+--INFO (Tue 12.02.2019 at 11:59:42) : Database initialized;
+--INFO (Tue 12.02.2019 at 11:59:42) : Server initialized;
+--INFO (Tue 12.02.2019 at 11:59:42) : Server started to wait for new connections;
+--INFO (Tue 12.02.2019 at 11:59:47) : New connection was accepted: /127.0.0.1:50261
+--INFO (Tue 12.02.2019 at 11:59:53) : User simon trying to login into the server;
+--INFO (Tue 12.02.2019 at 11:59:54) : User simon logged in the server
+--INFO (Wed 13.02.2019 at 12:01:09) : User simon disconnected;
+--INFO (Wed 13.02.2019 at 12:02:02) : Server restarted;
+--INFO (Wed 13.02.2019 at 12:02:02) : Database initialized;
+--INFO (Wed 13.02.2019 at 12:02:02) : Server initialized;
+--INFO (Wed 13.02.2019 at 12:02:02) : Server started to wait for new connections;
+--INFO (Wed 13.02.2019 at 12:02:10) : New connection was accepted: /127.0.0.1:50264
+--INFO (Wed 13.02.2019 at 12:02:14) : User simon trying to login into the server;
+--INFO (Wed 13.02.2019 at 12:02:15) : User simon logged in the server
+--INFO (Wed 13.02.2019 at 12:04:11) : User simon disconnected;
+--INFO (Wed 13.02.2019 at 12:34:35) : Server restarted;
+--INFO (Wed 13.02.2019 at 12:34:36) : Database initialized;
+--INFO (Wed 13.02.2019 at 12:34:36) : Server initialized;
+--INFO (Wed 13.02.2019 at 12:34:36) : Server started to wait for new connections;
+--INFO (Wed 13.02.2019 at 12:34:43) : New connection was accepted: /127.0.0.1:50444

@@ -256,6 +256,8 @@ public class ClientHandler extends Thread{
 										double parcialExp = Pontuation.getProgressBarValue(user.getUserParcialExp(),user.getUserLvl());
 										mainClient.main_Vbox_Left_QuickInfo_ProgressBar.setProgress(parcialExp);
 										mainClient.profilePane_ProgressIndicator.setProgress(parcialExp);
+										int percentage = (int) ((Math.round(parcialExp * 100.0) / 100.0)*100);
+										mainClient.profilePane_Label_Percentage_Experience.setText(percentage+"%");
 									}
 								});
 

@@ -24,16 +24,12 @@ public class Client extends Thread{
 		runConnection();
 	}
 
-	public void runConnection() {
-		try {
-			socket = new Socket("localhost",32456);
-			socket.setTcpNoDelay(true);
-			ch = new ClientHandler(socket,this,client,lh);
-			ch.start(); 
-			lh.log("INFO", "Connected successfully to server!");
-		}catch(Exception e) {
-			lh.log("SEVERE", "Could not connect to server!");
-		}
+	public void runConnection() throws UnknownHostException, IOException {
+		socket = new Socket("localhost",32456);
+		socket.setTcpNoDelay(true);
+		ch = new ClientHandler(socket,this,client,lh);
+		ch.start(); 
+		lh.log("INFO", "Connected successfully to server!");
 
 	}
 
