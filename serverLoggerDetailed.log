@@ -1466,3 +1466,3586 @@
   <thread>1</thread>
   <message>New connection was accepted: /127.0.0.1:50444</message>
 </record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-13T21:10:51</date>
+  <millis>1550092251199</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-13T21:10:52</date>
+  <millis>1550092252335</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-13T21:10:52</date>
+  <millis>1550092252343</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-13T21:10:52</date>
+  <millis>1550092252349</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-13T21:11:06</date>
+  <millis>1550092266228</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52615</message>
+</record>
+<record>
+  <date>2019-02-13T21:11:19</date>
+  <millis>1550092279759</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:11:21</date>
+  <millis>1550092281187</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:11:43</date>
+  <millis>1550092303183</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52617</message>
+</record>
+<record>
+  <date>2019-02-13T21:11:48</date>
+  <millis>1550092308242</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:11:48</date>
+  <millis>1550092308287</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:13:48</date>
+  <millis>1550092428376</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-13T21:13:50</date>
+  <millis>1550092430457</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-13T21:13:55</date>
+  <millis>1550092435429</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-13T21:13:55</date>
+  <millis>1550092435703</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-13T21:13:55</date>
+  <millis>1550092435708</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-13T21:13:55</date>
+  <millis>1550092435712</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-13T21:14:02</date>
+  <millis>1550092442315</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52620</message>
+</record>
+<record>
+  <date>2019-02-13T21:14:06</date>
+  <millis>1550092446356</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:14:07</date>
+  <millis>1550092447138</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:14:18</date>
+  <millis>1550092458493</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52621</message>
+</record>
+<record>
+  <date>2019-02-13T21:14:26</date>
+  <millis>1550092466721</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:14:26</date>
+  <millis>1550092466762</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:14</date>
+  <millis>1550092514152</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:17</date>
+  <millis>1550092517042</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:22</date>
+  <millis>1550092522458</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52622</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:26</date>
+  <millis>1550092526224</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:26</date>
+  <millis>1550092526250</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:33</date>
+  <millis>1550092533143</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52623</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:37</date>
+  <millis>1550092537788</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:15:37</date>
+  <millis>1550092537814</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:16:25</date>
+  <millis>1550092585468</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-13T21:16:36</date>
+  <millis>1550092596581</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-13T21:21:27</date>
+  <millis>1550092887915</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:28</date>
+  <millis>1550092888633</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:28</date>
+  <millis>1550092888642</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:28</date>
+  <millis>1550092888647</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:32</date>
+  <millis>1550092892945</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52653</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:37</date>
+  <millis>1550092897915</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:39</date>
+  <millis>1550092899066</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:21:52</date>
+  <millis>1550092912368</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:52654</message>
+</record>
+<record>
+  <date>2019-02-13T21:22:00</date>
+  <millis>1550092920414</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-13T21:22:00</date>
+  <millis>1550092920457</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-13T21:22:42</date>
+  <millis>1550092962056</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-13T21:22:45</date>
+  <millis>1550092965275</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T18:29:44</date>
+  <millis>1550168984079</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T18:29:45</date>
+  <millis>1550168985368</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T18:29:45</date>
+  <millis>1550168985373</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T18:29:45</date>
+  <millis>1550168985379</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T18:30:01</date>
+  <millis>1550169001435</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:57462</message>
+</record>
+<record>
+  <date>2019-02-14T18:30:09</date>
+  <millis>1550169009501</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:30:10</date>
+  <millis>1550169010907</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:30:55</date>
+  <millis>1550169055561</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T18:39:40</date>
+  <millis>1550169580301</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:57789</message>
+</record>
+<record>
+  <date>2019-02-14T18:39:47</date>
+  <millis>1550169587423</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:39:47</date>
+  <millis>1550169587454</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:39:57</date>
+  <millis>1550169597478</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:12</date>
+  <millis>1550169612521</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:57790</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:16</date>
+  <millis>1550169616648</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:16</date>
+  <millis>1550169616670</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:30</date>
+  <millis>1550169630430</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:57791</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:36</date>
+  <millis>1550169636316</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:36</date>
+  <millis>1550169636322</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxxx couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:40</date>
+  <millis>1550169640789</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:40</date>
+  <millis>1550169640800</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxxx couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:45</date>
+  <millis>1550169645154</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:40:45</date>
+  <millis>1550169645214</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:46:42</date>
+  <millis>1550170002679</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T18:46:46</date>
+  <millis>1550170006375</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T18:49:44</date>
+  <millis>1550170184131</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T18:49:44</date>
+  <millis>1550170184811</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T18:49:44</date>
+  <millis>1550170184819</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T18:49:44</date>
+  <millis>1550170184825</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T18:49:52</date>
+  <millis>1550170192761</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:57838</message>
+</record>
+<record>
+  <date>2019-02-14T18:49:57</date>
+  <millis>1550170197227</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:49:58</date>
+  <millis>1550170198564</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:50:44</date>
+  <millis>1550170244523</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:10</date>
+  <millis>1550170450876</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58018</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:15</date>
+  <millis>1550170455740</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:15</date>
+  <millis>1550170455772</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:28</date>
+  <millis>1550170468904</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58019</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:34</date>
+  <millis>1550170474388</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User berunoxxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:34</date>
+  <millis>1550170474396</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User berunoxxxx couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:38</date>
+  <millis>1550170478403</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T18:54:38</date>
+  <millis>1550170478433</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T18:55:01</date>
+  <millis>1550170501847</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T18:55:13</date>
+  <millis>1550170513545</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T19:24:33</date>
+  <millis>1550172273731</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T19:24:34</date>
+  <millis>1550172274492</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T19:24:34</date>
+  <millis>1550172274496</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T19:24:34</date>
+  <millis>1550172274502</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T19:24:54</date>
+  <millis>1550172294416</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58095</message>
+</record>
+<record>
+  <date>2019-02-14T19:25:00</date>
+  <millis>1550172300099</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:25:01</date>
+  <millis>1550172301428</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:25:45</date>
+  <millis>1550172345347</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:26:23</date>
+  <millis>1550172383665</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58102</message>
+</record>
+<record>
+  <date>2019-02-14T19:26:28</date>
+  <millis>1550172388981</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:26:29</date>
+  <millis>1550172389028</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:28:09</date>
+  <millis>1550172489048</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:28:14</date>
+  <millis>1550172494302</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58106</message>
+</record>
+<record>
+  <date>2019-02-14T19:28:18</date>
+  <millis>1550172498326</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:28:18</date>
+  <millis>1550172498365</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:28:55</date>
+  <millis>1550172535013</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58107</message>
+</record>
+<record>
+  <date>2019-02-14T19:29:00</date>
+  <millis>1550172540480</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:29:00</date>
+  <millis>1550172540507</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:29:51</date>
+  <millis>1550172591017</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:29:55</date>
+  <millis>1550172595289</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:30:01</date>
+  <millis>1550172601336</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58108</message>
+</record>
+<record>
+  <date>2019-02-14T19:30:05</date>
+  <millis>1550172605229</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:30:05</date>
+  <millis>1550172605252</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:30:28</date>
+  <millis>1550172628304</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58109</message>
+</record>
+<record>
+  <date>2019-02-14T19:30:34</date>
+  <millis>1550172634294</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:30:34</date>
+  <millis>1550172634327</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:31:00</date>
+  <millis>1550172660197</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:31:02</date>
+  <millis>1550172662794</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:31:55</date>
+  <millis>1550172715420</millis>
+  <sequence>28</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58110</message>
+</record>
+<record>
+  <date>2019-02-14T19:31:58</date>
+  <millis>1550172718360</millis>
+  <sequence>29</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:10</date>
+  <millis>1550172730960</millis>
+  <sequence>30</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58111</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:16</date>
+  <millis>1550172736437</millis>
+  <sequence>31</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:16</date>
+  <millis>1550172736460</millis>
+  <sequence>32</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:30</date>
+  <millis>1550172750948</millis>
+  <sequence>33</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58112</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:38</date>
+  <millis>1550172758209</millis>
+  <sequence>34</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:38</date>
+  <millis>1550172758230</millis>
+  <sequence>35</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User simon couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:47</date>
+  <millis>1550172767323</millis>
+  <sequence>36</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:32:47</date>
+  <millis>1550172767347</millis>
+  <sequence>37</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:42:38</date>
+  <millis>1550173358194</millis>
+  <sequence>38</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:42:43</date>
+  <millis>1550173363444</millis>
+  <sequence>39</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:42:53</date>
+  <millis>1550173373402</millis>
+  <sequence>40</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58143</message>
+</record>
+<record>
+  <date>2019-02-14T19:42:57</date>
+  <millis>1550173377894</millis>
+  <sequence>41</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:42:57</date>
+  <millis>1550173377912</millis>
+  <sequence>42</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:43:08</date>
+  <millis>1550173388708</millis>
+  <sequence>43</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58144</message>
+</record>
+<record>
+  <date>2019-02-14T19:43:26</date>
+  <millis>1550173406603</millis>
+  <sequence>44</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T19:43:26</date>
+  <millis>1550173406669</millis>
+  <sequence>45</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T19:43:47</date>
+  <millis>1550173427566</millis>
+  <sequence>46</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T19:43:52</date>
+  <millis>1550173432129</millis>
+  <sequence>47</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:17</date>
+  <millis>1550174417237</millis>
+  <sequence>48</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58175</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:20</date>
+  <millis>1550174420981</millis>
+  <sequence>49</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:21</date>
+  <millis>1550174421056</millis>
+  <sequence>50</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:33</date>
+  <millis>1550174433623</millis>
+  <sequence>51</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58182</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:39</date>
+  <millis>1550174439203</millis>
+  <sequence>52</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:39</date>
+  <millis>1550174439241</millis>
+  <sequence>53</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:48</date>
+  <millis>1550174448115</millis>
+  <sequence>54</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:00:57</date>
+  <millis>1550174457419</millis>
+  <sequence>55</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:02:44</date>
+  <millis>1550174564485</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T20:02:45</date>
+  <millis>1550174565152</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:02:45</date>
+  <millis>1550174565156</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:02:45</date>
+  <millis>1550174565161</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T20:02:53</date>
+  <millis>1550174573092</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58186</message>
+</record>
+<record>
+  <date>2019-02-14T20:02:56</date>
+  <millis>1550174576735</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:02:58</date>
+  <millis>1550174578146</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:03</date>
+  <millis>1550174583892</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58187</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:09</date>
+  <millis>1550174589281</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:09</date>
+  <millis>1550174589375</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:16</date>
+  <millis>1550174596940</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:24</date>
+  <millis>1550174604278</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:30</date>
+  <millis>1550174610458</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58188</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:36</date>
+  <millis>1550174616030</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:36</date>
+  <millis>1550174616059</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:49</date>
+  <millis>1550174629800</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58189</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:57</date>
+  <millis>1550174637045</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:03:57</date>
+  <millis>1550174637076</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:04:03</date>
+  <millis>1550174643296</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:05:17</date>
+  <millis>1550174717906</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:18</date>
+  <millis>1550174718186</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:18</date>
+  <millis>1550174718191</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:18</date>
+  <millis>1550174718234</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:23</date>
+  <millis>1550174723834</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58191</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:32</date>
+  <millis>1550174732634</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:33</date>
+  <millis>1550174733780</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:53</date>
+  <millis>1550174753689</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58200</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:58</date>
+  <millis>1550174758361</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:05:58</date>
+  <millis>1550174758393</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:06:09</date>
+  <millis>1550174769325</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:11</date>
+  <millis>1550174831763</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:20</date>
+  <millis>1550174840897</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58203</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:31</date>
+  <millis>1550174851685</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:31</date>
+  <millis>1550174851716</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:38</date>
+  <millis>1550174858092</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58204</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:43</date>
+  <millis>1550174863024</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:43</date>
+  <millis>1550174863053</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:07:52</date>
+  <millis>1550174872556</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:08:19</date>
+  <millis>1550174899745</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:09:36</date>
+  <millis>1550174976761</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58218</message>
+</record>
+<record>
+  <date>2019-02-14T20:09:41</date>
+  <millis>1550174981974</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:09:41</date>
+  <millis>1550174981997</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:09:52</date>
+  <millis>1550174992664</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58219</message>
+</record>
+<record>
+  <date>2019-02-14T20:09:57</date>
+  <millis>1550174997471</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:09:57</date>
+  <millis>1550174997504</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:10:05</date>
+  <millis>1550175005536</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:10:11</date>
+  <millis>1550175011001</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:11:05</date>
+  <millis>1550175065333</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:06</date>
+  <millis>1550175066585</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>User joao added successfully;</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:11:12</date>
+  <millis>1550175072107</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:12</date>
+  <millis>1550175072395</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:12</date>
+  <millis>1550175072400</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:12</date>
+  <millis>1550175072404</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:23</date>
+  <millis>1550175083343</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58221</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:27</date>
+  <millis>1550175087641</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:28</date>
+  <millis>1550175088431</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:38</date>
+  <millis>1550175098260</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58222</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:44</date>
+  <millis>1550175104942</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:44</date>
+  <millis>1550175104989</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:11:56</date>
+  <millis>1550175116927</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58223</message>
+</record>
+<record>
+  <date>2019-02-14T20:12:09</date>
+  <millis>1550175129196</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:12:09</date>
+  <millis>1550175129229</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:12:19</date>
+  <millis>1550175139297</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:12:50</date>
+  <millis>1550175170138</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:15</date>
+  <millis>1550175195314</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:13:20</date>
+  <millis>1550175200525</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:20</date>
+  <millis>1550175200806</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:20</date>
+  <millis>1550175200812</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:20</date>
+  <millis>1550175200817</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:26</date>
+  <millis>1550175206389</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58224</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:31</date>
+  <millis>1550175211066</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:31</date>
+  <millis>1550175211885</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:37</date>
+  <millis>1550175217351</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58225</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:50</date>
+  <millis>1550175230026</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:50</date>
+  <millis>1550175230075</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:13:56</date>
+  <millis>1550175236498</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58226</message>
+</record>
+<record>
+  <date>2019-02-14T20:14:01</date>
+  <millis>1550175241155</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:14:01</date>
+  <millis>1550175241213</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:14:38</date>
+  <millis>1550175278234</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:14:47</date>
+  <millis>1550175287616</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:14:59</date>
+  <millis>1550175299507</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:07</date>
+  <millis>1550175307784</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58244</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:09</date>
+  <millis>1550175309454</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58245</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:11</date>
+  <millis>1550175311632</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58246</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:15</date>
+  <millis>1550175315726</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:15</date>
+  <millis>1550175315752</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:20</date>
+  <millis>1550175320932</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:20</date>
+  <millis>1550175320954</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:24</date>
+  <millis>1550175324393</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:24</date>
+  <millis>1550175324420</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:15:35</date>
+  <millis>1550175335105</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:16:22</date>
+  <millis>1550175382762</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:16:33</date>
+  <millis>1550175393046</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon disconnected;</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:16:58</date>
+  <millis>1550175418879</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:00</date>
+  <millis>1550175420554</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>User bruno added successfully;</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T20:17:03</date>
+  <millis>1550175423867</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:04</date>
+  <millis>1550175424130</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Database initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:04</date>
+  <millis>1550175424134</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server initialized;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:04</date>
+  <millis>1550175424140</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server started to wait for new connections;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:20</date>
+  <millis>1550175440444</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58251</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:20</date>
+  <millis>1550175440763</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58252</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:21</date>
+  <millis>1550175441381</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58253</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:21</date>
+  <millis>1550175441541</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58254</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:30</date>
+  <millis>1550175450206</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:31</date>
+  <millis>1550175451695</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:35</date>
+  <millis>1550175455863</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:35</date>
+  <millis>1550175455920</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:39</date>
+  <millis>1550175459970</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:40</date>
+  <millis>1550175460011</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:43</date>
+  <millis>1550175463711</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User bruno trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:43</date>
+  <millis>1550175463753</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User bruno logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:17:54</date>
+  <millis>1550175474901</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>User bruno disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:18:06</date>
+  <millis>1550175486742</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:18:14</date>
+  <millis>1550175494795</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>12</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:18:17</date>
+  <millis>1550175497349</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:21</date>
+  <millis>1550175621265</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58258</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:21</date>
+  <millis>1550175621270</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58259</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:22</date>
+  <millis>1550175622882</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58260</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:26</date>
+  <millis>1550175626316</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58261</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:31</date>
+  <millis>1550175631648</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User bruno trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:31</date>
+  <millis>1550175631672</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User bruno logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:38</date>
+  <millis>1550175638885</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:38</date>
+  <millis>1550175638915</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:46</date>
+  <millis>1550175646435</millis>
+  <sequence>28</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:46</date>
+  <millis>1550175646465</millis>
+  <sequence>29</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:52</date>
+  <millis>1550175652010</millis>
+  <sequence>30</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:52</date>
+  <millis>1550175652047</millis>
+  <sequence>31</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:20:59</date>
+  <millis>1550175659882</millis>
+  <sequence>32</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>19</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:21:07</date>
+  <millis>1550175667392</millis>
+  <sequence>33</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:21:15</date>
+  <millis>1550175675739</millis>
+  <sequence>34</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>18</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:21:40</date>
+  <millis>1550175700198</millis>
+  <sequence>35</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>17</thread>
+  <message>User bruno disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:26</date>
+  <millis>1550175746301</millis>
+  <sequence>36</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58262</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:26</date>
+  <millis>1550175746336</millis>
+  <sequence>37</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58263</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:29</date>
+  <millis>1550175749093</millis>
+  <sequence>38</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58264</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:30</date>
+  <millis>1550175750451</millis>
+  <sequence>39</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58265</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:35</date>
+  <millis>1550175755371</millis>
+  <sequence>40</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:35</date>
+  <millis>1550175755392</millis>
+  <sequence>41</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:47</date>
+  <millis>1550175767852</millis>
+  <sequence>42</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:47</date>
+  <millis>1550175767872</millis>
+  <sequence>43</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:55</date>
+  <millis>1550175775355</millis>
+  <sequence>44</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:55</date>
+  <millis>1550175775385</millis>
+  <sequence>45</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:59</date>
+  <millis>1550175779026</millis>
+  <sequence>46</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:22:59</date>
+  <millis>1550175779056</millis>
+  <sequence>47</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User joao couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:04</date>
+  <millis>1550175784501</millis>
+  <sequence>48</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:04</date>
+  <millis>1550175784522</millis>
+  <sequence>49</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User joao couldn not login into the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:08</date>
+  <millis>1550175788459</millis>
+  <sequence>50</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User bruno trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:08</date>
+  <millis>1550175788496</millis>
+  <sequence>51</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User bruno logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:15</date>
+  <millis>1550175795425</millis>
+  <sequence>52</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>22</thread>
+  <message>User bruno disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:28</date>
+  <millis>1550175808247</millis>
+  <sequence>53</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>23</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:45</date>
+  <millis>1550175825405</millis>
+  <sequence>54</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:23:57</date>
+  <millis>1550175837950</millis>
+  <sequence>55</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>21</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:25</date>
+  <millis>1550175925531</millis>
+  <sequence>56</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58301</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:26</date>
+  <millis>1550175926054</millis>
+  <sequence>57</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58302</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:26</date>
+  <millis>1550175926661</millis>
+  <sequence>58</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58303</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:27</date>
+  <millis>1550175927325</millis>
+  <sequence>59</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58304</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:51</date>
+  <millis>1550175951352</millis>
+  <sequence>60</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:51</date>
+  <millis>1550175951369</millis>
+  <sequence>61</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:56</date>
+  <millis>1550175956095</millis>
+  <sequence>62</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>27</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:25:56</date>
+  <millis>1550175956119</millis>
+  <sequence>63</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>27</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:26:04</date>
+  <millis>1550175964045</millis>
+  <sequence>64</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User bruno trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:26:04</date>
+  <millis>1550175964070</millis>
+  <sequence>65</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User bruno logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:26:07</date>
+  <millis>1550175967709</millis>
+  <sequence>66</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>25</thread>
+  <message>User joao trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:26:07</date>
+  <millis>1550175967744</millis>
+  <sequence>67</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>25</thread>
+  <message>User joao logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:26:13</date>
+  <millis>1550175973643</millis>
+  <sequence>68</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>25</thread>
+  <message>User joao disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:28:28</date>
+  <millis>1550176108511</millis>
+  <sequence>69</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>24</thread>
+  <message>User bruno disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:28:30</date>
+  <millis>1550176110283</millis>
+  <sequence>70</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>27</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:28:31</date>
+  <millis>1550176111885</millis>
+  <sequence>71</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>26</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:31:06</date>
+  <millis>1550176266038</millis>
+  <sequence>72</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58316</message>
+</record>
+<record>
+  <date>2019-02-14T20:31:08</date>
+  <millis>1550176268710</millis>
+  <sequence>73</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>28</thread>
+  <message>Lost a connection;</message>
+</record>
+<record>
+  <date>2019-02-14T20:31:23</date>
+  <millis>1550176283000</millis>
+  <sequence>74</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58319</message>
+</record>
+<record>
+  <date>2019-02-14T20:31:27</date>
+  <millis>1550176287225</millis>
+  <sequence>75</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>29</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:31:27</date>
+  <millis>1550176287244</millis>
+  <sequence>76</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>29</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:31:49</date>
+  <millis>1550176309502</millis>
+  <sequence>77</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>29</thread>
+  <message>User simon disconnected;</message>
+</record>
+<record>
+  <date>2019-02-14T20:32:30</date>
+  <millis>1550176350236</millis>
+  <sequence>78</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58320</message>
+</record>
+<record>
+  <date>2019-02-14T20:32:30</date>
+  <millis>1550176350706</millis>
+  <sequence>79</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>New connection was accepted: /127.0.0.1:58321</message>
+</record>
+<record>
+  <date>2019-02-14T20:32:42</date>
+  <millis>1550176362038</millis>
+  <sequence>80</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>31</thread>
+  <message>User simon trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:32:42</date>
+  <millis>1550176362060</millis>
+  <sequence>81</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>31</thread>
+  <message>User simon logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:32:56</date>
+  <millis>1550176376254</millis>
+  <sequence>82</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>30</thread>
+  <message>User berunoxxx trying to login into the server;</message>
+</record>
+<record>
+  <date>2019-02-14T20:32:56</date>
+  <millis>1550176376274</millis>
+  <sequence>83</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>30</thread>
+  <message>User berunoxxx logged in the server</message>
+</record>
+<record>
+  <date>2019-02-14T20:33:10</date>
+  <millis>1550176390325</millis>
+  <sequence>84</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>30</thread>
+  <message>User berunoxxx disconnected;</message>
+</record>

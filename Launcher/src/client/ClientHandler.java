@@ -171,12 +171,26 @@ public class ClientHandler extends Thread{
 
 	}
 
-	protected void sendMessageCase10(String username, String password ) {
-		int code = 7;
+	protected void sendMessageCase10(String username,String password,String firstname,String lastname,int age, String email) {
+		int code = 10;
+		JSONObject registerInfo = createObjWithInfo(username, password,firstname,lastname,age,email);
 
-		//enviar o codigo
-		//enviar o username 
-		//enviar a password
+		try {
+			// enviar o codigo
+			out.writeObject(code);
+
+			// enviar a informação do user que pretende registar
+			out.writeObject(registerInfo);
+			lh.log("INFO", "Registation request was send sucessfully");
+
+		}catch(Exception e) {
+			Platform.runLater(new Runnable() {
+				@Override public void run() {
+					lh.log("WARNING", "Could not connect to server");
+					AlertBox.display("Error", "Can't connect to server",false);
+				}
+			});
+		}
 
 	}
 
@@ -236,6 +250,7 @@ public class ClientHandler extends Thread{
 								Platform.runLater(new Runnable() {
 									@Override public void run() {
 										mainClient.updateSceneToMenu();
+										mainClient.addMessageToScrollPane("You just connected to the server",null,actualTime,null,Type.LOGIN);
 										mainClient.dashboardPane.setVisible(true);
 										mainClient.loadingScreen_Label.setText("Welcome, "+user.getFullName()+", to Our Chat");
 										mainClient.main_Vbox_Left_QuickInfo_label_FullName.setText(user.getFullName());
@@ -263,21 +278,24 @@ public class ClientHandler extends Thread{
 
 								//receber numero de amigos
 								int numberUsers = (int) in.readObject();
-								
+
 								Platform.runLater(new Runnable() {
 									@Override public void run() {
 										mainClient.dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.setText(String.valueOf(numberUsers));
 									}
 								});
-								
+
 								if(numberUsers != 0) {
 									for(int i=0;i<numberUsers;i++) {
 										JSONObject userOnline = (JSONObject) in.readObject();
 										User u = createUserFromJSON(userOnline);
-										mainClient.usersOnline.add(u);
+										if(!u.getUsername().equals(mainClient.user.getUsername())){
+											mainClient.usersOnline.add(u);
+											mainClient.addUserOnlineToScrollPane(u);
+										}
 									}
 								}
-								
+
 								//final
 								Timer t = new Timer(4000, new ActionListener() {
 
@@ -291,27 +309,28 @@ public class ClientHandler extends Thread{
 												fadeTransition.setFromValue(1);
 												fadeTransition.setToValue(0);
 												fadeTransition.play();
-												
+
 												fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
 													@Override
 													public void handle(ActionEvent event) {
 														mainClient.loadingScreen.setVisible(false);
 													}
 												});
-												
+
 											}
 										});
 									}
 								});
 								t.setRepeats(false);
 								t.start();
-								
+
 								lh.log("INFO", "Loading the aplication with the detail of user terminated.");
 							}else {
 								String error = (String) in.readObject();
 								Platform.runLater(new Runnable() {
 									@Override public void run() {
 										lh.log("INFO", "Client could not login because "+error);
+										mainClient.launcher_VBox_Pane_LoginVBox.setVisible(true);
 										mainClient.launcher_VBox_Pane_LoginVBox_TextField_Username.clear();
 										mainClient.launcher_VBox_Pane_LoginVBox_TextField_Password.clear();
 										mainClient.launcher_VBox_Pane_LoginVBox_TextField_Username.requestFocus();
@@ -335,19 +354,41 @@ public class ClientHandler extends Thread{
 							}
 							break;
 						case 1:
-							/**
-							//receber o user que se conectou
-							String userConnected = (String) in.readObject();
-							//receber a lista com as conexoes atualizadas
-							mainClient.connections = (String) in.readObject();
-							textOutput = "The user '"+ userConnected+"' just connected";
-							side = Side.LEFT;
-							type= Type.LOGIN;
-							userToSend = userConnected;
-							atualizarClient = true;
-							*/
+
+							// receber a info do user que se conectou
+							JSONObject userOnline = (JSONObject) in.readObject();
+							User u = createUserFromJSON(userOnline);
+							Platform.runLater(new Runnable() {
+								@Override public void run() {
+									mainClient.usersOnline.add(u);
+									mainClient.addUserOnlineToScrollPane(u);
+									mainClient.addMessageToScrollPane(u.getFullName()+" just connected to the server",null,actualTime,null,Type.LOGIN);
+								}
+							});
 							break;
 						case 2:
+
+							//receber o username que se desconectou
+							String usernameDisconnect = (String) in.readObject();
+
+							Platform.runLater(new Runnable() {
+								@Override public void run() {
+									for(int i=0;i<mainClient.usersOnline.size();i++) {
+										User targetUser = mainClient.usersOnline.get(i);
+
+										if(targetUser.getUsername().equals(usernameDisconnect)) {
+											mainClient.usersOnline.remove(targetUser);
+											int numberUsers = Integer.parseInt(mainClient.dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.getText());
+											mainClient.dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.setText(String.valueOf(numberUsers-1));
+											mainClient.removeUserOnlineToScrollPane(i);
+											mainClient.addMessageToScrollPane(targetUser.getFullName()+" has disconnected to the server",null,actualTime,null,Type.LOGOUT);
+										}
+
+									}
+								}
+							});
+
+
 							/**
 							//receber o user que se desconectou
 							String userDisconnect = (String) in.readObject();
@@ -360,14 +401,14 @@ public class ClientHandler extends Thread{
 							type=Type.LOGOUT;
 							userToSend = userDisconnect;
 							atualizarClient = true;
-							*/
+							 */
 							break;
 						case 3:
 							/**
 							//receber o owner da mensagem enviada para o servidor
 							String ownerOfMessage = (String) in.readObject();
 							textOutput = (String) in.readObject();
-							
+
 							//receber a mensagem se o owner da mensagem nao corresponder ao dono desta thread
 							if (!mainClient.user.getFullName().equals(ownerOfMessage)) {
 								atualizarClient = true;
@@ -376,7 +417,7 @@ public class ClientHandler extends Thread{
 								userToSend = ownerOfMessage;
 								//JSONObject infoOwnerMessageUpdated = (JSONObject) in.readObject();
 								//updatedInfoFriendFromJSON(ownerOfMessage,infoOwnerMessageUpdated);
-								
+
 							}else {
 								atualizarClient = true;
 								side = Side.RIGHT;
@@ -385,7 +426,7 @@ public class ClientHandler extends Thread{
 								//JSONObject infoUserUpdated = (JSONObject) in.readObject();
 								//updatedInfoUserFromJSON(infoUserUpdated);
 							}
-							*/
+							 */
 							break;
 						case 5:
 							break;
@@ -672,6 +713,18 @@ public class ClientHandler extends Thread{
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
 		User u = new User(username,firstName,lastName,age,email,lvlUser,expUser,parcialExpUser,numMensagens,numWordsWritten);
 		return u;
+	}
+
+	@SuppressWarnings("unchecked")
+	private JSONObject createObjWithInfo(String username,String password,String firstname,String lastname,int age, String email) {
+		JSONObject obj = new JSONObject();
+		obj.put("username",username);
+		obj.put("password", password);
+		obj.put("lastName", lastname);
+		obj.put("age", age);
+		obj.put("email",email);
+		obj.put("firstname", firstname);
+		return obj;
 	}
 
 	public void close() {

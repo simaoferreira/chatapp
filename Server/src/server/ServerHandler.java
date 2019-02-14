@@ -79,10 +79,7 @@ public class ServerHandler extends Thread{
     						sendToClients(2,false);
     						
     						//enviar o username que disconectou
-    						sendToClients(dbh.getFullName(dbh.getID(username)),false);
-    						
-    						//enviar as conexoes atuais
-    						sendToClients(connectionsUpdated.toString(),false);
+    						sendToClients(dbh.getUsername(dbh.getID(username)),false);
     						
                         }
                         Thread.currentThread().interrupt();

@@ -41,7 +41,9 @@ import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
+import javafx.animation.ParallelTransition;
 import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -69,6 +71,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -100,7 +103,7 @@ public class ControllerChat {
 
 	private AnchorPane launcherPane;
 	private AnchorPane appPane;
-	
+
 	private Client c;
 	public User user;
 	public ArrayList<User> usersOnline = null;
@@ -153,18 +156,18 @@ public class ControllerChat {
 		}
 
 	}
-	
+
 	private boolean inHierarchy(Node node, Node potentialHierarchyElement) {
-	    if (potentialHierarchyElement == null) {
-	        return true;
-	    }
-	    while (node != null) {
-	        if (node == potentialHierarchyElement) {
-	            return true;
-	        }
-	        node = node.getParent();
-	    }
-	    return false;
+		if (potentialHierarchyElement == null) {
+			return true;
+		}
+		while (node != null) {
+			if (node == potentialHierarchyElement) {
+				return true;
+			}
+			node = node.getParent();
+		}
+		return false;
 	}
 
 	private void loadChat() throws IOException {
@@ -173,13 +176,13 @@ public class ControllerChat {
 			loader.setController(this);
 			appPane = (AnchorPane) loader.load();
 			appPane.setBorder(darkblue);
-			
+
 			appPane.addEventFilter(MouseEvent.MOUSE_CLICKED, evt -> {
-		        if (!inHierarchy(evt.getPickResult().getIntersectedNode(), main_Notifications_PopUP)) {
-		        	main_Notifications_PopUP.setVisible(false);
-		        }
-		    });
-			
+				if (!inHierarchy(evt.getPickResult().getIntersectedNode(), main_Notifications_PopUP)) {
+					main_Notifications_PopUP.setVisible(false);
+				}
+			});
+
 
 			main_HBox_Top.setOnMousePressed(new EventHandler<MouseEvent>() {
 				@Override
@@ -205,7 +208,7 @@ public class ControllerChat {
 					stage.setOpacity(1);
 				}
 			});
-			
+
 			lh.log("INFO", "Chat loaded");
 		}catch(Exception e) {
 			lh.log("SEVERE", "Chat could not be loaded!");
@@ -214,8 +217,8 @@ public class ControllerChat {
 	}
 
 	public void startController() {
-		
-		
+
+
 		try {
 			c = new Client(this,lh);
 			try {
@@ -238,7 +241,7 @@ public class ControllerChat {
 				launcher_Label_Version.setText(version);
 
 				Scene scene = new Scene(launcherPane);
-				
+
 				scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 					final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
 							KeyCombination.ALT_DOWN);
@@ -251,7 +254,7 @@ public class ControllerChat {
 
 				stage.setScene(scene);
 				stage.show(); 
-				
+
 				long lhwnd = com.sun.glass.ui.Window.getWindows().get(0).getNativeWindow();
 				Pointer lpVoid = new Pointer(lhwnd);
 				WinDef.HWND hwnd = new WinDef.HWND(lpVoid);
@@ -259,12 +262,12 @@ public class ControllerChat {
 				int oldStyle = user32.GetWindowLong(hwnd, GWL_STYLE);
 				int newStyle = oldStyle | 0x00020000;//WS_MINIMIZEBOX
 				user32.SetWindowLong(hwnd, GWL_STYLE, newStyle);
-				
+
 				lh.log("INFO", "Launcher scene was set succefully in stage.");
 			}catch(Exception e) {
 				lh.log("SEVERE", "Could not set scene Launcher to stage!");
 			}
-			
+
 		} catch (IOException e) {
 			lh.log("WARNING", "Could not connect to the server!");
 			Platform.runLater(new Runnable() {
@@ -273,14 +276,14 @@ public class ControllerChat {
 				}
 			});
 		}
-		
+
 	}
 
 	public void updateSceneToMenu() {
-		
+
 		try {
 			Scene scene = new Scene(appPane);
-			
+
 			FadeTransition fadeTransition = new FadeTransition();
 			fadeTransition.setDuration(Duration.millis(500));
 			fadeTransition.setNode(launcherPane);
@@ -305,12 +308,22 @@ public class ControllerChat {
 					}
 				}
 			});
-			
+
+			chatPane_HBox_Left_Handle_Input_TextArea.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+				final KeyCombination keyComb = new KeyCodeCombination(KeyCode.ENTER,
+						KeyCombination.SHIFT_DOWN);
+				public void handle(KeyEvent ke) {
+					if (keyComb.match(ke)) {
+						chatPane_HBox_Left_Handle_Input_TextArea.appendText("\n");
+					}
+				}
+			});
+
 			lh.log("INFO", "Updated scene succesfully to chat");
 		}catch(Exception e) {
 			lh.log("SEVERE", "Could not update scene to chat");
 		}
-		
+
 
 	}
 
@@ -396,12 +409,12 @@ public class ControllerChat {
 	/////////////////////////////////////////////////////////////////
 	/////////////////////////CHAT FXML VARIABLES/////////////////////
 	/////////////////////////////////////////////////////////////////
-	
-    @FXML
-    public VBox loadingScreen;
-    
-    @FXML
-    public Label loadingScreen_Label;
+
+	@FXML
+	public VBox loadingScreen;
+
+	@FXML
+	public Label loadingScreen_Label;
 
 	@FXML
 	public AnchorPane mainAnchorPane;
@@ -679,16 +692,18 @@ public class ControllerChat {
 		if(validateInputLogin()) {
 			String username = launcher_VBox_Pane_LoginVBox_TextField_Username.getText();
 			String password = launcher_VBox_Pane_LoginVBox_TextField_Password.getText();
+			launcher_VBox_Pane_LoginVBox.setVisible(false);
 			c.requestLoginAuthentication(username, password);
 		}
 	}
-	
+
 	@FXML
 	void loginWithEnterKey(KeyEvent event) {
 		if (event.getCode() == KeyCode.ENTER) {
 			if(validateInputLogin()) {
 				String username = launcher_VBox_Pane_LoginVBox_TextField_Username.getText();
 				String password = launcher_VBox_Pane_LoginVBox_TextField_Password.getText();
+				launcher_VBox_Pane_LoginVBox.setVisible(false);
 				c.requestLoginAuthentication(username, password);
 			}
 		}
@@ -751,7 +766,22 @@ public class ControllerChat {
 			String username = launcher_VBox_Pane_RegisterVBox_TextField_Username.getText();
 			String email = launcher_VBox_Pane_RegisterVBox_TextField_Email.getText();
 			String password = launcher_VBox_Pane_RegisterVBox_TextField_Password.getText();
-			//enviar pedido de registo
+			c.registerAccount(username, password, firstname, lastname, age, email);
+		}
+	}
+
+	@FXML
+	void registerWithEnterKey(KeyEvent event) {
+		if (event.getCode() == KeyCode.ENTER) {
+			if(validateInputRegister()) {
+				String firstname = launcher_VBox_Pane_RegisterVBox_TextField_Firstname.getText();
+				String lastname = launcher_VBox_Pane_RegisterVBox_TextField_Lastname.getText();
+				int age = Integer.parseInt(launcher_VBox_Pane_RegisterVBox_TextField_Age.getText());
+				String username = launcher_VBox_Pane_RegisterVBox_TextField_Username.getText();
+				String email = launcher_VBox_Pane_RegisterVBox_TextField_Email.getText();
+				String password = launcher_VBox_Pane_RegisterVBox_TextField_Password.getText();
+				c.registerAccount(username, password, firstname, lastname, age, email);
+			}
 		}
 	}
 
@@ -827,21 +857,6 @@ public class ControllerChat {
 	}
 
 	@FXML
-	void registerWithEnterKey(KeyEvent event) {
-		if (event.getCode() == KeyCode.ENTER) {
-			if(validateInputRegister()) {
-				String firstname = launcher_VBox_Pane_RegisterVBox_TextField_Firstname.getText();
-				String lastname = launcher_VBox_Pane_RegisterVBox_TextField_Lastname.getText();
-				int age = Integer.parseInt(launcher_VBox_Pane_RegisterVBox_TextField_Age.getText());
-				String username = launcher_VBox_Pane_RegisterVBox_TextField_Username.getText();
-				String email = launcher_VBox_Pane_RegisterVBox_TextField_Email.getText();
-				String password = launcher_VBox_Pane_RegisterVBox_TextField_Password.getText();
-				//enviar pedido de registo
-			}
-		}
-	}
-
-	@FXML
 	void cancelChanges(MouseEvent event) {
 
 	}
@@ -863,7 +878,7 @@ public class ControllerChat {
 		friendsPane.setVisible(false);
 		settingsPane.setVisible(false);
 	}
-	
+
 	@FXML
 	void changeToProfile(MouseEvent event) {
 		dashboardPane.setVisible(false);
@@ -929,10 +944,10 @@ public class ControllerChat {
 	@FXML
 	void updateChanges(KeyEvent event) {
 		if (event.getCode() == KeyCode.ENTER) {
-			
+
 		}
 	}
-	
+
 	@FXML
 	void updateChangesWithMouse(MouseEvent event) {
 
@@ -948,6 +963,128 @@ public class ControllerChat {
 
 	public void connectToServer() throws UnknownHostException, IOException {
 
+	}
+
+	public void addMessageToScrollPane(String text,String user, String hour,Side side,Type type) {
+		VBox mensagem = new VBox();
+		mensagem.setPadding(new Insets(10, 10, 10, 10));
+		mensagem.getStyleClass().addAll("chat-messages");
+
+		Label usernameLabel = new Label(text);
+		usernameLabel.setStyle("-fx-font-family: Calibri;");
+		usernameLabel.setStyle("-fx-font-size: 17;");
+		usernameLabel.setStyle("-fx-text-fill: #fff;");
+		usernameLabel.setUnderline(true);
+
+		Label textLabel = new Label(text);
+		textLabel.setStyle("-fx-font-family: Calibri;");
+		textLabel.setStyle("-fx-font-size: 15;");
+		textLabel.setStyle("-fx-text-fill: #fff;");
+
+		Label hourLabel = new Label(hour);
+		hourLabel.setStyle("-fx-font-family: Calibri;");
+		hourLabel.setStyle("-fx-font-size: 12;");
+		hourLabel.setStyle("-fx-text-fill: #fff;");
+
+		if(type == Type.LOGIN) {
+			VBox.setMargin(mensagem, new Insets(0, 20,10, 0));
+			mensagem.setStyle("-fx-background-color: #4d9b20");
+			mensagem.setAlignment(Pos.CENTER);
+			mensagem.getChildren().addAll(textLabel,hourLabel);
+			
+			Timer t = new Timer(10000, new ActionListener() {
+
+				@Override
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					Platform.runLater(new Runnable() {
+						@Override public void run() {
+							chatPane_HBox_Left_ScrollPane_VBox.getChildren().remove(mensagem);
+						}
+					});
+				}
+			});
+			t.setRepeats(false);
+			t.start();
+		}else if(type == Type.LOGOUT) {
+			VBox.setMargin(mensagem, new Insets(0, 20,10, 0));
+			mensagem.setStyle("-fx-background-color:  #cc3d3d");
+			mensagem.setAlignment(Pos.CENTER);
+			mensagem.getChildren().addAll(textLabel,hourLabel);
+			
+			Timer t = new Timer(10000, new ActionListener() {
+
+				@Override
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					Platform.runLater(new Runnable() {
+						@Override public void run() {
+							chatPane_HBox_Left_ScrollPane_VBox.getChildren().remove(mensagem);
+						}
+					});
+				}
+			});
+			t.setRepeats(false);
+			t.start();
+		}
+
+		chatPane_HBox_Left_ScrollPane_VBox.getChildren().add(mensagem);
+	}
+
+	public void addUserOnlineToScrollPane(User u) {
+		String fullname = u.getFullName();
+		String level = String.valueOf(u.getUserLvl());
+		String exp = String.valueOf(u.getUserExp());
+
+		Pane userField = new Pane();
+		userField.setId(u.getUsername());
+		userField.setPrefSize(180, 54);
+		userField.getStyleClass().addAll("userBox","buttons");
+		userField.setCursor(Cursor.HAND);
+
+		Label fullnameLabel = new Label(fullname);
+		fullnameLabel.setId("fullname");
+		fullnameLabel.setStyle("-fx-font-size: 14;");
+		fullnameLabel.setStyle("-fx-text-fill: #7c8184;");
+		fullnameLabel.setLayoutX(6f);
+		fullnameLabel.setLayoutY(7f);
+
+		Label levelLabel = new Label("Lvl: "+level);
+		levelLabel.setId("level");
+		levelLabel.setStyle("-fx-font-size: 12;");
+		levelLabel.setStyle("-fx-text-fill: #7c8184;");
+		levelLabel.setLayoutX(6f);
+		levelLabel.setLayoutY(27f);
+
+		userField.getChildren().addAll(fullnameLabel,levelLabel);
+		chatPane_HBox_Right_ScrollPane_VBox.getChildren().add(userField);
+		dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.setText(String.valueOf(usersOnline.size()+1));
+
+	}
+
+	public void removeUserOnlineToScrollPane(int i) {
+		Pane product = (Pane) chatPane_HBox_Right_ScrollPane_VBox.getChildren().get(i);
+
+		FadeTransition fadeTransitionRemove = new FadeTransition();
+		fadeTransitionRemove.setDuration(Duration.millis(500));
+		fadeTransitionRemove.setNode(product);
+		fadeTransitionRemove.setFromValue(1);
+		fadeTransitionRemove.setToValue(0);
+
+		TranslateTransition translateRemove = new TranslateTransition();
+		translateRemove.setDuration(Duration.millis(500));
+		translateRemove.setNode(product);
+		translateRemove.setFromX(product.getLayoutX());
+		translateRemove.setToX(product.getLayoutX()+300);
+
+		ParallelTransition pt = new ParallelTransition();
+		pt.getChildren().addAll(fadeTransitionRemove,translateRemove);
+		pt.play();
+
+		pt.setOnFinished(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				chatPane_HBox_Right_ScrollPane_VBox.getChildren().remove(product);
+			}
+		});
 	}
 
 }
