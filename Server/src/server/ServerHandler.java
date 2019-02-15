@@ -160,13 +160,15 @@ public class ServerHandler extends Thread{
 						//enviar o username que enviou mensagem
 						idBD = dbh.getID(ownerOfMessage);
 						sendToClients(dbh.getFullName(idBD),true);
-						//enviar o texto se esta thread nao pertencer ao dono
-						sendToClients(message, true);
 						
 						infoUserObj = createObjWithStats(idBD);
 						//enviar info do username para os amigos do owner
+						sendToClients(infoUserObj,true);
 						
-						//sendToClients(infoUserObj,true);
+						//enviar o texto 
+						sendToClients(message, true);
+						
+						
 						break;
 					case 6:
 						//receber o user do admin

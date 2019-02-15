@@ -408,3 +408,256 @@
 --INFO (Thu 14.02.2019 at 08:32:56) : User berunoxxx trying to login into the server;
 --INFO (Thu 14.02.2019 at 08:32:56) : User berunoxxx logged in the server
 --INFO (Thu 14.02.2019 at 08:33:10) : User berunoxxx disconnected;
+--INFO (Thu 14.02.2019 at 10:06:41) : Server restarted;
+--INFO (Thu 14.02.2019 at 10:06:42) : Database initialized;
+--INFO (Thu 14.02.2019 at 10:06:42) : Server initialized;
+--INFO (Thu 14.02.2019 at 10:06:42) : Server started to wait for new connections;
+--INFO (Thu 14.02.2019 at 10:06:57) : New connection was accepted: /127.0.0.1:58827
+--INFO (Thu 14.02.2019 at 10:06:57) : New connection was accepted: /127.0.0.1:58826
+--INFO (Thu 14.02.2019 at 10:07:13) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:07:15) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:07:19) : User berunoxxx trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:07:19) : User berunoxxx logged in the server
+--INFO (Thu 14.02.2019 at 10:08:00) : User berunoxxx disconnected;
+--INFO (Thu 14.02.2019 at 10:08:01) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:10:03) : New connection was accepted: /127.0.0.1:58855
+--INFO (Thu 14.02.2019 at 10:10:04) : New connection was accepted: /127.0.0.1:58856
+--INFO (Thu 14.02.2019 at 10:12:11) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:12:11) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:12:16) : User berunoxxx trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:12:16) : User berunoxxx logged in the server
+--INFO (Thu 14.02.2019 at 10:12:40) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 14.02.2019 at 10:14:46) : User berunoxxx disconnected;
+--INFO (Thu 14.02.2019 at 10:14:48) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:14:56) : Server restarted;
+--WARNING (Thu 14.02.2019 at 10:14:56) : Could not initialize server!
+--INFO (Thu 14.02.2019 at 10:15:07) : New connection was accepted: /127.0.0.1:58889
+--INFO (Thu 14.02.2019 at 10:15:26) : New connection was accepted: /127.0.0.1:58892
+--INFO (Thu 14.02.2019 at 10:15:27) : User berunoxxx trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:15:27) : User berunoxxx logged in the server
+--INFO (Thu 14.02.2019 at 10:15:45) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:15:45) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:15:50) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 14.02.2019 at 10:16:19) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:16:20) : User berunoxxx disconnected;
+--INFO (Thu 14.02.2019 at 10:20:03) : New connection was accepted: /127.0.0.1:58969
+--INFO (Thu 14.02.2019 at 10:20:04) : New connection was accepted: /127.0.0.1:58970
+--INFO (Thu 14.02.2019 at 10:20:17) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:20:17) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:20:22) : User berunoxxx trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:20:23) : User berunoxxx logged in the server
+--INFO (Thu 14.02.2019 at 10:20:28) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 10:20:36) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 14.02.2019 at 10:20:53) : User berunoxxx disconnected;
+--INFO (Thu 14.02.2019 at 10:20:56) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:21:46) : New connection was accepted: /127.0.0.1:58984
+--INFO (Thu 14.02.2019 at 10:21:50) : New connection was accepted: /127.0.0.1:58985
+--INFO (Thu 14.02.2019 at 10:21:59) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:21:59) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:22:12) : User berunoxxx trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:22:12) : User berunoxxx logged in the server
+--INFO (Thu 14.02.2019 at 10:22:24) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 10:22:47) : Length of words written by berunoxxx successfully updated
+--INFO (Thu 14.02.2019 at 10:22:55) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 10:22:59) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 10:39:59) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:40:11) : User berunoxxx disconnected;
+--INFO (Thu 14.02.2019 at 10:40:19) : New connection was accepted: /127.0.0.1:59363
+--INFO (Thu 14.02.2019 at 10:40:28) : New connection was accepted: /127.0.0.1:59365
+--INFO (Thu 14.02.2019 at 10:41:16) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:41:19) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:41:28) : New connection was accepted: /127.0.0.1:59373
+--INFO (Thu 14.02.2019 at 10:41:29) : New connection was accepted: /127.0.0.1:59374
+--INFO (Thu 14.02.2019 at 10:41:49) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:42:21) : Server restarted;
+--INFO (Thu 14.02.2019 at 10:42:21) : Database initialized;
+--INFO (Thu 14.02.2019 at 10:42:22) : Server initialized;
+--INFO (Thu 14.02.2019 at 10:42:22) : Server started to wait for new connections;
+--INFO (Thu 14.02.2019 at 10:42:29) : New connection was accepted: /127.0.0.1:59386
+--INFO (Thu 14.02.2019 at 10:44:38) : New connection was accepted: /127.0.0.1:59403
+--INFO (Thu 14.02.2019 at 10:44:42) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:51:45) : New connection was accepted: /127.0.0.1:59494
+--INFO (Thu 14.02.2019 at 10:51:49) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:53:59) : New connection was accepted: /127.0.0.1:59508
+--INFO (Thu 14.02.2019 at 10:54:08) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:54:20) : New connection was accepted: /127.0.0.1:59511
+--INFO (Thu 14.02.2019 at 10:54:26) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:54:28) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:55:04) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:55:07) : New connection was accepted: /127.0.0.1:59517
+--INFO (Thu 14.02.2019 at 10:55:11) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:55:11) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:55:27) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 10:56:06) : Lost a connection;
+--INFO (Thu 14.02.2019 at 10:56:11) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:56:20) : New connection was accepted: /127.0.0.1:59525
+--INFO (Thu 14.02.2019 at 10:56:24) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:56:24) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:56:36) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 10:58:55) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 10:58:59) : New connection was accepted: /127.0.0.1:59540
+--INFO (Thu 14.02.2019 at 10:59:05) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 10:59:05) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 10:59:28) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:00:00) : New connection was accepted: /127.0.0.1:59548
+--INFO (Thu 14.02.2019 at 11:00:04) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:00:04) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:00:16) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:00:30) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:04:42) : New connection was accepted: /127.0.0.1:59588
+--INFO (Thu 14.02.2019 at 11:04:47) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:04:47) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:05:44) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:13:59) : New connection was accepted: /127.0.0.1:59811
+--INFO (Thu 14.02.2019 at 11:14:07) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:14:07) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:14:17) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:14:49) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:33:59) : New connection was accepted: /127.0.0.1:59977
+--INFO (Thu 14.02.2019 at 11:34:04) : Lost a connection;
+--INFO (Thu 14.02.2019 at 11:34:25) : New connection was accepted: /127.0.0.1:59981
+--INFO (Thu 14.02.2019 at 11:34:29) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:34:29) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:34:46) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:39:41) : New connection was accepted: /127.0.0.1:60071
+--INFO (Thu 14.02.2019 at 11:39:45) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:39:45) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:39:54) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:40:47) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:40:50) : New connection was accepted: /127.0.0.1:60083
+--INFO (Thu 14.02.2019 at 11:40:55) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:40:55) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:41:08) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:41:12) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:41:21) : User simon disconnected;
+--INFO (Thu 14.02.2019 at 11:43:43) : New connection was accepted: /127.0.0.1:60116
+--INFO (Thu 14.02.2019 at 11:43:47) : User simon trying to login into the server;
+--INFO (Thu 14.02.2019 at 11:43:48) : User simon logged in the server
+--INFO (Thu 14.02.2019 at 11:43:57) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:52:27) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:52:29) : Length of words written by simon successfully updated
+--INFO (Thu 14.02.2019 at 11:52:35) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:04:28) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:04:42) : New connection was accepted: /127.0.0.1:60288
+--INFO (Fri 15.02.2019 at 12:04:49) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:04:49) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:05:01) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:05:06) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:05:12) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:05:22) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:05:28) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:05:33) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:05:38) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:06:06) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:06:24) : New connection was accepted: /127.0.0.1:60302
+--INFO (Fri 15.02.2019 at 12:06:35) : User berunoxxx trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:06:35) : User berunoxxx logged in the server
+--INFO (Fri 15.02.2019 at 12:06:54) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:06:58) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:07:04) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:07:07) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:07:18) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:07:32) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:07:48) : User berunoxxx disconnected;
+--INFO (Fri 15.02.2019 at 12:08:22) : New connection was accepted: /127.0.0.1:60330
+--INFO (Fri 15.02.2019 at 12:08:29) : User bruno trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:08:29) : User bruno logged in the server
+--INFO (Fri 15.02.2019 at 12:08:47) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:08:58) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:09:03) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:09:09) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:09:13) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:09:17) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:09:20) : Length of words written by bruno successfully updated
+--INFO (Fri 15.02.2019 at 12:15:44) : User bruno disconnected;
+--INFO (Fri 15.02.2019 at 12:15:50) : New connection was accepted: /127.0.0.1:60425
+--INFO (Fri 15.02.2019 at 12:16:03) : User joao trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:16:03) : User joao logged in the server
+--INFO (Fri 15.02.2019 at 12:16:16) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:16:22) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:16:39) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:16:50) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:16:58) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:17:07) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:17:14) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:17:44) : Length of words written by joao successfully updated
+--INFO (Fri 15.02.2019 at 12:17:56) : User joao disconnected;
+--INFO (Fri 15.02.2019 at 12:20:48) : New connection was accepted: /127.0.0.1:60535
+--INFO (Fri 15.02.2019 at 12:20:53) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:20:53) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:21:09) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:22:05) : New connection was accepted: /127.0.0.1:60545
+--INFO (Fri 15.02.2019 at 12:22:08) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:22:09) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:22:17) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:22:17) : User simon couldn not login into the server
+--INFO (Fri 15.02.2019 at 12:22:23) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:28:14) : New connection was accepted: /127.0.0.1:60653
+--INFO (Fri 15.02.2019 at 12:28:22) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:28:22) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:28:29) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:28:33) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:28:40) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:29:59) : New connection was accepted: /127.0.0.1:60682
+--INFO (Fri 15.02.2019 at 12:30:03) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:30:04) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:30:11) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:30:15) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:30:19) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:30:23) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:30:25) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:31:03) : New connection was accepted: /127.0.0.1:60690
+--INFO (Fri 15.02.2019 at 12:31:08) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:31:08) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:31:16) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:31:17) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:31:19) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:31:22) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:32:17) : New connection was accepted: /127.0.0.1:60699
+--INFO (Fri 15.02.2019 at 12:32:21) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:32:21) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:32:29) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:32:30) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:32:37) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:32:37) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:32:39) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:33:08) : New connection was accepted: /127.0.0.1:60706
+--INFO (Fri 15.02.2019 at 12:33:12) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:33:12) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:33:20) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:33:26) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:33:33) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:33:40) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:33:46) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:34:02) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:36:26) : Server restarted;
+--INFO (Fri 15.02.2019 at 12:36:27) : Database initialized;
+--INFO (Fri 15.02.2019 at 12:36:27) : Server initialized;
+--INFO (Fri 15.02.2019 at 12:36:27) : Server started to wait for new connections;
+--INFO (Fri 15.02.2019 at 12:36:32) : New connection was accepted: /127.0.0.1:60729
+--INFO (Fri 15.02.2019 at 12:36:36) : Lost a connection;
+--INFO (Fri 15.02.2019 at 12:37:27) : New connection was accepted: /127.0.0.1:60751
+--INFO (Fri 15.02.2019 at 12:37:40) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:37:42) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:37:54) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:37:58) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:38:04) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:38:07) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 12:39:38) : Server restarted;
+--INFO (Fri 15.02.2019 at 12:39:38) : Database initialized;
+--INFO (Fri 15.02.2019 at 12:39:38) : Server initialized;
+--INFO (Fri 15.02.2019 at 12:39:38) : Server started to wait for new connections;
+--INFO (Fri 15.02.2019 at 12:39:44) : New connection was accepted: /127.0.0.1:60790
+--INFO (Fri 15.02.2019 at 12:39:48) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:39:49) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 12:39:57) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:40:07) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 12:40:25) : New connection was accepted: /127.0.0.1:60795
+--INFO (Fri 15.02.2019 at 12:40:30) : User berunoxxx trying to login into the server;
+--INFO (Fri 15.02.2019 at 12:40:30) : User berunoxxx logged in the server
+--INFO (Fri 15.02.2019 at 12:40:46) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:40:54) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:41:09) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:41:32) : Length of words written by berunoxxx successfully updated
+--INFO (Fri 15.02.2019 at 12:41:42) : User berunoxxx disconnected;
+--INFO (Fri 15.02.2019 at 12:41:53) : User simon disconnected;

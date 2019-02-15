@@ -44,24 +44,11 @@ public class Client extends Thread{
 		//ch.sendMessage("10", username, password);
 	}
 
-	/**
-
-    ////////////////  CODE 2  ////////////////
-    public void requestCloseConnection() {
-    	ch.sendMessageCase2(user);
-        //String code = "2";
-        //ch.sendMessage(code, user, "null");
-    }
-
     ////////////////  CODE 3  ////////////////
-    public void sendMessagesToChat(String user) {
-        String inputText = client.text;
-        ch.sendMessageCase3(user, inputText);
-        //String code = "1";
-        //ch.sendMessage(code,user,inputText);
+    public void sendMessagesToChat(String text) {
+        ch.sendMessageCase3(client.user.getUsername(), text);
     }
 
-	 */
 
 	/**
     ////////////////  CODE 5  ////////////////

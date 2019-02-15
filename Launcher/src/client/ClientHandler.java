@@ -38,6 +38,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.util.Duration;
@@ -57,7 +58,6 @@ public class ClientHandler extends Thread{
 	private JSONObject objData;
 	private int codeNumber;
 	private String username;
-	private ArrayList<User> friends = new ArrayList<User>();
 	private String text;
 	private String id;
 	private String liveNews;
@@ -243,7 +243,20 @@ public class ClientHandler extends Thread{
 							if(authBool) {
 								//receber info do username
 								JSONObject infoUser = (JSONObject) in.readObject();
-								User user = mainClient.user = createUserFromJSON(infoUser);
+								User user =  createUserFromJSON(infoUser);
+								
+								mainClient.user.setUsername(user.getUsername());
+								mainClient.user.setAge(user.getAge());
+								mainClient.user.setFirstName(user.getFirstName());
+								mainClient.user.setLastName(user.getLastName());
+								mainClient.user.setEmail(user.getEmail());
+								mainClient.user.setUserLvl(user.getUserLvl());
+								mainClient.user.setUserExp(user.getUserExp());
+								mainClient.user.setUserParcialExp(user.getUserParcialExp());
+								mainClient.user.setMessagesSent(user.getMessagesSent());
+								mainClient.user.setWordsWritten(user.getWordsWritten());
+								
+								
 								lh.log("INFO", "User: "+user.getUsername());
 								lh.log("INFO", "Started to loading the aplication with the detail of user.");
 								//inicio
@@ -387,23 +400,25 @@ public class ClientHandler extends Thread{
 									}
 								}
 							});
-
-
-							/**
-							//receber o user que se desconectou
-							String userDisconnect = (String) in.readObject();
-
-							//receber a lista com as conexoes atualizadas
-							mainClient.connections = (String) in.readObject();
-
-							textOutput = "The user '"+userDisconnect+"' disconnected";
-							side = Side.LEFT;
-							type=Type.LOGOUT;
-							userToSend = userDisconnect;
-							atualizarClient = true;
-							 */
 							break;
 						case 3:
+							//receber o owner da mensagem enviada para o servidor
+							String ownerOfMessage = (String) in.readObject();
+							JSONObject infoOwnerMessage = (JSONObject) in.readObject();
+							String message = (String) in.readObject();
+							Platform.runLater(new Runnable() {
+								@Override public void run() {
+									if (mainClient.user.getFullName().equals(ownerOfMessage)) {
+										updatedUserInfoFromJSON(infoOwnerMessage);
+										mainClient.addMessageToScrollPane(message,ownerOfMessage,actualTime,Side.RIGHT,Type.MESSAGE);
+									}else {
+										updatedUserOnlineInfoFromJSON(ownerOfMessage,infoOwnerMessage);
+										mainClient.addMessageToScrollPane(message,ownerOfMessage,actualTime,Side.LEFT,Type.MESSAGE);
+									}
+								}
+							});
+							
+
 							/**
 							//receber o owner da mensagem enviada para o servidor
 							String ownerOfMessage = (String) in.readObject();
@@ -669,7 +684,7 @@ public class ClientHandler extends Thread{
 		}
 	}
 
-	private void updatedInfoUserFromJSON(JSONObject info) {
+	private void updatedUserInfoFromJSON(JSONObject info) {
 		int lvlUser = Integer.parseInt(info.get("lvlUser").toString());
 		int expUser = Integer.parseInt(info.get("expUser").toString());
 		int parcialExpUser = Integer.parseInt(info.get("parcialExpUser").toString());
@@ -682,14 +697,14 @@ public class ClientHandler extends Thread{
 		mainClient.user.setWordsWritten(numWordsWritten);
 	}
 
-	private void updatedInfoFriendFromJSON(String userFriend, JSONObject info) {
+	private void updatedUserOnlineInfoFromJSON(String user, JSONObject info) {
 		int lvlUser = Integer.parseInt(info.get("lvlUser").toString());
 		int expUser = Integer.parseInt(info.get("expUser").toString());
 		int parcialExpUser = Integer.parseInt(info.get("parcialExpUser").toString());
 		int numMensagens = Integer.parseInt(info.get("numMessages").toString());
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
-		for(User u : friends) {
-			if(u.getUsername().equals(userFriend)) {
+		for(User u : mainClient.usersOnline) {
+			if(u.getFullName().equals(user)) {
 				u.setUserLvl(lvlUser);
 				u.setUserExp(expUser);
 				u.setUserParcialExp(parcialExpUser);

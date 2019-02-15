@@ -33,6 +33,7 @@ import com.sun.jna.*;
 import dataHandler.AlertBox;
 import dataHandler.Informations;
 import dataHandler.Notifications;
+import dataHandler.Pontuation;
 import dataHandler.ProtectionBadWords;
 import dataHandler.User;
 import dataHandler.LoggerHandle;
@@ -45,6 +46,10 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -113,6 +118,7 @@ public class ControllerChat {
 		this.stage = primaryStage;
 		this.version = version;
 		this.lh = lh;
+		user = new User("","","",0,"",0,0,0,0,0);
 		stage.initStyle(StageStyle.UNDECORATED);
 
 		loadLauncher();
@@ -237,8 +243,102 @@ public class ControllerChat {
 				change.getControlNewText().length() <= MAX_CHARS ? change : null));
 				launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain.setTextFormatter(new TextFormatter<String>(change -> 
 				change.getControlNewText().length() <= MAX_CHARS ? change : null));
+				
+				//profilePane_Statistics_Label_WordsWritten.textProperty().bind();
+				//profilePane_Statistics_Label_MessagesSend.textProperty().bind(new SimpleStringProperty(String.valueOf(user.getMessagesSent())));
+				//profilePane_Statistics_Label_TotalExperience.textProperty().bind(new SimpleStringProperty(String.valueOf(user.getUserExp())));
+					
+				user.getFirstNameProperty().addListener(new ChangeListener<String>() {
+					@Override
+					public void changed(ObservableValue<? extends String> observable, String oldValue,
+							String newValue) {
+						settingsPane_TextField_Firstname.setPromptText(user.getFirstName());
+						profilePane_Details_Label_Firstname.setText(user.getFirstName());
+					}
+			    });
+				
+				user.getLastNameProperty().addListener(new ChangeListener<String>() {
+					@Override
+					public void changed(ObservableValue<? extends String> observable, String oldValue,
+							String newValue) {
+						settingsPane_TextField_Lastname.setPromptText(user.getLastName());
+						profilePane_Details_Label_Lastname.setText(user.getLastName());
+					}
+			    });
+				
+				user.getEmailProperty().addListener(new ChangeListener<String>() {
+					@Override
+					public void changed(ObservableValue<? extends String> observable, String oldValue,
+							String newValue) {
+						settingsPane_TextField_Email.setPromptText(user.getEmail());
+						profilePane_Details_Label_Email.setText(user.getEmail());
+					}
+			    });
+				
+				user.getAgeProperty().addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						settingsPane_TextField_Age.setPromptText(String.valueOf(user.getAge()));
+						profilePane_Details_Label_Age.setText(String.valueOf(user.getAge()));
+						
+					}
+			    });
+				
+				user.getUserLvlProperty().addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						profilePane_Label_Level.setText(String.valueOf(user.getUserLvl()));
+						main_Vbox_Left_QuickInfo_Label_Lvl.setText(String.valueOf(user.getUserLvl()));
+						
+					}
+			    });
+				
+				user.getUserExpProperty().addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						profilePane_Statistics_Label_TotalExperience.setText(String.valueOf(user.getUserExp()));
+						
+					}
+			    });
+				
+				user.getUserParcialExpProperty().addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						double parcialExp = Pontuation.getProgressBarValue(user.getUserParcialExp(),user.getUserLvl());
+						//main_Vbox_Left_QuickInfo_ProgressBar.setProgress(parcialExp);
+						animationProgressBar(main_Vbox_Left_QuickInfo_ProgressBar,parcialExp);
+						profilePane_ProgressIndicator.setProgress(parcialExp);
+						int percentage = (int) ((Math.round(parcialExp * 100.0) / 100.0)*100);
+						profilePane_Label_Percentage_Experience.setText(percentage+"%");
+						
+					}
+			    });
+				
+				
+				user.getMessagesSentProperty().addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						profilePane_Statistics_Label_MessagesSend.setText(String.valueOf(user.getMessagesSent()));
+						
+					}
+			    });
+				
+				user.getWordsWrittenProperty().addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						profilePane_Statistics_Label_WordsWritten.setText(String.valueOf(user.getWordsWritten()));
+						
+					}
+			    });
 
 				launcher_Label_Version.setText(version);
+				main_Version_Label.setText(version);
 
 				Scene scene = new Scene(launcherPane);
 
@@ -265,7 +365,8 @@ public class ControllerChat {
 
 				lh.log("INFO", "Launcher scene was set succefully in stage.");
 			}catch(Exception e) {
-				lh.log("SEVERE", "Could not set scene Launcher to stage!");
+				lh.log("SEVERE", "Could not set scene Launcher to stage!",e);
+				
 			}
 
 		} catch (IOException e) {
@@ -278,6 +379,7 @@ public class ControllerChat {
 		}
 
 	}
+	
 
 	public void updateSceneToMenu() {
 
@@ -315,9 +417,19 @@ public class ControllerChat {
 				public void handle(KeyEvent ke) {
 					if (keyComb.match(ke)) {
 						chatPane_HBox_Left_Handle_Input_TextArea.appendText("\n");
-					}
+						ke.consume();
+					}else if (ke.getCode().equals(KeyCode.ENTER)) {
+						String texto = chatPane_HBox_Left_Handle_Input_TextArea.getText();
+						if(!texto.equals("")) {
+							c.sendMessagesToChat(texto);
+							chatPane_HBox_Left_Handle_Input_TextArea.setText("");
+						}
+						ke.consume();
+			        }
 				}
 			});
+			
+
 
 			lh.log("INFO", "Updated scene succesfully to chat");
 		}catch(Exception e) {
@@ -933,12 +1045,19 @@ public class ControllerChat {
 
 	@FXML
 	void sendMessageAllChatWithKey(KeyEvent event) {
-
+		if (event.getCode() == KeyCode.ENTER) {
+			String texto = chatPane_HBox_Left_Handle_Input_TextArea.getText();
+			c.sendMessagesToChat(texto);
+			chatPane_HBox_Left_Handle_Input_TextArea.setText("");
+		}
+		
 	}
 
 	@FXML
 	void sendMessageAllChatWithMouseClick(MouseEvent event) {
-
+		String texto = chatPane_HBox_Left_Handle_Input_TextArea.getText();
+		c.sendMessagesToChat(texto);
+		chatPane_HBox_Left_Handle_Input_TextArea.setText("");
 	}
 
 	@FXML
@@ -953,7 +1072,14 @@ public class ControllerChat {
 
 	}
 
-
+	
+	public void animationProgressBar(ProgressBar pg,double parcialExp) {
+		Animation animation = new Timeline(
+				new KeyFrame(Duration.seconds(1),
+						new KeyValue(pg.progressProperty(), parcialExp)));
+		animation.play();
+	}
+	
 	public void fastScrollToBottom(ScrollPane scrollPane) {
 		Animation animation = new Timeline(
 				new KeyFrame(Duration.seconds(0.1),
@@ -970,7 +1096,7 @@ public class ControllerChat {
 		mensagem.setPadding(new Insets(10, 10, 10, 10));
 		mensagem.getStyleClass().addAll("chat-messages");
 
-		Label usernameLabel = new Label(text);
+		Label usernameLabel = new Label(user);
 		usernameLabel.setStyle("-fx-font-family: Calibri;");
 		usernameLabel.setStyle("-fx-font-size: 17;");
 		usernameLabel.setStyle("-fx-text-fill: #fff;");
@@ -980,6 +1106,7 @@ public class ControllerChat {
 		textLabel.setStyle("-fx-font-family: Calibri;");
 		textLabel.setStyle("-fx-font-size: 15;");
 		textLabel.setStyle("-fx-text-fill: #fff;");
+		textLabel.setWrapText(true);
 
 		Label hourLabel = new Label(hour);
 		hourLabel.setStyle("-fx-font-family: Calibri;");
@@ -1024,6 +1151,19 @@ public class ControllerChat {
 			});
 			t.setRepeats(false);
 			t.start();
+		}else if(type == Type.MESSAGE) {
+			mensagem.setMaxWidth(380f);
+			
+			if(side == Side.RIGHT) {
+				VBox.setMargin(mensagem, new Insets(0, 0,10, 380));
+				mensagem.setStyle("-fx-background-color:  #5188bc");
+				
+			}else if(side == Side.LEFT) {
+				VBox.setMargin(mensagem, new Insets(0, 0,10, 0));
+				mensagem.setStyle("-fx-background-color:  #67696d");
+			}
+			
+			mensagem.getChildren().addAll(usernameLabel,textLabel,hourLabel);
 		}
 
 		chatPane_HBox_Left_ScrollPane_VBox.getChildren().add(mensagem);

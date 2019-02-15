@@ -65,3 +65,70 @@
   </exception>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-14T22:14:56</date>
+  <millis>1550182496725</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Server restarted;</message>
+</record>
+<record>
+  <date>2019-02-14T22:14:56</date>
+  <millis>1550182496775</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>handlers.LoggerHandle</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Could not initialize server!</message>
+  <exception>
+    <message>java.net.BindException: Address already in use: JVM_Bind</message>
+    <frame>
+      <class>java.net.DualStackPlainSocketImpl</class>
+      <method>bind0</method>
+    </frame>
+    <frame>
+      <class>java.net.DualStackPlainSocketImpl</class>
+      <method>socketBind</method>
+    </frame>
+    <frame>
+      <class>java.net.AbstractPlainSocketImpl</class>
+      <method>bind</method>
+    </frame>
+    <frame>
+      <class>java.net.PlainSocketImpl</class>
+      <method>bind</method>
+    </frame>
+    <frame>
+      <class>java.net.ServerSocket</class>
+      <method>bind</method>
+    </frame>
+    <frame>
+      <class>java.net.ServerSocket</class>
+      <method>&lt;init&gt;</method>
+    </frame>
+    <frame>
+      <class>java.net.ServerSocket</class>
+      <method>&lt;init&gt;</method>
+    </frame>
+    <frame>
+      <class>server.Server</class>
+      <method>&lt;init&gt;</method>
+      <line>43</line>
+    </frame>
+    <frame>
+      <class>server.Server</class>
+      <method>main</method>
+      <line>34</line>
+    </frame>
+  </exception>
+</record>
+</log>
