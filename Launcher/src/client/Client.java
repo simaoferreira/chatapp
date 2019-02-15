@@ -41,7 +41,6 @@ public class Client extends Thread{
 	////////////////CODE 10  ////////////////
 	public void registerAccount(String username,String password,String firstname,String lastname,int age, String email) {
 		ch.sendMessageCase10(username, password,firstname,lastname,age,email);
-		//ch.sendMessage("10", username, password);
 	}
 
     ////////////////  CODE 3  ////////////////

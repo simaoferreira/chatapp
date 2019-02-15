@@ -196,13 +196,27 @@ public class ServerHandler extends Thread{
 						//enviar texto
 						break;
 					case 10:
-						//receber o username 
-						//receber a password
+						//receber o info do novo user
+						JSONObject infoNewUser = (JSONObject) in.readObject();
+						String username = infoNewUser.get("username").toString();
 						
-						//enviar o codigo 10
-						//enviar texto
-						//enviar username
-						break;
+						sendText(codeNumber);
+						
+						if(dbh.estaRegistado(username)) {
+							sendText(new Boolean(false));
+							sendText("The username,"+username+" , is already registered");
+	                	}else {
+	                		String passwordNewUser = infoNewUser.get("password").toString();
+							String firstName = infoNewUser.get("firstname").toString();
+							String lastName = infoNewUser.get("lastname").toString();
+							String email = infoNewUser.get("email").toString();
+							int age = Integer.parseInt(infoNewUser.get("age").toString());
+	                		dbh.addUser(username, passwordNewUser, email,age, firstName, lastName);
+	                		sendText(new Boolean(true));
+	                		sendText("Registered sucessfully! Now you can login!");
+	                	}
+						
+	                	break;
 					}
 				} catch (ClassNotFoundException e) {
 					lh.log("SEVERE","Could not read the codeNumber",e);

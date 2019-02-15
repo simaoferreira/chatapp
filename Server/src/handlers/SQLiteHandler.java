@@ -91,7 +91,7 @@ public class SQLiteHandler {
 
     }
 
-    protected void addUser(String username,String password, String email, String salt, String firstname,String lastname) throws SQLException, ClassNotFoundException {
+    protected void addUser(String username,String password, String email, int age, String salt, String firstname,String lastname) throws SQLException, ClassNotFoundException {
         if(con == null) {
             getConnection();
         }
@@ -106,7 +106,7 @@ public class SQLiteHandler {
             PreparedStatement prepInfo = con.prepareStatement("INSERT INTO usersInfo values(?,?,?,?,?,?,?,?,?,?)");
             prepInfo.setString(2, firstname);
             prepInfo.setString(3, lastname);
-            prepInfo.setInt(4, 21);
+            prepInfo.setInt(4, age);
             prepInfo.setString(5, email);
             prepInfo.setInt(6, 1);
             prepInfo.setInt(7, 0);

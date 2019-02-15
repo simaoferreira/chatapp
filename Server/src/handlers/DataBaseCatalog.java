@@ -91,11 +91,11 @@ public class DataBaseCatalog {
      * @param username - Username of user
      * @param password - Password of user
      */
-    public void addUser(String username,String password,String email,String firstname,String lastname) {
+    public void addUser(String username,String password,String email,int age,String firstname,String lastname) {
         try {
         	byte[] salt = getNextSalt();
             String passw = hash(password.toCharArray(),salt);
-            sql.addUser(username,passw,email,toHex(salt),firstname,lastname);
+            sql.addUser(username,passw,email,age,toHex(salt),firstname,lastname);
             lh.log("INFO", "User "+username+" added successfully;");
         } catch (ClassNotFoundException | SQLException | NoSuchAlgorithmException e) {
             lh.log("WARNING", "Error while trying to add user "+username, e);

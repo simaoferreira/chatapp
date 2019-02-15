@@ -244,7 +244,7 @@ public class ClientHandler extends Thread{
 								//receber info do username
 								JSONObject infoUser = (JSONObject) in.readObject();
 								User user =  createUserFromJSON(infoUser);
-								
+
 								mainClient.user.setUsername(user.getUsername());
 								mainClient.user.setAge(user.getAge());
 								mainClient.user.setFirstName(user.getFirstName());
@@ -255,8 +255,8 @@ public class ClientHandler extends Thread{
 								mainClient.user.setUserParcialExp(user.getUserParcialExp());
 								mainClient.user.setMessagesSent(user.getMessagesSent());
 								mainClient.user.setWordsWritten(user.getWordsWritten());
-								
-								
+
+
 								lh.log("INFO", "User: "+user.getUsername());
 								lh.log("INFO", "Started to loading the aplication with the detail of user.");
 								//inicio
@@ -414,34 +414,12 @@ public class ClientHandler extends Thread{
 									}else {
 										updatedUserOnlineInfoFromJSON(ownerOfMessage,infoOwnerMessage);
 										mainClient.addMessageToScrollPane(message,ownerOfMessage,actualTime,Side.LEFT,Type.MESSAGE);
+										if(!mainClient.chatPane.isVisible()) {
+											mainClient.numberNotifyChat.set(mainClient.numberNotifyChat.get()+1);
+										}
 									}
 								}
 							});
-							
-
-							/**
-							//receber o owner da mensagem enviada para o servidor
-							String ownerOfMessage = (String) in.readObject();
-							textOutput = (String) in.readObject();
-
-							//receber a mensagem se o owner da mensagem nao corresponder ao dono desta thread
-							if (!mainClient.user.getFullName().equals(ownerOfMessage)) {
-								atualizarClient = true;
-								side = Side.LEFT;
-								type = Type.MESSAGE;
-								userToSend = ownerOfMessage;
-								//JSONObject infoOwnerMessageUpdated = (JSONObject) in.readObject();
-								//updatedInfoFriendFromJSON(ownerOfMessage,infoOwnerMessageUpdated);
-
-							}else {
-								atualizarClient = true;
-								side = Side.RIGHT;
-								type = Type.MESSAGE;
-								userToSend = "You";
-								//JSONObject infoUserUpdated = (JSONObject) in.readObject();
-								//updatedInfoUserFromJSON(infoUserUpdated);
-							}
-							 */
 							break;
 						case 5:
 							break;
@@ -452,6 +430,47 @@ public class ClientHandler extends Thread{
 						case 9:
 							break;
 						case 10:
+							//receber o boolean 
+							Boolean isRegistered = (Boolean) in.readObject();
+							String textFeedback = (String) in.readObject();
+
+							Platform.runLater(new Runnable() {
+								@Override public void run() {
+									AlertBox.display("Details",textFeedback,false);
+									if(!isRegistered) {
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Username.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox.setVisible(true);
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Username.requestFocus();
+									}else {
+										mainClient.launcher_VBox_Pane_LoginVBox.setVisible(true);
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Firstname.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Lastname.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Age.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Username.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Email.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Password.clear();
+										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain.clear();
+									}
+								}
+							});
+
+							/**
+							Platform.runLater(new Runnable() {
+								@Override public void run() {
+									AlertBox.display("Details",text,false);
+								}
+							});
+							if(username.equals("null")) {
+								mainClient.clearRegisterPane();
+								Platform.runLater(new Runnable() {
+									@Override public void run() {
+										mainClient.usernameTextFieldRegister.requestFocus();
+									}
+								});
+							}else {
+								mainClient.changeToLoginAlternative();
+							}
+							 */
 							break;
 						}
 
@@ -735,7 +754,7 @@ public class ClientHandler extends Thread{
 		JSONObject obj = new JSONObject();
 		obj.put("username",username);
 		obj.put("password", password);
-		obj.put("lastName", lastname);
+		obj.put("lastname", lastname);
 		obj.put("age", age);
 		obj.put("email",email);
 		obj.put("firstname", firstname);

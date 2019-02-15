@@ -7,8 +7,11 @@ import javafx.scene.control.ScrollPane;
 import com.gluonhq.charm.glisten.control.ProgressBar; 
 import com.gluonhq.charm.glisten.control.ProgressIndicator;
 
+import java.awt.Desktop;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -46,6 +49,8 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
@@ -112,12 +117,19 @@ public class ControllerChat {
 	private Client c;
 	public User user;
 	public ArrayList<User> usersOnline = null;
+	
+	public IntegerProperty numberNotifyChat = new SimpleIntegerProperty();
+	public IntegerProperty numberNotifyFriends = new SimpleIntegerProperty();
+	public IntegerProperty numberNotifyPopUp = new SimpleIntegerProperty();
 
 	public ControllerChat(Stage primaryStage,String version, LoggerHandle lh) throws IOException {
 		usersOnline = new ArrayList<User>();
 		this.stage = primaryStage;
 		this.version = version;
 		this.lh = lh;
+		numberNotifyChat.set(0);
+		numberNotifyFriends.set(0);
+		numberNotifyPopUp.set(0);
 		user = new User("","","",0,"",0,0,0,0,0);
 		stage.initStyle(StageStyle.UNDECORATED);
 
@@ -334,6 +346,21 @@ public class ControllerChat {
 							Number newValue) {
 						profilePane_Statistics_Label_WordsWritten.setText(String.valueOf(user.getWordsWritten()));
 						
+					}
+			    });
+				
+				numberNotifyChat.addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						if(numberNotifyChat.get() == 0) {
+							main_Vbox_Left_HBox_Chat_Notify.setVisible(false);
+						}else {
+							if(!chatPane.isVisible()) {
+								main_Vbox_Left_HBox_Chat_Notify.setText(String.valueOf(numberNotifyChat.get()));
+								main_Vbox_Left_HBox_Chat_Notify.setVisible(true);
+							}
+						}
 					}
 			    });
 
@@ -773,7 +800,7 @@ public class ControllerChat {
 	/////////////////////////////////////////////////////////////////
 
 	@FXML
-	void changeToLogin(MouseEvent event) {
+	public void changeToLogin(MouseEvent event) {
 		launcher_VBox_Pane_RegisterVBox.setVisible(false);
 		launcher_VBox_Pane_LoginVBox.setVisible(true);
 		launcher_VBox_Pane_RegisterVBox_TextField_Firstname.clear();
@@ -786,7 +813,7 @@ public class ControllerChat {
 	}
 
 	@FXML
-	void changeToRegister(MouseEvent event) {
+	public void changeToRegister(MouseEvent event) {
 		launcher_VBox_Pane_LoginVBox.setVisible(false);
 		launcher_VBox_Pane_RegisterVBox.setVisible(true);
 		launcher_VBox_Pane_LoginVBox_TextField_Username.clear();
@@ -878,6 +905,7 @@ public class ControllerChat {
 			String username = launcher_VBox_Pane_RegisterVBox_TextField_Username.getText();
 			String email = launcher_VBox_Pane_RegisterVBox_TextField_Email.getText();
 			String password = launcher_VBox_Pane_RegisterVBox_TextField_Password.getText();
+			launcher_VBox_Pane_RegisterVBox.setVisible(false);
 			c.registerAccount(username, password, firstname, lastname, age, email);
 		}
 	}
@@ -892,6 +920,7 @@ public class ControllerChat {
 				String username = launcher_VBox_Pane_RegisterVBox_TextField_Username.getText();
 				String email = launcher_VBox_Pane_RegisterVBox_TextField_Email.getText();
 				String password = launcher_VBox_Pane_RegisterVBox_TextField_Password.getText();
+				launcher_VBox_Pane_RegisterVBox.setVisible(false);
 				c.registerAccount(username, password, firstname, lastname, age, email);
 			}
 		}
@@ -980,6 +1009,7 @@ public class ControllerChat {
 		profilePane.setVisible(false);
 		friendsPane.setVisible(false);
 		settingsPane.setVisible(false);
+		numberNotifyChat.set(0);
 	}
 
 	@FXML
@@ -1025,12 +1055,20 @@ public class ControllerChat {
 
 	@FXML
 	void openGitHub(MouseEvent event) {
-
+		try {
+			Desktop.getDesktop().browse(new URI("https://github.com/simaoferreira"));
+		} catch (IOException | URISyntaxException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@FXML
 	void openLinkedIn(MouseEvent event) {
-
+		try {
+			Desktop.getDesktop().browse(new URI("https://www.linkedin.com/in/sim%C3%A3o-ferreira-96173315a/"));
+		} catch (IOException | URISyntaxException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@FXML

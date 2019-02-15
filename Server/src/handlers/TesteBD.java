@@ -12,7 +12,7 @@ public class TesteBD {
 		db.initialize();
 		//db.addUser("simon", "mastir","mastirofgames@gmail.com","Simão","Ferreira");
 		//db.addUser("berunoxxx", "bruno","berunoxxx@gmail.com","Bruno","Ribeiro");
-		db.addUser("bruno", "cruz","brunocruz@gmail.com","Bruno","Cruz");
+		db.addUser("bruno", "cruz","brunocruz@gmail.com",21,"Bruno","Cruz");
 		//bd.addRequestFriend(1, 2);
 	}
 
