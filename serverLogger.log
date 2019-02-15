@@ -819,3 +819,47 @@
 --INFO (Fri 15.02.2019 at 04:59:11) : User simon trying to login into the server;
 --INFO (Fri 15.02.2019 at 04:59:11) : User simon logged in the server
 --INFO (Fri 15.02.2019 at 05:03:47) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:35:03) : Server restarted;
+--INFO (Fri 15.02.2019 at 11:35:05) : Database initialized;
+--INFO (Fri 15.02.2019 at 11:35:05) : Server initialized;
+--INFO (Fri 15.02.2019 at 11:35:05) : Server started to wait for new connections;
+--INFO (Fri 15.02.2019 at 11:35:19) : New connection was accepted: /127.0.0.1:65182
+--INFO (Fri 15.02.2019 at 11:35:30) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:35:31) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:36:30) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:38:06) : New connection was accepted: /127.0.0.1:65233
+--INFO (Fri 15.02.2019 at 11:38:13) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:38:13) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:38:20) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:39:43) : New connection was accepted: /127.0.0.1:65264
+--INFO (Fri 15.02.2019 at 11:39:47) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:39:47) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:39:52) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:40:44) : New connection was accepted: /127.0.0.1:65271
+--INFO (Fri 15.02.2019 at 11:40:49) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:40:49) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:41:02) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:41:28) : New connection was accepted: /127.0.0.1:65273
+--INFO (Fri 15.02.2019 at 11:41:32) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:41:32) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:41:37) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:42:20) : New connection was accepted: /127.0.0.1:65288
+--INFO (Fri 15.02.2019 at 11:42:24) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:42:24) : User simon couldn not login into the server
+--INFO (Fri 15.02.2019 at 11:42:26) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:42:26) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:42:29) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:43:38) : New connection was accepted: /127.0.0.1:65301
+--INFO (Fri 15.02.2019 at 11:43:42) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:43:42) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:43:46) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:44:39) : New connection was accepted: /127.0.0.1:65306
+--INFO (Fri 15.02.2019 at 11:44:43) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:44:43) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:44:53) : User simon disconnected;
+--INFO (Fri 15.02.2019 at 11:45:13) : New connection was accepted: /127.0.0.1:65311
+--INFO (Fri 15.02.2019 at 11:45:18) : User simon trying to login into the server;
+--INFO (Fri 15.02.2019 at 11:45:18) : User simon logged in the server
+--INFO (Fri 15.02.2019 at 11:45:33) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 11:45:37) : Length of words written by simon successfully updated
+--INFO (Fri 15.02.2019 at 11:46:15) : User simon disconnected;

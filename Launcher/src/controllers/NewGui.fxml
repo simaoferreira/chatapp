@@ -195,7 +195,7 @@
                            <children>
                               <ImageView fitHeight="78.0" fitWidth="66.0" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../Desktop/New%20GUI/res/simao.jpg" />
+                                    <Image url="@res/simao.jpg" />
                                  </image>
                               </ImageView>
                               <VBox alignment="CENTER_LEFT">
@@ -257,7 +257,7 @@
                <children>
                   <ImageView fitHeight="71.0" fitWidth="239.0" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Desktop/New%20GUI/res/logo.png" />
+                        <Image url="@res/logo.png" />
                      </image>
                   </ImageView>
                   <VBox alignment="CENTER" maxHeight="20.0" prefHeight="20.0" styleClass="box">
@@ -299,7 +299,7 @@
                      <children>
                         <ImageView fitHeight="143.0" fitWidth="408.0" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../Desktop/New%20GUI/res/logo.png" />
+                              <Image url="@res/logo.png" />
                            </image>
                         </ImageView>
                         <ScrollPane fx:id="dashboardPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefWidth="800.0" stylesheets="@stylesheet.css">
@@ -1262,7 +1262,7 @@
          <children>
             <ImageView fitHeight="124.0" fitWidth="484.0" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Desktop/New%20GUI/res/logo.png" />
+                  <Image url="@res/logo.png" />
                </image>
                <VBox.margin>
                   <Insets bottom="20.0" />
