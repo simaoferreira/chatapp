@@ -9,13 +9,17 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.swing.Timer;
 
 import java.awt.event.ActionListener;
+import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.math.BigInteger;
 import java.net.Socket;
+import java.net.URLDecoder;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
@@ -42,6 +46,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.util.Duration;
+import startLaunch.Chat;
 
 public class ClientHandler extends Thread{
 
@@ -75,6 +80,27 @@ public class ClientHandler extends Thread{
 		this.socket = socket;
 		this.mainClient = mainClient;
 		this.lh = lh;
+	}
+	
+	public void sendClientVersion(String version) {
+		int code = 11;
+		try {
+			// enviar o codigo
+			out.writeObject(code);
+			
+			//enviar a versão
+			out.writeObject(version);
+			
+			lh.log("INFO", "Login authentication requested sucessfully");
+		}catch(Exception e) {
+			Platform.runLater(new Runnable() {
+				@Override public void run() {
+					lh.log("WARNING", "Could not connect to server");
+					AlertBox.display("Error", "Can't connect to server",false);
+				}
+			});
+		}
+		
 	}
 
 	protected void sendMessageCase0(String user,String password) {
@@ -472,6 +498,46 @@ public class ClientHandler extends Thread{
 							}
 							 */
 							break;
+						case 11:
+					        long length;
+					        int bytesRead;
+					        int current = 0;
+					        FileOutputStream fos = null;
+					        BufferedOutputStream bos = null;
+					        
+							Boolean isUpdated = (Boolean) in.readObject();
+							
+							if(isUpdated) {
+								Platform.runLater(new Runnable() {
+									@Override public void run() {
+										mainClient.updateSceneToLauncher();
+									}
+								});
+								
+							}else {
+								length = (long) in.readObject();
+				            	byte [] buffer  = new byte [(int) length];
+				            	String path = Chat.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+				            	String decodedPath = URLDecoder.decode(path, "UTF-8");
+				            	fos = new FileOutputStream(decodedPath);
+				            	bos = new BufferedOutputStream(fos);
+				            	bytesRead = in.read(buffer,0,buffer.length);
+				            	current = bytesRead;
+
+				            	if(bytesRead<length) {
+				            		while(bytesRead!=0) {
+				            			bytesRead = in.read(buffer, current, (buffer.length-current));
+				            			if(bytesRead >= 0)
+				            				current += bytesRead;
+				            		}
+				            	}
+
+				            	bos.write(buffer, 0 , current);
+				            	bos.flush();
+				            	bos.close();
+				            	mainClient.restartApplication(null, null);
+							}
+							break;
 						}
 
 					} catch (Exception e) {
@@ -770,4 +836,6 @@ public class ClientHandler extends Thread{
 			e.printStackTrace();
 		}
 	}
+
+
 }

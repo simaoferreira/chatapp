@@ -9,11 +9,13 @@ import com.gluonhq.charm.glisten.control.ProgressIndicator;
 
 import java.awt.Desktop;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,6 +63,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -83,10 +86,13 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 import javafx.util.Duration;
+import startLaunch.Chat;
+import sun.applet.Main;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyCodeCombination;
@@ -108,16 +114,17 @@ public class ControllerChat {
 	private static double yOffset = 0;
 
 	private Stage stage;
-	private String version;
+	public String version;
 	private LoggerHandle lh = null;
 
 	private AnchorPane launcherPane;
 	private AnchorPane appPane;
+	private VBox updaterPane;
 
 	private Client c;
 	public User user;
 	public ArrayList<User> usersOnline = null;
-	
+
 	public IntegerProperty numberNotifyChat = new SimpleIntegerProperty();
 	public IntegerProperty numberNotifyFriends = new SimpleIntegerProperty();
 	public IntegerProperty numberNotifyPopUp = new SimpleIntegerProperty();
@@ -132,12 +139,52 @@ public class ControllerChat {
 		numberNotifyPopUp.set(0);
 		user = new User("","","",0,"",0,0,0,0,0);
 		stage.initStyle(StageStyle.UNDECORATED);
-
+		
+		loadUpdater();
 		loadLauncher();
 		loadChat();
 	}
+	
+	private void loadUpdater() {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("updater.fxml"));
+			loader.setController(this);
+			updaterPane = (VBox) loader.load();
+			updaterPane.setBorder(darkblue);
+			
+			updaterPane.setOnMousePressed(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(0.9);
+					xOffset = stage.getX() - event.getScreenX();
+					yOffset = stage.getY() - event.getScreenY();
+				}
+			});
 
-	private void loadLauncher() throws IOException {
+			updaterPane.setOnMouseDragged(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(0.9);
+					stage.setX(event.getScreenX() + xOffset);
+					stage.setY(event.getScreenY() + yOffset);
+				}
+			});
+
+			updaterPane.setOnMouseReleased(new EventHandler<MouseEvent>() {
+				@Override
+				public void handle(MouseEvent event) {
+					stage.setOpacity(1);
+				}
+			});
+			lh.log("INFO", "Updater loaded");
+			
+		}catch(Exception e) {
+			lh.log("SEVERE", "Updater could not be loaded loaded!");
+		}
+		
+	}
+
+	private void loadLauncher() {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("NewLauncher.fxml"));
 			loader.setController(this);
@@ -236,7 +283,6 @@ public class ControllerChat {
 
 	public void startController() {
 
-
 		try {
 			c = new Client(this,lh);
 			try {
@@ -255,11 +301,11 @@ public class ControllerChat {
 				change.getControlNewText().length() <= MAX_CHARS ? change : null));
 				launcher_VBox_Pane_RegisterVBox_TextField_PasswordAgain.setTextFormatter(new TextFormatter<String>(change -> 
 				change.getControlNewText().length() <= MAX_CHARS ? change : null));
-				
+
 				//profilePane_Statistics_Label_WordsWritten.textProperty().bind();
 				//profilePane_Statistics_Label_MessagesSend.textProperty().bind(new SimpleStringProperty(String.valueOf(user.getMessagesSent())));
 				//profilePane_Statistics_Label_TotalExperience.textProperty().bind(new SimpleStringProperty(String.valueOf(user.getUserExp())));
-					
+
 				user.getFirstNameProperty().addListener(new ChangeListener<String>() {
 					@Override
 					public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -267,8 +313,8 @@ public class ControllerChat {
 						settingsPane_TextField_Firstname.setPromptText(user.getFirstName());
 						profilePane_Details_Label_Firstname.setText(user.getFirstName());
 					}
-			    });
-				
+				});
+
 				user.getLastNameProperty().addListener(new ChangeListener<String>() {
 					@Override
 					public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -276,8 +322,8 @@ public class ControllerChat {
 						settingsPane_TextField_Lastname.setPromptText(user.getLastName());
 						profilePane_Details_Label_Lastname.setText(user.getLastName());
 					}
-			    });
-				
+				});
+
 				user.getEmailProperty().addListener(new ChangeListener<String>() {
 					@Override
 					public void changed(ObservableValue<? extends String> observable, String oldValue,
@@ -285,37 +331,37 @@ public class ControllerChat {
 						settingsPane_TextField_Email.setPromptText(user.getEmail());
 						profilePane_Details_Label_Email.setText(user.getEmail());
 					}
-			    });
-				
+				});
+
 				user.getAgeProperty().addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
 							Number newValue) {
 						settingsPane_TextField_Age.setPromptText(String.valueOf(user.getAge()));
 						profilePane_Details_Label_Age.setText(String.valueOf(user.getAge()));
-						
+
 					}
-			    });
-				
+				});
+
 				user.getUserLvlProperty().addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
 							Number newValue) {
 						profilePane_Label_Level.setText(String.valueOf(user.getUserLvl()));
 						main_Vbox_Left_QuickInfo_Label_Lvl.setText(String.valueOf(user.getUserLvl()));
-						
+
 					}
-			    });
-				
+				});
+
 				user.getUserExpProperty().addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
 							Number newValue) {
 						profilePane_Statistics_Label_TotalExperience.setText(String.valueOf(user.getUserExp()));
-						
+
 					}
-			    });
-				
+				});
+
 				user.getUserParcialExpProperty().addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
@@ -326,29 +372,29 @@ public class ControllerChat {
 						profilePane_ProgressIndicator.setProgress(parcialExp);
 						int percentage = (int) ((Math.round(parcialExp * 100.0) / 100.0)*100);
 						profilePane_Label_Percentage_Experience.setText(percentage+"%");
-						
+
 					}
-			    });
-				
-				
+				});
+
+
 				user.getMessagesSentProperty().addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
 							Number newValue) {
 						profilePane_Statistics_Label_MessagesSend.setText(String.valueOf(user.getMessagesSent()));
-						
+
 					}
-			    });
-				
+				});
+
 				user.getWordsWrittenProperty().addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
 							Number newValue) {
 						profilePane_Statistics_Label_WordsWritten.setText(String.valueOf(user.getWordsWritten()));
-						
+
 					}
-			    });
-				
+				});
+
 				numberNotifyChat.addListener(new ChangeListener<Number>() {
 					@Override
 					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
@@ -362,12 +408,12 @@ public class ControllerChat {
 							}
 						}
 					}
-			    });
+				});
 
-				launcher_Label_Version.setText(version);
-				main_Version_Label.setText(version);
+				launcher_Label_Version.setText("v"+version);
+				main_Version_Label.setText("v"+version);
 
-				Scene scene = new Scene(launcherPane);
+				Scene scene = new Scene(updaterPane);
 
 				scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 					final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
@@ -381,6 +427,20 @@ public class ControllerChat {
 
 				stage.setScene(scene);
 				stage.show(); 
+				
+				Timer t = new Timer(1500, new ActionListener() {
+
+					@Override
+					public void actionPerformed(java.awt.event.ActionEvent e) {
+						Platform.runLater(new Runnable() {
+							@Override public void run() {
+								c.sendVersion(version);
+							}
+						});
+					}
+				});
+				t.setRepeats(false);
+				t.start();
 
 				long lhwnd = com.sun.glass.ui.Window.getWindows().get(0).getNativeWindow();
 				Pointer lpVoid = new Pointer(lhwnd);
@@ -393,7 +453,7 @@ public class ControllerChat {
 				lh.log("INFO", "Launcher scene was set succefully in stage.");
 			}catch(Exception e) {
 				lh.log("SEVERE", "Could not set scene Launcher to stage!",e);
-				
+
 			}
 
 		} catch (IOException e) {
@@ -406,12 +466,13 @@ public class ControllerChat {
 		}
 
 	}
-	
+
 
 	public void updateSceneToMenu() {
 
 		try {
 			Scene scene = new Scene(appPane);
+			
 
 			FadeTransition fadeTransition = new FadeTransition();
 			fadeTransition.setDuration(Duration.millis(500));
@@ -448,14 +509,19 @@ public class ControllerChat {
 					}else if (ke.getCode().equals(KeyCode.ENTER)) {
 						String texto = chatPane_HBox_Left_Handle_Input_TextArea.getText();
 						if(!texto.equals("")) {
-							c.sendMessagesToChat(texto);
-							chatPane_HBox_Left_Handle_Input_TextArea.setText("");
+							if(texto.startsWith("/restart")) {
+								restartApplication(null,null);
+							}else {
+								c.sendMessagesToChat(texto);
+								chatPane_HBox_Left_Handle_Input_TextArea.setText("");
+							}
+							
 						}
 						ke.consume();
-			        }
+					}
 				}
 			});
-			
+
 
 
 			lh.log("INFO", "Updated scene succesfully to chat");
@@ -464,6 +530,26 @@ public class ControllerChat {
 		}
 
 
+	}
+	
+	public void updateSceneToLauncher() {
+		Scene scene = new Scene(launcherPane);
+
+		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+					KeyCombination.ALT_DOWN);
+			public void handle(KeyEvent ke) {
+				if (keyComb.match(ke)) {
+					System.exit(0);
+				}
+			}
+		});
+
+		stage.setScene(scene);
+		Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        stage.setX((primScreenBounds.getWidth() - stage.getWidth()) / 2);
+        stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 2);
+		stage.show(); 
 	}
 
 	@FXML
@@ -1088,7 +1174,7 @@ public class ControllerChat {
 			c.sendMessagesToChat(texto);
 			chatPane_HBox_Left_Handle_Input_TextArea.setText("");
 		}
-		
+
 	}
 
 	@FXML
@@ -1110,14 +1196,14 @@ public class ControllerChat {
 
 	}
 
-	
+
 	public void animationProgressBar(ProgressBar pg,double parcialExp) {
 		Animation animation = new Timeline(
 				new KeyFrame(Duration.seconds(1),
 						new KeyValue(pg.progressProperty(), parcialExp)));
 		animation.play();
 	}
-	
+
 	public void fastScrollToBottom(ScrollPane scrollPane) {
 		Animation animation = new Timeline(
 				new KeyFrame(Duration.seconds(0.1),
@@ -1156,7 +1242,7 @@ public class ControllerChat {
 			mensagem.setStyle("-fx-background-color: #4d9b20");
 			mensagem.setAlignment(Pos.CENTER);
 			mensagem.getChildren().addAll(textLabel,hourLabel);
-			
+
 			Timer t = new Timer(10000, new ActionListener() {
 
 				@Override
@@ -1175,7 +1261,7 @@ public class ControllerChat {
 			mensagem.setStyle("-fx-background-color:  #cc3d3d");
 			mensagem.setAlignment(Pos.CENTER);
 			mensagem.getChildren().addAll(textLabel,hourLabel);
-			
+
 			Timer t = new Timer(10000, new ActionListener() {
 
 				@Override
@@ -1191,16 +1277,16 @@ public class ControllerChat {
 			t.start();
 		}else if(type == Type.MESSAGE) {
 			mensagem.setMaxWidth(380f);
-			
+
 			if(side == Side.RIGHT) {
 				VBox.setMargin(mensagem, new Insets(0, 0,10, 380));
 				mensagem.setStyle("-fx-background-color:  #5188bc");
-				
+
 			}else if(side == Side.LEFT) {
 				VBox.setMargin(mensagem, new Insets(0, 0,10, 0));
 				mensagem.setStyle("-fx-background-color:  #67696d");
 			}
-			
+
 			mensagem.getChildren().addAll(usernameLabel,textLabel,hourLabel);
 		}
 
@@ -1263,6 +1349,42 @@ public class ControllerChat {
 				chatPane_HBox_Right_ScrollPane_VBox.getChildren().remove(product);
 			}
 		});
+	}
+
+	public void restartApplication(Runnable runBeforeRestart, Integer TimeToWaitToExecuteTask) {
+		try {
+
+			// execute some custom code before restarting
+			if (runBeforeRestart != null) {
+				// Wait for 2 seconds before restart if null
+				if (TimeToWaitToExecuteTask != null) {
+					TimeUnit.SECONDS.sleep(TimeToWaitToExecuteTask);
+				} else {
+					TimeUnit.SECONDS.sleep(2);
+				}
+				runBeforeRestart.run();
+			}
+
+			final String javaBin = System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
+			final File currentJar = new File(Chat.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+
+			/* is it a jar file? */
+			if (!currentJar.getName().endsWith(".jar"))
+				return;
+
+			/* Build command: java -jar application.jar */
+			final ArrayList<String> command = new ArrayList<String>();
+			command.add(javaBin);
+			command.add("-jar");
+			command.add(currentJar.getPath());
+
+			final ProcessBuilder builder = new ProcessBuilder(command);
+			builder.start();
+			System.exit(0);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

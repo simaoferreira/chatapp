@@ -29,6 +29,7 @@ public class Server {
     protected ArrayList<ServerHandler> connections = new ArrayList<ServerHandler>();
     protected DataBaseCatalog          dbh = null;
     protected LoggerHandle             lh = null;
+    protected String                   version = "0.5.5";
 
     public static void main(String[] args) {
         new Server();

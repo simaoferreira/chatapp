@@ -47,6 +47,11 @@ public class Client extends Thread{
     public void sendMessagesToChat(String text) {
         ch.sendMessageCase3(client.user.getUsername(), text);
     }
+    
+    ///////////////  CODE 11 /////////////////
+    public void sendVersion(String version) {
+    	ch.sendClientVersion(version);
+    }
 
 
 	/**

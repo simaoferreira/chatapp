@@ -863,3 +863,167 @@
 --INFO (Fri 15.02.2019 at 11:45:33) : Length of words written by simon successfully updated
 --INFO (Fri 15.02.2019 at 11:45:37) : Length of words written by simon successfully updated
 --INFO (Fri 15.02.2019 at 11:46:15) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:11:39) : New connection was accepted: /127.0.0.1:49518
+--INFO (Sat 16.02.2019 at 12:11:49) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:11:49) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:12:30) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:21:53) : New connection was accepted: /127.0.0.1:49748
+--INFO (Sat 16.02.2019 at 12:22:04) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:22:04) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:22:16) : Length of words written by simon successfully updated
+--INFO (Sat 16.02.2019 at 12:23:02) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:24:19) : New connection was accepted: /127.0.0.1:49760
+--INFO (Sat 16.02.2019 at 12:24:25) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:24:25) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:28:41) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:29:03) : New connection was accepted: /127.0.0.1:49820
+--INFO (Sat 16.02.2019 at 12:29:07) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:29:07) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:29:16) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:29:19) : New connection was accepted: /127.0.0.1:49821
+--INFO (Sat 16.02.2019 at 12:29:32) : Lost a connection;
+--INFO (Sat 16.02.2019 at 12:30:53) : New connection was accepted: /127.0.0.1:49826
+--INFO (Sat 16.02.2019 at 12:30:58) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:30:58) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:31:17) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:31:19) : New connection was accepted: /127.0.0.1:49827
+--INFO (Sat 16.02.2019 at 12:31:24) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:31:24) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:31:30) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:31:39) : New connection was accepted: /127.0.0.1:49828
+--INFO (Sat 16.02.2019 at 12:31:42) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:31:42) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:31:51) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:31:53) : New connection was accepted: /127.0.0.1:49829
+--INFO (Sat 16.02.2019 at 12:32:10) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 12:32:10) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 12:32:19) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 12:32:21) : New connection was accepted: /127.0.0.1:49830
+--INFO (Sat 16.02.2019 at 12:32:24) : Lost a connection;
+--INFO (Sat 16.02.2019 at 12:48:40) : New connection was accepted: /127.0.0.1:49863
+--INFO (Sat 16.02.2019 at 12:49:04) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:17:34) : New connection was accepted: /127.0.0.1:49952
+--INFO (Sat 16.02.2019 at 01:17:52) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:18:13) : New connection was accepted: /127.0.0.1:49959
+--INFO (Sat 16.02.2019 at 01:18:13) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:21:03) : Server restarted;
+--INFO (Sat 16.02.2019 at 01:21:03) : Database initialized;
+--INFO (Sat 16.02.2019 at 01:21:03) : Server initialized;
+--INFO (Sat 16.02.2019 at 01:21:03) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 01:21:17) : New connection was accepted: /127.0.0.1:49966
+--INFO (Sat 16.02.2019 at 01:22:12) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:24:25) : New connection was accepted: /127.0.0.1:49969
+--INFO (Sat 16.02.2019 at 01:24:38) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:24:42) : New connection was accepted: /127.0.0.1:49970
+--INFO (Sat 16.02.2019 at 01:24:58) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:25:03) : New connection was accepted: /127.0.0.1:49971
+--INFO (Sat 16.02.2019 at 01:25:30) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:30:13) : Server restarted;
+--INFO (Sat 16.02.2019 at 01:30:14) : Database initialized;
+--INFO (Sat 16.02.2019 at 01:30:14) : Server initialized;
+--INFO (Sat 16.02.2019 at 01:30:14) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 01:30:22) : New connection was accepted: /127.0.0.1:49977
+--WARNING (Sat 16.02.2019 at 01:30:37) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:30:46) : New connection was accepted: /127.0.0.1:49978
+--INFO (Sat 16.02.2019 at 01:32:49) : New connection was accepted: /127.0.0.1:50007
+--WARNING (Sat 16.02.2019 at 01:32:56) : Error trying creating the streams!
+--WARNING (Sat 16.02.2019 at 01:35:49) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:35:58) : New connection was accepted: /127.0.0.1:50040
+--INFO (Sat 16.02.2019 at 01:36:07) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:36:44) : Server restarted;
+--INFO (Sat 16.02.2019 at 01:36:44) : Database initialized;
+--INFO (Sat 16.02.2019 at 01:36:44) : Server initialized;
+--INFO (Sat 16.02.2019 at 01:36:44) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 01:36:55) : New connection was accepted: /127.0.0.1:50041
+--WARNING (Sat 16.02.2019 at 01:37:42) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:42:37) : Server restarted;
+--INFO (Sat 16.02.2019 at 01:42:37) : Database initialized;
+--INFO (Sat 16.02.2019 at 01:42:37) : Server initialized;
+--INFO (Sat 16.02.2019 at 01:42:37) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 01:42:45) : New connection was accepted: /127.0.0.1:50128
+--INFO (Sat 16.02.2019 at 01:44:10) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:44:22) : New connection was accepted: /127.0.0.1:50136
+--INFO (Sat 16.02.2019 at 01:44:34) : New connection was accepted: /127.0.0.1:50138
+--WARNING (Sat 16.02.2019 at 01:45:07) : Error trying creating the streams!
+--WARNING (Sat 16.02.2019 at 01:45:13) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:45:33) : New connection was accepted: /127.0.0.1:50139
+--WARNING (Sat 16.02.2019 at 01:45:42) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:46:57) : Server restarted;
+--INFO (Sat 16.02.2019 at 01:46:58) : Database initialized;
+--INFO (Sat 16.02.2019 at 01:46:58) : Server initialized;
+--INFO (Sat 16.02.2019 at 01:46:58) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 01:47:04) : New connection was accepted: /127.0.0.1:50140
+--INFO (Sat 16.02.2019 at 01:47:08) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:47:12) : New connection was accepted: /127.0.0.1:50141
+--WARNING (Sat 16.02.2019 at 01:47:28) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:47:54) : New connection was accepted: /127.0.0.1:50142
+--WARNING (Sat 16.02.2019 at 01:47:59) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:48:04) : New connection was accepted: /127.0.0.1:50143
+--WARNING (Sat 16.02.2019 at 01:49:35) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:51:07) : New connection was accepted: /127.0.0.1:50148
+--WARNING (Sat 16.02.2019 at 01:52:56) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:53:16) : Server restarted;
+--INFO (Sat 16.02.2019 at 01:53:16) : Database initialized;
+--INFO (Sat 16.02.2019 at 01:53:16) : Server initialized;
+--INFO (Sat 16.02.2019 at 01:53:16) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 01:53:25) : New connection was accepted: /127.0.0.1:50186
+--INFO (Sat 16.02.2019 at 01:53:30) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:53:33) : New connection was accepted: /127.0.0.1:50187
+--WARNING (Sat 16.02.2019 at 01:53:48) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:56:56) : New connection was accepted: /127.0.0.1:50215
+--WARNING (Sat 16.02.2019 at 01:57:10) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:57:55) : New connection was accepted: /127.0.0.1:50222
+--WARNING (Sat 16.02.2019 at 01:58:00) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:58:28) : New connection was accepted: /127.0.0.1:50227
+--INFO (Sat 16.02.2019 at 01:58:33) : Lost a connection;
+--INFO (Sat 16.02.2019 at 01:58:37) : New connection was accepted: /127.0.0.1:50233
+--WARNING (Sat 16.02.2019 at 01:58:58) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 01:59:04) : New connection was accepted: /127.0.0.1:50238
+--WARNING (Sat 16.02.2019 at 01:59:10) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 02:00:06) : Server restarted;
+--INFO (Sat 16.02.2019 at 02:00:07) : Database initialized;
+--INFO (Sat 16.02.2019 at 02:00:07) : Server initialized;
+--INFO (Sat 16.02.2019 at 02:00:07) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 02:00:19) : New connection was accepted: /127.0.0.1:50253
+--INFO (Sat 16.02.2019 at 02:00:23) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:00:26) : New connection was accepted: /127.0.0.1:50255
+--WARNING (Sat 16.02.2019 at 02:00:54) : Error trying creating the streams!
+--INFO (Sat 16.02.2019 at 02:02:19) : New connection was accepted: /127.0.0.1:50261
+--INFO (Sat 16.02.2019 at 02:02:23) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:02:26) : New connection was accepted: /127.0.0.1:50262
+--INFO (Sat 16.02.2019 at 02:02:37) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 02:02:39) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 02:02:49) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 02:04:12) : Server restarted;
+--INFO (Sat 16.02.2019 at 02:04:12) : Database initialized;
+--INFO (Sat 16.02.2019 at 02:04:12) : Server initialized;
+--INFO (Sat 16.02.2019 at 02:04:12) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 02:04:35) : New connection was accepted: /127.0.0.1:50300
+--INFO (Sat 16.02.2019 at 02:04:39) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:04:43) : New connection was accepted: /127.0.0.1:50303
+--INFO (Sat 16.02.2019 at 02:04:51) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:08:03) : Server restarted;
+--INFO (Sat 16.02.2019 at 02:08:03) : Database initialized;
+--INFO (Sat 16.02.2019 at 02:08:03) : Server initialized;
+--INFO (Sat 16.02.2019 at 02:08:03) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 02:08:21) : New connection was accepted: /127.0.0.1:50347
+--INFO (Sat 16.02.2019 at 02:08:26) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:08:29) : New connection was accepted: /127.0.0.1:50348
+--INFO (Sat 16.02.2019 at 02:08:43) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:12:04) : New connection was accepted: /127.0.0.1:50395
+--INFO (Sat 16.02.2019 at 02:12:21) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:13:39) : New connection was accepted: /127.0.0.1:50408
+--INFO (Sat 16.02.2019 at 02:13:46) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 02:13:47) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 02:13:59) : Length of words written by simon successfully updated
+--INFO (Sat 16.02.2019 at 02:14:02) : User simon disconnected;
+--INFO (Sat 16.02.2019 at 02:14:56) : Server restarted;
+--INFO (Sat 16.02.2019 at 02:14:57) : Database initialized;
+--INFO (Sat 16.02.2019 at 02:14:57) : Server initialized;
+--INFO (Sat 16.02.2019 at 02:14:57) : Server started to wait for new connections;
+--INFO (Sat 16.02.2019 at 02:15:07) : New connection was accepted: /127.0.0.1:50438
+--INFO (Sat 16.02.2019 at 02:15:12) : Lost a connection;
+--INFO (Sat 16.02.2019 at 02:15:16) : New connection was accepted: /127.0.0.1:50444
+--INFO (Sat 16.02.2019 at 02:15:23) : User simon trying to login into the server;
+--INFO (Sat 16.02.2019 at 02:15:25) : User simon logged in the server
+--INFO (Sat 16.02.2019 at 02:15:31) : User simon disconnected;

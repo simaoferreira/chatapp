@@ -1,7 +1,10 @@
 package server;
 
+import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -29,6 +32,8 @@ public class ServerHandler extends Thread{
 	private DataBaseCatalog    dbh;
 	private LoggerHandle       lh;
 	private ArrayList<ServerHandler> friendsThreads = new ArrayList<ServerHandler>();
+	private FileInputStream fis = null;
+	private BufferedInputStream bis = null;
 
 	public ServerHandler(DataBaseCatalog dbh, LoggerHandle lh, Socket socket,Server server) {
 		this.socket = socket;
@@ -49,7 +54,7 @@ public class ServerHandler extends Thread{
 	public synchronized void run() {
 
 		try {
-			
+
 			//dis = new DataInputStream(socket.getInputStream());
 			//dos = new DataOutputStream(socket.getOutputStream());
 			out = new ObjectOutputStream(socket.getOutputStream());
@@ -59,46 +64,46 @@ public class ServerHandler extends Thread{
 
 				try {
 					StringBuilder connectionsUpdated = new StringBuilder();
-					
+
 					//receber o codigo
 					try {
 						codeNumber  = (int) in.readObject();
-                    } catch (Exception e) {
-                        run = false;
-                        if (username==null) {
-                        	lh.log("INFO", "Lost a connection;");
-                        }else {
-                        	lh.log("INFO", "User "+username+" disconnected;");
-                        	server.connections.remove(this);
-    						
-    						for(int i=0;i<server.connections.size();i++) {
-    	                        connectionsUpdated.append(i+": "+server.connections.get(i).username+"\n");
-    	                    }
-    						
-    						//enviar o codigo 2
-    						sendToClients(2,false);
-    						
-    						//enviar o username que disconectou
-    						sendToClients(dbh.getUsername(dbh.getID(username)),false);
-    						
-                        }
-                        Thread.currentThread().interrupt();
-                        break;
-                    }
-					
+					} catch (Exception e) {
+						run = false;
+						if (username==null) {
+							lh.log("INFO", "Lost a connection;");
+						}else {
+							lh.log("INFO", "User "+username+" disconnected;");
+							server.connections.remove(this);
+
+							for(int i=0;i<server.connections.size();i++) {
+								connectionsUpdated.append(i+": "+server.connections.get(i).username+"\n");
+							}
+
+							//enviar o codigo 2
+							sendToClients(2,false);
+
+							//enviar o username que disconectou
+							sendToClients(dbh.getUsername(dbh.getID(username)),false);
+
+						}
+						Thread.currentThread().interrupt();
+						break;
+					}
+
 
 					int idBD;
 					JSONObject infoUserObj;
-					
+
 
 					switch(codeNumber) {
 					case 0:
 						//receber o nome do user
 						String user   = (String) in.readObject();
 						//receber a pass do user
-	                    String password = (String) in.readObject();
-	                    lh.log("INFO", "User " + user + " trying to login into the server;");
-	                    
+						String password = (String) in.readObject();
+						lh.log("INFO", "User " + user + " trying to login into the server;");
+
 						if(dbh.checkLogin(user, password) && !checkUserLogged(user)) {
 							username = user;
 							server.connections.add(this);
@@ -107,16 +112,16 @@ public class ServerHandler extends Thread{
 							out.writeObject(codeNumber);
 							//enviar True
 							out.writeObject(new Boolean(true));
-							
+
 							idBD = dbh.getID(username);
 							JSONObject userObjInfo = createObjWithInfo(idBD);
 							//enviar info do username
 							out.writeObject(userObjInfo);
-							
+
 							//enviar numero de users online
 							int size = server.connections.size();
 							out.writeObject(size);
-							
+
 							if(size!=0) {
 								for(ServerHandler sh : server.connections) {
 									int i = dbh.getID(sh.username);
@@ -125,20 +130,20 @@ public class ServerHandler extends Thread{
 									out.writeObject(infoUserObj);
 								}
 							}
-							
+
 							//enviar informação para os restantes clientes com code 1
 							sendToClients(1,false);
-							
+
 							//enviar o user que se conectou
 							sendToClients(userObjInfo,false);
-							
+
 							lh.log("INFO", "User " + user + " logged in the server");
 						}else{
 							//enviar o codigo 0
 							out.writeObject(codeNumber);
 							//enviar False
 							out.writeObject(new Boolean(false));
-							
+
 							if(!dbh.checkLogin(user, password)) {
 								out.writeObject("Username or password incorrect!");
 							}else {
@@ -154,26 +159,26 @@ public class ServerHandler extends Thread{
 						String message = (String) in.readObject();
 						String[] words = message.split(" ");
 						dbh.updateWordsWritten(ownerOfMessage, words.length);
-						
+
 						//enviar o codigo 3
 						sendToClients(codeNumber,true);
 						//enviar o username que enviou mensagem
 						idBD = dbh.getID(ownerOfMessage);
 						sendToClients(dbh.getFullName(idBD),true);
-						
+
 						infoUserObj = createObjWithStats(idBD);
 						//enviar info do username para os amigos do owner
 						sendToClients(infoUserObj,true);
-						
+
 						//enviar o texto 
 						sendToClients(message, true);
-						
-						
+
+
 						break;
 					case 6:
 						//receber o user do admin
 						//receber a live new
-						
+
 						//enviar o codigo 6
 						//enviar o username do admin
 						//enviar a live news
@@ -181,7 +186,7 @@ public class ServerHandler extends Thread{
 					case 7:
 						//receber o nome do user que pediu convite
 						//receber o nome do user que vai receber convite
-						
+
 						//enviar o codigo 7
 						//enviar o texto
 						break;
@@ -189,7 +194,7 @@ public class ServerHandler extends Thread{
 						//receber o resultado final do convite (accept ou decline)
 						//receber o nome do user que respondeu ao convite
 						//receber o nome do user que enviou o pedido
-						
+
 						//enviar o codigo 9
 						//enviar o resultado do convite 
 						//enviar username se convite for aceite
@@ -199,24 +204,74 @@ public class ServerHandler extends Thread{
 						//receber o info do novo user
 						JSONObject infoNewUser = (JSONObject) in.readObject();
 						String username = infoNewUser.get("username").toString();
-						
+
 						sendText(codeNumber);
-						
+
 						if(dbh.estaRegistado(username)) {
 							sendText(new Boolean(false));
 							sendText("The username,"+username+" , is already registered");
-	                	}else {
-	                		String passwordNewUser = infoNewUser.get("password").toString();
+						}else {
+							String passwordNewUser = infoNewUser.get("password").toString();
 							String firstName = infoNewUser.get("firstname").toString();
 							String lastName = infoNewUser.get("lastname").toString();
 							String email = infoNewUser.get("email").toString();
 							int age = Integer.parseInt(infoNewUser.get("age").toString());
-	                		dbh.addUser(username, passwordNewUser, email,age, firstName, lastName);
-	                		sendText(new Boolean(true));
-	                		sendText("Registered sucessfully! Now you can login!");
-	                	}
+							dbh.addUser(username, passwordNewUser, email,age, firstName, lastName);
+							sendText(new Boolean(true));
+							sendText("Registered sucessfully! Now you can login!");
+						}
+						break;
+					case 11:
+						//receber a versão
+						String versionClient = (String) in.readObject();
+						System.out.println(versionClient.equals(server.version));
 						
-	                	break;
+						if(versionClient.equals(server.version)) {
+							
+							sendText(codeNumber);
+							sendText(new Boolean(true));
+						}else {
+							sendText(codeNumber);
+							sendText(new Boolean(false));
+
+							File myFile = new File ("OurChat.jar");
+
+
+							long length = myFile.length();
+							int byteAtual = 0;
+
+							out.writeObject(length);
+							byte [] bytes  = new byte [(int) length];
+							fis = new FileInputStream(myFile);
+							bis = new BufferedInputStream(fis);
+							bis.read(bytes,0,bytes.length);
+
+							int len=1024;
+
+							if(length<1024) {
+								len = (int) length;
+							}
+
+							while(len<=1024 && len>=0) {
+
+								out.write(bytes, byteAtual, len);
+
+								if (byteAtual + 1024 > length - 1024) {
+									byteAtual += 1024;
+									len = (int) (length-byteAtual);
+
+								}else {
+									len = 1024;
+									byteAtual += 1024;
+								}	            		
+
+							}
+
+							out.flush();
+							fis.close();
+							bis.close();
+							break;
+						}
 					}
 				} catch (ClassNotFoundException e) {
 					lh.log("SEVERE","Could not read the codeNumber",e);
@@ -440,29 +495,29 @@ public class ServerHandler extends Thread{
 
 	private void sendToFriends(JSONObject infoUserObj, boolean sendToThisClient) throws IOException {
 		ArrayList<Integer> friends = dbh.getFriends(dbh.getID(this.username));
-		
+
 		for(ServerHandler sh : server.connections) {
 			if(ehFriend(sh,friends)) {
 				sh.sendText(infoUserObj);
 			}
 		}
-		
+
 		if(sendToThisClient) {
 			out.writeObject(infoUserObj);
 		}
-		
-		
+
+
 	}
-	
+
 	private Boolean ehFriend(ServerHandler sh, ArrayList<Integer> friends) {
-		
+
 		for(Integer f :  friends) {
 			if(dbh.getID(sh.username) == f) {
 				return true;
 			}
 		}
 		return false;
-		
+
 	}
 
 	private void createArrayWithSHOfFriends(ArrayList<Integer> friends) {
@@ -476,7 +531,7 @@ public class ServerHandler extends Thread{
 				}
 			}
 		}
-		
+
 	}
 
 	private void sendToOneClient(String username, Object obj) throws IOException {
@@ -499,7 +554,7 @@ public class ServerHandler extends Thread{
 			}else {
 				sh.sendText(obj);
 			}
-			
+
 		}
 
 	}
@@ -536,30 +591,30 @@ public class ServerHandler extends Thread{
 	 */
 
 	@SuppressWarnings("unchecked")
-    private JSONObject createObjWithStats(int id) {
-        JSONObject obj = new JSONObject();
-        obj.put("lvlUser", dbh.getLvlUser(id));
-        obj.put("expUser", dbh.getExpUser(id));
-        obj.put("parcialExpUser", dbh.getParcialExpUser(id));
-        obj.put("numMessages", dbh.getMessagesSent(id));
-        obj.put("numWords", dbh.getWordsWritten(id));
-        return obj;
-    }
-	
-    @SuppressWarnings("unchecked")
-    private JSONObject createObjWithInfo(int id) {
-        JSONObject obj = new JSONObject();
-        obj.put("username",dbh.getUsername(id));
-        obj.put("firstName", dbh.getFirstName(id));
-        obj.put("lastName", dbh.getLastName(id));
-        obj.put("age", dbh.getAge(id));
-        obj.put("email",dbh.getEmail(id));
-        obj.put("lvlUser", dbh.getLvlUser(id));
-        obj.put("expUser", dbh.getExpUser(id));
-        obj.put("parcialExpUser", dbh.getParcialExpUser(id));
-        obj.put("numMessages", dbh.getMessagesSent(id));
-        obj.put("numWords", dbh.getWordsWritten(id));
-        return obj;
-    }
+	private JSONObject createObjWithStats(int id) {
+		JSONObject obj = new JSONObject();
+		obj.put("lvlUser", dbh.getLvlUser(id));
+		obj.put("expUser", dbh.getExpUser(id));
+		obj.put("parcialExpUser", dbh.getParcialExpUser(id));
+		obj.put("numMessages", dbh.getMessagesSent(id));
+		obj.put("numWords", dbh.getWordsWritten(id));
+		return obj;
+	}
+
+	@SuppressWarnings("unchecked")
+	private JSONObject createObjWithInfo(int id) {
+		JSONObject obj = new JSONObject();
+		obj.put("username",dbh.getUsername(id));
+		obj.put("firstName", dbh.getFirstName(id));
+		obj.put("lastName", dbh.getLastName(id));
+		obj.put("age", dbh.getAge(id));
+		obj.put("email",dbh.getEmail(id));
+		obj.put("lvlUser", dbh.getLvlUser(id));
+		obj.put("expUser", dbh.getExpUser(id));
+		obj.put("parcialExpUser", dbh.getParcialExpUser(id));
+		obj.put("numMessages", dbh.getMessagesSent(id));
+		obj.put("numWords", dbh.getWordsWritten(id));
+		return obj;
+	}
 
 }
