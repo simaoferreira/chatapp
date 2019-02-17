@@ -15,58 +15,58 @@ public class Pontuation {
     			return 0 + (exp-100);
     		}
     	}else if(lvl == 2) {
+    		if(exp>=0 && exp<200) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-200);
+    		}
+    	}else if(lvl == 3) {
+    		if(exp>=0 && exp<300) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-300);
+    		}
+    	}else if(lvl == 4) {
+    		if(exp>=0 && exp<400) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-400);
+    		}
+    	}else if(lvl == 5) {
+    		if(exp>=0 && exp<500) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-500);
+    		}
+    	}else if(lvl == 6) {
+    		if(exp>=0 && exp<600) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-600);
+    		}
+    	}else if(lvl == 7) {
+    		if(exp>=0 && exp<700) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-700);
+    		}
+    	}else if(lvl == 8) {
+    		if(exp>=0 && exp<800) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-800);
+    		}
+    	}else if(lvl == 9) {
+    		if(exp>=0 && exp<900) {
+    			return exp;
+    		}else {
+    			return 0 + (exp-900);
+    		}
+    	}else {
     		if(exp>=0 && exp<1000) {
     			return exp;
     		}else {
     			return 0 + (exp-1000);
-    		}
-    	}else if(lvl == 3) {
-    		if(exp>=0 && exp<1500) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-1500);
-    		}
-    	}else if(lvl == 4) {
-    		if(exp>=0 && exp<2000) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-2000);
-    		}
-    	}else if(lvl == 5) {
-    		if(exp>=0 && exp<2500) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-2500);
-    		}
-    	}else if(lvl == 6) {
-    		if(exp>=0 && exp<3500) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-3500);
-    		}
-    	}else if(lvl == 7) {
-    		if(exp>=0 && exp<5000) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-5000);
-    		}
-    	}else if(lvl == 8) {
-    		if(exp>=0 && exp<7000) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-7000);
-    		}
-    	}else if(lvl == 9) {
-    		if(exp>=0 && exp<9000) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-1000);
-    		}
-    	}else {
-    		if(exp>=0 && exp<10000) {
-    			return exp;
-    		}else {
-    			return 0 + (exp-10000);
     		}
     	}
     }

@@ -27,7 +27,7 @@ public class AlertBox {
         label.setTextFill(Color.WHITE);
         label.setText(message);
 
-        Button button = new Button("Fechar");
+        Button button = new Button("Close");
         if(close) {
             button.setOnAction(e -> System.exit(-1));
         }else {

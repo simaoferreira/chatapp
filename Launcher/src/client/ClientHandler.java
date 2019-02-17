@@ -81,16 +81,16 @@ public class ClientHandler extends Thread{
 		this.mainClient = mainClient;
 		this.lh = lh;
 	}
-	
+
 	public void sendClientVersion(String version) {
 		int code = 11;
 		try {
 			// enviar o codigo
 			out.writeObject(code);
-			
+
 			//enviar a versão
 			out.writeObject(version);
-			
+
 			lh.log("INFO", "Login authentication requested sucessfully");
 		}catch(Exception e) {
 			Platform.runLater(new Runnable() {
@@ -100,7 +100,7 @@ public class ClientHandler extends Thread{
 				}
 			});
 		}
-		
+
 	}
 
 	protected void sendMessageCase0(String user,String password) {
@@ -181,7 +181,28 @@ public class ClientHandler extends Thread{
 	protected void sendMessageCase7(String userSentInvite,String userTarget) {
 		int code = 7;
 
+		try {
+			// enviar o codigo
+			out.writeObject(code);
+
+			//enviar o nome do user que estah a enviar o pedido de amizade
+			out.writeObject(userSentInvite);
+
+			//enviar o nome do user que estah a receber o pedido de amizade
+			out.writeObject(userTarget);
+
+
+		}catch(Exception e) {
+			Platform.runLater(new Runnable() {
+				@Override public void run() {
+					AlertBox.display("Error", "Can't connect to server",true);
+				}
+			});
+		}
+
+
 		//enviar o codigo
+
 		//enviar o nome do user que pediu convite
 		//enviar o nome do user que vai receber convite
 
@@ -332,6 +353,11 @@ public class ClientHandler extends Thread{
 											mainClient.usersOnline.add(u);
 											mainClient.addUserOnlineToScrollPane(u);
 										}
+
+										Boolean ehFriend = (Boolean) in.readObject();
+										if(ehFriend) {
+											mainClient.friends.add(u);
+										}
 									}
 								}
 
@@ -452,6 +478,14 @@ public class ClientHandler extends Thread{
 						case 6:
 							break;
 						case 7:
+							//receber o nome do user que pediu amizade a este cliente
+							String ownerOfFriendRequest = (String) in.readObject();
+							User userOfFriendRequest = getUserByUsername(ownerOfFriendRequest);
+							Platform.runLater(new Runnable() {
+								@Override public void run() {
+									mainClient.addFriendRequestToScrollPane(userOfFriendRequest,actualTime);
+								}
+							});
 							break;
 						case 9:
 							break;
@@ -499,43 +533,57 @@ public class ClientHandler extends Thread{
 							 */
 							break;
 						case 11:
-					        long length;
-					        int bytesRead;
-					        int current = 0;
-					        FileOutputStream fos = null;
-					        BufferedOutputStream bos = null;
-					        
+							long length;
+							int bytesRead;
+							int current = 0;
+							FileOutputStream fos = null;
+							BufferedOutputStream bos = null;
+
 							Boolean isUpdated = (Boolean) in.readObject();
-							
+
 							if(isUpdated) {
 								Platform.runLater(new Runnable() {
 									@Override public void run() {
 										mainClient.updateSceneToLauncher();
 									}
 								});
-								
+
 							}else {
+								Platform.runLater(new Runnable() {
+									@Override public void run() {
+										mainClient.updater_Label.setText("Updating...");
+									}
+								});
 								length = (long) in.readObject();
-				            	byte [] buffer  = new byte [(int) length];
-				            	String path = Chat.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-				            	String decodedPath = URLDecoder.decode(path, "UTF-8");
-				            	fos = new FileOutputStream(decodedPath);
-				            	bos = new BufferedOutputStream(fos);
-				            	bytesRead = in.read(buffer,0,buffer.length);
-				            	current = bytesRead;
+								byte [] buffer  = new byte [(int) length];
+								String path = Chat.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+								String decodedPath = URLDecoder.decode(path, "UTF-8");
+								fos = new FileOutputStream(decodedPath);
+								bos = new BufferedOutputStream(fos);
+								bytesRead = in.read(buffer,0,buffer.length);
+								current = bytesRead;
 
-				            	if(bytesRead<length) {
-				            		while(bytesRead!=0) {
-				            			bytesRead = in.read(buffer, current, (buffer.length-current));
-				            			if(bytesRead >= 0)
-				            				current += bytesRead;
-				            		}
-				            	}
+								if(bytesRead<length) {
+									while(bytesRead!=0) {
+										bytesRead = in.read(buffer, current, (buffer.length-current));
+										if(bytesRead >= 0)
+											current += bytesRead;
+									}
+								}
 
-				            	bos.write(buffer, 0 , current);
-				            	bos.flush();
-				            	bos.close();
-				            	mainClient.restartApplication(null, null);
+								bos.write(buffer, 0 , current);
+								bos.flush();
+								bos.close();
+
+								/**
+				            	Platform.runLater(new Runnable() {
+									@Override public void run() {
+										mainClient.updater_Label.setText("Update completed");
+									}
+								});
+								 */
+
+								mainClient.restartApplication(null, null);
 							}
 							break;
 						}
@@ -767,6 +815,15 @@ public class ClientHandler extends Thread{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	private User getUserByUsername(String ownerOfFriendRequest) {
+		for(User u : mainClient.usersOnline) {
+			if(u.getUsername().equals(ownerOfFriendRequest)) {
+				return u;
+			}
+		}
+		return null;
 	}
 
 	private void updatedUserInfoFromJSON(JSONObject info) {

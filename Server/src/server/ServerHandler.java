@@ -128,6 +128,11 @@ public class ServerHandler extends Thread{
 									infoUserObj = createObjWithInfo(i);
 									//enviar a info do amigo com id i
 									out.writeObject(infoUserObj);
+									if(dbh.checksFriendship(username, sh.username)) {
+										out.writeObject(new Boolean(true));
+									}else {
+										out.writeObject(new Boolean(false));
+									}
 								}
 							}
 
@@ -185,10 +190,16 @@ public class ServerHandler extends Thread{
 						break;
 					case 7:
 						//receber o nome do user que pediu convite
+						String userRequestedInvite = (String) in.readObject();
 						//receber o nome do user que vai receber convite
-
+						String userTargetInvite = (String) in.readObject();
+						
+						dbh.addRequestFriend(userRequestedInvite, userTargetInvite);
+						
 						//enviar o codigo 7
-						//enviar o texto
+						sendToOneClient(userTargetInvite, 7);
+						//enviar o user que mandou pedido
+						sendToOneClient(userTargetInvite, userRequestedInvite);
 						break;
 					case 8:
 						//receber o resultado final do convite (accept ou decline)
@@ -224,7 +235,6 @@ public class ServerHandler extends Thread{
 					case 11:
 						//receber a versão
 						String versionClient = (String) in.readObject();
-						System.out.println(versionClient.equals(server.version));
 						
 						if(versionClient.equals(server.version)) {
 							
@@ -572,7 +582,7 @@ public class ServerHandler extends Thread{
     }
 	 */
 
-	protected void sendText(Object obj) throws IOException {
+	private void sendText(Object obj) throws IOException {
 		out.writeObject(obj);
 	}
 

@@ -10296,3 +10296,5484 @@
   <message>Updated scene succesfully to chat</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T12:21:52</date>
+  <millis>1550319712311</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:53</date>
+  <millis>1550319713401</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:53</date>
+  <millis>1550319713839</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:53</date>
+  <millis>1550319713860</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:54</date>
+  <millis>1550319714454</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:55</date>
+  <millis>1550319715775</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:59</date>
+  <millis>1550319719743</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:21:59</date>
+  <millis>1550319719794</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T12:22:35</date>
+  <millis>1550319755006</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Registation request was send sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:22:42</date>
+  <millis>1550319762066</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:22:42</date>
+  <millis>1550319762115</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T12:22:55</date>
+  <millis>1550319775873</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:22:55</date>
+  <millis>1550319775922</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T12:23:49</date>
+  <millis>1550319829611</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:23:50</date>
+  <millis>1550319830487</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:23:50</date>
+  <millis>1550319830896</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:23:50</date>
+  <millis>1550319830917</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T12:23:51</date>
+  <millis>1550319831438</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T12:23:52</date>
+  <millis>1550319832891</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:12</date>
+  <millis>1550319852874</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Registation request was send sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:18</date>
+  <millis>1550319858119</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:18</date>
+  <millis>1550319858169</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:21</date>
+  <millis>1550319861191</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:21</date>
+  <millis>1550319861243</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T12:24:33</date>
+  <millis>1550319873712</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:34</date>
+  <millis>1550319874568</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:35</date>
+  <millis>1550319875047</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:35</date>
+  <millis>1550319875094</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:35</date>
+  <millis>1550319875652</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:37</date>
+  <millis>1550319877113</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:40</date>
+  <millis>1550319880616</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:24:40</date>
+  <millis>1550319880667</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:04</date>
+  <millis>1550319904128</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:04</date>
+  <millis>1550319904185</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:28</date>
+  <millis>1550319928520</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Registation request was send sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:34</date>
+  <millis>1550319934897</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:34</date>
+  <millis>1550319934961</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: berunoxxx</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:34</date>
+  <millis>1550319934966</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:34</date>
+  <millis>1550319934974</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T12:25:35</date>
+  <millis>1550319935051</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T12:28:31</date>
+  <millis>1550320111194</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:32</date>
+  <millis>1550320112022</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:32</date>
+  <millis>1550320112428</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:32</date>
+  <millis>1550320112449</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:33</date>
+  <millis>1550320113500</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:34</date>
+  <millis>1550320114575</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:37</date>
+  <millis>1550320117973</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:38</date>
+  <millis>1550320118026</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T12:28:57</date>
+  <millis>1550320137936</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Registation request was send sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:29:03</date>
+  <millis>1550320143115</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T12:30:52</date>
+  <millis>1550320252474</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:30:53</date>
+  <millis>1550320253309</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:30:53</date>
+  <millis>1550320253683</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T12:30:53</date>
+  <millis>1550320253704</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T12:30:54</date>
+  <millis>1550320254247</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T12:30:55</date>
+  <millis>1550320255699</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:31:17</date>
+  <millis>1550320277848</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Registation request was send sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:31:22</date>
+  <millis>1550320282457</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T12:31:22</date>
+  <millis>1550320282525</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T12:31:22</date>
+  <millis>1550320282529</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T12:31:22</date>
+  <millis>1550320282537</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T12:31:22</date>
+  <millis>1550320282613</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:18:55</date>
+  <millis>1550344735685</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:19:03</date>
+  <millis>1550344743631</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:19:04</date>
+  <millis>1550344744876</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:19:05</date>
+  <millis>1550344745096</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:19:09</date>
+  <millis>1550344749785</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Connecting with server has been lost!</message>
+  <exception>
+    <message>java.net.SocketException: Software caused connection abort: recv failed</message>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead0</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$PeekInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peekByte</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+    </frame>
+    <frame>
+      <class>client.ClientHandler</class>
+      <method>run</method>
+      <line>250</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-16T19:19:16</date>
+  <millis>1550344756028</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:19:16</date>
+  <millis>1550344756902</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Could not connect to server</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:20:06</date>
+  <millis>1550344806409</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:07</date>
+  <millis>1550344807489</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:08</date>
+  <millis>1550344808034</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:08</date>
+  <millis>1550344808059</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:08</date>
+  <millis>1550344808816</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:10</date>
+  <millis>1550344810066</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:14</date>
+  <millis>1550344814977</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:16</date>
+  <millis>1550344816793</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Client could not login because Username or password incorrect!</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:19</date>
+  <millis>1550344819301</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:19</date>
+  <millis>1550344819418</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:19</date>
+  <millis>1550344819429</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:19</date>
+  <millis>1550344819560</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+<record>
+  <date>2019-02-16T19:20:19</date>
+  <millis>1550344819656</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:22:44</date>
+  <millis>1550344964834</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:45</date>
+  <millis>1550344965932</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:46</date>
+  <millis>1550344966431</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:46</date>
+  <millis>1550344966456</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:47</date>
+  <millis>1550344967134</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:48</date>
+  <millis>1550344968494</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:51</date>
+  <millis>1550344971792</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:51</date>
+  <millis>1550344971878</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:51</date>
+  <millis>1550344971882</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:51</date>
+  <millis>1550344971890</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:22:51</date>
+  <millis>1550344971969</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:24:16</date>
+  <millis>1550345056960</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:18</date>
+  <millis>1550345058156</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:18</date>
+  <millis>1550345058660</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:18</date>
+  <millis>1550345058689</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:19</date>
+  <millis>1550345059489</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:20</date>
+  <millis>1550345060714</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:23</date>
+  <millis>1550345063943</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:24</date>
+  <millis>1550345064013</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:24</date>
+  <millis>1550345064017</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:24</date>
+  <millis>1550345064030</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:24:24</date>
+  <millis>1550345064098</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:26:10</date>
+  <millis>1550345170389</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:11</date>
+  <millis>1550345171453</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:12</date>
+  <millis>1550345172144</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:12</date>
+  <millis>1550345172177</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:12</date>
+  <millis>1550345172913</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:14</date>
+  <millis>1550345174276</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:18</date>
+  <millis>1550345178012</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:18</date>
+  <millis>1550345178082</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:18</date>
+  <millis>1550345178087</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:18</date>
+  <millis>1550345178129</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:18</date>
+  <millis>1550345178203</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+<record>
+  <date>2019-02-16T19:26:30</date>
+  <millis>1550345190836</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Connecting with server has been lost!</message>
+  <exception>
+    <message>java.net.SocketException: Software caused connection abort: recv failed</message>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead0</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$PeekInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peekByte</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+    </frame>
+    <frame>
+      <class>client.ClientHandler</class>
+      <method>run</method>
+      <line>250</line>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:27:44</date>
+  <millis>1550345264942</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:46</date>
+  <millis>1550345266835</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:47</date>
+  <millis>1550345267618</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:47</date>
+  <millis>1550345267660</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:49</date>
+  <millis>1550345269466</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:50</date>
+  <millis>1550345270403</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:56</date>
+  <millis>1550345276522</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:56</date>
+  <millis>1550345276608</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:56</date>
+  <millis>1550345276614</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:56</date>
+  <millis>1550345276624</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:27:56</date>
+  <millis>1550345276701</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:28:35</date>
+  <millis>1550345315574</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:36</date>
+  <millis>1550345316908</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:37</date>
+  <millis>1550345317421</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:37</date>
+  <millis>1550345317449</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:38</date>
+  <millis>1550345318131</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:39</date>
+  <millis>1550345319473</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:46</date>
+  <millis>1550345326282</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:46</date>
+  <millis>1550345326348</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:46</date>
+  <millis>1550345326355</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:46</date>
+  <millis>1550345326377</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:28:46</date>
+  <millis>1550345326446</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:30:08</date>
+  <millis>1550345408885</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:10</date>
+  <millis>1550345410024</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:10</date>
+  <millis>1550345410531</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:10</date>
+  <millis>1550345410556</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:11</date>
+  <millis>1550345411311</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:12</date>
+  <millis>1550345412606</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:16</date>
+  <millis>1550345416031</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:16</date>
+  <millis>1550345416118</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:16</date>
+  <millis>1550345416201</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:16</date>
+  <millis>1550345416349</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:30:16</date>
+  <millis>1550345416419</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:31:30</date>
+  <millis>1550345490424</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:31</date>
+  <millis>1550345491525</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:32</date>
+  <millis>1550345492040</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:32</date>
+  <millis>1550345492067</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:32</date>
+  <millis>1550345492912</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:34</date>
+  <millis>1550345494174</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:38</date>
+  <millis>1550345498229</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:38</date>
+  <millis>1550345498301</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:38</date>
+  <millis>1550345498311</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:38</date>
+  <millis>1550345498344</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:31:38</date>
+  <millis>1550345498429</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:32:54</date>
+  <millis>1550345574828</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:32:55</date>
+  <millis>1550345575908</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:32:56</date>
+  <millis>1550345576608</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:32:56</date>
+  <millis>1550345576655</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:32:57</date>
+  <millis>1550345577445</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:32:58</date>
+  <millis>1550345578737</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:33:02</date>
+  <millis>1550345582534</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:33:02</date>
+  <millis>1550345582605</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:33:02</date>
+  <millis>1550345582634</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:33:02</date>
+  <millis>1550345582650</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:33:02</date>
+  <millis>1550345582725</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:35:28</date>
+  <millis>1550345728610</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:29</date>
+  <millis>1550345729901</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:30</date>
+  <millis>1550345730482</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:30</date>
+  <millis>1550345730514</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:31</date>
+  <millis>1550345731252</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:32</date>
+  <millis>1550345732571</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:36</date>
+  <millis>1550345736462</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:36</date>
+  <millis>1550345736533</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:36</date>
+  <millis>1550345736544</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:36</date>
+  <millis>1550345736558</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:35:36</date>
+  <millis>1550345736620</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:36:37</date>
+  <millis>1550345797055</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:38</date>
+  <millis>1550345798137</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:38</date>
+  <millis>1550345798643</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:38</date>
+  <millis>1550345798691</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:39</date>
+  <millis>1550345799355</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:40</date>
+  <millis>1550345800717</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:43</date>
+  <millis>1550345803824</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:43</date>
+  <millis>1550345803900</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:43</date>
+  <millis>1550345803940</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:43</date>
+  <millis>1550345803964</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:36:44</date>
+  <millis>1550345804031</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:39:06</date>
+  <millis>1550345946797</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:07</date>
+  <millis>1550345947931</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:08</date>
+  <millis>1550345948448</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:08</date>
+  <millis>1550345948473</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:09</date>
+  <millis>1550345949147</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:10</date>
+  <millis>1550345950501</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:13</date>
+  <millis>1550345953818</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:13</date>
+  <millis>1550345953897</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:13</date>
+  <millis>1550345953905</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:13</date>
+  <millis>1550345953919</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:39:13</date>
+  <millis>1550345953995</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:41:21</date>
+  <millis>1550346081468</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:22</date>
+  <millis>1550346082580</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:23</date>
+  <millis>1550346083114</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:23</date>
+  <millis>1550346083158</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:23</date>
+  <millis>1550346083844</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:25</date>
+  <millis>1550346085200</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:28</date>
+  <millis>1550346088529</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:28</date>
+  <millis>1550346088597</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:28</date>
+  <millis>1550346088604</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:28</date>
+  <millis>1550346088619</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:41:28</date>
+  <millis>1550346088686</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:45:12</date>
+  <millis>1550346312917</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:14</date>
+  <millis>1550346314096</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:14</date>
+  <millis>1550346314590</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:14</date>
+  <millis>1550346314621</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:15</date>
+  <millis>1550346315328</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:16</date>
+  <millis>1550346316641</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:20</date>
+  <millis>1550346320016</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:20</date>
+  <millis>1550346320148</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:20</date>
+  <millis>1550346320205</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:20</date>
+  <millis>1550346320221</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:45:20</date>
+  <millis>1550346320290</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:49:29</date>
+  <millis>1550346569158</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:30</date>
+  <millis>1550346570229</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:30</date>
+  <millis>1550346570742</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:30</date>
+  <millis>1550346570783</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:31</date>
+  <millis>1550346571470</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:32</date>
+  <millis>1550346572775</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:36</date>
+  <millis>1550346576719</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:36</date>
+  <millis>1550346576805</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:36</date>
+  <millis>1550346576810</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:36</date>
+  <millis>1550346576823</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:49:36</date>
+  <millis>1550346576901</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:50:28</date>
+  <millis>1550346628728</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:29</date>
+  <millis>1550346629866</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:30</date>
+  <millis>1550346630338</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:30</date>
+  <millis>1550346630390</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:31</date>
+  <millis>1550346631194</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:32</date>
+  <millis>1550346632458</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:35</date>
+  <millis>1550346635921</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:35</date>
+  <millis>1550346635999</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:36</date>
+  <millis>1550346636003</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:36</date>
+  <millis>1550346636016</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:50:36</date>
+  <millis>1550346636092</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:52:08</date>
+  <millis>1550346728052</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:09</date>
+  <millis>1550346729225</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:09</date>
+  <millis>1550346729771</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:09</date>
+  <millis>1550346729794</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:10</date>
+  <millis>1550346730482</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:11</date>
+  <millis>1550346731809</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:15</date>
+  <millis>1550346735420</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:15</date>
+  <millis>1550346735488</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:15</date>
+  <millis>1550346735492</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:15</date>
+  <millis>1550346735507</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:52:15</date>
+  <millis>1550346735569</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:53:47</date>
+  <millis>1550346827467</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:48</date>
+  <millis>1550346828508</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:48</date>
+  <millis>1550346828969</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:49</date>
+  <millis>1550346829001</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:49</date>
+  <millis>1550346829690</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:51</date>
+  <millis>1550346831019</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:56</date>
+  <millis>1550346836522</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:56</date>
+  <millis>1550346836598</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:56</date>
+  <millis>1550346836603</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:56</date>
+  <millis>1550346836616</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:53:56</date>
+  <millis>1550346836681</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+<record>
+  <date>2019-02-16T19:54:08</date>
+  <millis>1550346848070</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Connecting with server has been lost!</message>
+  <exception>
+    <message>java.net.SocketException: Software caused connection abort: recv failed</message>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead0</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$PeekInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peekByte</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+    </frame>
+    <frame>
+      <class>client.ClientHandler</class>
+      <method>run</method>
+      <line>250</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T19:55:41</date>
+  <millis>1550346941454</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:42</date>
+  <millis>1550346942508</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:43</date>
+  <millis>1550346943031</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:43</date>
+  <millis>1550346943063</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:43</date>
+  <millis>1550346943763</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:45</date>
+  <millis>1550346945132</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:49</date>
+  <millis>1550346949632</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:51</date>
+  <millis>1550346951356</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: berunoxxx</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:51</date>
+  <millis>1550346951361</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:51</date>
+  <millis>1550346951370</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T19:55:51</date>
+  <millis>1550346951445</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+<record>
+  <date>2019-02-16T20:00:19</date>
+  <millis>1550347219140</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Connecting with server has been lost!</message>
+  <exception>
+    <message>java.net.SocketException: Software caused connection abort: recv failed</message>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead0</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>socketRead</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$PeekInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peekByte</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+    </frame>
+    <frame>
+      <class>client.ClientHandler</class>
+      <method>run</method>
+      <line>250</line>
+    </frame>
+  </exception>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T20:02:28</date>
+  <millis>1550347348308</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:29</date>
+  <millis>1550347349410</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:29</date>
+  <millis>1550347349878</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:29</date>
+  <millis>1550347349906</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:30</date>
+  <millis>1550347350606</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:31</date>
+  <millis>1550347351944</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:38</date>
+  <millis>1550347358617</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:39</date>
+  <millis>1550347359726</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: berunoxxx</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:39</date>
+  <millis>1550347359731</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:39</date>
+  <millis>1550347359739</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T20:02:39</date>
+  <millis>1550347359808</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-16T20:03:44</date>
+  <millis>1550347424852</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:45</date>
+  <millis>1550347425959</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:46</date>
+  <millis>1550347426440</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:46</date>
+  <millis>1550347426483</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:47</date>
+  <millis>1550347427162</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:48</date>
+  <millis>1550347428490</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:52</date>
+  <millis>1550347432321</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:52</date>
+  <millis>1550347432398</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: berunoxxx</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:52</date>
+  <millis>1550347432452</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:52</date>
+  <millis>1550347432464</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-16T20:03:52</date>
+  <millis>1550347432533</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T15:15:27</date>
+  <millis>1550416527114</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:28</date>
+  <millis>1550416528425</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:29</date>
+  <millis>1550416529348</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:29</date>
+  <millis>1550416529489</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:30</date>
+  <millis>1550416530906</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:31</date>
+  <millis>1550416531875</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:35</date>
+  <millis>1550416535254</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:36</date>
+  <millis>1550416536192</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:36</date>
+  <millis>1550416536196</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:36</date>
+  <millis>1550416536296</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T15:15:36</date>
+  <millis>1550416536378</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T15:17:42</date>
+  <millis>1550416662002</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:42</date>
+  <millis>1550416662871</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:43</date>
+  <millis>1550416663313</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:43</date>
+  <millis>1550416663337</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:44</date>
+  <millis>1550416664049</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:45</date>
+  <millis>1550416665322</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:48</date>
+  <millis>1550416668402</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:48</date>
+  <millis>1550416668479</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:48</date>
+  <millis>1550416668488</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:48</date>
+  <millis>1550416668502</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T15:17:48</date>
+  <millis>1550416668582</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T15:19:05</date>
+  <millis>1550416745506</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:06</date>
+  <millis>1550416746371</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:06</date>
+  <millis>1550416746732</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:06</date>
+  <millis>1550416746755</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:07</date>
+  <millis>1550416747337</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:08</date>
+  <millis>1550416748683</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:52</date>
+  <millis>1550416792439</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:52</date>
+  <millis>1550416792508</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:52</date>
+  <millis>1550416792518</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:52</date>
+  <millis>1550416792548</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T15:19:52</date>
+  <millis>1550416792639</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T17:44:45</date>
+  <millis>1550425485426</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:44:47</date>
+  <millis>1550425487653</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:44:48</date>
+  <millis>1550425488154</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:44:48</date>
+  <millis>1550425488207</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T17:44:56</date>
+  <millis>1550425496791</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T17:44:57</date>
+  <millis>1550425497038</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:45:03</date>
+  <millis>1550425503165</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:45:06</date>
+  <millis>1550425506453</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T17:45:06</date>
+  <millis>1550425506457</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T17:45:06</date>
+  <millis>1550425506466</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T17:45:06</date>
+  <millis>1550425506752</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T17:47:20</date>
+  <millis>1550425640360</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:21</date>
+  <millis>1550425641646</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:22</date>
+  <millis>1550425642220</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:22</date>
+  <millis>1550425642369</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:23</date>
+  <millis>1550425643286</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:24</date>
+  <millis>1550425644611</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:28</date>
+  <millis>1550425648727</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:30</date>
+  <millis>1550425650720</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:30</date>
+  <millis>1550425650727</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:30</date>
+  <millis>1550425650781</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T17:47:30</date>
+  <millis>1550425650887</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T17:48:24</date>
+  <millis>1550425704313</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:25</date>
+  <millis>1550425705128</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:25</date>
+  <millis>1550425705468</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:25</date>
+  <millis>1550425705492</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:26</date>
+  <millis>1550425706193</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:27</date>
+  <millis>1550425707385</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:32</date>
+  <millis>1550425712370</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:32</date>
+  <millis>1550425712437</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:32</date>
+  <millis>1550425712441</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:32</date>
+  <millis>1550425712450</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T17:48:32</date>
+  <millis>1550425712549</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T17:50:44</date>
+  <millis>1550425844775</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:45</date>
+  <millis>1550425845583</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:45</date>
+  <millis>1550425845928</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:45</date>
+  <millis>1550425845950</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:46</date>
+  <millis>1550425846475</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:47</date>
+  <millis>1550425847905</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:51</date>
+  <millis>1550425851104</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:51</date>
+  <millis>1550425851928</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:51</date>
+  <millis>1550425851932</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:51</date>
+  <millis>1550425851938</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T17:50:52</date>
+  <millis>1550425852003</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:04:08</date>
+  <millis>1550426648445</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:09</date>
+  <millis>1550426649256</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:09</date>
+  <millis>1550426649598</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:09</date>
+  <millis>1550426649621</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:10</date>
+  <millis>1550426650167</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:11</date>
+  <millis>1550426651604</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:14</date>
+  <millis>1550426654845</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:15</date>
+  <millis>1550426655647</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:15</date>
+  <millis>1550426655651</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:15</date>
+  <millis>1550426655657</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T18:04:15</date>
+  <millis>1550426655729</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:06:21</date>
+  <millis>1550426781909</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:06:22</date>
+  <millis>1550426782760</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:06:23</date>
+  <millis>1550426783131</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:06:23</date>
+  <millis>1550426783152</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:06:23</date>
+  <millis>1550426783884</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:06:23</date>
+  <millis>1550426783980</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Connecting with server has been lost!</message>
+  <exception>
+    <message>java.net.SocketException: Connection reset</message>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.net.SocketInputStream</class>
+      <method>read</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$PeekInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peek</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream$BlockDataInputStream</class>
+      <method>peekByte</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject0</method>
+    </frame>
+    <frame>
+      <class>java.io.ObjectInputStream</class>
+      <method>readObject</method>
+    </frame>
+    <frame>
+      <class>client.ClientHandler</class>
+      <method>run</method>
+      <line>271</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2019-02-17T18:06:25</date>
+  <millis>1550426785099</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>WARNING</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Could not connect to server</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:07:06</date>
+  <millis>1550426826900</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:07:08</date>
+  <millis>1550426828022</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:07:08</date>
+  <millis>1550426828383</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:07:30</date>
+  <millis>1550426850610</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:07:31</date>
+  <millis>1550426851453</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:07:31</date>
+  <millis>1550426851808</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:07:59</date>
+  <millis>1550426879617</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:00</date>
+  <millis>1550426880522</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:00</date>
+  <millis>1550426880870</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:00</date>
+  <millis>1550426880891</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:01</date>
+  <millis>1550426881405</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:02</date>
+  <millis>1550426882852</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:06</date>
+  <millis>1550426886401</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:07</date>
+  <millis>1550426887212</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:07</date>
+  <millis>1550426887217</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:07</date>
+  <millis>1550426887223</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T18:08:07</date>
+  <millis>1550426887279</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:10:24</date>
+  <millis>1550427024200</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:25</date>
+  <millis>1550427025010</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:25</date>
+  <millis>1550427025366</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:25</date>
+  <millis>1550427025390</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:25</date>
+  <millis>1550427025892</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:27</date>
+  <millis>1550427027352</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:32</date>
+  <millis>1550427032135</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:32</date>
+  <millis>1550427032992</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:32</date>
+  <millis>1550427032996</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:33</date>
+  <millis>1550427033003</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T18:10:33</date>
+  <millis>1550427033071</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:11:45</date>
+  <millis>1550427105911</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:46</date>
+  <millis>1550427106772</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:47</date>
+  <millis>1550427107130</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:47</date>
+  <millis>1550427107151</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:47</date>
+  <millis>1550427107684</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:49</date>
+  <millis>1550427109139</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:53</date>
+  <millis>1550427113683</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:53</date>
+  <millis>1550427113751</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:53</date>
+  <millis>1550427113755</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:53</date>
+  <millis>1550427113768</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T18:11:53</date>
+  <millis>1550427113843</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:12:55</date>
+  <millis>1550427175491</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:12:56</date>
+  <millis>1550427176333</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:12:56</date>
+  <millis>1550427176745</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:12:56</date>
+  <millis>1550427176760</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:12:57</date>
+  <millis>1550427177290</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:12:58</date>
+  <millis>1550427178738</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:13:18</date>
+  <millis>1550427198433</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Registation request was send sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:13:23</date>
+  <millis>1550427203177</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:13:23</date>
+  <millis>1550427203250</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T18:13:23</date>
+  <millis>1550427203255</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T18:13:23</date>
+  <millis>1550427203263</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T18:13:23</date>
+  <millis>1550427203350</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-02-17T18:14:57</date>
+  <millis>1550427297963</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updater loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:14:58</date>
+  <millis>1550427298864</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:14:59</date>
+  <millis>1550427299245</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Chat loaded</message>
+</record>
+<record>
+  <date>2019-02-17T18:14:59</date>
+  <millis>1550427299266</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Connected successfully to server!</message>
+</record>
+<record>
+  <date>2019-02-17T18:14:59</date>
+  <millis>1550427299811</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Launcher scene was set succefully in stage.</message>
+</record>
+<record>
+  <date>2019-02-17T18:15:01</date>
+  <millis>1550427301174</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:15:04</date>
+  <millis>1550427304976</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Login authentication requested sucessfully</message>
+</record>
+<record>
+  <date>2019-02-17T18:15:05</date>
+  <millis>1550427305043</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>User: simon</message>
+</record>
+<record>
+  <date>2019-02-17T18:15:05</date>
+  <millis>1550427305046</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Started to loading the aplication with the detail of user.</message>
+</record>
+<record>
+  <date>2019-02-17T18:15:05</date>
+  <millis>1550427305054</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>20</thread>
+  <message>Loading the aplication with the detail of user terminated.</message>
+</record>
+<record>
+  <date>2019-02-17T18:15:05</date>
+  <millis>1550427305122</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>dataHandler.LoggerHandle</class>
+  <method>log</method>
+  <thread>13</thread>
+  <message>Updated scene succesfully to chat</message>
+</record>
+</log>

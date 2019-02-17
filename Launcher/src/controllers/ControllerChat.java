@@ -86,6 +86,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
+import javafx.stage.Modality;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -124,6 +125,7 @@ public class ControllerChat {
 	private Client c;
 	public User user;
 	public ArrayList<User> usersOnline = null;
+	public ArrayList<User> friends = null;
 
 	public IntegerProperty numberNotifyChat = new SimpleIntegerProperty();
 	public IntegerProperty numberNotifyFriends = new SimpleIntegerProperty();
@@ -131,6 +133,7 @@ public class ControllerChat {
 
 	public ControllerChat(Stage primaryStage,String version, LoggerHandle lh) throws IOException {
 		usersOnline = new ArrayList<User>();
+		friends = new ArrayList<User>();
 		this.stage = primaryStage;
 		this.version = version;
 		this.lh = lh;
@@ -139,19 +142,19 @@ public class ControllerChat {
 		numberNotifyPopUp.set(0);
 		user = new User("","","",0,"",0,0,0,0,0);
 		stage.initStyle(StageStyle.UNDECORATED);
-		
+
 		loadUpdater();
 		loadLauncher();
 		loadChat();
 	}
-	
+
 	private void loadUpdater() {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("updater.fxml"));
 			loader.setController(this);
 			updaterPane = (VBox) loader.load();
 			updaterPane.setBorder(darkblue);
-			
+
 			updaterPane.setOnMousePressed(new EventHandler<MouseEvent>() {
 				@Override
 				public void handle(MouseEvent event) {
@@ -177,11 +180,11 @@ public class ControllerChat {
 				}
 			});
 			lh.log("INFO", "Updater loaded");
-			
+
 		}catch(Exception e) {
 			lh.log("SEVERE", "Updater could not be loaded loaded!");
 		}
-		
+
 	}
 
 	private void loadLauncher() {
@@ -427,7 +430,7 @@ public class ControllerChat {
 
 				stage.setScene(scene);
 				stage.show(); 
-				
+
 				Timer t = new Timer(1500, new ActionListener() {
 
 					@Override
@@ -472,7 +475,7 @@ public class ControllerChat {
 
 		try {
 			Scene scene = new Scene(appPane);
-			
+
 
 			FadeTransition fadeTransition = new FadeTransition();
 			fadeTransition.setDuration(Duration.millis(500));
@@ -509,13 +512,8 @@ public class ControllerChat {
 					}else if (ke.getCode().equals(KeyCode.ENTER)) {
 						String texto = chatPane_HBox_Left_Handle_Input_TextArea.getText();
 						if(!texto.equals("")) {
-							if(texto.startsWith("/restart")) {
-								restartApplication(null,null);
-							}else {
-								c.sendMessagesToChat(texto);
-								chatPane_HBox_Left_Handle_Input_TextArea.setText("");
-							}
-							
+							c.sendMessagesToChat(texto);
+							chatPane_HBox_Left_Handle_Input_TextArea.setText("");
 						}
 						ke.consume();
 					}
@@ -531,7 +529,7 @@ public class ControllerChat {
 
 
 	}
-	
+
 	public void updateSceneToLauncher() {
 		Scene scene = new Scene(launcherPane);
 
@@ -547,10 +545,13 @@ public class ControllerChat {
 
 		stage.setScene(scene);
 		Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
-        stage.setX((primScreenBounds.getWidth() - stage.getWidth()) / 2);
-        stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 2);
+		stage.setX((primScreenBounds.getWidth() - stage.getWidth()) / 2);
+		stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 2);
 		stage.show(); 
 	}
+
+	@FXML
+	public Label updater_Label;
 
 	@FXML
 	public AnchorPane launcherAnchorPane;
@@ -1319,9 +1320,237 @@ public class ControllerChat {
 		levelLabel.setLayoutY(27f);
 
 		userField.getChildren().addAll(fullnameLabel,levelLabel);
+
+		userField.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				showInfoUser(u);
+			}
+		});
+
 		chatPane_HBox_Right_ScrollPane_VBox.getChildren().add(userField);
 		dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.setText(String.valueOf(usersOnline.size()+1));
 
+	}
+	
+	private void showInfoUser(User u) {
+		Stage window = new Stage();
+
+		window.initModality(Modality.NONE);
+		window.initStyle(StageStyle.UNDECORATED);
+
+		Pane pane = new Pane();
+		pane.setPrefWidth(600);
+
+		HBox boxButtons = new HBox();
+		boxButtons.setLayoutX(0);
+		boxButtons.setLayoutY(0);
+		boxButtons.setPrefWidth(600);
+		boxButtons.setAlignment(Pos.CENTER_RIGHT);
+
+		FontAwesomeIconView close = new FontAwesomeIconView();
+		close.setGlyphName("CLOSE");
+		close.setGlyphSize(18);
+		close.setStyle("-fx-fill: e8e8e8;");
+		close.setCursor(Cursor.HAND);
+		HBox.setMargin(close, new Insets(0,5,0,0));
+		close.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				window.close();
+			}
+		});
+
+		FontAwesomeIconView minimize = new FontAwesomeIconView();
+		minimize.setGlyphName("MINUS");
+		minimize.setGlyphSize(18);
+		minimize.setStyle("-fx-fill: e8e8e8;");
+		minimize.setCursor(Cursor.HAND);
+		HBox.setMargin(minimize, new Insets(6,10,0,0));
+		minimize.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				window.setIconified(true);
+			}
+		});
+
+		boxButtons.getChildren().addAll(minimize,close);
+
+		VBox detailsBox = new VBox();
+		detailsBox.setLayoutX(0);
+		detailsBox.setLayoutY(0);
+		detailsBox.setPrefWidth(600);
+		detailsBox.setStyle("-fx-background-color:  #202123;-fx-border-color : #0fafe0;" + 
+				"	-fx-border-width: 2px 2px 2px 2px;");
+		detailsBox.setPadding(new Insets(10,10,10,10));
+
+		Label fullnameLabel = new Label(u.getFullName());
+		fullnameLabel.setStyle("-fx-font-family: Ebrima;-fx-font-size: 20px;-fx-text-fill: #fff;");
+		fullnameLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				
+			}
+		});
+		detailsBox.getChildren().add(fullnameLabel);
+
+		HBox boxAddButton = new HBox();
+		boxAddButton.setAlignment(Pos.CENTER_RIGHT);
+		boxAddButton.setPrefWidth(600);
+		VBox.setMargin(boxAddButton, new Insets(5,0,0,0));
+		
+		FontAwesomeIconView iconAddFriend = new FontAwesomeIconView();
+		iconAddFriend.setGlyphName("USER_PLUS");
+		iconAddFriend.setGlyphSize(18);
+		iconAddFriend.setStyle("-fx-fill: e8e8e8;");
+
+		JFXButton buttonAddFriend =  new JFXButton(); 
+		buttonAddFriend.setMinWidth(100);
+		buttonAddFriend.setStyle("-fx-background-color: #4a8c44;-fx-background-radius: 0;");
+		buttonAddFriend.setText("Add Friend");
+		buttonAddFriend.setTextFill(Color.WHITE);
+		buttonAddFriend.setCursor(Cursor.HAND);
+		buttonAddFriend.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				c.sendRequestFriend(user.getUsername(),u.getUsername());
+				buttonAddFriend.setDisable(true);
+				buttonAddFriend.setText("Request Sent");
+				iconAddFriend.setGlyphSize(15);
+				iconAddFriend.setGlyphName("HOURGLASS");
+			}
+		});
+
+		
+
+		buttonAddFriend.setGraphic(iconAddFriend);
+
+		if(!ehFriend(u.getUsername())){
+			boxAddButton.getChildren().add(buttonAddFriend);
+			detailsBox.getChildren().add(boxAddButton);
+		}
+
+		pane.getChildren().addAll(detailsBox,boxButtons);
+
+		Scene scene = new Scene(pane);
+
+		scene.setOnMousePressed(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent event) {
+				window.setOpacity(0.9);
+				xOffset = window.getX() - event.getScreenX();
+				yOffset = window.getY() - event.getScreenY();
+			}
+		});
+
+		scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent event) {
+				window.setOpacity(0.9);
+				window.setX(event.getScreenX() + xOffset);
+				window.setY(event.getScreenY() + yOffset);
+			}
+		});
+
+		scene.setOnMouseReleased(new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent event) {
+				window.setOpacity(1);
+			}
+		});
+
+		window.setScene(scene);
+		window.show();
+	}
+	
+	public void addFriendRequestToScrollPane(User u,String time) {
+		VBox friendRequestBox = new VBox();
+		friendRequestBox.getStyleClass().addAll("full-border-grey");
+		friendRequestBox.setStyle("-fx-background-color: #fff");
+		friendRequestBox.setAlignment(Pos.CENTER_LEFT);
+		VBox.setMargin(friendRequestBox, new Insets(0,0,10,0));
+		
+		Label titleLabel = new Label("Friend Request");
+		titleLabel.setStyle("-fx-font-family: Calibri;-fx-font-size: 20px;-fx-text-fill: #0fafe0;");
+		VBox.setMargin(titleLabel, new Insets(10,0,0,10));
+		
+		HBox infoBox = new HBox();
+		infoBox.setAlignment(Pos.CENTER_LEFT);
+		VBox.setMargin(infoBox, new Insets(5,0,0,10));
+		
+		Label infoUser = new Label(u.getFullName());
+		infoUser.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				showInfoUser(u);
+			}
+		});
+		infoUser.setUnderline(true);
+		infoUser.setStyle("-fx-font-family: Calibri ;-fx-font-size: 15px;-fx-text-fill: #000000;");
+		infoUser.setCursor(Cursor.HAND);
+		HBox.setMargin(infoUser, new Insets(0,5,0,0));
+		
+		Label infoText = new Label("sent you a friend request.");
+		infoUser.setStyle("-fx-font-family: Calibri ;-fx-font-size: 15px;-fx-text-fill: #000000;");
+		
+		infoBox.getChildren().addAll(infoUser,infoText);
+		
+		Label hourLabel = new Label(time);
+		hourLabel.setStyle("-fx-font-family: Calibri ;-fx-font-size: 12px;-fx-text-fill: #000000;");
+		VBox.setMargin(hourLabel, new Insets(5,0,10,10));
+		
+		HBox buttonsBox = new HBox();
+		buttonsBox.setAlignment(Pos.CENTER_RIGHT);
+		buttonsBox.getStyleClass().addAll("top-border-grey");
+		
+		JFXButton acceptFriendRequest =  new JFXButton(); 
+		acceptFriendRequest.setMinWidth(100);
+		acceptFriendRequest.setStyle("-fx-background-color: #4a8c44;-fx-background-radius: 0;");
+		acceptFriendRequest.setText("Accept");
+		acceptFriendRequest.setTextFill(Color.WHITE);
+		acceptFriendRequest.setCursor(Cursor.HAND);
+		acceptFriendRequest.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				c.acceptFriendRequest(user.getUsername(),u.getUsername());
+			}
+		});
+
+		FontAwesomeIconView iconAccept = new FontAwesomeIconView();
+		iconAccept.setGlyphName("CHECK");
+		iconAccept.setGlyphSize(14);
+		iconAccept.setStyle("-fx-fill: #fff;");
+
+		acceptFriendRequest.setGraphic(iconAccept);
+		HBox.setMargin(acceptFriendRequest, new Insets(5,10,5,0));
+		
+		JFXButton declineFriendRequest =  new JFXButton(); 
+		declineFriendRequest.setMinWidth(100);
+		declineFriendRequest.setStyle("-fx-background-color: #ad2d2d;-fx-background-radius: 0;");
+		declineFriendRequest.setText("Decline");
+		declineFriendRequest.setTextFill(Color.WHITE);
+		declineFriendRequest.setCursor(Cursor.HAND);
+		declineFriendRequest.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				c.declineFriendRequest(user.getUsername(),u.getUsername());
+			}
+		});
+
+		FontAwesomeIconView iconDecline = new FontAwesomeIconView();
+		iconDecline.setGlyphName("TIMES");
+		iconDecline.setGlyphSize(14);
+		iconDecline.setStyle("-fx-fill: #fff;");
+
+		declineFriendRequest.setGraphic(iconDecline);
+		HBox.setMargin(declineFriendRequest, new Insets(5,10,5,0));
+		
+		buttonsBox.getChildren().addAll(acceptFriendRequest,declineFriendRequest);
+		
+		friendRequestBox.getChildren().addAll(titleLabel,infoBox,hourLabel,buttonsBox);
+		
+		friendsPane_ScrollPane_Requests_VBox.getChildren().add(friendRequestBox);
+		
 	}
 
 	public void removeUserOnlineToScrollPane(int i) {
@@ -1350,6 +1579,7 @@ public class ControllerChat {
 			}
 		});
 	}
+	
 
 	public void restartApplication(Runnable runBeforeRestart, Integer TimeToWaitToExecuteTask) {
 		try {
@@ -1386,5 +1616,19 @@ public class ControllerChat {
 			e.printStackTrace();
 		}
 	}
+
+	public boolean ehFriend(String username) {
+
+		for(User target : friends) {
+			if(target.getUsername().equals(username)) {
+				return true;
+			}
+			break;
+		}
+
+		return false;
+	}
+
+
 
 }

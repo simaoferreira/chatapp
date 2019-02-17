@@ -6,23 +6,23 @@ public class Pontuation {
     	if(lvl == 1) {
     		return exp/100f;
     	}else if(lvl == 2) {
-    		return exp/1000f;
+    		return exp/200f;
     	}else if(lvl == 3) {
-    		return exp/1500f;
+    		return exp/300f;
     	}else if(lvl == 4) {
-    		return exp/2000f;
+    		return exp/400f;
     	}else if(lvl == 5) {
-    		return exp/2500f;
+    		return exp/500f;
     	}else if(lvl == 6) {
-    		return exp/3500f;
+    		return exp/600f;
     	}else if(lvl == 7) {
-    		return exp/5000f;
+    		return exp/700f;
     	}else if(lvl == 8) {
-    		return exp/7000f;
+    		return exp/800f;
     	}else if(lvl == 9) {
-    		return exp/9000f;
+    		return exp/900f;
     	}else {
-    		return exp/10000f;
+    		return exp/1000f;
     	}
     }
 }

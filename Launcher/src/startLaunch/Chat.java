@@ -10,7 +10,7 @@ import javafx.stage.WindowEvent;
 
 public class Chat extends Application{
 
-    private static final String version = "0.5.5";
+    private static final String version = "0.6.1";
     private static LoggerHandle             lh = null;
 
     public static void main(String[] args) {

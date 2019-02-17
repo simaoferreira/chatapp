@@ -25,7 +25,7 @@ public class Client extends Thread{
 	}
 
 	public void runConnection() throws UnknownHostException, IOException {
-		socket = new Socket("localhost",32456);
+		socket = new Socket(ip,32456);
 		socket.setTcpNoDelay(true);
 		ch = new ClientHandler(socket,this,client,lh);
 		ch.start(); 
@@ -43,15 +43,15 @@ public class Client extends Thread{
 		ch.sendMessageCase10(username, password,firstname,lastname,age,email);
 	}
 
-    ////////////////  CODE 3  ////////////////
-    public void sendMessagesToChat(String text) {
-        ch.sendMessageCase3(client.user.getUsername(), text);
-    }
-    
-    ///////////////  CODE 11 /////////////////
-    public void sendVersion(String version) {
-    	ch.sendClientVersion(version);
-    }
+	////////////////  CODE 3  ////////////////
+	public void sendMessagesToChat(String text) {
+		ch.sendMessageCase3(client.user.getUsername(), text);
+	}
+
+	///////////////  CODE 11 /////////////////
+	public void sendVersion(String version) {
+		ch.sendClientVersion(version);
+	}
 
 
 	/**
@@ -72,52 +72,24 @@ public class Client extends Thread{
     }
 	 */
 
+	////////////////CODE 7  ////////////////
+	public void sendRequestFriend(String username,String usernameTarget) {
+		ch.sendMessageCase7(username, usernameTarget);
+	}
+
+
+	////////////////CODE 8  ////////////////
+	public void acceptFriendRequest(String username,String usernameTarget) {
+		ch.sendMessageCase8(true, username, usernameTarget);
+
+	}
+
+	////////////////CODE 8  ////////////////
+	public void declineFriendRequest(String username,String usernameTarget) {
+		ch.sendMessageCase8(false, username, usernameTarget);
+	}
+
 	/**
-    ////////////////CODE 7  ////////////////
-    public void sendRequestFriend() {
-        String textField = client.text;
-        String userTarget = textField.substring(11);
-        if(userTarget.equals(client.user)) {
-            //ch.printError("You can't invite yourself!");
-        }else {
-            //ch.sendMessage("7",user,userTarget);
-        	ch.sendMessageCase7(user, userTarget);
-        }
-    }
-
-    ////////////////CODE 8  ////////////////
-    public void acceptFriendRequest() {
-        String textField = client.text;
-        if (textField.equals("/accept")) {
-
-        }else {
-            String userSentInvite = textField.substring(8);
-            //ch.sendMessage("8", user, "accept:"+userSentInvite);
-            ch.sendMessageCase8(true, user, userSentInvite);
-        }
-
-    }
-
-    ////////////////CODE 8  ////////////////
-    public void declineFriendRequest() {
-        String textField = client.text;
-        if (textField.equals("/decline")) {
-
-        }else {
-            String userSentInvite = textField.substring(9);
-            ch.sendMessageCase8(false, user, userSentInvite);
-            //ch.sendMessage("8", user, "decline:"+userSentInvite);
-        }
-
-    }
-
-    ////////////////CODE 10  ////////////////
-    public void registerAccount(String username,String password) {
-    	ch.sendMessageCase10(username, password);
-        //ch.sendMessage("10", username, password);
-    }
-
-
     public void replyPrivateMessageToChat(String user, String lastUserPrivate) {
         if(lastUserPrivate.equals("")) {
             ch.printError("You can't reply! Wait for a new message");
