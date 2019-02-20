@@ -11,11 +11,13 @@ public class AlertBox {
 	
 	private static final Border red = new Border(new BorderStroke(Color.rgb(193, 31, 31),
 			BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(5)));
+	private static final Border green = new Border(new BorderStroke(Color.rgb(74, 140, 68),
+			BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(5)));
 	
 	private static final Border white = new Border(new BorderStroke(Color.WHITE,
 			BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(3)));
 
-    public static void display(String title, String message,boolean close) {
+    public static void display(String title, String message,Color color, boolean close) {
         Stage window = new Stage();
 
         window.initModality(Modality.APPLICATION_MODAL);
@@ -39,8 +41,11 @@ public class AlertBox {
         layout.setPrefSize(350, 200);
         layout.getChildren().addAll(label,button);
         layout.setAlignment(Pos.CENTER);
-        layout.setBorder(red);
-        layout.setStyle("-fx-border-color: #c11f1f;");
+        if(color == Color.RED) {
+        	layout.setBorder(red);
+        }else if(color == Color.GREEN) {
+        	layout.setBorder(green);
+        }
         //layout.setStyle("-fx-border-width: -1px -1px -1px -1px;");
         layout.setStyle("-fx-background-color: #202123;");
     	

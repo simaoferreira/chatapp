@@ -311,7 +311,7 @@ public class ControllerLauncher {
 		friendsLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 		    @Override
 		    public void handle(MouseEvent mouseEvent) {
-		    	AlertBox.display("Details", u.getFullName(),false);
+		    	AlertBox.display("Details", u.getFullName(),Color.RED,false);
 		    }
 		});
 	}
@@ -341,7 +341,7 @@ public class ControllerLauncher {
 			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 			    @Override
 			    public void handle(MouseEvent mouseEvent) {
-			    	AlertBox.display("Details", user + " connected at "+hour,false);
+			    	AlertBox.display("Details", user + " connected at "+hour,Color.RED,false);
 			    }
 			});
 			
@@ -353,7 +353,7 @@ public class ControllerLauncher {
 			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 			    @Override
 			    public void handle(MouseEvent mouseEvent) {
-			    	AlertBox.display("Details", user + " disconnected at "+hour,false);
+			    	AlertBox.display("Details", user + " disconnected at "+hour,Color.RED,false);
 			    }
 			});
 			
@@ -365,7 +365,7 @@ public class ControllerLauncher {
 			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 			    @Override
 			    public void handle(MouseEvent mouseEvent) {
-			    	AlertBox.display("Details", text+ " at "+hour,false);
+			    	AlertBox.display("Details", text+ " at "+hour,Color.RED,false);
 			    }
 			});
 			
@@ -385,7 +385,7 @@ public class ControllerLauncher {
 				centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 				    @Override
 				    public void handle(MouseEvent mouseEvent) {
-				    	AlertBox.display("Details", user + " sent this message at "+hour,false);
+				    	AlertBox.display("Details", user + " sent this message at "+hour,Color.RED,false);
 				    }
 				});
 			}
@@ -397,7 +397,7 @@ public class ControllerLauncher {
 			centeredLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 			    @Override
 			    public void handle(MouseEvent mouseEvent) {
-			    	AlertBox.display("Details", "You sent message at "+hour,false);
+			    	AlertBox.display("Details", "You sent message at "+hour,Color.RED,false);
 			    }
 			});
 			
@@ -443,7 +443,7 @@ public class ControllerLauncher {
 		if(passwordAgain.equals(password)) {
 			//c.registerAccount(username, password);
 		}else {
-			AlertBox.display("Details", "Passwords don't match!",false);
+			AlertBox.display("Details", "Passwords don't match!",Color.RED,false);
 			passwordTextFieldRegister.clear();
 			passwordAgainTextFieldRegister.clear();
 		}
@@ -458,7 +458,7 @@ public class ControllerLauncher {
 			if(passwordAgain.equals(password)) {
 				//c.registerAccount(username, password);
 			}else {
-				AlertBox.display("Details", "Passwords don't match!",false);
+				AlertBox.display("Details", "Passwords don't match!",Color.RED,false);
 				passwordTextFieldRegister.clear();
 				passwordAgainTextFieldRegister.clear();
 			}

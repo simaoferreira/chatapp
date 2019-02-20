@@ -11,16 +11,16 @@ public class ConnectDB {
         
         try {
             //bd.updateWordsWritten("berunoxxx",14);
-            //bd.addFriend(1, 2);
-            //bd.removeRequestFriend(1, 2);
-        	//bd.removeFriend(1, 5);
+            bd.removeFriend(1, 2);
+            //bd.removeRequestFriend(3,2);
+        	//bd.removeFriend(3, 1);
         	//bd.changeFirstName("simon", "Simão");
         	//bd.changeLastName("simon", "Ferreira");
         	//bd.changeFirstName("berunoxxx", "Bruno");
         	//bd.changeLastName("berunoxxx", "Ribeiro");
         	//bd.addFriend(1, 2);
-        	bd.removeRequestFriend(1, 2);
-        	bd.updateWordsWritten("simon", 50);
+        	//bd.removeRequestFriend(3, 1);
+        	//bd.updateWordsWritten("simon", 50);
             bd.getInfoPlayers();
             bd.getUsers();
             bd.getFriends();

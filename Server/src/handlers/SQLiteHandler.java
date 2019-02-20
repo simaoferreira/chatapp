@@ -355,8 +355,7 @@ public class SQLiteHandler {
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT idUser,idRequestedFriend FROM usersRequestsFriends WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
-
+        ResultSet res = state.executeQuery("SELECT idUser,idRequestedFriend FROM usersRequestsFriends WHERE (idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"') OR (idUser='" + userRequestedFriend + "' AND idRequestedFriend='"+ username +"')");
         if(res.next()) {
             result=true;
 
@@ -403,20 +402,20 @@ public class SQLiteHandler {
         return result;
     }
     
-    protected ArrayList<String> getRequestsInvite(int username,int userRequestedFriend) throws ClassNotFoundException, SQLException {
+    protected ArrayList<Integer> getRequestsInvite(int username) throws ClassNotFoundException, SQLException {
 
-    	ArrayList<String> requests = new ArrayList<String>();
+    	ArrayList<Integer> requests = new ArrayList<Integer>();
 
         if(con == null) {
             getConnection();
         }
 
         Statement state = con.createStatement();
-        ResultSet res = state.executeQuery("SELECT idUser FROM usersRequestsFriends WHERE idUser='" + username + "' AND idRequestedFriend='"+ userRequestedFriend +"'");
+        ResultSet res = state.executeQuery("SELECT idUser FROM usersRequestsFriends WHERE idRequestedFriend='"+ username +"'");
 
         if(res.next()) {
         	int id = res.getInt("idUser");
-            requests.add(getFirstName(id)+" " + getLastName(id));
+            requests.add(id);
         }
 
         return requests;

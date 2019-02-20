@@ -1,6 +1,8 @@
 package dataHandler;
 
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -17,9 +19,11 @@ public class User {
 	IntegerProperty userParcialExp = new SimpleIntegerProperty();
 	IntegerProperty messagesSent = new SimpleIntegerProperty();
 	IntegerProperty wordsWritten = new SimpleIntegerProperty();
+	BooleanProperty existsFriendRequest = new SimpleBooleanProperty();
+	BooleanProperty existsFriendShip = new SimpleBooleanProperty();
 	
 	public User(String username,String firstName, String lastName, int age, String email, int userLvl, int userExp, int userParcialExp, int messagesSent,
-			int wordsWritten) {
+			int wordsWritten, boolean existsFriendRequest, boolean existsFriendShip) {
 		this.username.set(username);
 		this.firstName.set(firstName);
 		this.lastName.set(lastName);
@@ -30,6 +34,8 @@ public class User {
 		this.userParcialExp.set(userParcialExp);
 		this.messagesSent.set(messagesSent);
 		this.wordsWritten.set(wordsWritten);
+		this.existsFriendRequest.set(existsFriendRequest);
+		this.existsFriendShip.set(existsFriendShip);
 	}
 	
 	public String getFullName() {
@@ -155,8 +161,29 @@ public class User {
 	public void setWordsWritten(int wordsWritten) {
 		this.wordsWritten.set(wordsWritten);
 	}
+
+	public BooleanProperty getExistsFriendRequestProperty() {
+		return existsFriendRequest;
+	}
 	
+	public boolean getExistsFriendRequest() {
+		return existsFriendRequest.get();
+	}
+
+	public void setExistsFriendRequest(boolean existsFriendRequest) {
+		this.existsFriendRequest.set(existsFriendRequest);
+	}
+
+	public BooleanProperty getExistsFriendShipProperty() {
+		return existsFriendShip;
+	}
 	
+	public boolean getExistsFriendShip() {
+		return existsFriendShip.get();
+	}
 	
+	public void setExistsFriendShip(boolean existsFriendShip) {
+		this.existsFriendShip.set(existsFriendShip);
+	}
 	
 }

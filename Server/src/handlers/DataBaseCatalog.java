@@ -286,6 +286,22 @@ public class DataBaseCatalog {
     }
     
     /**
+     * Checks if already exists a request invite from username to userRequestedFriend
+     * @param username - the username that send request
+     * @param userRequestedFriend -  the username that got the request
+     * @return true if already exists this request otherwise false
+     */
+    public boolean checkRequestInvite(String username,int friend) {
+        int user = getID(username);
+        try {
+            return sql.checkRequestInvite(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying to check if there is a friend invite!", e);
+        }
+        return false;
+    }
+    
+    /**
      * Checks if a specific friendship exists
      * @param username - username one
      * @param userFriend - username two
@@ -300,7 +316,38 @@ public class DataBaseCatalog {
             lh.log("WARNING", "Error while trying to check frindship!", e);
         }
         return false;
-    }   
+    }  
+    
+    /**
+     * Checks if a specific friendship exists
+     * @param username - username one
+     * @param userFriend - id two
+     * @return true if already exists otherwise false
+     */
+    public boolean checksFriendship(String username, int friend) {
+        int user = getID(username);
+        try {
+            return sql.checkFriendship(user, friend);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying to check frindship!", e);
+        }
+        return false;
+    }
+    
+    /**
+     * Get the list of users that request friend to username
+     * @param username - the username that receives the requests
+     * @return the list of users that request friend to username
+     */
+    public ArrayList<Integer> getRequestsInvite(String username) {
+    	int user = getID(username);
+        try {
+            return sql.getRequestsInvite(user);
+        } catch (ClassNotFoundException | SQLException e) {
+            lh.log("WARNING", "Error while trying to get list of friends requests!", e);
+        }
+        return null;
+    }
     
 
     /**

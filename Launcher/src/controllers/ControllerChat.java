@@ -57,6 +57,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -140,7 +141,7 @@ public class ControllerChat {
 		numberNotifyChat.set(0);
 		numberNotifyFriends.set(0);
 		numberNotifyPopUp.set(0);
-		user = new User("","","",0,"",0,0,0,0,0);
+		user = new User("","","",0,"",0,0,0,0,0,false,false);
 		stage.initStyle(StageStyle.UNDECORATED);
 
 		loadUpdater();
@@ -413,6 +414,21 @@ public class ControllerChat {
 					}
 				});
 
+				numberNotifyPopUp.addListener(new ChangeListener<Number>() {
+					@Override
+					public void changed(ObservableValue<? extends Number> observable, Number oldValue,
+							Number newValue) {
+						if(numberNotifyPopUp.get() == 0) {
+							main_bell_notifications_Label.setVisible(false);
+						}else {
+							if(!main_Notifications_PopUP.isVisible()) {
+								main_bell_notifications_Label.setText(String.valueOf(numberNotifyPopUp.get()));
+								main_bell_notifications_Label.setVisible(true);
+							}
+						}
+					}
+				});
+
 				launcher_Label_Version.setText("v"+version);
 				main_Version_Label.setText("v"+version);
 
@@ -463,7 +479,7 @@ public class ControllerChat {
 			lh.log("WARNING", "Could not connect to the server!");
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,true);
 				}
 			});
 		}
@@ -1161,6 +1177,7 @@ public class ControllerChat {
 	@FXML
 	void openPopupNotifications(MouseEvent event) {
 		main_Notifications_PopUP.setVisible(true);
+		numberNotifyPopUp.set(0);
 	}
 
 	@FXML
@@ -1294,6 +1311,30 @@ public class ControllerChat {
 		chatPane_HBox_Left_ScrollPane_VBox.getChildren().add(mensagem);
 	}
 
+	public void addNotifyPopUp(String title, String text) {
+		VBox notifyBox = new VBox();
+		notifyBox.setPadding(new Insets(10,10,10,10));
+		notifyBox.getStyleClass().addAll("buttons","top-border-blue");
+		notifyBox.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				changeToFriends(mouseEvent);
+				friendsPane_ScrollPane_Requests_VBox.requestFocus();
+			}
+		});
+
+		Label titleLabel = new Label(title);
+		titleLabel.setStyle("-fx-font-family: Arial;-fx-font-size: 15px;-fx-text-fill: #0fafe0;");
+
+		Label textLabel = new Label(text);
+		textLabel.setStyle("-fx-font-size: 12px;-fx-text-fill: #000000;");
+
+		notifyBox.getChildren().addAll(titleLabel,textLabel);
+
+		main_Notifications_PopUP_VBox.getChildren().add(notifyBox);
+
+	}
+
 	public void addUserOnlineToScrollPane(User u) {
 		String fullname = u.getFullName();
 		String level = String.valueOf(u.getUserLvl());
@@ -1332,7 +1373,45 @@ public class ControllerChat {
 		dashboardPane_HBox_Right_VBox_Servers_Status_MainServer_Label_NumberUsers.setText(String.valueOf(usersOnline.size()+1));
 
 	}
-	
+
+	public void addFriendToScrollPane(User u) {
+		String fullname = u.getFullName();
+		String level = String.valueOf(u.getUserLvl());
+		String exp = String.valueOf(u.getUserExp());
+
+		Pane userField = new Pane();
+		userField.setId(u.getUsername());
+		userField.setPrefSize(180, 54);
+		userField.getStyleClass().addAll("userBox","buttons");
+		userField.setCursor(Cursor.HAND);
+
+		Label fullnameLabel = new Label(fullname);
+		fullnameLabel.setId("fullname");
+		fullnameLabel.setStyle("-fx-font-size: 14;");
+		fullnameLabel.setStyle("-fx-text-fill: #7c8184;");
+		fullnameLabel.setLayoutX(6f);
+		fullnameLabel.setLayoutY(7f);
+
+		Label levelLabel = new Label("Lvl: "+level);
+		levelLabel.setId("level");
+		levelLabel.setStyle("-fx-font-size: 12;");
+		levelLabel.setStyle("-fx-text-fill: #7c8184;");
+		levelLabel.setLayoutX(6f);
+		levelLabel.setLayoutY(27f);
+
+		userField.getChildren().addAll(fullnameLabel,levelLabel);
+
+		userField.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+			@Override
+			public void handle(MouseEvent mouseEvent) {
+				showInfoUser(u);
+			}
+		});
+
+		friendsPane_ScrollPane_Friends_VBox.getChildren().add(userField);
+
+	}
+
 	private void showInfoUser(User u) {
 		Stage window = new Stage();
 
@@ -1389,7 +1468,7 @@ public class ControllerChat {
 		fullnameLabel.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent mouseEvent) {
-				
+
 			}
 		});
 		detailsBox.getChildren().add(fullnameLabel);
@@ -1398,7 +1477,7 @@ public class ControllerChat {
 		boxAddButton.setAlignment(Pos.CENTER_RIGHT);
 		boxAddButton.setPrefWidth(600);
 		VBox.setMargin(boxAddButton, new Insets(5,0,0,0));
-		
+
 		FontAwesomeIconView iconAddFriend = new FontAwesomeIconView();
 		iconAddFriend.setGlyphName("USER_PLUS");
 		iconAddFriend.setGlyphSize(18);
@@ -1415,22 +1494,77 @@ public class ControllerChat {
 			public void handle(MouseEvent mouseEvent) {
 				c.sendRequestFriend(user.getUsername(),u.getUsername());
 				buttonAddFriend.setDisable(true);
-				buttonAddFriend.setText("Request Sent");
-				iconAddFriend.setGlyphSize(15);
+				buttonAddFriend.setText("Pendent");
+				iconAddFriend.setGlyphSize(14);
 				iconAddFriend.setGlyphName("HOURGLASS");
 			}
 		});
 
-		
-
 		buttonAddFriend.setGraphic(iconAddFriend);
 
-		if(!ehFriend(u.getUsername())){
+		if(u.getExistsFriendRequest()) {
+			buttonAddFriend.setDisable(true);
+			buttonAddFriend.setText("Pendent");
+			iconAddFriend.setGlyphSize(14);
+			iconAddFriend.setGlyphName("HOURGLASS");
+		}else {
+			buttonAddFriend.setDisable(false);
+			buttonAddFriend.setText("Add Friend");
+			iconAddFriend.setGlyphSize(18);
+			iconAddFriend.setGlyphName("USER_PLUS");
+		}
+
+		if(!u.getExistsFriendShip()){
 			boxAddButton.getChildren().add(buttonAddFriend);
 			detailsBox.getChildren().add(boxAddButton);
 		}
 
+
 		pane.getChildren().addAll(detailsBox,boxButtons);
+
+		u.getExistsFriendRequestProperty().addListener(new ChangeListener<Boolean>() {
+			@Override
+			public void changed(ObservableValue<? extends Boolean> arg0, Boolean arg1, Boolean arg2) {
+				if(u.getExistsFriendRequest()) {
+					buttonAddFriend.setDisable(true);
+					buttonAddFriend.setText("Pendent");
+					iconAddFriend.setGlyphSize(14);
+					iconAddFriend.setGlyphName("HOURGLASS");
+				}else {
+					buttonAddFriend.setDisable(false);
+					buttonAddFriend.setText("Add Friend");
+					iconAddFriend.setGlyphSize(18);
+					iconAddFriend.setGlyphName("USER_PLUS");
+				}
+
+			}
+		});
+
+		u.getExistsFriendShipProperty().addListener(new ChangeListener<Boolean>() {
+			@Override
+			public void changed(ObservableValue<? extends Boolean> arg0, Boolean arg1, Boolean arg2) {
+				if(u.getExistsFriendShip()) {
+					buttonAddFriend.removeEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+						@Override
+						public void handle(MouseEvent mouseEvent) {
+							c.sendRequestFriend(user.getUsername(),u.getUsername());
+							buttonAddFriend.setDisable(true);
+							buttonAddFriend.setText("Pendent");
+							iconAddFriend.setGlyphSize(14);
+							iconAddFriend.setGlyphName("HOURGLASS");
+						}
+					});
+					boxAddButton.getChildren().remove(buttonAddFriend);
+					detailsBox.getChildren().remove(boxAddButton);
+				}else {
+					buttonAddFriend.setDisable(false);
+					buttonAddFriend.setText("Add Friend");
+					iconAddFriend.setGlyphSize(18);
+					iconAddFriend.setGlyphName("USER_PLUS");
+				}
+
+			}
+		});
 
 		Scene scene = new Scene(pane);
 
@@ -1462,22 +1596,23 @@ public class ControllerChat {
 		window.setScene(scene);
 		window.show();
 	}
-	
+
 	public void addFriendRequestToScrollPane(User u,String time) {
 		VBox friendRequestBox = new VBox();
 		friendRequestBox.getStyleClass().addAll("full-border-grey");
 		friendRequestBox.setStyle("-fx-background-color: #fff");
 		friendRequestBox.setAlignment(Pos.CENTER_LEFT);
+		friendRequestBox.setId(u.getUsername());
 		VBox.setMargin(friendRequestBox, new Insets(0,0,10,0));
-		
+
 		Label titleLabel = new Label("Friend Request");
 		titleLabel.setStyle("-fx-font-family: Calibri;-fx-font-size: 20px;-fx-text-fill: #0fafe0;");
 		VBox.setMargin(titleLabel, new Insets(10,0,0,10));
-		
+
 		HBox infoBox = new HBox();
 		infoBox.setAlignment(Pos.CENTER_LEFT);
 		VBox.setMargin(infoBox, new Insets(5,0,0,10));
-		
+
 		Label infoUser = new Label(u.getFullName());
 		infoUser.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 			@Override
@@ -1489,20 +1624,20 @@ public class ControllerChat {
 		infoUser.setStyle("-fx-font-family: Calibri ;-fx-font-size: 15px;-fx-text-fill: #000000;");
 		infoUser.setCursor(Cursor.HAND);
 		HBox.setMargin(infoUser, new Insets(0,5,0,0));
-		
+
 		Label infoText = new Label("sent you a friend request.");
 		infoUser.setStyle("-fx-font-family: Calibri ;-fx-font-size: 15px;-fx-text-fill: #000000;");
-		
+
 		infoBox.getChildren().addAll(infoUser,infoText);
-		
+
 		Label hourLabel = new Label(time);
 		hourLabel.setStyle("-fx-font-family: Calibri ;-fx-font-size: 12px;-fx-text-fill: #000000;");
 		VBox.setMargin(hourLabel, new Insets(5,0,10,10));
-		
+
 		HBox buttonsBox = new HBox();
 		buttonsBox.setAlignment(Pos.CENTER_RIGHT);
 		buttonsBox.getStyleClass().addAll("top-border-grey");
-		
+
 		JFXButton acceptFriendRequest =  new JFXButton(); 
 		acceptFriendRequest.setMinWidth(100);
 		acceptFriendRequest.setStyle("-fx-background-color: #4a8c44;-fx-background-radius: 0;");
@@ -1523,7 +1658,7 @@ public class ControllerChat {
 
 		acceptFriendRequest.setGraphic(iconAccept);
 		HBox.setMargin(acceptFriendRequest, new Insets(5,10,5,0));
-		
+
 		JFXButton declineFriendRequest =  new JFXButton(); 
 		declineFriendRequest.setMinWidth(100);
 		declineFriendRequest.setStyle("-fx-background-color: #ad2d2d;-fx-background-radius: 0;");
@@ -1544,13 +1679,13 @@ public class ControllerChat {
 
 		declineFriendRequest.setGraphic(iconDecline);
 		HBox.setMargin(declineFriendRequest, new Insets(5,10,5,0));
-		
+
 		buttonsBox.getChildren().addAll(acceptFriendRequest,declineFriendRequest);
-		
+
 		friendRequestBox.getChildren().addAll(titleLabel,infoBox,hourLabel,buttonsBox);
-		
+
 		friendsPane_ScrollPane_Requests_VBox.getChildren().add(friendRequestBox);
-		
+
 	}
 
 	public void removeUserOnlineToScrollPane(int i) {
@@ -1579,7 +1714,41 @@ public class ControllerChat {
 			}
 		});
 	}
-	
+
+	public void removeFriendRequestToScrollPane(String username) {
+		ObservableList<Node> nodes = friendsPane_ScrollPane_Requests_VBox.getChildren();
+
+		for(Node p :  nodes) {
+			if(p.getId().equals(username)){
+				FadeTransition fadeTransitionRemove = new FadeTransition();
+				fadeTransitionRemove.setDuration(Duration.millis(500));
+				fadeTransitionRemove.setNode(p);
+				fadeTransitionRemove.setFromValue(1);
+				fadeTransitionRemove.setToValue(0);
+
+				TranslateTransition translateRemove = new TranslateTransition();
+				translateRemove.setDuration(Duration.millis(500));
+				translateRemove.setNode(p);
+				translateRemove.setFromX(p.getLayoutX());
+				translateRemove.setToX(p.getLayoutX()+300);
+
+				ParallelTransition pt = new ParallelTransition();
+				pt.getChildren().addAll(fadeTransitionRemove,translateRemove);
+				pt.play();
+
+				pt.setOnFinished(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						friendsPane_ScrollPane_Requests_VBox.getChildren().remove(p);
+					}
+				});
+			}
+			break;
+		}
+
+
+	}
+
 
 	public void restartApplication(Runnable runBeforeRestart, Integer TimeToWaitToExecuteTask) {
 		try {
@@ -1616,19 +1785,5 @@ public class ControllerChat {
 			e.printStackTrace();
 		}
 	}
-
-	public boolean ehFriend(String username) {
-
-		for(User target : friends) {
-			if(target.getUsername().equals(username)) {
-				return true;
-			}
-			break;
-		}
-
-		return false;
-	}
-
-
 
 }

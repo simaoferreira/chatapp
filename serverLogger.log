@@ -1701,3 +1701,284 @@
 --INFO (Sun 17.02.2019 at 06:16:09) : Length of words written by simon successfully updated
 --INFO (Sun 17.02.2019 at 06:16:19) : User berunoxxx disconnected;
 --INFO (Sun 17.02.2019 at 06:16:29) : User simon disconnected;
+--INFO (Sun 17.02.2019 at 09:37:49) : Server restarted;
+--INFO (Sun 17.02.2019 at 09:37:51) : Database initialized;
+--INFO (Sun 17.02.2019 at 09:37:51) : Server initialized;
+--INFO (Sun 17.02.2019 at 09:37:51) : Server started to wait for new connections;
+--INFO (Sun 17.02.2019 at 09:38:01) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 09:38:11) : User simon trying to login into the server;
+--INFO (Sun 17.02.2019 at 09:38:13) : User simon logged in the server
+--INFO (Sun 17.02.2019 at 09:38:24) : Length of words written by simon successfully updated
+--INFO (Sun 17.02.2019 at 09:38:27) : Length of words written by simon successfully updated
+--INFO (Sun 17.02.2019 at 09:38:27) : Length of words written by simon successfully updated
+--INFO (Sun 17.02.2019 at 09:38:28) : Length of words written by simon successfully updated
+--INFO (Sun 17.02.2019 at 09:38:29) : Length of words written by simon successfully updated
+--INFO (Sun 17.02.2019 at 09:38:36) : User simon disconnected;
+--INFO (Sun 17.02.2019 at 10:54:29) : Server restarted;
+--WARNING (Sun 17.02.2019 at 10:54:29) : Could not initialize server!
+--INFO (Sun 17.02.2019 at 10:54:38) : Server restarted;
+--WARNING (Sun 17.02.2019 at 10:54:38) : Could not initialize server!
+--INFO (Sun 17.02.2019 at 10:54:51) : Server restarted;
+--WARNING (Sun 17.02.2019 at 10:54:51) : Could not initialize server!
+--INFO (Sun 17.02.2019 at 10:56:23) : Server restarted;
+--WARNING (Sun 17.02.2019 at 10:56:23) : Could not initialize server!
+--INFO (Sun 17.02.2019 at 11:05:02) : Server restarted;
+--INFO (Sun 17.02.2019 at 11:05:03) : Database initialized;
+--INFO (Sun 17.02.2019 at 11:05:03) : Server initialized;
+--INFO (Sun 17.02.2019 at 11:05:03) : Server started to wait for new connections;
+--INFO (Sun 17.02.2019 at 11:05:33) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:05:49) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:05:50) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:11:14) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:25:41) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:25:48) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:25:48) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:26:26) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:28:49) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:29:12) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:29:12) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:29:26) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:31:50) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:31:56) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:31:56) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:34:23) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:34:30) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:34:40) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:34:40) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:38:35) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:38:39) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:38:44) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:38:44) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:39:40) : Length of words written by berunoxxx successfully updated
+--INFO (Sun 17.02.2019 at 11:39:45) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:45:08) : New connection was accepted: /81.84.174.114:1032
+--INFO (Sun 17.02.2019 at 11:45:10) : New connection was accepted: /81.84.174.114:1033
+--INFO (Sun 17.02.2019 at 11:45:15) : User simon trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:45:15) : User simon logged in the server
+--INFO (Sun 17.02.2019 at 11:45:19) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:45:19) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:49:14) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:49:34) : User joao added successfully;
+--INFO (Sun 17.02.2019 at 11:49:42) : User joao trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:49:42) : User joao logged in the server
+--INFO (Sun 17.02.2019 at 11:49:54) : Request friendship sent by joao to simon added successfully;
+--INFO (Sun 17.02.2019 at 11:50:54) : User simon disconnected;
+--INFO (Sun 17.02.2019 at 11:51:01) : User joao disconnected;
+--INFO (Sun 17.02.2019 at 11:51:05) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:51:58) : Server restarted;
+--INFO (Sun 17.02.2019 at 11:51:58) : Database initialized;
+--INFO (Sun 17.02.2019 at 11:51:58) : Server initialized;
+--INFO (Sun 17.02.2019 at 11:51:58) : Server started to wait for new connections;
+--INFO (Sun 17.02.2019 at 11:52:09) : New connection was accepted: /81.84.174.114:1030
+--INFO (Sun 17.02.2019 at 11:52:10) : New connection was accepted: /81.84.174.114:1032
+--INFO (Sun 17.02.2019 at 11:52:13) : New connection was accepted: /81.84.174.114:1033
+--INFO (Sun 17.02.2019 at 11:52:21) : User simon trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:52:23) : User simon logged in the server
+--INFO (Sun 17.02.2019 at 11:52:28) : User berunoxxx trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:52:28) : User berunoxxx logged in the server
+--INFO (Sun 17.02.2019 at 11:52:32) : User joao trying to login into the server;
+--INFO (Sun 17.02.2019 at 11:52:32) : User joao logged in the server
+--INFO (Sun 17.02.2019 at 11:52:50) : Request friendship sent by simon to joao added successfully;
+--INFO (Sun 17.02.2019 at 11:55:04) : Request friendship sent by joao to berunoxxx added successfully;
+--INFO (Sun 17.02.2019 at 11:55:15) : User berunoxxx disconnected;
+--INFO (Sun 17.02.2019 at 11:55:18) : User joao disconnected;
+--INFO (Sun 17.02.2019 at 11:55:21) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:02:37) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:02:37) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:02:37) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:02:37) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:03:19) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:04:05) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:04:06) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:04:30) : Length of words written by simon successfully updated
+--INFO (Tue 19.02.2019 at 10:04:55) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:05:00) : User joao trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:05:00) : User joao logged in the server
+--INFO (Tue 19.02.2019 at 10:05:15) : Request friendship sent by joao to simon removed successfully;
+--INFO (Tue 19.02.2019 at 10:05:15) : User 1 added successfully to list of friends of joao;
+--INFO (Tue 19.02.2019 at 10:06:51) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:06:51) : User joao disconnected;
+--INFO (Tue 19.02.2019 at 10:08:14) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:08:15) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:08:15) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:08:15) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:08:22) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:08:27) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:08:28) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:08:38) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:08:43) : User joao trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:08:43) : User joao logged in the server
+--INFO (Tue 19.02.2019 at 10:08:52) : Request friendship sent by joao to simon removed successfully;
+--INFO (Tue 19.02.2019 at 10:08:53) : User 1 added successfully to list of friends of joao;
+--INFO (Tue 19.02.2019 at 10:09:02) : User joao disconnected;
+--INFO (Tue 19.02.2019 at 10:09:05) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:12:39) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:12:51) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:12:52) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:12:52) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:12:52) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:12:59) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:13:00) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:13:32) : User simon added successfully;
+--INFO (Tue 19.02.2019 at 10:13:45) : Lost a connection;
+--INFO (Tue 19.02.2019 at 10:16:07) : Lost a connection;
+--INFO (Tue 19.02.2019 at 10:20:06) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:20:27) : User berunoxxx added successfully;
+--INFO (Tue 19.02.2019 at 10:23:15) : Lost a connection;
+--INFO (Tue 19.02.2019 at 10:23:19) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:23:41) : User joao added successfully;
+--INFO (Tue 19.02.2019 at 10:23:50) : Lost a connection;
+--INFO (Tue 19.02.2019 at 10:24:27) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:24:28) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:24:33) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:24:33) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:24:38) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:24:38) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:24:48) : Request friendship sent by berunoxxx to simon added successfully;
+--INFO (Tue 19.02.2019 at 10:25:01) : Request friendship sent by simon to berunoxxx removed successfully;
+--INFO (Tue 19.02.2019 at 10:25:01) : User 2 added successfully to list of friends of simon;
+--INFO (Tue 19.02.2019 at 10:27:44) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:28:18) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:28:42) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:28:43) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:28:43) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:28:43) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:28:51) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:28:57) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:28:57) : User simon couldn not login into the server
+--INFO (Tue 19.02.2019 at 10:29:17) : User simon added successfully;
+--INFO (Tue 19.02.2019 at 10:29:28) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:29:28) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:29:34) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:30:10) : User berunoxxx added successfully;
+--INFO (Tue 19.02.2019 at 10:30:16) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:30:16) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:30:25) : Request friendship sent by berunoxxx to simon added successfully;
+--INFO (Tue 19.02.2019 at 10:30:33) : Request friendship sent by berunoxxx to simon removed successfully;
+--INFO (Tue 19.02.2019 at 10:30:33) : User 2 added successfully to list of friends of simon;
+--INFO (Tue 19.02.2019 at 10:31:12) : User berunoxxx disconnected;
+--INFO (Tue 19.02.2019 at 10:31:14) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:31:45) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:31:45) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:31:45) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:31:45) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:31:51) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:31:57) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:31:57) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:32:07) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:32:14) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:32:14) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:32:19) : Request friendship sent by simon to berunoxxx added successfully;
+--INFO (Tue 19.02.2019 at 10:32:29) : Request friendship sent by simon to berunoxxx removed successfully;
+--INFO (Tue 19.02.2019 at 10:32:29) : User 1 added successfully to list of friends of berunoxxx;
+--INFO (Tue 19.02.2019 at 10:33:19) : User berunoxxx disconnected;
+--INFO (Tue 19.02.2019 at 10:33:34) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:33:34) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:33:34) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:33:35) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:33:57) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:34:03) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:34:03) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:34:09) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:34:14) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:34:14) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:34:19) : Request friendship sent by simon to berunoxxx added successfully;
+--INFO (Tue 19.02.2019 at 10:34:25) : Request friendship sent by simon to berunoxxx removed successfully;
+--INFO (Tue 19.02.2019 at 10:34:25) : User 1 added successfully to list of friends of berunoxxx;
+--INFO (Tue 19.02.2019 at 10:39:44) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:39:46) : User berunoxxx disconnected;
+--INFO (Tue 19.02.2019 at 10:40:01) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:40:01) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:40:02) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:40:02) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:40:08) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:40:09) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:40:14) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:40:15) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:40:21) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:40:21) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:40:34) : Request friendship sent by berunoxxx to simon added successfully;
+--INFO (Tue 19.02.2019 at 10:40:40) : Request friendship sent by berunoxxx to simon removed successfully;
+--INFO (Tue 19.02.2019 at 10:40:40) : User 2 added successfully to list of friends of simon;
+--INFO (Tue 19.02.2019 at 10:41:19) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:41:20) : User berunoxxx disconnected;
+--INFO (Tue 19.02.2019 at 10:41:29) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:41:29) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:41:29) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:41:29) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:41:36) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:41:42) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:41:47) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:41:47) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:41:53) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:41:53) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:42:04) : Request friendship sent by simon to berunoxxx added successfully;
+--INFO (Tue 19.02.2019 at 10:42:10) : Request friendship sent by simon to berunoxxx removed successfully;
+--INFO (Tue 19.02.2019 at 10:42:10) : User 1 added successfully to list of friends of berunoxxx;
+--INFO (Tue 19.02.2019 at 10:42:42) : User berunoxxx disconnected;
+--INFO (Tue 19.02.2019 at 10:42:44) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 10:43:03) : Server restarted;
+--INFO (Tue 19.02.2019 at 10:43:03) : Database initialized;
+--INFO (Tue 19.02.2019 at 10:43:03) : Server initialized;
+--INFO (Tue 19.02.2019 at 10:43:03) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 10:43:08) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 10:43:10) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 10:43:16) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:43:17) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 10:43:27) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 10:43:27) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 10:43:50) : Request friendship sent by berunoxxx to simon added successfully;
+--INFO (Tue 19.02.2019 at 10:44:00) : Request friendship sent by berunoxxx to simon removed successfully;
+--INFO (Tue 19.02.2019 at 10:44:00) : User 2 added successfully to list of friends of simon;
+--INFO (Tue 19.02.2019 at 10:45:45) : User berunoxxx disconnected;
+--INFO (Tue 19.02.2019 at 10:45:46) : User simon disconnected;
+--INFO (Tue 19.02.2019 at 11:58:25) : Server restarted;
+--INFO (Tue 19.02.2019 at 11:58:25) : Database initialized;
+--INFO (Tue 19.02.2019 at 11:58:25) : Server initialized;
+--INFO (Tue 19.02.2019 at 11:58:25) : Server started to wait for new connections;
+--INFO (Tue 19.02.2019 at 11:58:33) : New connection was accepted: /81.84.174.114:1030
+--INFO (Tue 19.02.2019 at 11:58:33) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 11:58:56) : User simon trying to login into the server;
+--INFO (Tue 19.02.2019 at 11:58:57) : User simon logged in the server
+--INFO (Tue 19.02.2019 at 11:58:59) : Lost a connection;
+--INFO (Tue 19.02.2019 at 11:59:05) : New connection was accepted: /81.84.174.114:1032
+--INFO (Tue 19.02.2019 at 11:59:12) : User berunoxxx trying to login into the server;
+--INFO (Tue 19.02.2019 at 11:59:12) : User berunoxxx logged in the server
+--INFO (Tue 19.02.2019 at 11:59:25) : Request friendship sent by berunoxxx to simon added successfully;
+--INFO (Wed 20.02.2019 at 12:00:38) : Request friendship sent by berunoxxx to simon removed successfully;
+--INFO (Wed 20.02.2019 at 12:00:38) : User 2 added successfully to list of friends of simon;
+--INFO (Wed 20.02.2019 at 12:02:53) : User simon disconnected;
+--INFO (Wed 20.02.2019 at 12:03:17) : Server restarted;
+--INFO (Wed 20.02.2019 at 12:03:18) : Database initialized;
+--INFO (Wed 20.02.2019 at 12:03:18) : Server initialized;
+--INFO (Wed 20.02.2019 at 12:03:18) : Server started to wait for new connections;
+--INFO (Wed 20.02.2019 at 12:03:26) : New connection was accepted: /81.84.174.114:1030
+--INFO (Wed 20.02.2019 at 12:03:27) : New connection was accepted: /81.84.174.114:1032
+--INFO (Wed 20.02.2019 at 12:03:32) : User simon trying to login into the server;
+--INFO (Wed 20.02.2019 at 12:03:33) : User simon logged in the server
+--INFO (Wed 20.02.2019 at 12:03:38) : User berunoxxx trying to login into the server;
+--INFO (Wed 20.02.2019 at 12:03:38) : User berunoxxx logged in the server
+--INFO (Wed 20.02.2019 at 12:03:48) : Request friendship sent by simon to berunoxxx added successfully;
+--INFO (Wed 20.02.2019 at 12:04:02) : Request friendship sent by simon to berunoxxx removed successfully;
+--INFO (Wed 20.02.2019 at 12:04:02) : User 1 added successfully to list of friends of berunoxxx;
+--INFO (Wed 20.02.2019 at 12:04:56) : User berunoxxx disconnected;
+--INFO (Wed 20.02.2019 at 12:05:09) : User simon disconnected;
+--INFO (Wed 20.02.2019 at 12:08:54) : New connection was accepted: /81.84.174.114:1030
+--INFO (Wed 20.02.2019 at 12:09:01) : User simon trying to login into the server;
+--INFO (Wed 20.02.2019 at 12:09:01) : User simon logged in the server
+--INFO (Wed 20.02.2019 at 12:09:20) : New connection was accepted: /81.84.174.114:1032
+--INFO (Wed 20.02.2019 at 12:09:31) : User berunoxxx trying to login into the server;
+--INFO (Wed 20.02.2019 at 12:09:31) : User berunoxxx logged in the server
+--INFO (Wed 20.02.2019 at 12:09:39) : Request friendship sent by simon to berunoxxx added successfully;
+--INFO (Wed 20.02.2019 at 12:09:48) : Request friendship sent by simon to berunoxxx removed successfully;
+--INFO (Wed 20.02.2019 at 12:09:48) : User 1 added successfully to list of friends of berunoxxx;
+--INFO (Wed 20.02.2019 at 12:11:11) : User berunoxxx disconnected;
+--INFO (Wed 20.02.2019 at 12:11:13) : User simon disconnected;
+--INFO (Wed 20.02.2019 at 12:11:38) : New connection was accepted: /81.84.174.114:1030
+--INFO (Wed 20.02.2019 at 12:11:40) : New connection was accepted: /81.84.174.114:1032
+--INFO (Wed 20.02.2019 at 12:11:44) : User simon trying to login into the server;
+--INFO (Wed 20.02.2019 at 12:11:44) : User simon logged in the server
+--INFO (Wed 20.02.2019 at 12:11:49) : User berunoxxx trying to login into the server;
+--INFO (Wed 20.02.2019 at 12:11:49) : User berunoxxx logged in the server
+--INFO (Wed 20.02.2019 at 12:11:56) : Request friendship sent by simon to berunoxxx added successfully;
+--INFO (Wed 20.02.2019 at 12:12:08) : User berunoxxx disconnected;

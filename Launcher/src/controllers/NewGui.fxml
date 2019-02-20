@@ -308,7 +308,7 @@
                                  <children>
                                     <VBox maxHeight="-Infinity" maxWidth="815.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="800.0" styleClass="full-border-grey">
                                        <children>
-                                          <Label text="Patch Notes 0.6.1" textFill="#7c8184">
+                                          <Label text="Patch Notes 0.6.2" textFill="#7c8184">
                                              <font>
                                                 <Font name="Calibri Bold" size="23.0" />
                                              </font>
@@ -1200,46 +1200,6 @@
                <content>
                   <VBox fx:id="main_Notifications_PopUP_VBox" prefWidth="300.0">
                      <children>
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0">
-                           <children>
-                              <Label text="New friend request" textFill="#0fafe0">
-                                 <font>
-                                    <Font name="Arial" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="João Gil sent you a friend request." wrapText="true" />
-                           </children>
-                           <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <styleClass>
-                              <String fx:value="buttons" />
-                              <String fx:value="top-border-blue" />
-                           </styleClass>
-                        </VBox>
-                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0">
-                           <children>
-                              <Label text="New friend request" textFill="#0fafe0">
-                                 <font>
-                                    <Font name="Arial" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label text="João Gil sent you a friend request." wrapText="true" />
-                           </children>
-                           <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <styleClass>
-                              <String fx:value="buttons" />
-                              <String fx:value="top-border-blue" />
-                           </styleClass>
-                        </VBox>
                      </children>
                      <padding>
                         <Insets top="-5.0" />

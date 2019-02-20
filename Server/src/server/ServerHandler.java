@@ -135,12 +135,24 @@ public class ServerHandler extends Thread{
 									}
 								}
 							}
+							
+							ArrayList<Integer> friendsRequests = dbh.getRequestsInvite(username);
+							out.writeObject(friendsRequests.size());
+							
+							for(Integer i :  friendsRequests) {
+								infoUserObj = createObjWithInfo(i);
+								out.writeObject(infoUserObj);
+							}
 
 							//enviar informação para os restantes clientes com code 1
 							sendToClients(1,false);
 
 							//enviar o user que se conectou
 							sendToClients(userObjInfo,false);
+							
+							
+							
+							
 
 							lh.log("INFO", "User " + user + " logged in the server");
 						}else{
@@ -202,14 +214,34 @@ public class ServerHandler extends Thread{
 						sendToOneClient(userTargetInvite, userRequestedInvite);
 						break;
 					case 8:
-						//receber o resultado final do convite (accept ou decline)
 						//receber o nome do user que respondeu ao convite
+						String userReceivedInvite = (String) in.readObject();
+						
 						//receber o nome do user que enviou o pedido
-
-						//enviar o codigo 9
-						//enviar o resultado do convite 
-						//enviar username se convite for aceite
-						//enviar texto
+						String userSentInvite = (String) in.readObject();
+						
+						//receber o resultado final do convite (accept ou decline)
+						Boolean result = (Boolean) in.readObject();
+						
+						if(result) {
+							dbh.removeRequestFriend(userReceivedInvite, userSentInvite);
+							sendToOneClient(userSentInvite,8);
+							sendToOneClient(userSentInvite,new Boolean(true));
+							sendToOneClient(userSentInvite,new Boolean(true));
+							sendToOneClient(userSentInvite, createObjWithInfo(dbh.getID(userReceivedInvite)));
+							
+                            dbh.addFriend(userSentInvite, userReceivedInvite);
+                            sendToOneClient(userReceivedInvite,8);
+                            sendToOneClient(userReceivedInvite,new Boolean(true));
+                            sendToOneClient(userReceivedInvite,new Boolean(false));
+                            sendToOneClient(userReceivedInvite, createObjWithInfo(dbh.getID(userSentInvite)));
+						}else {
+							dbh.removeRequestFriend(userSentInvite, userReceivedInvite);
+							sendToOneClient(userReceivedInvite,8);
+							sendToOneClient(userReceivedInvite,new Boolean(false));
+							sendToOneClient(userReceivedInvite,dbh.getFullName(dbh.getID(userReceivedInvite)));
+						}
+						
 						break;
 					case 10:
 						//receber o info do novo user
@@ -624,6 +656,8 @@ public class ServerHandler extends Thread{
 		obj.put("parcialExpUser", dbh.getParcialExpUser(id));
 		obj.put("numMessages", dbh.getMessagesSent(id));
 		obj.put("numWords", dbh.getWordsWritten(id));
+		obj.put("existsFriendRequest", dbh.checkRequestInvite(username,id));
+		obj.put("existsFriendShip", dbh.checksFriendship(username, id));
 		return obj;
 	}
 

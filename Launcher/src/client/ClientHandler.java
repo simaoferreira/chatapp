@@ -45,6 +45,7 @@ import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import startLaunch.Chat;
 
@@ -96,7 +97,7 @@ public class ClientHandler extends Thread{
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
 					lh.log("WARNING", "Could not connect to server");
-					AlertBox.display("Error", "Can't connect to server",false);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,false);
 				}
 			});
 		}
@@ -119,7 +120,7 @@ public class ClientHandler extends Thread{
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
 					lh.log("WARNING", "Could not connect to server");
-					AlertBox.display("Error", "Can't connect to server",false);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,false);
 				}
 			});
 		}
@@ -139,7 +140,7 @@ public class ClientHandler extends Thread{
 		}catch(Exception e) {
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,true);
 				}
 			});
 		}
@@ -166,7 +167,7 @@ public class ClientHandler extends Thread{
 		}catch(Exception e) {
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,false);
 				}
 			});
 		}
@@ -195,7 +196,7 @@ public class ClientHandler extends Thread{
 		}catch(Exception e) {
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
-					AlertBox.display("Error", "Can't connect to server",true);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,false);
 				}
 			});
 		}
@@ -210,6 +211,27 @@ public class ClientHandler extends Thread{
 
 	protected void sendMessageCase8(Boolean result,String userReceivedInvite,String userSentInvite) {
 		int code = 8;
+
+		try {
+			// enviar o codigo
+			out.writeObject(code);
+
+			//enviar o nome do user que estah a enviar o pedido de amizade
+			out.writeObject(userSentInvite);
+
+			//enviar o nome do user que estah a receber o pedido de amizade
+			out.writeObject(userReceivedInvite);
+
+			out.writeObject(new Boolean(true));
+
+
+		}catch(Exception e) {
+			Platform.runLater(new Runnable() {
+				@Override public void run() {
+					AlertBox.display("Error", "Can't connect to server",Color.RED,false);
+				}
+			});
+		}
 
 		//enviar o codigo
 		//enviar o resultado final do convite (accept ou decline)
@@ -234,7 +256,7 @@ public class ClientHandler extends Thread{
 			Platform.runLater(new Runnable() {
 				@Override public void run() {
 					lh.log("WARNING", "Could not connect to server");
-					AlertBox.display("Error", "Can't connect to server",false);
+					AlertBox.display("Error", "Can't connect to server",Color.RED,false);
 				}
 			});
 		}
@@ -276,7 +298,7 @@ public class ClientHandler extends Thread{
 							mainClient.chatPane_HBox_Left_Handle_Input_Button.setDisable(true);
 							Platform.runLater(new Runnable() {
 								@Override public void run() {
-									AlertBox.display("Error", "Connecting with server has been lost!",false);
+									AlertBox.display("Error", "Connecting with server has been lost!",Color.RED,false);
 								}
 							});
 							//System.exit(-1);
@@ -359,6 +381,20 @@ public class ClientHandler extends Thread{
 											mainClient.friends.add(u);
 										}
 									}
+								}
+
+								int numberFriendsRequests = (int) in.readObject();
+
+								for(int i=0;i<numberFriendsRequests;i++) {
+									JSONObject userOnline = (JSONObject) in.readObject();
+									User u = createUserFromJSON(userOnline);
+									Platform.runLater(new Runnable() {
+										@Override public void run() {
+											mainClient.addFriendRequestToScrollPane(u,actualTime);
+											mainClient.addNotifyPopUp("Friend Request", u.getFullName()+" sent you a friend request");
+											mainClient.numberNotifyPopUp.set(mainClient.numberNotifyPopUp.get()+1);
+										}
+									});
 								}
 
 								//final
@@ -483,9 +519,52 @@ public class ClientHandler extends Thread{
 							User userOfFriendRequest = getUserByUsername(ownerOfFriendRequest);
 							Platform.runLater(new Runnable() {
 								@Override public void run() {
+									for(User u : mainClient.usersOnline) {
+										if(u.getUsername().equals(userOfFriendRequest.getUsername())) {
+											u.setExistsFriendRequest(true);
+											break;
+										}
+									}
 									mainClient.addFriendRequestToScrollPane(userOfFriendRequest,actualTime);
+									mainClient.addNotifyPopUp("Friend Request", userOfFriendRequest.getFullName()+" sent you a friend request");
+									mainClient.numberNotifyPopUp.set(mainClient.numberNotifyPopUp.get()+1);
 								}
 							});
+							break;
+						case 8:
+							Boolean result = (Boolean) in.readObject();
+
+							if(result) {
+								Boolean ehReceptor = (Boolean) in.readObject();
+								JSONObject infoUser = (JSONObject) in.readObject();
+								User friend = createUserFromJSON(infoUser);
+								
+								Platform.runLater(new Runnable() {
+									@Override public void run() {
+										for(User u : mainClient.usersOnline) {
+											if(u.getUsername().equals(friend.getUsername())) {
+												u.setExistsFriendRequest(false);
+												u.setExistsFriendShip(true);
+												break;
+											}
+										}
+										mainClient.addFriendToScrollPane(friend);
+										mainClient.numberNotifyPopUp.set(mainClient.numberNotifyPopUp.get()+1);
+										if(ehReceptor) {
+											mainClient.addNotifyPopUp("Friend Request", "You accept the friend request of "+friend.getFullName());
+											mainClient.removeFriendRequestToScrollPane(friend.getUsername());
+										}else {
+											mainClient.addNotifyPopUp("Friend Request", friend.getFullName()+" accepted your friend request.");
+										}
+										
+									}
+								});
+
+							}else {
+								
+							}
+
+
 							break;
 						case 9:
 							break;
@@ -496,12 +575,13 @@ public class ClientHandler extends Thread{
 
 							Platform.runLater(new Runnable() {
 								@Override public void run() {
-									AlertBox.display("Details",textFeedback,false);
 									if(!isRegistered) {
+										AlertBox.display("Details",textFeedback,Color.RED,false);
 										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Username.clear();
 										mainClient.launcher_VBox_Pane_RegisterVBox.setVisible(true);
 										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Username.requestFocus();
 									}else {
+										AlertBox.display("Details",textFeedback,Color.GREEN,false);
 										mainClient.launcher_VBox_Pane_LoginVBox.setVisible(true);
 										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Firstname.clear();
 										mainClient.launcher_VBox_Pane_RegisterVBox_TextField_Lastname.clear();
@@ -868,7 +948,9 @@ public class ClientHandler extends Thread{
 		int parcialExpUser = Integer.parseInt(info.get("parcialExpUser").toString());
 		int numMensagens = Integer.parseInt(info.get("numMessages").toString());
 		int numWordsWritten = Integer.parseInt(info.get("numWords").toString());
-		User u = new User(username,firstName,lastName,age,email,lvlUser,expUser,parcialExpUser,numMensagens,numWordsWritten);
+		boolean existsFriendRequest = Boolean.parseBoolean(info.get("existsFriendRequest").toString());
+		boolean existsFriendShip = Boolean.parseBoolean(info.get("existsFriendShip").toString());
+		User u = new User(username,firstName,lastName,age,email,lvlUser,expUser,parcialExpUser,numMensagens,numWordsWritten,existsFriendRequest,existsFriendShip);
 		return u;
 	}
 
