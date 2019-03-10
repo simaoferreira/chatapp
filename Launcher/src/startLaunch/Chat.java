@@ -2,6 +2,7 @@ package startLaunch;
 
 import controllers.ControllerChat;
 import dataHandler.LoggerHandle;
+import dataHandler.PropertiesFile;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
@@ -10,11 +11,13 @@ import javafx.stage.WindowEvent;
 
 public class Chat extends Application{
 
-    private static final String version = "0.6.2";
+    private static final String version = "0.6.3";
     private static LoggerHandle             lh = null;
+    private static PropertiesFile           pf = null;
 
     public static void main(String[] args) {
     	lh = new LoggerHandle();
+    	pf = new PropertiesFile("config.properties",lh);
     	try {
     	    Application.launch(args);
     	    lh.log("INFO", "Aplication started");
@@ -31,8 +34,8 @@ public class Chat extends Application{
 		        event.consume();
 		    }
 		});
-
-        ControllerChat c = new ControllerChat(primaryStage,version,lh);
+    	
+        ControllerChat c = new ControllerChat(primaryStage,version,lh,pf);
         c.startController();
 
     }

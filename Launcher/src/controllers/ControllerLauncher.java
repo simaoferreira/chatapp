@@ -80,6 +80,7 @@ public class ControllerLauncher {
 		lblversionSecond.setText(version);
 		lbl.setVisible(false);
 		Scene scene = new Scene(loginPane);
+		
 		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 			final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
 					KeyCombination.ALT_DOWN);
@@ -96,10 +97,11 @@ public class ControllerLauncher {
 	private void loadMenu() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("mainV2.fxml"));
 		loader.setController(this);
+		
 		menuPane = (GridPane) loader.load();
 		menuPane.setBorder(darkblue);
 		menuPane.setStyle("-fx-background: #4e5460;");
-		
+		menuPane.getStylesheets().add("themeOne.css");
 		menuPane.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -121,6 +123,7 @@ public class ControllerLauncher {
 	private void loadLogin() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("launcher.fxml"));
 		loader.setController(this);
+		loginPane.getStylesheets().add(getClass().getResource("themeOne.css").toExternalForm());
 		loginPane = (Pane) loader.load();
 		loginPane.setBorder(darkblue);
 		loginPane.setStyle("-fx-background: #4e5460;");
@@ -509,6 +512,7 @@ public class ControllerLauncher {
 		fadeTransition.play();
 		
 		Scene scene = new Scene(menuPane);
+		scene.getStylesheets().add(getClass().getResource("/themeOne.css").toExternalForm());
 		
 		fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
 			@Override

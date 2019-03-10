@@ -4,8 +4,10 @@ package controllers;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 
-import com.gluonhq.charm.glisten.control.ProgressBar; 
-import com.gluonhq.charm.glisten.control.ProgressIndicator;
+//import com.gluonhq.charm.glisten.control.ProgressBar; 
+//import com.gluonhq.charm.glisten.control.ProgressIndicator;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ProgressIndicator;
 
 import java.awt.Desktop;
 import java.awt.event.ActionListener;
@@ -39,6 +41,7 @@ import dataHandler.AlertBox;
 import dataHandler.Informations;
 import dataHandler.Notifications;
 import dataHandler.Pontuation;
+import dataHandler.PropertiesFile;
 import dataHandler.ProtectionBadWords;
 import dataHandler.User;
 import dataHandler.LoggerHandle;
@@ -114,10 +117,17 @@ public class ControllerChat {
 
 	private static double xOffset = 0;
 	private static double yOffset = 0;
+	
+	private final String urlThemeOne = this.getClass().getResource("themeOne.css").toExternalForm();
+	private final String urlThemeTwo = this.getClass().getResource("themeTwo.css").toExternalForm();
 
 	private Stage stage;
 	public String version;
 	private LoggerHandle lh = null;
+	private PropertiesFile pf = null;
+	
+	String color = "";
+	String language = "";
 
 	private AnchorPane launcherPane;
 	private AnchorPane appPane;
@@ -132,12 +142,15 @@ public class ControllerChat {
 	public IntegerProperty numberNotifyFriends = new SimpleIntegerProperty();
 	public IntegerProperty numberNotifyPopUp = new SimpleIntegerProperty();
 
-	public ControllerChat(Stage primaryStage,String version, LoggerHandle lh) throws IOException {
+	public ControllerChat(Stage primaryStage,String version, LoggerHandle lh, PropertiesFile pf) throws IOException {
 		usersOnline = new ArrayList<User>();
 		friends = new ArrayList<User>();
 		this.stage = primaryStage;
 		this.version = version;
 		this.lh = lh;
+		this.pf = pf;
+		language = pf.getProperty("language");
+    	color = pf.getProperty("color");
 		numberNotifyChat.set(0);
 		numberNotifyFriends.set(0);
 		numberNotifyPopUp.set(0);
@@ -194,6 +207,7 @@ public class ControllerChat {
 			loader.setController(this);
 			launcherPane = (AnchorPane) loader.load();
 			launcherPane.setBorder(darkblue);
+			
 
 			launcher_HBox_Top.setOnMousePressed(new EventHandler<MouseEvent>() {
 				@Override
@@ -245,6 +259,12 @@ public class ControllerChat {
 			loader.setController(this);
 			appPane = (AnchorPane) loader.load();
 			appPane.setBorder(darkblue);
+			if(color.equals("red")) {
+				appPane.getStylesheets().add(urlThemeOne);
+			}else {
+				appPane.getStylesheets().add(urlThemeTwo);
+			}
+			
 
 			appPane.addEventFilter(MouseEvent.MOUSE_CLICKED, evt -> {
 				if (!inHierarchy(evt.getPickResult().getIntersectedNode(), main_Notifications_PopUP)) {
@@ -280,6 +300,7 @@ public class ControllerChat {
 
 			lh.log("INFO", "Chat loaded");
 		}catch(Exception e) {
+			e.printStackTrace();
 			lh.log("SEVERE", "Chat could not be loaded!");
 		}
 
@@ -637,6 +658,9 @@ public class ControllerChat {
 
 	@FXML
 	public FontAwesomeIconView launcher_Button_Quit;
+	
+    @FXML
+    private FontAwesomeIconView button_Configurations;
 
 	@FXML
 	public HBox launcher_HBox_Right_Version_HBox;
@@ -1213,6 +1237,17 @@ public class ControllerChat {
 	void updateChangesWithMouse(MouseEvent event) {
 
 	}
+	
+    @FXML
+    void openConfigurations(MouseEvent event) {
+    	if(appPane.getStylesheets().contains(urlThemeOne)) {
+    		appPane.getStylesheets().remove(urlThemeOne);
+    		appPane.getStylesheets().add(urlThemeTwo);
+    	}else {
+    		appPane.getStylesheets().remove(urlThemeTwo);
+    		appPane.getStylesheets().add(urlThemeOne);
+    	}
+    }
 
 
 	public void animationProgressBar(ProgressBar pg,double parcialExp) {

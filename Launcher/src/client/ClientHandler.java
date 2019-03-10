@@ -282,7 +282,7 @@ public class ClientHandler extends Thread{
 					Calendar cal = Calendar.getInstance();
 					SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 					actualTime = sdf.format(cal.getTime());
-
+					
 					Animation animation = new Timeline(
 							new KeyFrame(Duration.seconds(0.1),
 									new KeyValue(mainClient.chatPane_HBox_Left_ScrollPane.vvalueProperty(), 1)));

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.ProgressBar?>
 <?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
 <?import com.jfoenix.controls.JFXBadge?>
 <?import com.jfoenix.controls.JFXButton?>
@@ -12,6 +11,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TextArea?>
@@ -25,14 +25,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="parent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox fx:id="main_Vbox_Left" prefHeight="720.0" prefWidth="300.0" styleClass="sidebar">
          <children>
             <Pane fx:id="main_Vbox_Left_QuickInfo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="300.0" styleClass="bottom-border-blue">
                <children>
-                  <ProgressBar fx:id="main_Vbox_Left_QuickInfo_ProgressBar" layoutX="39.0" layoutY="53.0" prefHeight="4.0" prefWidth="248.0" progress="0.0" />
-                  <Label fx:id="main_Vbox_Left_QuickInfo_Label_Lvl" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="5.0" prefWidth="25.0" style="-fx-background-color: #5188bc; -fx-background-radius: 10%;" text="-1" textAlignment="CENTER" textFill="WHITE" />
+                  <ProgressBar fx:id="main_Vbox_Left_QuickInfo_ProgressBar" layoutX="39.0" layoutY="53.0" prefHeight="4.0" prefWidth="248.0" progress="0.35" styleClass="jfx-progress-bar" />
+                  <Label fx:id="main_Vbox_Left_QuickInfo_Label_Lvl" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="5.0" prefWidth="25.0" styleClass="labelLvl" text="-1" textAlignment="CENTER" textFill="WHITE" />
                   <Label fx:id="main_Vbox_Left_QuickInfo_label_FullName" layoutX="5.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" text="Username" textFill="WHITE">
                      <font>
                         <Font name="Ebrima" size="22.0" />
@@ -255,11 +255,7 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" prefHeight="280.0" prefWidth="350.0">
                <children>
-                  <ImageView fitHeight="71.0" fitWidth="239.0" preserveRatio="true">
-                     <image>
-                        <Image url="@res/logo.png" />
-                     </image>
-                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="239.0" preserveRatio="true" styleClass="imageview" />
                   <VBox alignment="CENTER" maxHeight="20.0" prefHeight="20.0" styleClass="box">
                      <padding>
                         <Insets left="10.0" top="10.0" />
@@ -297,12 +293,8 @@
                         <Insets />
                      </HBox.margin>
                      <children>
-                        <ImageView fitHeight="143.0" fitWidth="408.0" preserveRatio="true">
-                           <image>
-                              <Image url="@res/logo.png" />
-                           </image>
-                        </ImageView>
-                        <ScrollPane fx:id="dashboardPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefWidth="800.0" stylesheets="@stylesheet.css">
+                        <ImageView fitHeight="143.0" fitWidth="408.0" preserveRatio="true" styleClass="imageview" />
+                        <ScrollPane fx:id="dashboardPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefWidth="800.0">
                            <content>
                               <VBox fx:id="dashboardPane_HBox_Left_ScrollPane_VBox" maxHeight="-Infinity" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="780.0" style="-fx-background-color: #fff;">
                                  <children>
@@ -514,7 +506,7 @@
                <children>
                   <VBox fx:id="chatPane_HBox_Left">
                      <children>
-                        <ScrollPane fx:id="chatPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css">
+                        <ScrollPane fx:id="chatPane_HBox_Left_ScrollPane" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="800.0">
                            <content>
                               <VBox fx:id="chatPane_HBox_Left_ScrollPane_VBox" maxHeight="-Infinity" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="780.0" style="-fx-background-color: #fff;" />
                            </content>
@@ -886,7 +878,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="800.0">
                                        <children>
-                                          <ScrollPane fx:id="friendsPane_ScrollPane_FriendsFeed" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="795.0" stylesheets="@stylesheet.css">
+                                          <ScrollPane fx:id="friendsPane_ScrollPane_FriendsFeed" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="795.0">
                                              <content>
                                                 <VBox fx:id="friendsPane_ScrollPane_FriendsFeed_VBox" maxHeight="-Infinity" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="780.0">
                                                    <padding>
@@ -906,7 +898,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <ScrollPane fx:id="friendsPane_ScrollPane_Requests" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="795.0" stylesheets="@stylesheet.css">
+                                          <ScrollPane fx:id="friendsPane_ScrollPane_Requests" cache="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="795.0">
                                              <content>
                                                 <VBox fx:id="friendsPane_ScrollPane_Requests_VBox" maxHeight="-Infinity" maxWidth="780.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="780.0">
                                                    <padding>
@@ -954,7 +946,7 @@
                               <Insets left="10.0" />
                            </padding>
                         </Label>
-                        <ScrollPane fx:id="friendsPane_ScrollPane_Friends" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="545.0" prefWidth="180.0" style="-fx-background-color: #fff;" stylesheets="@stylesheet.css">
+                        <ScrollPane fx:id="friendsPane_ScrollPane_Friends" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="545.0" prefWidth="180.0" style="-fx-background-color: #fff;">
                            <content>
                               <VBox fx:id="friendsPane_ScrollPane_Friends_VBox" prefHeight="543.0" prefWidth="180.0" />
                            </content>
@@ -1128,12 +1120,20 @@
       </VBox>
       <HBox fx:id="main_HBox_Top" alignment="CENTER_RIGHT" layoutX="300.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="980.0">
          <children>
-            <FontAwesomeIconView fx:id="button_Minimize" glyphName="MINUS" glyphStyle="-fx-fill:#7C8184" onMouseClicked="#minimizeWindow" size="1.5EM">
+            <FontAwesomeIconView fx:id="button_minimize" fill="#7c8184" glyphName="MINUS" onMouseClicked="#minimizeWindow" size="1.5em">
+               <HBox.margin>
+                  <Insets right="10.0" top="6.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="button_Configurations" fill="#7c8184" glyphName="COG" onMouseClicked="#openConfigurations" size="1.3EM">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <HBox.margin>
-                  <Insets right="10.0" top="6.0" />
+                  <Insets right="10.0" />
                </HBox.margin>
             </FontAwesomeIconView>
             <FontAwesomeIconView fx:id="button_Quit" glyphName="CLOSE" glyphStyle="-fx-fill:#7C8184" onMouseClicked="#closeWindow" size="1.5em">
@@ -1218,7 +1218,7 @@
             </Label>
          </children>
       </HBox>
-      <VBox fx:id="loadingScreen" alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+      <VBox fx:id="loadingScreen" alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #fff;" visible="false">
          <children>
             <ImageView fitHeight="124.0" fitWidth="484.0" preserveRatio="true">
                <image>
