@@ -2180,3 +2180,157 @@
 --INFO (Sun 10.03.2019 at 01:24:44) : User berunoxxx logged in the server
 --INFO (Sun 10.03.2019 at 01:25:03) : User simon disconnected;
 --INFO (Sun 10.03.2019 at 01:25:03) : User berunoxxx disconnected;
+--INFO (Mon 11.03.2019 at 08:49:26) : Server restarted;
+--INFO (Mon 11.03.2019 at 08:49:27) : Database initialized;
+--INFO (Mon 11.03.2019 at 08:49:27) : Server initialized;
+--INFO (Mon 11.03.2019 at 08:49:27) : Server started to wait for new connections;
+--INFO (Mon 11.03.2019 at 08:49:42) : New connection was accepted: /81.84.174.114:1025
+--INFO (Mon 11.03.2019 at 08:49:52) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:49:53) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:50:53) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:51:00) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:51:06) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:51:06) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:52:08) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:52:13) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:52:19) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:52:19) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:53:06) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:53:10) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:53:15) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:53:15) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:55:20) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:55:45) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:55:50) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:55:50) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:56:25) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:56:29) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:56:35) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:56:35) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:56:46) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:56:56) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:57:02) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:57:02) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:57:09) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 08:57:13) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 08:57:18) : User simon trying to login into the server;
+--INFO (Mon 11.03.2019 at 08:57:18) : User simon logged in the server
+--INFO (Mon 11.03.2019 at 08:57:32) : User simon disconnected;
+--INFO (Mon 11.03.2019 at 09:03:27) : New connection was accepted: /81.84.174.114:1024
+--INFO (Mon 11.03.2019 at 09:03:50) : Lost a connection;
+--INFO (Wed 13.03.2019 at 09:34:20) : Server restarted;
+--INFO (Wed 13.03.2019 at 09:34:21) : Database initialized;
+--INFO (Wed 13.03.2019 at 09:34:21) : Server initialized;
+--INFO (Wed 13.03.2019 at 09:34:21) : Server started to wait for new connections;
+--INFO (Wed 13.03.2019 at 09:34:33) : New connection was accepted: /127.0.0.1:64955
+--INFO (Wed 13.03.2019 at 09:34:41) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:34:43) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 09:34:53) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 09:41:46) : New connection was accepted: /127.0.0.1:65382
+--INFO (Wed 13.03.2019 at 09:41:51) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:41:51) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 09:43:06) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 09:44:31) : New connection was accepted: /127.0.0.1:49225
+--INFO (Wed 13.03.2019 at 09:44:37) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:44:37) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 09:48:01) : New connection was accepted: /127.0.0.1:49419
+--INFO (Wed 13.03.2019 at 09:48:06) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:48:06) : User simon couldn not login into the server
+--INFO (Wed 13.03.2019 at 09:48:11) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:48:11) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 09:50:53) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 09:50:54) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 09:50:59) : New connection was accepted: /127.0.0.1:49562
+--INFO (Wed 13.03.2019 at 09:51:10) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:51:10) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 09:51:49) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 09:52:11) : New connection was accepted: /127.0.0.1:49620
+--INFO (Wed 13.03.2019 at 09:52:16) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:52:16) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 09:54:47) : New connection was accepted: /127.0.0.1:49755
+--INFO (Wed 13.03.2019 at 09:54:53) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:54:53) : User berunoxxx couldn not login into the server
+--INFO (Wed 13.03.2019 at 09:54:57) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:54:57) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 09:56:55) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 09:56:59) : New connection was accepted: /127.0.0.1:49866
+--INFO (Wed 13.03.2019 at 09:57:07) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:57:07) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 09:58:06) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 09:58:28) : New connection was accepted: /127.0.0.1:49939
+--INFO (Wed 13.03.2019 at 09:58:34) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 09:58:34) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 09:58:53) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 13.03.2019 at 09:59:02) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 13.03.2019 at 09:59:06) : Length of words written by berunoxxx successfully updated
+--INFO (Wed 13.03.2019 at 09:59:23) : Length of words written by simon successfully updated
+--INFO (Wed 13.03.2019 at 10:09:09) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 10:09:14) : New connection was accepted: /127.0.0.1:50530
+--INFO (Wed 13.03.2019 at 10:09:23) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:09:23) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 10:11:00) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 10:11:36) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:12:08) : New connection was accepted: /127.0.0.1:50673
+--INFO (Wed 13.03.2019 at 10:12:13) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:12:13) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:12:28) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:13:24) : New connection was accepted: /127.0.0.1:50736
+--INFO (Wed 13.03.2019 at 10:13:29) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:13:29) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 10:13:42) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 10:17:02) : New connection was accepted: /127.0.0.1:50948
+--INFO (Wed 13.03.2019 at 10:17:07) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:17:07) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:17:24) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:18:11) : New connection was accepted: /127.0.0.1:51005
+--INFO (Wed 13.03.2019 at 10:18:13) : New connection was accepted: /127.0.0.1:51007
+--INFO (Wed 13.03.2019 at 10:18:18) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:18:18) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:18:23) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:18:23) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 10:19:03) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 10:19:15) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:20:15) : New connection was accepted: /127.0.0.1:51107
+--INFO (Wed 13.03.2019 at 10:20:17) : Lost a connection;
+--INFO (Wed 13.03.2019 at 10:20:50) : New connection was accepted: /127.0.0.1:51137
+--INFO (Wed 13.03.2019 at 10:20:55) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:20:55) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:21:01) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:22:19) : New connection was accepted: /127.0.0.1:51209
+--INFO (Wed 13.03.2019 at 10:22:25) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:22:25) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:22:30) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:24:33) : New connection was accepted: /127.0.0.1:51331
+--INFO (Wed 13.03.2019 at 10:25:49) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:25:49) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:26:08) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:26:34) : New connection was accepted: /127.0.0.1:51432
+--INFO (Wed 13.03.2019 at 10:26:40) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:26:40) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:27:11) : New connection was accepted: /127.0.0.1:51463
+--INFO (Wed 13.03.2019 at 10:27:17) : User berunoxxx trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:27:17) : User berunoxxx logged in the server
+--INFO (Wed 13.03.2019 at 10:29:18) : User berunoxxx disconnected;
+--INFO (Wed 13.03.2019 at 10:29:19) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:29:25) : New connection was accepted: /127.0.0.1:51572
+--INFO (Wed 13.03.2019 at 10:29:30) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:29:30) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:29:48) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:30:13) : New connection was accepted: /127.0.0.1:51612
+--INFO (Wed 13.03.2019 at 10:30:19) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:30:19) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:30:52) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:30:56) : New connection was accepted: /127.0.0.1:51649
+--INFO (Wed 13.03.2019 at 10:31:01) : Lost a connection;
+--INFO (Wed 13.03.2019 at 10:31:33) : New connection was accepted: /127.0.0.1:51680
+--INFO (Wed 13.03.2019 at 10:31:38) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:31:38) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:31:58) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:32:17) : New connection was accepted: /127.0.0.1:51719
+--INFO (Wed 13.03.2019 at 10:32:22) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:32:22) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:32:33) : User simon disconnected;
+--INFO (Wed 13.03.2019 at 10:33:51) : New connection was accepted: /127.0.0.1:51797
+--INFO (Wed 13.03.2019 at 10:33:56) : User simon trying to login into the server;
+--INFO (Wed 13.03.2019 at 10:33:56) : User simon logged in the server
+--INFO (Wed 13.03.2019 at 10:34:20) : User simon disconnected;

@@ -300,7 +300,7 @@
                                  <children>
                                     <VBox maxHeight="-Infinity" maxWidth="815.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="800.0" styleClass="full-border-grey">
                                        <children>
-                                          <Label text="Patch Notes 0.6.2" textFill="#7c8184">
+                                          <Label text="Patch Notes 0.6.4" textFill="#7c8184">
                                              <font>
                                                 <Font name="Calibri Bold" size="23.0" />
                                              </font>

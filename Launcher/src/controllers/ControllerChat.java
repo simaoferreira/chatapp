@@ -111,6 +111,9 @@ public class ControllerChat {
 
 	private static final Border darkblue = new Border(new BorderStroke(Color.rgb(32,33,35),
 			BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(3)));
+	private static final Border blue = new Border(new BorderStroke(Color.rgb(15, 175, 224),
+			BorderStrokeStyle.SOLID, new CornerRadii(0), new BorderWidths(3)));
+	
 	private static final Pattern VALIDEMAIL = 
 			Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 	private static final int MAX_CHARS = 16;
@@ -125,6 +128,9 @@ public class ControllerChat {
 	public String version;
 	private LoggerHandle lh = null;
 	private PropertiesFile pf = null;
+	
+	private boolean openConfig = false;
+    private Stage configurationsWindow = null;
 	
 	String color = "";
 	String language = "";
@@ -259,7 +265,7 @@ public class ControllerChat {
 			loader.setController(this);
 			appPane = (AnchorPane) loader.load();
 			appPane.setBorder(darkblue);
-			if(color.equals("red")) {
+			if(color.equals("blue")) {
 				appPane.getStylesheets().add(urlThemeOne);
 			}else {
 				appPane.getStylesheets().add(urlThemeTwo);
@@ -1240,13 +1246,129 @@ public class ControllerChat {
 	
     @FXML
     void openConfigurations(MouseEvent event) {
+    	/**
     	if(appPane.getStylesheets().contains(urlThemeOne)) {
     		appPane.getStylesheets().remove(urlThemeOne);
     		appPane.getStylesheets().add(urlThemeTwo);
+    		pf.updateProperty("color", "red");
     	}else {
     		appPane.getStylesheets().remove(urlThemeTwo);
     		appPane.getStylesheets().add(urlThemeOne);
+    		pf.updateProperty("color", "blue");
     	}
+    	
+    	pf.save();
+    	*/
+    	if(!openConfig) {
+    		openConfig = true;
+    		configurationsWindow = new Stage();
+
+    		configurationsWindow.initModality(Modality.NONE);
+    		configurationsWindow.initStyle(StageStyle.UNDECORATED);
+
+    		Pane pane = new Pane();
+    		pane.setPrefSize(400, 700);
+    		pane.setBorder(blue);
+    		if(color.equals("blue")) {
+    			pane.getStylesheets().add(urlThemeOne);
+			}else {
+				pane.getStylesheets().add(urlThemeTwo);
+			}
+    		
+    		
+    		HBox boxButtons = new HBox();
+    		boxButtons.setLayoutX(0);
+    		boxButtons.setLayoutY(0);
+    		boxButtons.setPrefWidth(400);
+    		boxButtons.setAlignment(Pos.CENTER_RIGHT);
+
+    		FontAwesomeIconView close = new FontAwesomeIconView();
+    		close.setGlyphName("CLOSE");
+    		close.setGlyphSize(18);
+    		close.setStyle("-fx-fill: e8e8e8;");
+    		close.setCursor(Cursor.HAND);
+    		HBox.setMargin(close, new Insets(0,5,0,0));
+    		close.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+    			@Override
+    			public void handle(MouseEvent mouseEvent) {
+    				openConfig = false;
+    				configurationsWindow.close();
+    				
+    			}
+    		});
+
+    		FontAwesomeIconView minimize = new FontAwesomeIconView();
+    		minimize.setGlyphName("MINUS");
+    		minimize.setGlyphSize(18);
+    		minimize.setStyle("-fx-fill: e8e8e8;");
+    		minimize.setCursor(Cursor.HAND);
+    		HBox.setMargin(minimize, new Insets(6,10,0,0));
+    		minimize.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+    			@Override
+    			public void handle(MouseEvent mouseEvent) {
+    				configurationsWindow.setIconified(true);
+    			}
+    		});
+
+    		boxButtons.getChildren().addAll(minimize,close);
+    		
+    		VBox configurationsBox = new VBox();
+    		configurationsBox.setLayoutX(0);
+    		configurationsBox.setLayoutY(0);
+    		configurationsBox.setPrefSize(400, 700);
+    		configurationsBox.getStyleClass().add("popup");
+    		configurationsBox.setPadding(new Insets(10,10,10,10));
+    		
+    		pane.getChildren().addAll(configurationsBox,boxButtons);
+    		
+    		Scene scene = new Scene(pane);
+
+    		boxButtons.setOnMousePressed(new EventHandler<MouseEvent>() {
+    			@Override
+    			public void handle(MouseEvent event) {
+    				configurationsWindow.setOpacity(0.9);
+    				xOffset = configurationsWindow.getX() - event.getScreenX();
+    				yOffset = configurationsWindow.getY() - event.getScreenY();
+    			}
+    		});
+
+    		boxButtons.setOnMouseDragged(new EventHandler<MouseEvent>() {
+    			@Override
+    			public void handle(MouseEvent event) {
+    				configurationsWindow.setOpacity(0.9);
+    				configurationsWindow.setX(event.getScreenX() + xOffset);
+    				configurationsWindow.setY(event.getScreenY() + yOffset);
+    			}
+    		});
+
+    		boxButtons.setOnMouseReleased(new EventHandler<MouseEvent>() {
+    			@Override
+    			public void handle(MouseEvent event) {
+    				configurationsWindow.setOpacity(1);
+    			}
+    		});
+    		
+    		scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
+				final KeyCombination keyComb = new KeyCodeCombination(KeyCode.F4,
+						KeyCombination.ALT_DOWN);
+				public void handle(KeyEvent ke) {
+					if (keyComb.match(ke)) {
+						openConfig = false;
+						configurationsWindow.close();
+					}
+				}
+			});
+
+    		configurationsWindow.setScene(scene);
+    		configurationsWindow.show();
+    	}else {
+    		configurationsWindow.setIconified(false);
+    	}
+    	
+		
+		
+    	
+    	
     }
 
 

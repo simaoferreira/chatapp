@@ -651,3 +651,574 @@
 --INFO (Sun 10.03.2019 at 01:24:44) : Started to loading the aplication with the detail of user.
 --INFO (Sun 10.03.2019 at 01:24:44) : Loading the aplication with the detail of user terminated.
 --INFO (Sun 10.03.2019 at 01:24:44) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:49:38) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:49:39) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:49:39) : language: en
+--FINE (Mon 11.03.2019 at 08:49:39) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:49:39) : color: blue
+--INFO (Mon 11.03.2019 at 08:49:39) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:49:41) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:49:42) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:49:42) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:49:44) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:49:46) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:49:52) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:49:53) : User: simon
+--INFO (Mon 11.03.2019 at 08:49:53) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:49:53) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:49:53) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:50:58) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:50:58) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:50:58) : language: en
+--FINE (Mon 11.03.2019 at 08:50:58) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:50:58) : color: blue
+--INFO (Mon 11.03.2019 at 08:50:58) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:50:59) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:51:00) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:51:00) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:51:00) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:51:02) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:51:06) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:51:06) : User: simon
+--INFO (Mon 11.03.2019 at 08:51:06) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:51:06) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:51:06) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:52:11) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:52:11) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:52:11) : language: en
+--FINE (Mon 11.03.2019 at 08:52:11) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:52:11) : color: blue
+--INFO (Mon 11.03.2019 at 08:52:12) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:52:13) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:52:13) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:52:13) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:52:14) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:52:15) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:52:19) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:52:19) : User: simon
+--INFO (Mon 11.03.2019 at 08:52:19) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:52:19) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:52:19) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:53:08) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:53:08) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:53:08) : language: en
+--FINE (Mon 11.03.2019 at 08:53:08) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:53:08) : color: blue
+--INFO (Mon 11.03.2019 at 08:53:09) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:53:10) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:53:10) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:53:10) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:53:11) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:53:12) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:53:15) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:53:15) : User: simon
+--INFO (Mon 11.03.2019 at 08:53:15) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:53:15) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:53:15) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:55:43) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:55:43) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:55:43) : language: en
+--FINE (Mon 11.03.2019 at 08:55:43) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:55:43) : color: blue
+--INFO (Mon 11.03.2019 at 08:55:43) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:55:44) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:55:45) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:55:45) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:55:45) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:55:46) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:55:50) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:55:50) : User: simon
+--INFO (Mon 11.03.2019 at 08:55:50) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:55:50) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:55:50) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:56:27) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:56:28) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:56:28) : language: en
+--FINE (Mon 11.03.2019 at 08:56:28) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:56:28) : color: red
+--INFO (Mon 11.03.2019 at 08:56:28) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:56:29) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:56:29) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:56:29) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:56:30) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:56:31) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:56:35) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:56:35) : User: simon
+--INFO (Mon 11.03.2019 at 08:56:35) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:56:35) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:56:35) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:56:54) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:56:54) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:56:54) : language: en
+--FINE (Mon 11.03.2019 at 08:56:54) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:56:54) : color: blue
+--INFO (Mon 11.03.2019 at 08:56:55) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:56:56) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:56:56) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:56:56) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:56:57) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:56:58) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:57:02) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:57:02) : User: simon
+--INFO (Mon 11.03.2019 at 08:57:02) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:57:02) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:57:02) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 08:57:11) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 08:57:11) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 08:57:11) : language: en
+--FINE (Mon 11.03.2019 at 08:57:11) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 08:57:11) : color: red
+--INFO (Mon 11.03.2019 at 08:57:12) : Updater loaded
+--INFO (Mon 11.03.2019 at 08:57:13) : Launcher loaded
+--INFO (Mon 11.03.2019 at 08:57:13) : Chat loaded
+--INFO (Mon 11.03.2019 at 08:57:13) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 08:57:14) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 08:57:15) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:57:18) : Login authentication requested sucessfully
+--INFO (Mon 11.03.2019 at 08:57:18) : User: simon
+--INFO (Mon 11.03.2019 at 08:57:18) : Started to loading the aplication with the detail of user.
+--INFO (Mon 11.03.2019 at 08:57:18) : Loading the aplication with the detail of user terminated.
+--INFO (Mon 11.03.2019 at 08:57:19) : Updated scene succesfully to chat
+--INFO (Mon 11.03.2019 at 09:03:25) : Properties file 'config.properties' loaded
+--FINE (Mon 11.03.2019 at 09:03:25) : Looking for property 'language'...
+--INFO (Mon 11.03.2019 at 09:03:25) : language: en
+--FINE (Mon 11.03.2019 at 09:03:25) : Looking for property 'color'...
+--INFO (Mon 11.03.2019 at 09:03:25) : color: red
+--INFO (Mon 11.03.2019 at 09:03:26) : Updater loaded
+--INFO (Mon 11.03.2019 at 09:03:27) : Launcher loaded
+--INFO (Mon 11.03.2019 at 09:03:27) : Chat loaded
+--INFO (Mon 11.03.2019 at 09:03:27) : Connected successfully to server!
+--INFO (Mon 11.03.2019 at 09:03:27) : Launcher scene was set succefully in stage.
+--INFO (Mon 11.03.2019 at 09:03:29) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:34:31) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:34:31) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:34:31) : language: en
+--FINE (Wed 13.03.2019 at 09:34:31) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:34:31) : color: red
+--INFO (Wed 13.03.2019 at 09:34:31) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:34:33) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:34:33) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:34:33) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:34:36) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:34:36) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:34:41) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:34:43) : User: simon
+--INFO (Wed 13.03.2019 at 09:34:43) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:34:43) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:34:43) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:41:43) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:41:43) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:41:43) : language: en
+--FINE (Wed 13.03.2019 at 09:41:43) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:41:43) : color: blue
+--INFO (Wed 13.03.2019 at 09:41:44) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:41:45) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:41:46) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:41:46) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:41:47) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:41:48) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:41:51) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:41:51) : User: simon
+--INFO (Wed 13.03.2019 at 09:41:51) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:41:51) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:41:52) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:44:29) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:44:30) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:44:30) : language: en
+--FINE (Wed 13.03.2019 at 09:44:30) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:44:30) : color: blue
+--INFO (Wed 13.03.2019 at 09:44:30) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:44:31) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:44:31) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:44:31) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:44:32) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:44:33) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:44:37) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:44:37) : User: simon
+--INFO (Wed 13.03.2019 at 09:44:37) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:44:37) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:44:37) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:47:59) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:47:59) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:47:59) : language: en
+--FINE (Wed 13.03.2019 at 09:47:59) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:47:59) : color: blue
+--INFO (Wed 13.03.2019 at 09:48:00) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:48:01) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:48:01) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:48:01) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:48:02) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:48:03) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:48:06) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:48:06) : Client could not login because This user is already logged in!
+--INFO (Wed 13.03.2019 at 09:48:11) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:48:11) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 09:48:11) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:48:11) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:48:11) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:50:57) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:50:57) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:50:57) : language: en
+--FINE (Wed 13.03.2019 at 09:50:57) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:50:57) : color: blue
+--INFO (Wed 13.03.2019 at 09:50:57) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:50:58) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:50:58) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:50:59) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:50:59) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:51:00) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:51:10) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:51:10) : User: simon
+--INFO (Wed 13.03.2019 at 09:51:10) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:51:10) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:51:10) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:52:09) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:52:09) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:52:09) : language: en
+--FINE (Wed 13.03.2019 at 09:52:09) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:52:09) : color: blue
+--INFO (Wed 13.03.2019 at 09:52:09) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:52:10) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:52:11) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:52:11) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:52:11) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:52:13) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:52:16) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:52:16) : User: simon
+--INFO (Wed 13.03.2019 at 09:52:16) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:52:16) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:52:16) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:54:45) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:54:45) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:54:45) : language: en
+--FINE (Wed 13.03.2019 at 09:54:45) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:54:46) : color: blue
+--INFO (Wed 13.03.2019 at 09:54:46) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:54:47) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:54:47) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:54:47) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:54:48) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:54:49) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:54:53) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:54:53) : Client could not login because Username or password incorrect!
+--INFO (Wed 13.03.2019 at 09:54:57) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:54:57) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 09:54:57) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:54:57) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:54:57) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:56:58) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:56:58) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:56:58) : language: en
+--FINE (Wed 13.03.2019 at 09:56:58) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:56:58) : color: blue
+--INFO (Wed 13.03.2019 at 09:56:58) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:56:59) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:56:59) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:56:59) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:57:00) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:57:01) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:57:07) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:57:07) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 09:57:07) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:57:07) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:57:07) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 09:58:26) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 09:58:26) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 09:58:26) : language: en
+--FINE (Wed 13.03.2019 at 09:58:26) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 09:58:26) : color: blue
+--INFO (Wed 13.03.2019 at 09:58:27) : Updater loaded
+--INFO (Wed 13.03.2019 at 09:58:28) : Launcher loaded
+--INFO (Wed 13.03.2019 at 09:58:28) : Chat loaded
+--INFO (Wed 13.03.2019 at 09:58:28) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 09:58:28) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 09:58:30) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:58:34) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 09:58:34) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 09:58:34) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 09:58:34) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 09:58:34) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:09:12) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:09:12) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:09:12) : language: en
+--FINE (Wed 13.03.2019 at 10:09:12) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:09:12) : color: blue
+--INFO (Wed 13.03.2019 at 10:09:13) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:09:14) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:09:14) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:09:14) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:09:15) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:09:16) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:09:23) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:09:23) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 10:09:23) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:09:23) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:09:24) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:11:41) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:11:41) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:11:41) : language: en
+--FINE (Wed 13.03.2019 at 10:11:41) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:11:41) : color: blue
+--INFO (Wed 13.03.2019 at 10:11:42) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:12:06) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:12:06) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:12:06) : language: en
+--FINE (Wed 13.03.2019 at 10:12:06) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:12:06) : color: red
+--INFO (Wed 13.03.2019 at 10:12:06) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:12:07) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:12:08) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:12:08) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:12:08) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:12:09) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:12:13) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:12:13) : User: simon
+--INFO (Wed 13.03.2019 at 10:12:13) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:12:13) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:12:13) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:13:22) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:13:22) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:13:22) : language: en
+--FINE (Wed 13.03.2019 at 10:13:22) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:13:22) : color: red
+--INFO (Wed 13.03.2019 at 10:13:22) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:13:23) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:13:23) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:13:24) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:13:24) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:13:26) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:13:29) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:13:29) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 10:13:29) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:13:29) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:13:30) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:16:35) : Properties file 'config.properties' loaded
+--INFO (Wed 13.03.2019 at 10:16:59) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:16:59) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:16:59) : language: en
+--FINE (Wed 13.03.2019 at 10:16:59) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:16:59) : color: red
+--INFO (Wed 13.03.2019 at 10:17:00) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:17:02) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:17:02) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:17:02) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:17:03) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:17:04) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:17:07) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:17:07) : User: simon
+--INFO (Wed 13.03.2019 at 10:17:07) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:17:07) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:17:07) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:18:09) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:18:09) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:18:09) : language: en
+--FINE (Wed 13.03.2019 at 10:18:09) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:18:09) : color: red
+--INFO (Wed 13.03.2019 at 10:18:09) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:18:09) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:18:10) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:18:10) : language: en
+--FINE (Wed 13.03.2019 at 10:18:10) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:18:10) : color: red
+--INFO (Wed 13.03.2019 at 10:18:10) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:18:11) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:18:11) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:18:11) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:18:12) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:18:12) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:18:13) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:18:13) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:18:13) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:18:13) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:18:15) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:18:18) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:18:18) : User: simon
+--INFO (Wed 13.03.2019 at 10:18:18) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:18:18) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:18:18) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:18:23) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:18:23) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 10:18:23) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:18:23) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:18:23) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:20:13) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:20:13) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:20:13) : language: en
+--FINE (Wed 13.03.2019 at 10:20:13) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:20:13) : color: red
+--INFO (Wed 13.03.2019 at 10:20:13) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:20:14) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:20:15) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:20:15) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:20:15) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:20:48) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:20:48) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:20:48) : language: en
+--FINE (Wed 13.03.2019 at 10:20:48) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:20:48) : color: red
+--INFO (Wed 13.03.2019 at 10:20:49) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:20:50) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:20:50) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:20:50) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:20:50) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:20:52) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:20:55) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:20:55) : User: simon
+--INFO (Wed 13.03.2019 at 10:20:55) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:20:55) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:20:55) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:22:18) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:22:18) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:22:18) : language: en
+--FINE (Wed 13.03.2019 at 10:22:18) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:22:18) : color: red
+--INFO (Wed 13.03.2019 at 10:22:18) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:22:19) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:22:19) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:22:19) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:22:20) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:22:21) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:22:25) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:22:25) : User: simon
+--INFO (Wed 13.03.2019 at 10:22:25) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:22:25) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:22:25) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:24:31) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:24:32) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:24:32) : language: en
+--FINE (Wed 13.03.2019 at 10:24:32) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:24:32) : color: red
+--INFO (Wed 13.03.2019 at 10:24:32) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:24:33) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:24:33) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:24:33) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:24:34) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:24:35) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:25:49) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:25:49) : User: simon
+--INFO (Wed 13.03.2019 at 10:25:49) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:25:49) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:25:50) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:26:32) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:26:32) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:26:32) : language: en
+--FINE (Wed 13.03.2019 at 10:26:32) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:26:32) : color: red
+--INFO (Wed 13.03.2019 at 10:26:33) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:26:34) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:26:34) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:26:34) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:26:35) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:26:36) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:26:40) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:26:40) : User: simon
+--INFO (Wed 13.03.2019 at 10:26:40) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:26:40) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:26:40) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:27:10) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:27:10) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:27:10) : language: en
+--FINE (Wed 13.03.2019 at 10:27:10) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:27:10) : color: red
+--INFO (Wed 13.03.2019 at 10:27:10) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:27:11) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:27:11) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:27:11) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:27:12) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:27:13) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:27:17) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:27:17) : User: berunoxxx
+--INFO (Wed 13.03.2019 at 10:27:17) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:27:17) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:27:17) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:29:22) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:29:23) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:29:23) : language: en
+--FINE (Wed 13.03.2019 at 10:29:23) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:29:23) : color: red
+--INFO (Wed 13.03.2019 at 10:29:23) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:29:24) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:29:25) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:29:25) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:29:25) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:29:27) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:29:30) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:29:30) : User: simon
+--INFO (Wed 13.03.2019 at 10:29:30) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:29:30) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:29:30) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:30:11) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:30:11) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:30:11) : language: en
+--FINE (Wed 13.03.2019 at 10:30:11) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:30:11) : color: red
+--INFO (Wed 13.03.2019 at 10:30:12) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:30:12) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:30:13) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:30:13) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:30:13) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:30:15) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:30:19) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:30:19) : User: simon
+--INFO (Wed 13.03.2019 at 10:30:19) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:30:19) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:30:19) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:30:54) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:30:54) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:30:54) : language: en
+--FINE (Wed 13.03.2019 at 10:30:54) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:30:54) : color: red
+--INFO (Wed 13.03.2019 at 10:30:55) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:30:55) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:30:56) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:30:56) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:30:56) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:30:58) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:31:31) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:31:31) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:31:31) : language: en
+--FINE (Wed 13.03.2019 at 10:31:31) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:31:31) : color: red
+--INFO (Wed 13.03.2019 at 10:31:31) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:31:32) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:31:32) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:31:33) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:31:33) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:31:34) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:31:38) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:31:38) : User: simon
+--INFO (Wed 13.03.2019 at 10:31:38) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:31:38) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:31:38) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:32:15) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:32:15) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:32:15) : language: en
+--FINE (Wed 13.03.2019 at 10:32:15) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:32:15) : color: red
+--INFO (Wed 13.03.2019 at 10:32:16) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:32:17) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:32:17) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:32:17) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:32:18) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:32:19) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:32:22) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:32:22) : User: simon
+--INFO (Wed 13.03.2019 at 10:32:22) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:32:22) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:32:22) : Updated scene succesfully to chat
+--INFO (Wed 13.03.2019 at 10:33:50) : Properties file 'config.properties' loaded
+--FINE (Wed 13.03.2019 at 10:33:50) : Looking for property 'language'...
+--INFO (Wed 13.03.2019 at 10:33:50) : language: en
+--FINE (Wed 13.03.2019 at 10:33:50) : Looking for property 'color'...
+--INFO (Wed 13.03.2019 at 10:33:50) : color: red
+--INFO (Wed 13.03.2019 at 10:33:50) : Updater loaded
+--INFO (Wed 13.03.2019 at 10:33:51) : Launcher loaded
+--INFO (Wed 13.03.2019 at 10:33:51) : Chat loaded
+--INFO (Wed 13.03.2019 at 10:33:51) : Connected successfully to server!
+--INFO (Wed 13.03.2019 at 10:33:52) : Launcher scene was set succefully in stage.
+--INFO (Wed 13.03.2019 at 10:33:53) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:33:56) : Login authentication requested sucessfully
+--INFO (Wed 13.03.2019 at 10:33:56) : User: simon
+--INFO (Wed 13.03.2019 at 10:33:56) : Started to loading the aplication with the detail of user.
+--INFO (Wed 13.03.2019 at 10:33:56) : Loading the aplication with the detail of user terminated.
+--INFO (Wed 13.03.2019 at 10:33:56) : Updated scene succesfully to chat

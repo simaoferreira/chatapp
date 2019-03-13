@@ -279,3 +279,9 @@
 .jfx-tab-pane .tab-header-area .jfx-rippler{
     -jfx-rippler-fill: #0fafe0;
 }
+
+.popup{
+	-fx-background-color: #202123;
+	-fx-border-color: #0fafe0;
+    -fx-border-width: 2px 2px 2px 2px;
+}

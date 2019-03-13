@@ -39,16 +39,17 @@ public class PropertiesFile {
 		return res;
 	}
 	
-	public void puProperty(String propertyName, String propertyValue) {
-		properties.put(propertyName, propertyValue);		
+	public void putProperty(String propertyName, String propertyValue) {
+		properties.put(propertyName, propertyValue);	
 	}
 	
-	public void save(boolean makeBackup) {
-		String outputFileName = this.propertiesFileName + ((makeBackup) ? ".bak" : "");
-		
+	public void updateProperty(String propertyName, String propertyValue) {
+		properties.replace(propertyName, propertyValue);
+	}
+	
+	public void save() {
 		try {
-			String classpathRoot = getClass().getResource("/").getPath();
-			FileOutputStream fos = new FileOutputStream(classpathRoot + File.separator+ outputFileName);
+			FileOutputStream fos = new FileOutputStream(this.propertiesFileName);
 			
 			properties.store(fos, "Created for configurations of system");
 		}catch(IOException e) {

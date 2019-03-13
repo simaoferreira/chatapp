@@ -11,7 +11,7 @@ import javafx.stage.WindowEvent;
 
 public class Chat extends Application{
 
-    private static final String version = "0.6.3";
+    private static final String version = "0.6.4";
     private static LoggerHandle             lh = null;
     private static PropertiesFile           pf = null;
 
